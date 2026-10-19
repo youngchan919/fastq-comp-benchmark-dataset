@@ -1,0 +1,290 @@
+[
+  {
+    "type": "h1",
+    "text": "What the annual public archive view establishes"
+  },
+  {
+    "type": "p",
+    "text": "The fixed cutoff is 30 September 2026. Stock includes all first public releases before 1 October 2026; the annual increment covers 1 October 2025–30 September 2026. The validated snapshot was retrieved 9 October 2026. Runs measure archived units; reported bases measure declared sequence volume; distinct known studies indicate research breadth. Release date is not sequencing/basecalling date, and study counts are not additive across categories. [Archive metadata](https://www.ebi.ac.uk/ena/portal/api/)"
+  },
+  {
+    "type": "table",
+    "headers": [
+      "Window",
+      "Runs",
+      "Reported 10¹⁵ bases",
+      "Known studies",
+      "Missing organism, runs"
+    ],
+    "rows": [
+      [
+        "Stock",
+        "44,218,223",
+        "102.7062",
+        "703,005",
+        "3.82%"
+      ],
+      [
+        "Annual increment",
+        "5,872,478",
+        "23.5313",
+        "114,478",
+        "23.18%"
+      ]
+    ]
+  },
+  {
+    "type": "p",
+    "text": "Stock has 378 missing/invalid base counts and 1,939,374 zero-base runs; the annual increment has 400,864 zero-base runs. Missing study labels affect 359,717 stock runs and 684 annual-increment runs. Organism labels are missing from 3.82% of stock runs and 23.18% of annual-increment runs; the share with missing organism names remains visible beside rankings. Exact totals and field distributions are in the [workbook](benchmark_dataset.xlsx)."
+  },
+  {
+    "type": "p",
+    "text": "The archive’s assay labels describe different sampling: whole-genome sequencing (WGS) spans genomes; exome sequencing (WXS) targets coding regions; RNA-Seq samples transcripts; amplicons focus on chosen regions. These labels do not fully specify preparation. Source describes the broad material, selection describes how a library was chosen, and layout distinguishes single from paired reads. Those fields must be considered together."
+  },
+  {
+    "type": "table",
+    "headers": [
+      "Strategy",
+      "Stock runs",
+      "Stock base share",
+      "Annual-increment runs",
+      "Known stock studies"
+    ],
+    "rows": [
+      [
+        "AMPLICON",
+        "18,359,855",
+        "4.66%",
+        "2,070,368",
+        "116,706"
+      ],
+      [
+        "WGS",
+        "9,295,474",
+        "37.84%",
+        "1,458,845",
+        "192,425"
+      ],
+      [
+        "RNA-Seq",
+        "8,648,389",
+        "37.48%",
+        "1,233,249",
+        "279,311"
+      ],
+      [
+        "OTHER",
+        "3,094,386",
+        "6.02%",
+        "491,878",
+        "67,861"
+      ],
+      [
+        "RAD-Seq",
+        "772,730",
+        "0.52%",
+        "134,053",
+        "3,790"
+      ],
+      [
+        "Targeted-Capture",
+        "624,557",
+        "0.95%",
+        "124,748",
+        "4,554"
+      ],
+      [
+        "WXS",
+        "561,043",
+        "1.51%",
+        "21,343",
+        "7,569"
+      ],
+      [
+        "ChIP-Seq",
+        "528,615",
+        "1.62%",
+        "45,705",
+        "21,319"
+      ],
+      [
+        "WGA",
+        "456,200",
+        "1.15%",
+        "45,575",
+        "11,320"
+      ],
+      [
+        "Bisulfite-Seq",
+        "295,839",
+        "2.17%",
+        "63,930",
+        "5,593"
+      ],
+      [
+        "CLONE",
+        "292,776",
+        "0.02%",
+        "1,861",
+        "979"
+      ],
+      [
+        "ATAC-seq",
+        "285,961",
+        "1.52%",
+        "50,460",
+        "9,288"
+      ]
+    ]
+  },
+  {
+    "type": "p",
+    "text": "WGS and RNA-Seq together account for most reported bases, whereas amplicons account for 41.52% of stock runs but only 4.66% of bases. RAD/GBS and capture/functional libraries also have meaningful project breadth. Paired layout accounts for 77.08% of stock runs and 91.19% of bases. No single statistic determines the number of inputs; runs, bases and studies answer different questions."
+  },
+  {
+    "type": "table",
+    "headers": [
+      "Raw platform label",
+      "Stock run share",
+      "Stock base share",
+      "Annual base share",
+      "Known stock studies"
+    ],
+    "rows": [
+      [
+        "ILLUMINA",
+        "90.22%",
+        "89.06%",
+        "83.31%",
+        "645,005"
+      ],
+      [
+        "DNBSEQ",
+        "0.86%",
+        "4.56%",
+        "9.30%",
+        "10,047"
+      ],
+      [
+        "BGISEQ",
+        "0.74%",
+        "2.46%",
+        "3.16%",
+        "9,502"
+      ],
+      [
+        "OXFORD_NANOPORE",
+        "2.55%",
+        "1.19%",
+        "1.65%",
+        "18,307"
+      ],
+      [
+        "PACBIO_SMRT",
+        "2.18%",
+        "1.98%",
+        "2.01%",
+        "28,602"
+      ],
+      [
+        "ION_TORRENT",
+        "1.25%",
+        "0.15%",
+        "0.04%",
+        "7,537"
+      ],
+      [
+        "ELEMENT",
+        "0.21%",
+        "0.15%",
+        "0.33%",
+        "1,014"
+      ],
+      [
+        "ULTIMA",
+        "0.01%",
+        "0.06%",
+        "0.06%",
+        "37"
+      ]
+    ]
+  },
+  {
+    "type": "p",
+    "text": "Raw labels remain separate. DNBSEQ/BGISEQ cannot simply be renamed a manufacturer market share. Platform×model×source×strategy joints distinguish MiSeq community/genomic amplicons from high-throughput genomic/transcript work. For example, MiSeq METAGENOMIC/AMPLICON has 4,854,104 stock runs across 49,876 studies, while NovaSeq 6000 VIRAL RNA/AMPLICON has 4,287,045 runs across 142 studies. Similar run totals do not imply equally broad demand. Concentration and recent public release help interpret historical or emerging platforms. [Archive metadata](https://www.ebi.ac.uk/ena/portal/api/)"
+  },
+  {
+    "type": "p",
+    "text": "Raw organism rankings bring human/mouse, microbial isolates and communities into view, together with substantial plant and animal research. Wheat, rice, cotton, livestock, rat and primate labels broaden material considerations. Named organisms, communities, strain or other extended labels, and missing names are shown separately; no strain, subspecies or synonym merge is assumed. These are archive labels, not taxonomically verified species-market ranks."
+  },
+  {
+    "type": "p",
+    "text": "Library_selection is absent from the frozen projection. Separate 14 October run-only marginals total 44,218,009 stock and 5,872,258 annual-increment runs. Leading stock labels are pcr 36.99%, random 18.75% and cdna 13.53%; annual increment is pcr 38.45%, random 20.65% and cdna 13.15%. They describe broad selection labels, not complete preparation or measured file structure; they are not joined to the frozen base/study statistics. [Selection-field counts](https://www.ebi.ac.uk/ena/portal/api/count)"
+  },
+  {
+    "type": "h1",
+    "text": "What the China archive view can and cannot compare"
+  },
+  {
+    "type": "table",
+    "headers": [
+      "Source and vintage",
+      "Actual finding",
+      "Limit"
+    ],
+    "rows": [
+      [
+        "CNSA live chart retrieved 15Oct 2026, September point",
+        "339,790 public runs;1,352,228 total runs",
+        "Current-vintage holdings point; not a verified first-release or immutable month-end census."
+      ],
+      [
+        "CNSA current model table",
+        "Explicit Samples/Experiments/Runs; T1:393,676 runs;BGISEQ500:244,358;G400:114,987;T7:74,348;NovaSeq 6000:84,521",
+        "Unfiltered population; public subset/cutoff/geography unresolved. First 25 of 62 models retrieved."
+      ],
+      [
+        "GSA publication, December 2024 statistics",
+        "GSA965,023 archived runs; GSA-Human 1,248,968. Published open datasets 11,174 and 1,168 respectively.",
+        "Archived/public/open/controlled and dataset/run units differ. Worldwide submissions."
+      ],
+      [
+        "GSA mirrored NCBI holdings, December 2024",
+        "34,456,823 mirrored runs",
+        "Overlap with worldwide archive; never add as extra domestic production."
+      ]
+    ]
+  },
+  {
+    "type": "p",
+    "text": "These official sources show substantial China-hosted sequencing activity and technology/material variety. They do not supply comparable national public platform/assay percentages for the global annual window. The GSA live route failed; its archive-author publication and official news provide valid separate scope findings. A 100 PB submitted-holdings announcement is not public FASTQ bytes. Current unfiltered CNSA organism/sample charts are not normalized as public or domestic-production shares. Reused source retrieval dates are preserved; no new national census was attempted. [CNSA statistics and official aggregate endpoints](https://db.cngb.org/cnsa/statistic/) [The GSA Family in 2025](https://academic.oup.com/gpb/article/23/4/qzaf072/8241968) [GSA user-submitted holdings exceed 100 PB](https://ngdc.cncb.ac.cn/news/255)"
+  },
+  {
+    "type": "h1",
+    "text": "What the applied-use survey found"
+  },
+  {
+    "type": "p",
+    "text": "Broad application portfolios, material/industry accounts and operating/deployed service routes were examined separately and cross-checked. This is a purposeful primary-source survey, not a representative sales sample. A provider menu establishes availability; a completed research project, commissioned service, instrument deployment and recurring production claim each establish something different. The [discovery register](survey_discovery_register.csv) records routes, findings, exclusions and unknowns. Sources that mix arrays, proteins, images or generic genetic testing are not all counted as FASTQ demand."
+  },
+  {
+    "type": "p",
+    "text": "**Clinical and reproductive use.** CERTANIA lists arrays alongside sequencing, so its entire reproductive portfolio cannot be treated as read demand. Annoroad’s 15 April 2026 draft filing identifies non-invasive prenatal testing (NIPT) and copy-number sequencing (CNV-seq) solutions supplied to 109 hospitals and 15 independent clinical laboratories by 31 December 2025. These are supplied institutions, not annual tests or runs. NIPT/CNV describes an application; the cited evidence does not establish whether sampling is genome-wide or targeted. NHS WGS, an accredited Ion Torrent laboratory and commercial exome/NGS testing provide separate applied-use support. [CERTANIA portfolio](https://certania.com/services/molecular-diagnostics-and-genomics) [Annoroad 2026 filing](https://www.hkexnews.hk/app/sehk/2026/108447/a132011/sehk26041501668.pdf) [NHS genomic service](https://www.england.nhs.uk/nhs-genomic-medicine-service/) [Targeted laboratory service](https://pmc.ncbi.nlm.nih.gov/articles/PMC10958377/) [Natera 2025 report](https://www.sec.gov/Archives/edgar/data/1604821/000110465926047801/ntra-20251231xars.pdf) [Burning Rock 2025 report](https://ir.brbiotech.com/static-files/c8cee243-84ea-4ac3-b94f-3b76dbabdcc4)"
+  },
+  {
+    "type": "p",
+    "text": "**Population, reference and ecological material.** DArT explicitly offers sequencing-based reduced-representation genotyping; not every genotype report or ecological project necessarily used it. Provider research accounts involve wheat, grape/Vitis, buckwheat and sugarcane genomic/reference work. PIC reports genome information for more than 8,000 elite pigs as an accumulated resource, while a poultry WGS paper and breeding-reference projects are completed research. None is converted into annual species sales. [DArTseq service](https://www.diversityarrays.com/services/dartseq/) [DArT ecological services](https://www.diversityarrays.com/industries/ecologists-and-biodiversity/) [Annoroad 2026 filing](https://www.hkexnews.hk/app/sehk/2026/108447/a132011/sehk26041501668.pdf) [Annoroad research accounts](https://www.annoroad.com/) [PIC genome resource](https://cms.genusplc.com/pic-nz/services/data-capture/) [Poultry WGS research](https://link.springer.com/article/10.1186/s12711-026-01085-2) [Breeding-reference project](https://www.plantbreeding.wur.nl/Solyntus/)"
+  },
+  {
+    "type": "p",
+    "text": "**Environmental and food uses.** China’s environment ministry describes actual aquatic DNA sequencing and a demonstrated 19-section Yangtze application. The exact library/instrument is not established. Food Forensics offers NGS ingredient identification; Hebei reports completed food-authenticity sequencing research separately from digital PCR. These give real sequencing links, while exact target sampling remains unresolved. Generic ecological DNA testing without a sequencing link remains an inquiry. [MEE monitoring account](https://www.mee.gov.cn/ywdt/hjywnews/202603/t20260312_1146462.shtml) [Food Forensics service](https://www.foodforensics.co.uk/technical-solutions/ngs-testing) [Hebei food research](https://scjg.hebei.gov.cn/info/84546) [Food NGS workflow](https://www.thermofisher.com/sg/en/home/industrial/food-beverage/food-authenticity-labeling/ngs-food-screening-species-identification.html)"
+  },
+  {
+    "type": "p",
+    "text": "**Biopharma and modern research.** GenomeScan explicitly offers producer-cell WGS; Eurofins and a China-facing HyQure service advertise NGS characterization. These establish availability, not annual production volumes or all quality-control tests. SeqMatic’s operating services distinguish DNA/RNA, epigenomics, spatial and single-cell workflows, with 10x/Parse as workflow suppliers rather than sequencer manufacturers. Applied company research corroborates some tagged/functional library uses. [GenomeScan service](https://genomescan.nl/genetic-characterization/) [HyQure service](https://www.hyqure.com/gmp-ngs-services) [Eurofins BPT services](https://www.eurofins.com/en/biopharma-services/biopharma-product-testing/services/next-generation-sequencing-ngs/) [SeqMatic portfolio](https://www.seqmatic.com/services/) [Company single-cell research](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE292621) [Company CUT&RUN research](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM7883167)"
+  },
+  {
+    "type": "p",
+    "text": "**Scale and technology direction.** Novogene reports 45,885.51 TB of produced sequence in FY2025, defining 1 TB as 10¹² bases: consolidated worldwide output, not storage bytes or China-only production. Named provider operation supports Ultima alongside established short/long-read families. MGI reports CycloneSEQ installations at two named China service sites. Roche’s dated 29 June 2026 SBX launch and July financial disclosure are more specific in time than an undated generic development footnote, but launch/research collaboration still does not establish broad production. These are scoped business/research reasons for technology attention, not novelty or corporate-size arguments. [Novogene 2025 report](https://static.cninfo.com.cn/finalpage/2026-04-15/1225103513.PDF) [SeqMatic portfolio](https://www.seqmatic.com/services/) [CycloneSEQ installations](https://www.mgi-tech.com/mgi-news/945.html) [Roche June launch](https://www.roche.com/investors/updates/inv-update-2026-06-29) [Roche July results](https://www.roche.com/media/releases/med-cor-2026-07-23) [Undated Roche page](https://diagnostics.roche.com/global/en/products/product-category/lab-type/sequencing.html) [SBX research presentations](https://diagnostics.roche.com/se/en/diagnostics-insights/introductory-sequencing-by-expansion-webinar.html)"
+  }
+]

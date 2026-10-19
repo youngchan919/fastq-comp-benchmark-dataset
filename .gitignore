@@ -1,0 +1,6 @@
+downloads/
+prepared/
+__pycache__/
+*.pyc
+*.part
+.build/
