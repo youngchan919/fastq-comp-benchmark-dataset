@@ -211,7 +211,7 @@
   },
   {
     "type": "p",
-    "text": "Raw labels remain separate. DNBSEQ/BGISEQ cannot simply be renamed a manufacturer market share. Platform×model×source×strategy joints distinguish MiSeq community/genomic amplicons from high-throughput genomic/transcript work. For example, MiSeq METAGENOMIC/AMPLICON has 4,854,104 stock runs across 49,876 studies, while NovaSeq 6000 VIRAL RNA/AMPLICON has 4,287,045 runs across 142 studies. Similar run totals do not imply equally broad demand. Concentration and recent public release help interpret historical or emerging platforms. [Archive metadata](https://www.ebi.ac.uk/ena/portal/api/)"
+    "text": "Raw labels remain separate. DNBSEQ/BGISEQ cannot simply be renamed a manufacturer market share. Platform, model, source and strategy combinations distinguish MiSeq community/genomic amplicons from high-throughput genomic/transcript work. For example, MiSeq METAGENOMIC/AMPLICON has 4,854,104 stock runs across 49,876 studies, while NovaSeq 6000 VIRAL RNA/AMPLICON has 4,287,045 runs across 142 studies. Similar run totals do not imply equally broad demand. Concentration and recent public release help interpret historical or emerging platforms. [Archive metadata](https://www.ebi.ac.uk/ena/portal/api/)"
   },
   {
     "type": "p",
@@ -219,7 +219,7 @@
   },
   {
     "type": "p",
-    "text": "Library_selection is absent from the frozen projection. Separate 14 October run-only marginals total 44,218,009 stock and 5,872,258 annual-increment runs. Leading stock labels are pcr 36.99%, random 18.75% and cdna 13.53%; annual increment is pcr 38.45%, random 20.65% and cdna 13.15%. They describe broad selection labels, not complete preparation or measured file structure; they are not joined to the frozen base/study statistics. [Selection-field counts](https://www.ebi.ac.uk/ena/portal/api/count)"
+    "text": "Library_selection is absent from the saved metadata extract. Separate 14 October separately retrieved run counts total 44,218,009 stock and 5,872,258 annual-increment runs. Leading stock labels are pcr 36.99%, random 18.75% and cdna 13.53%; annual increment is pcr 38.45%, random 20.65% and cdna 13.15%. They describe broad selection labels, not complete preparation or measured file structure; they are not joined to the saved base/study statistics. [Selection-field counts](https://www.ebi.ac.uk/ena/portal/api/count)"
   },
   {
     "type": "h1",

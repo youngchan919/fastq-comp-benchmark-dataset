@@ -13,10 +13,10 @@ args = parser.parse_args()
 translations = json.loads(args.translations.read_text(encoding='utf-8'))
 worksheet_names = {
     'fa': '参考序列', 'fq': '数据集', 'Files': '文件', 'Reasons': '选择理由',
-    'Coverage': '覆盖', 'Materials': '材料', 'Technology': '技术', 'Evidence': '证据',
+    'Details': '详细信息', 'Coverage': '覆盖', 'Materials': '材料', 'Technology': '技术', 'Evidence': '证据',
     'Archive totals': '归档总量', 'Archive strategy': '归档策略',
     'Archive platforms': '归档平台', 'Archive sources': '归档来源',
-    'Archive layout': '归档布局', 'Archive organisms': '归档生物',
+    'Archive layout': '归档布局', 'Archive organisms': '归档生物', 'Verification': '核验记录',
     'Archive joints': '归档联合统计', 'Read me': '阅读说明',
 }
 with zipfile.ZipFile(args.workbook) as source:
@@ -38,7 +38,7 @@ with zipfile.ZipFile(args.workbook) as source:
             if len(nodes) != 1:
                 raise ValueError(f'Expected one text node for merged label: {item_text!r}')
             nodes[0].text = translations[item_text]
-    cell = next(cell for cell in worksheet.findall('.//m:c', ns) if cell.get('r') == 'A8')
+    cell = next(cell for cell in worksheet.findall('.//m:c', ns) if cell.get('r') == 'A9')
     shared_index = int(cell.find('m:v', ns).text)
     shared_item = shared.findall('m:si', ns)[shared_index]
     shared_text = ''.join(node.text or '' for node in shared_item.findall('.//m:t', ns))

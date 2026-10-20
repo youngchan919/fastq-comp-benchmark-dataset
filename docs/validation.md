@@ -1,11 +1,15 @@
-# Validation scope
+# What has been checked?
 
-[English home](../README.md) · [简体中文](../zh-CN/)
+[Home](../README.md) · [Dated file checks](../checksums/README.md)
 
-The local inventory contains 52 datasets, 115 source objects (114 gzip FASTQ files and one BAM), 1,419,456,345,104 listed source bytes and 18 versioned reference proposals. There are 73 publisher-MD5 expectations and 42 size-only expectations. Known selected-source sequence totals exclude Data6 and Data8.
+There are three separate checks:
 
-All 35 local package checks passed: manifest/catalogue/download-plan parity, exact file names and routes, quantities, current dataset/reference mappings, actual XLSX and DOCX content, internal links, complete multi-run file lists and public navigation. All nine synthetic functional tests passed. They exercise planning, local verification/resume behavior and the pinned BAM export rule, including missing-quality rejection. No real source BAM was processed by these tests.
+- **The catalogue:** file identities, expected sizes/checksums, reference versions, reported amounts and all required mates/runs are consistent across the manifest, tables, workbook and downloader.
+- **Downloaded files:** the dated verification table reports whole-file publisher-MD5 matches separately from size-only checks, unfinished downloads and files awaiting verification. A final filename or size alone does not certify contents.
+- **Preparation and compression:** gzip decompression and the real BAM export have not produced verified benchmark FASTQs here. No compression ratio or throughput result is claimed.
 
-Sample worksheet cells were rendered from the actual XLSX values with local fonts and configured widths; no sampled text overflow was found. These checks are not native Excel rendering or Word pagination proof.
+Ten tiny synthetic software tests pass. They cover catalogue planning, local verification, rejection of bad checksums, the bounded proxy retry and the fixed BAM export policy. A local HTTPS/proxy test also confirmed recovery from one transient CONNECT503 error with certificate checking enabled. These tests do not authenticate real sequencing data.
 
-The package does not certify source availability, whole-file integrity, source/reference compatibility, complete-library distributions or compression performance. Saved prefix observations are identified individually and are nonrandom. References remain metadata-level proposals. Data6 still requires applicable real-source preparation; Data8 has unknown exact whole-file yield and no publisher checksum. Author attribution and package license choice remain pending.
+Document checks inspect the actual XLSX/DOCX contents and links. Sample cell views use local fonts and configured widths; they are not native Excel or Word page rendering. The English and Chinese files must preserve the same scientific identities and quantities. Language review does not substitute for data checks or human approval of every sentence.
+
+Suggested references still need content and sample/strain/target checks. Data 6 needs the specified real-source export; Data 8 has no publisher MD5 and unknown exact whole-file yield. Neither a version number nor a source listing removes these limits.

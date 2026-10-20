@@ -12,15 +12,15 @@ Data8 contains one SINGLE CNGB object, `WY_reads.fq.gz`. It is not a pair or two
 
 ## Verify acquired sources before testing
 
-The shared downloader writes its planned objects and per-file verification status. For 73 source objects it has publisher MD5 and listed size; 42 have size-only expectations. Neither a catalogue entry nor a successful request implies completed verification. Where no publisher checksum exists, record a local SHA-256 for subsequent reproducibility, recognizing that a local hash alone does not independently authenticate the publisher's content.
+The shared downloader lists the files and reports their verification status. For 73 files it has a publisher MD5 and listed size; 42 have no recorded publisher checksum. Neither a catalogue entry nor a successful request implies completed verification. Where no publisher checksum exists, record a local SHA-256 for subsequent reproducibility, recognizing that a local hash alone does not independently authenticate the publisher's content.
 
 The reference table distinguishes versioned source pages from proposed direct FASTA routes. Reference size/checksum information is incomplete; a first-character FASTA check is not a full-file or accession-identity check. Confirm full FASTA integrity, the pinned version and the relationship to the chosen sample before a reference-based comparison. Mixed communities and feature libraries do not receive invented single-genome references. Spatial masks/coordinates and CITE feature definitions are needed for particular interpretation or custom matching, not generic byte-identical compression.
 
 ## Gzip sources: uncompressed FASTQ is the benchmark target
 
-**Benchmark inputs are uncompressed FASTQ bytes.** Downloaded gzip files are source containers, not inputs to the compressors being compared. Decompress each listed source separately, preserving every header, sequence, quality character, record, order and formatting byte. Do not concatenate mates, runs or chunks; do not trim, normalize, reformat or recompress the prepared FASTQ.
+**Benchmark inputs are uncompressed FASTQ bytes.** Downloaded gzip files are download containers, not inputs to the compressors being compared. Decompress each listed source separately, preserving every header, sequence, quality character, record, order and formatting byte. Do not concatenate mates, runs or chunks; do not trim, normalize, reformat or recompress the prepared FASTQ.
 
-After source-container verification, run the following Bash commands for each exact listed file. This example prepares one maize mate; repeat separately for its other mate and every other selected gzip source, using the corresponding paths. Use fresh output names. Successful `gzip -t` and `gzip -dc` require a complete gzip stream with valid CRC/length checks; an error or truncation stops the workflow. A failed `.part` output is not a benchmark input.
+After downloaded-file verification, run the following Bash commands for each exact listed file. This example prepares one maize mate; repeat separately for its other mate and every other selected gzip source, using the corresponding paths. Use fresh output names. Successful `gzip -t` and `gzip -dc` require a complete gzip stream with valid CRC/length checks; an error or truncation stops the workflow. A failed `.part` output is not a benchmark input.
 
 ```bash
 set -euo pipefail
@@ -38,7 +38,7 @@ wc -c -- "$output_fastq"
 sha256sum -- "$source_gz" "$output_fastq"
 ```
 
-Record the gzip version, exact commands, source identity and source checksum, output byte count and output SHA-256 in the preparation receipt. The source gzip checksum and prepared FASTQ hash identify different byte streams; neither substitutes for the other. Compression ratios and throughput must use the prepared uncompressed FASTQ byte count as their input denominator. No real source decompression was performed during packaging.
+Record the gzip version, exact commands, source identity and source checksum, output byte count and output SHA-256 in the preparation log. The source gzip checksum and prepared FASTQ hash identify different byte streams; neither substitutes for the other. Compression ratios and throughput must use the prepared uncompressed FASTQ byte count as their input denominator. No real source decompression was performed during packaging.
 
 ## Data6: pinned BAM-to-FASTQ rule
 
@@ -50,7 +50,7 @@ The included [prepare_data6.py](../prepare_data6.py) requires **SAMtools 1.22 wi
 2. Keep primary records, excluding secondary/supplementary flags `0x900`. Mapped and unmapped primary records are eligible. This rule expects unpaired records with stored sequence and quality.
 3. Stop if primary records have paired/READ1/READ2 flags, duplicate QNAMEs, missing SEQ or missing QUAL. These conditions require an explicit preparation decision; the script does not silently discard them or synthesize qualities.
 4. Run `samtools fastq -@ 0 -n -F 0x900` on the name-sorted BAM. Retain QNAME without added mate suffixes or copied tags. Use stored QUAL, without the OQ preference option. SAMtools converts reverse-strand alignments back to forward FASTQ orientation.
-5. Write one plain `Data_6.fastq` and `preparation.json`. The receipt records the exact tool, source/output SHA-256, sizes, selected-record count and ordering/quality policy. Check the generated record count against the declared primary-record policy.
+5. Write one plain `Data_6.fastq` and `preparation.json`. The log records the exact tool, source/output SHA-256, sizes, selected-record count and ordering/quality policy. Check the generated record count against the declared primary-record policy.
 
 This is a fixed preparation choice, not native instrument order. Stored soft-clipped sequence can be exported; hard-clipped sequence absent from the BAM cannot be recovered. The real BAM's applicability and exact output yield remain **unexecuted/unverified**. Consult the pinned [fastq documentation](https://www.htslib.org/doc/1.22/samtools-fasta.html) and [sort documentation](https://www.htslib.org/doc/1.22/samtools-sort.html).
 

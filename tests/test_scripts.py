@@ -3,12 +3,13 @@ import hashlib
 import importlib.util
 import io
 import json
+import os
 from pathlib import Path
 import subprocess
 import sys
 import tempfile
 import unittest
-from unittest.mock import patch
+from unittest.mock import Mock, patch
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -81,6 +82,40 @@ class CatalogueAndDownloader(unittest.TestCase):
             self.assertEqual(result['status'], 'failed')
             self.assertEqual(partial.read_bytes(), b'test')
             self.assertFalse((root / 'toy.gz').exists())
+
+    def test_proxy_CONNECT_retry_is_bounded_and_uses_current_attempt(self):
+        proxy_error = b'Proxy tunneling failed: Service UnavailableUnable to establish SSL connection.\n'
+        for case, signals, old_log, calls, success in [
+                ('transient', [proxy_error, b''], b'', 2, True),
+                ('permanent', [proxy_error, proxy_error], b'', 2, False),
+                ('unrelated', [b'Connection timed out\n'], b'', 1, False),
+                ('stale', [b'Connection timed out\n'], proxy_error, 1, False)]:
+            with self.subTest(case=case), tempfile.TemporaryDirectory() as tmp:
+                root = Path(tmp)
+                data = b'synthetic transfer fixture\n'
+                job = dict(path='toy.gz', filename='toy.gz', kind='data', size=len(data),
+                           md5=hashlib.md5(data).hexdigest(), url='https://example.invalid/toy')
+                log = root / 'logs/toy.gz.wget.log'
+                log.parent.mkdir()
+                log.write_bytes(old_log)
+                pending = list(signals)
+                def start(command, **kwargs):
+                    self.assertEqual(kwargs['env']['LC_ALL'], 'C')
+                    self.assertEqual(kwargs['env'].get('PATH'), os.environ.get('PATH'))
+                    signal = pending.pop(0)
+                    kwargs['stderr'].write(signal)
+                    if not signal:
+                        Path(command[command.index('--output-document') + 1]).write_bytes(data)
+                    process = Mock()
+                    process.wait.return_value = 4 if signal else 0
+                    return process
+                downloader = self.module.Downloader(root, 1)
+                with patch.object(self.module.subprocess, 'Popen', side_effect=start) as launch, \
+                        patch.object(downloader.stopped, 'wait', return_value=False):
+                    result = downloader.one(job)
+                self.assertEqual(launch.call_count, calls)
+                self.assertEqual(result['status'], 'downloaded' if success else 'failed')
+                self.assertEqual((root / 'toy.gz').exists(), success)
 
     def test_synthetic_reference_header_check(self):
         with tempfile.TemporaryDirectory() as tmp:

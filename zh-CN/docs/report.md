@@ -1,31 +1,30 @@
-# 构建公开的 FASTQ 压缩基准
+# FASTQ 无损压缩基准数据集
 
-全球与中国证据、一个公开集合及准备要求 • 2026年10月19日
+数据集版本 1.0.0 · 2026 年 10 月 20 日
 
-本报告描述了用于无损 FASTQ 压缩测试的公开集合。公开归档分布以及有记录的应用/研究用途确定了工作负载优先级；选择原则再将这些需求对应到具体输入。
+这份数据集用于测试 FASTQ 文件的无损压缩和解压。我们选择了 52 组公开数据，覆盖常见的测序技术和用途。每组数据都给出选择理由、下载地址和使用方法。这个仓库只保存清单和说明，测序文件需要另外下载。
 
-目标是以具有代表性的现实数据量，测试有实际意义的输入类型。一个完整命名的文库可能包含多个配对 run；有文档记录的 flow cell、条码或 lane 输出也可以是自然的交付单位。没有规定较小输入更好，也没有要求每个生物样本都必须纳入其所有制备类型。来源研究的数据量为所选示例提供背景，但不能证明整个市场的生产规范。Data ID 用来标识报告和工作簿中的当前输入。
+| 项目 | 数量 |
+| --- | --- |
+| 数据集 | 52（51 组 FASTQ 数据，另有 1 个 BAM 源文件） |
+| 待下载文件 | 115（114 个 gzip FASTQ 文件和 1 个 BAM 文件） |
+| 清单所列下载总字节数 | 1,419,456,345,104 |
+| 建议的参考序列版本 | 18 |
 
-一条 FASTQ 记录保存读段名称、序列字母，以及每个碱基对应的一个编码质量字符。无损解压必须还原所选输入的确切字节，包括名称、序列、质量值、顺序和格式。一个 150 碱基读段含有 150 个质量位置；一个文件在这些位置上可能使用 4 种或 39 种不同的质量字符。频率同样重要：众数占比是指在已检查的质量位置中，最常见质量字符所占的百分比。这些汇总值并不测量压缩程序的性能。
-
-仅为未压缩 FASTQ 字节数；下载的 gzip 对象是来源容器，并非基准输入。
-
-美国国家生物技术信息中心序列读取档案（SRA）和欧洲核苷酸档案（ENA）将公开测序提交整理为项目、样本、实验和 run。档案计数反映公开提交，不等于全部生产活动。这里的一个数据集是明确声明的完整输入单位，其中每个 run、配对端或分块均单独列出。部分压缩程序会用参考序列位置和差异来编码匹配的序列片段，因此参考序列的身份、版本及其与读段的匹配关系可能影响数据表示和压缩效果。并非所有压缩程序都需要参考序列。
-
-四类证据视图用于形成选择：全球归档、全球应用/商业用途、中国托管归档及中国应用/商业用途。全球视图包含中国，因此不能将四者相加。归档截止日期为2026年9月30日。以下调查结果保留各自标明的来源和检索日期。
+公平的无损压缩测试，必须逐字节恢复未压缩 FASTQ，包括读段名称、序列、质量字符、顺序和格式。下载得到的 gzip 文件须先解压；唯一的 BAM 输入则须按准备说明中的固定规则导出。下载文件大小既不是未压缩 FASTQ 的大小，也不是压缩结果。
 
 # 年度公开归档视图所能说明的内容
 
-固定截止日为 2026 年 9 月 30 日。存量包含 2026 年 10 月 1 日以前所有首次公开的记录；年度增量覆盖 2025 年 10 月 1 日至 2026 年 9 月 30 日。已验证的快照于 2026 年 10 月 9 日获取。run 数量反映归档单位；报告的碱基数反映声明的序列量；已知的独立研究数则表示研究覆盖广度。公开日期不等同于测序/碱基识别日期，且不同类别的研究数不能相加。[档案元数据](https://www.ebi.ac.uk/ena/portal/api/)
+固定截止日为 2026 年 9 月 30 日。存量包含 2026 年 10 月 1 日以前所有首次公开的记录；年度增量覆盖 2025 年 10 月 1 日至 2026 年 9 月 30 日。已验证的快照于 2026 年 10 月 9 日获取。运行数量反映归档单位；报告的碱基数反映声明的序列量；已知的独立研究数则表示研究覆盖广度。公开日期不等同于测序/碱基识别日期，且不同类别的研究数不能相加。[档案元数据](https://www.ebi.ac.uk/ena/portal/api/)
 
 | 时间窗 | 运行数 | 报告为10¹⁵个碱基 | 已知研究数 | 生物名称和运行数缺失 |
 | --- | --- | --- | --- | --- |
 | 存量 | 44,218,223 | 102.7062 | 703,005 | 3.82% |
 | 年度增量 | 5,872,478 | 23.5313 | 114,478 | 23.18% |
 
-存量中有 378 个碱基数缺失/无效条目，以及 1,939,374 个报告为零碱基的 run；年度增量中有 400,864 个零碱基 run。存量中 359,717 个 run 缺少研究标签，年度增量中则有 684 个。存量 run 有 3.82% 缺少生物名称，年度增量 run 有 23.18% 缺少生物名称；排名旁仍显示缺失物种名的比例。确切总量和字段分布见[工作簿](../catalogue/benchmark_dataset.xlsx)。
+存量中有 378 个碱基数缺失/无效条目，以及 1,939,374 个报告为零碱基的测序运行；年度增量中有 400,864 个零碱基测序运行。存量中 359,717次测序运行缺少研究标签，年度增量中则有 684 个。存量测序运行有 3.82% 缺少生物名称，年度增量测序运行有 23.18% 缺少生物名称；排名旁仍显示缺失物种名的比例。确切总量和字段分布见[工作簿](../catalogue/benchmark_dataset.xlsx)。
 
-档案中的检测标签对应不同取样方式：全基因组测序（WGS）覆盖整个基因组；外显子组测序（WXS）针对编码区；RNA-Seq 对转录本取样；扩增子测序聚焦特定区域。这些标签并未完整说明制备方式。Source 表示大类材料，selection 表示文库如何选取，layout 则区分单端和双端读段。必须结合这些字段判断。
+档案中的检测标签对应不同取样方式：全基因组测序（WGS）覆盖整个基因组；外显子组测序（WXS）针对编码区；RNA-Seq 对转录本取样；扩增子测序聚焦特定区域。这些标签并未完整说明制备方式。来源字段表示大类材料，文库选择方式表示文库如何选取，读段布局则区分单端和双端读段。必须结合这些字段判断。
 
 | 策略 | 存量运行数 | 存量碱基份额 | 年度增量运行 | 已知存量研究数 |
 | --- | --- | --- | --- | --- |
@@ -42,7 +41,7 @@
 | CLONE | 292,776 | 0.02% | 1,861 | 979 |
 | ATAC 测序 | 285,961 | 1.52% | 50,460 | 9,288 |
 
-WGS 和 RNA-Seq 合计占报告碱基数的大部分；扩增子占存量 run 的 41.52%，但只占碱基数的 4.66%。RAD/GBS 以及捕获/功能性文库也覆盖了有意义的研究范围。配对布局占存量 run 的 77.08%，占碱基数的 91.19%。没有任何单一统计量能决定输入数量；run 数、碱基数和研究数分别回答不同问题。
+WGS 和 RNA-Seq 合计占报告碱基数的大部分；扩增子占存量测序运行的 41.52%，但只占碱基数的 4.66%。RAD/GBS 以及捕获/功能性文库也覆盖了有意义的研究范围。配对布局占存量测序运行的 77.08%，占碱基数的 91.19%。没有任何单一统计量能决定输入数量；运行数、碱基数和研究数分别回答不同问题。
 
 | 原始平台标签 | 存量运行份额 | 存量碱基份额 | 年度碱基份额 | 已知存量研究数 |
 | --- | --- | --- | --- | --- |
@@ -55,18 +54,18 @@ WGS 和 RNA-Seq 合计占报告碱基数的大部分；扩增子占存量 run �
 | ELEMENT | 0.21% | 0.15% | 0.33% | 1,014 |
 | ULTIMA | 0.01% | 0.06% | 0.06% | 37 |
 
-原始标签继续分别保留。不能简单地把 DNBSEQ/BGISEQ 改写成制造商市场份额。平台×机型×来源×策略联合统计，可以区分 MiSeq 社区/基因组扩增子与高通量基因组/转录本工作。例如，MiSeq METAGENOMIC/AMPLICON 有 49,876 项研究中的 4,854,104 个存量 run；而 NovaSeq 6000 VIRAL RNA/AMPLICON 有 142 项研究中的 4,287,045 个 run。run 总数相似，不代表需求同样广泛。集中度和近期公开记录有助于理解历史平台或新兴平台。[档案元数据](https://www.ebi.ac.uk/ena/portal/api/)
+原始平台标签分别保留，不能直接把 DNBSEQ/BGISEQ 计数称为厂商市场份额。结合平台、型号、来源和策略，可以区分 MiSeq 上的群落/基因组扩增子工作与高通量基因组/转录组工作。例如，MiSeq METAGENOMIC/AMPLICON 有 49,876 项研究、4,854,104 个存量测序运行；NovaSeq 6000 VIRAL RNA/AMPLICON 则有 142 项研究、4,287,045次测序运行。运行数相近并不表示需求覆盖面相同。数据集中于少数研究，或近期公开记录增加，都有助于判断平台是历史常用还是正在兴起。[档案元数据](https://www.ebi.ac.uk/ena/portal/api/)
 
 原始生物名称排名显示了人类/小鼠、微生物分离株和群落，也显示植物和动物研究数量可观。小麦、水稻、棉花、家畜、大鼠和灵长类标签拓宽了材料考量范围。具名生物、群落、菌株或其他扩展标签，以及缺失名称的条目分别展示；不会擅自合并菌株、亚种或同义名。这些是档案标签，不是经分类学验证的物种市场排名。
 
-冻结的字段投影中没有 Library_selection。10 月 14 日单独获取的 run 数边际统计显示，存量为 44,218,009 个 run，年度增量为 5,872,258 个 run。存量的主要标签为 pcr 36.99%、random 18.75% 和 cdna 13.53%；年度增量分别为 pcr 38.45%、random 20.65% 和 cdna 13.15%。这些是宽泛的选择标签，并不说明完整制备或实测文件结构，也没有与冻结数据中的碱基/研究统计做联合分析。[选择字段计数](https://www.ebi.ac.uk/ena/portal/api/count)
+保存的元数据提取结果中没有 library_selection 字段。另于 10 月 14 日单独获取的测序运行数显示，存量共 44,218,009次测序运行，年度增量共 5,872,258 个。存量中占比较高的标签为 pcr（36.99%）、random（18.75%）和 cdna（13.53%）；年度增量中分别为 38.45%、20.65% 和 13.15%。这些宽泛标签并不说明完整制备方式或文件的实测结构，也未与保存的碱基数/研究数统计合并分析。[选择字段计数](https://www.ebi.ac.uk/ena/portal/api/count)
 
 # 中国归档视图能够和不能比较的内容
 
 | 来源及版本日期 | 实际发现 | 限制 |
 | --- | --- | --- |
 | CNSA 实时图表，2026年10月15日检索，显示9月数据点 | 339,790次公开运行；总运行数1,352,228。 | 当前版本的存量数据点；并非已核实的首次发布日期或不可变的月末普查。 |
-| CNSA 当前型号表 | 明确列出 Samples/Experiments/Runs；T1：393,676次运行；BGISEQ500：244,358；G400：114,987；T7：74,348；NovaSeq 6000：84,521。 | 未筛选总体；公开子集/截止日期/地理范围尚未确定。已获取62个型号中的前25个。 |
+| CNSA 当前型号表 | 明确列出 样本数/实验数/运行数；T1：393,676次运行；BGISEQ500：244,358；G400：114,987；T7：74,348；NovaSeq 6000：84,521。 | 未筛选总体；公开子集/截止日期/地理范围尚未确定。已获取62个型号中的前25个。 |
 | GSA 发布的2024年12月统计 | GSA 有965,023次归档运行；GSA-Human 有1,248,968次。已发布的开放数据集分别为11,174和1,168个。 | 归档、公开、开放、受控等状态及数据集/运行等单位各不相同。全球提交数据。 |
 | GSA 镜像 NCBI 持有数据，2024年12月 | 34,456,823次镜像运行。 | 与全球归档重叠；不得将其作为额外国内产量相加。 |
 
@@ -76,7 +75,7 @@ WGS 和 RNA-Seq 合计占报告碱基数的大部分；扩增子占存量 run �
 
 我们分别考察并交叉核查了广泛的应用组合、材料/行业记录，以及实际运营/已部署的服务路径。这是有明确目的的一手来源调查，并非具有代表性的销售抽样。供应商菜单证明服务可用；已完成研究、受委托服务、仪器部署和持续生产声明，分别能证明不同事项。[发现登记表](../../evidence/survey_discovery_register.csv)记录了检索路径、发现、排除项和未知情况。涉及芯片、蛋白质、图像或一般遗传检测的来源，并不都计为 FASTQ 需求。
 
-**临床与生殖用途。**CERTANIA 同时列出芯片和测序，因此不能把其整个生殖产品组合都视为读段数据需求。Annoroad 于 2026 年 4 月 15 日提交的招股草案显示，截至 2025 年 12 月 31 日，其无创产前检测（NIPT）和拷贝数测序（CNV-seq）解决方案已提供给 109 家医院和 15 家独立临床实验室。这些数字是服务机构数，不是年度检测数或 run 数。NIPT/CNV 描述的是应用用途；引用证据并未说明取样是全基因组还是靶向。NHS WGS、获认可的 Ion Torrent 实验室以及商业外显子组/NGS 检测则提供了其他实际用途证据。[CERTANIA 产品组合](https://certania.com/services/molecular-diagnostics-and-genomics) [Annoroad 2026 年申报文件](https://www.hkexnews.hk/app/sehk/2026/108447/a132011/sehk26041501668.pdf) [NHS 基因组服务](https://www.england.nhs.uk/nhs-genomic-medicine-service/) [靶向实验室服务](https://pmc.ncbi.nlm.nih.gov/articles/PMC10958377/) [Natera 2025 年报告](https://www.sec.gov/Archives/edgar/data/1604821/000110465926047801/ntra-20251231xars.pdf) [Burning Rock 2025 年报告](https://ir.brbiotech.com/static-files/c8cee243-84ea-4ac3-b94f-3b76dbabdcc4)
+**临床与生殖用途。**CERTANIA 同时列出芯片和测序，因此不能把其整个生殖产品组合都视为读段数据需求。Annoroad 于 2026 年 4 月 15 日提交的招股草案显示，截至 2025 年 12 月 31 日，其无创产前检测（NIPT）和拷贝数测序（CNV-seq）解决方案已提供给 109 家医院和 15 家独立临床实验室。这些数字是服务机构数，不是年度检测数或 运行数。NIPT/CNV 描述的是应用用途；引用证据并未说明取样是全基因组还是靶向。NHS WGS、获认可的 Ion Torrent 实验室以及商业外显子组/NGS 检测则提供了其他实际用途证据。[CERTANIA 产品组合](https://certania.com/services/molecular-diagnostics-and-genomics) [Annoroad 2026 年申报文件](https://www.hkexnews.hk/app/sehk/2026/108447/a132011/sehk26041501668.pdf) [NHS 基因组服务](https://www.england.nhs.uk/nhs-genomic-medicine-service/) [靶向实验室服务](https://pmc.ncbi.nlm.nih.gov/articles/PMC10958377/) [Natera 2025 年报告](https://www.sec.gov/Archives/edgar/data/1604821/000110465926047801/ntra-20251231xars.pdf) [Burning Rock 2025 年报告](https://ir.brbiotech.com/static-files/c8cee243-84ea-4ac3-b94f-3b76dbabdcc4)
 
 **群体、参考序列与生态材料。**DArT 明确提供基于测序的简化代表性基因分型服务；但并非每份基因型报告或生态项目都必然采用了这种方法。供应商的研究记录涉及小麦、葡萄/Vitis、荞麦和甘蔗的基因组/参考序列工作。PIC 报告其累计资源中包含 8,000 多头优良猪的基因组信息；另有家禽 WGS 论文和育种参考序列项目记录了已完成的研究。这些信息都不应换算成年度物种销售量。[DArTseq 服务](https://www.diversityarrays.com/services/dartseq/) [DArT 生态服务](https://www.diversityarrays.com/industries/ecologists-and-biodiversity/) [Annoroad 2026 年申报文件](https://www.hkexnews.hk/app/sehk/2026/108447/a132011/sehk26041501668.pdf) [Annoroad 研究记录](https://www.annoroad.com/) [PIC 基因组资源](https://cms.genusplc.com/pic-nz/services/data-capture/) [家禽 WGS 研究](https://link.springer.com/article/10.1186/s12711-026-01085-2) [育种参考序列项目](https://www.plantbreeding.wur.nl/Solyntus/)
 
@@ -86,1018 +85,728 @@ WGS 和 RNA-Seq 合计占报告碱基数的大部分；扩增子占存量 run �
 
 **规模与技术方向。**Novogene 报告 FY2025 产出序列为 45,885.51 TB，并将 1 TB 定义为 10¹² 个碱基；这是合并后的全球产出，不是存储字节数，也不是仅中国的产出。具名供应商的运营支持将 Ultima 与成熟的短读长/长读长技术家族一并纳入考虑。MGI 报告了 CycloneSEQ 在中国两个具名服务点的安装情况。Roche 于 2026 年 6 月 29 日发布 SBX，且在 7 月披露财务信息；这些有具体日期的材料，比未注明日期的一般研发脚注更适合说明时间背景，但发布或研究合作仍不能证明已广泛投入生产。这些是范围有限的业务/研究依据，不是因为新奇或公司规模而关注某项技术。[Novogene 2025 年报告](https://static.cninfo.com.cn/finalpage/2026-04-15/1225103513.PDF) [SeqMatic 产品组合](https://www.seqmatic.com/services/) [CycloneSEQ 安装情况](https://www.mgi-tech.com/mgi-news/945.html) [Roche 六月发布](https://www.roche.com/investors/updates/inv-update-2026-06-29) [Roche 七月业绩](https://www.roche.com/media/releases/med-cor-2026-07-23) [未注明日期的 Roche 页面](https://diagnostics.roche.com/global/en/products/product-category/lab-type/sequencing.html) [SBX 研究介绍](https://diagnostics.roche.com/se/en/diagnostics-insights/introductory-sequencing-by-expansion-webinar.html)
 
-# 工作负载和具体输入的选择方式
+# 数据集的选择方法
 
-档案中的使用情况和有公开记录的用途，可以说明哪些工作流程重要；即便公开提交较少，可信的已部署或已承诺技术方向也可能值得考虑。之后还需为具体输入确认明确的公开身份、制备方式、用途、参考序列关系和适当序列量。不同的业务目的不一定需要不同文件：一个输入可以满足多项需求；而不同的带标签、转化后、单端/双端、原始/共识表示，可能需要作为不同示例。
+归档统计显示了哪些测序类型较常见，以及各自报告了多少序列量。公开发表的研究、服务和技术部署记录，还能补充归档计数可能遗漏的用途。全球统计已包含中国数据，因此两类统计不能相加。服务目录只能说明服务可提供，不能说明销售规模；作物的经济价值本身也不能证明其测序需求。
 
-代表性数据量应结合相关输入单位和用途评估。Renan 抛光文库和 CHO 基因组文库均包含其所有有记录的输出。每个 CITE 组分都包含所属实验的全部四个输出；ADT、mRNA 和 HTO 仍分别保留。Revio 输入是明确识别的、按条码区分的细胞输出，不能悄悄称为一个完整细胞或该供体的全部文库。一个真实 run 本身不能证明普遍的生产规范，原始碱基数也不能证明可用的比对深度。
-
-应根据这些有文档依据的条件选择公开示例，而不是根据压缩结果、加权分数、预设条目数、物种清单或每个制造商一份文件来挑选。旧有条件若仍有支持其用途的证据，就应保留。公开日期截止 2026 年 9 月 30 日；公开时间与测序/碱基识别日期不同。打包过程中没有下载、导出或基准测试完整源数据/参考序列。已保存的非随机前缀观察均只适用于各自明确标注的对象。
-
-仪器制造商、测序仪家族和文库供应商是不同字段。Illumina 和 MGI 短读长系统通常产生平行且长度相对固定的读段；ONT 纳米孔和 PacBio 单分子系统产生长读长表示。它们通常分别称为第二代和第三代技术。尽管档案标签宽泛地写为 BGISEQ，CycloneSEQ 实际属于 MGI 纳米孔家族。10x、CITE 或空间文库标签本身不能确定测序仪，也不能证明具体化学体系。
-
-| 字段 | 含义及选择后果 |
+| 选择原则 | 本集合中的做法 |
 | --- | --- |
-| Species/material | 人类/模型/作物/微生物参考序列与混合群落各不相同。经济价值本身不能证明测序需求；样本与参考序列是否实际匹配需要另行核查。 |
-| 来源 | 宽泛材料标签：基因组、转录本衍生物、群落或其他类别。宽泛归档标签可能需要文档澄清。 |
-| 策略与选择 | 策略描述预期取样方式；选择策略只是准备标签。WGS、RNA、外显子组/捕获、扩增子、ATAC、ChIP、CUT&RUN 和 Hi-C 不可互换。生殖/CNV 用途本身不能证明采用捕获或扩增子取样。 |
-| 布局和组分 | 单端/双端标签不同于文库完整性。明确列出所有配对端、标签和分块。一个逻辑文库可能由多次运行构成。 |
-| 读长、质量值和标头 | 只有与所保存前缀精确匹配的对象才能说明已测量属性。未预览对象已在 Files 中逐一标明。前缀不是随机抽样，也不代表完整文件分布；字符集合相似不意味着频率相近。 |
-| 参考序列和处理方式 | 确定带版本号的参考序列身份，以及后续 FASTQ 制备和排序。原始 CLR、共识序列、修剪、过滤、合并、格式转换和所提供的恒定质量值都可能改变字节表示。解读用掩膜/特征并非通用无损压缩的自动要求。 |
+| 覆盖重要工作负载 | 结合档案 运行数、报告碱基数、研究覆盖面和有记录的实际用途来判断；不会因为出现某个物种、厂商或用途名称，就自动为其单独增加文件。 |
+| 保留有意义的差异 | 纳入重要的文库、技术、读段和参考序列差异。质量字符种类相近，并不表示字符出现频率也相近；有差异本身也不等于已证明压缩更有优势。 |
+| 选择完整且合适的输入单位 | 合适的输入可以是档案中的一次双端测序运行、一个细胞、一个测序流动槽输出，或一份有名称的多测序运行文库。比较数据量时须考虑任务和输入单位，不要只因文件较小而优先选择。 |
+| 固定输入字节和参考序列 | 列出所有配对文件、测序运行和分块。保持准备后的 FASTQ 字节完全不变，并记录参考序列版本及尚需完成的准备步骤。先确定输入，再测试压缩程序。 |
 
-报告的读数计数沿用来源的统计口径；不使用统一倍数换算成配对读数。报告的序列碱基数与计数并列显示。已知产出量的 50 个 FASTQ 输入，所选源总量为 2,029,937,896,053 个碱基。Data 6（BAM）和 Data 8（CNGB FASTQ）的确切序列碱基数未知，因此都不计入该总量；不以相关分析或 SRA 的产出量替代所选源数据总量。
+来源研究的数据量可帮助判断具体案例是否合适，但不能代表普遍的生产标准。这里没有规定最低文件大小、目标数据集数量或评分，也不声称本集合已是最小可能集合。年度复核后，如果入选理由仍成立，可以保留原有输入。
 
-仅对 URL 完全匹配的文件复用已保存的属性概况。观察到的属性只适用于 Files 表中标出的确切文件，不能据此推断同一文库里的其他文件。Files 工作表标明了哪些确切对象有已保存证据。这里没有测量全文件完整性、配对关系或代表性分布。仅在此前已有记录时列出发布者 MD5；不声称这些校验值由本轮计算。
+工作簿把测序仪厂商与文库方法分开记录。Illumina 和 MGI 常用于平行短读段测序；ONT、CycloneSEQ 和 PacBio 属于单分子长读段技术，通常称为第二代和第三代测序。10x 或 CITE 文库名称本身不能确定测序仪。档案中的策略标签说明取样对象，布局字段则说明采用单端还是双端读段。
 
-# 已覆盖的需求与仍待满足的需求
+集合包含人类及其他生物的基因组测序、整体/小 RNA 和单细胞 RNA、CITE 标签与空间读段、染色质文库、靶向标记、分离株和混合群落。工作簿中的“覆盖”“材料”和“技术”表说明这些用途与入选数据的对应关系；更详细的档案统计和来源说明也列于工作簿中。
 
-## 人类全基因组测序
+报告的序列碱基数、文件大小和 read/spot 计数是不同指标。已知的 50 个 FASTQ 输入合计报告 2,029,937,896,053 个碱基。Data 6 和 Data 8 的准确源序列量未知，因此不计入总数；也没有用相关分析结果或 SRA 数值代替。彼此重叠类别的研究数不作相加。
 
-报告的碱基总量较大、覆盖的研究较广，并且有具体的实际应用服务作为佐证。与按物种或制造商名称平均分配输入相比，这些因素值得给予更多关注。Data ID：1、2、3、4、5、6、7、8。所选示例是公开研究中的代理样本。全文件结构、完整性和代表性均未确定。[全球公开读段档案存量和年度增量](https://www.ebi.ac.uk/ena/portal/api/) [Eurofins 人类 WGS 服务](https://eurofinsgenomics.eu/en/next-generation-sequencing/ngs-built-for-you/inview-genome/inview-whole-genome-sequencing/) [Novogene FY2025 年报](https://static.cninfo.com.cn/finalpage/2026-04-15/1225103513.PDF) [NHS 委托的全基因组服务](https://www.england.nhs.uk/nhs-genomic-medicine-service/) [Annoroad 港交所申报中的业务证明章节](https://www.hkexnews.hk/app/sehk/2026/108447/a132011/sehk26041501668.pdf) [SeqMatic 服务和技术产品组合](https://www.seqmatic.com/services/) [Complete Genomics 服务商网络](https://www.completegenomics.com/products/sequencing-service-providers/)
+# 为什么有些输入较小
 
-## 外显子组、靶向及生殖/拷贝数测序
+有 11 组完整输入的压缩下载总量不足 1 十进制 GB。靶向文库、单个细胞、样本标签或小型基因组都可能是有意义的小输入。应结合其用途判断数据量，而不是设置 1 GB 的最低门槛。小文件可能更受启动和参考序列开销影响，但这里没有测量这类性能差异，也不会通过填充或复制文件来增大输入。
 
-外显子检测、靶向实验室服务，以及公司玉米分析性靶向捕获研究，支持纳入靶向文库覆盖。生殖/CNV 服务可独立证明相关测序应用，但应用目的并不能证明采用了靶向取样，也不能证明文件结构不同于 WGS。Data ID：9、11、12。当前输入覆盖外显子组、人类循环 DNA 靶标以及非人群体捕获。仅凭产前/拷贝数应用名称，无法确定其具体取样方式。[全球公开读段档案存量和年度增量](https://www.ebi.ac.uk/ena/portal/api/) [Annoroad 港交所申报中的业务证明章节](https://www.hkexnews.hk/app/sehk/2026/108447/a132011/sehk26041501668.pdf) [FSANZ 托管的 Corteva 玉米申请材料](https://www.foodstandards.govt.nz/sites/default/files/2023-12/FSANZ%20DP51291%20Dossier%20Redacted_Redacted.pdf) [CERTANIA 分子诊断/基因组学产品组合](https://certania.com/services/molecular-diagnostics-and-genomics) [Natera FY2025 年报](https://www.sec.gov/Archives/edgar/data/1604821/000110465926047801/ntra-20251231xars.pdf) [Ion Torrent 临床实验室实施案例](https://pmc.ncbi.nlm.nih.gov/articles/PMC10958377/) [Burning Rock FY2025 Form 20-F](https://ir.brbiotech.com/static-files/c8cee243-84ea-4ac3-b94f-3b76dbabdcc4)
+# 52 组数据
 
-## 群体基因分型与育种
+请结合[工作簿](../catalogue/benchmark_dataset.xlsx)、[全部文件链接](../catalogue/files.tsv)和[当前核验记录](../checksums/README.md)阅读以下选择理由。数据编号是稳定标识。每组数据分别列出报告序列量和清单中的下载字节数；工作簿“选择理由”表提供简要说明，“详细信息”表保留数量依据、处理注意事项及观察范围。
 
-商业测序服务的可用性和档案证据，共同支持纳入普通 WGS 无法体现的用途。仅凭育种的经济重要性并不足够。Data ID：10、12、13。公开研究中有普通玉米基因组重测序、藜麦 RAD 和针叶树群体捕获的实例。并非所有基因分型都使用测序，也不存在按物种设定的配额。[全球公开读段档案存量和年度增量](https://www.ebi.ac.uk/ena/portal/api/) [DArT 行业导航](https://www.diversityarrays.com/industries/) [DArTseq 服务](https://www.diversityarrays.com/services/dartseq/) [DArT 生态服务](https://www.diversityarrays.com/industries/ecologists-and-biodiversity/) [Annoroad 港交所申报中的业务证明章节](https://www.hkexnews.hk/app/sehk/2026/108447/a132011/sehk26041501668.pdf) [Genus FY2025 年报](https://www.genusplc.com/media/glah32tg/genus-annual-report-2025.pdf) [PIC 基因组数据采集](https://cms.genusplc.com/pic-nz/services/data-capture/)
+## 数据 1：人类全基因组 — MGI G400
 
-## 参考基因组、泛基因组及非模式生物组装
+这组人类全基因组数据展示了常见的 MGI 短读段测序。抽查读段中出现了多种质量字符。与 Data 2、Data 3 一起，它能让压缩程序在同一类人类基因组任务中面对不同的质量字符分布。
 
-参考序列和泛基因组用途将技术与材料及研究目的联系起来。公开物种列表或基因组的经济价值本身不能成为增加文件的理由。Data ID：5、6、7、8、14、15、16、17、18、19、20、21、22。当前输入覆盖人类长读长、小鼠、小麦 Renan、马铃薯短读长、动物和拟南芥核基因组用途。有文档记录的植物 HiFi 处理流程仍未经过 FASTQ 前缀检查。缺少参考序列的非模式生物组装，以及有意采用近缘物种参考序列进行测试，仍是一般覆盖范围的边界问题。Cyclone 全文件产出量及其与相关 SRA 原始数据的字节等价性尚未验证。[全球公开读段档案存量和年度增量](https://www.ebi.ac.uk/ena/portal/api/) [Annoroad 港交所申报中的业务证明章节](https://www.hkexnews.hk/app/sehk/2026/108447/a132011/sehk26041501668.pdf) [SeqMatic 服务和技术产品组合](https://www.seqmatic.com/services/) [Annoroad 身份及平台产品组合](https://www.annoroad.com/en/technology/platform) [Annoroad 应用研究新闻导航](https://www.annoroad.com/) [Solyntus 基因组测序联盟](https://www.plantbreeding.wur.nl/Solyntus/) [Oxford Nanopore FY2025 年报](https://nanoporetech.com/api/assets/f/196663/x/e6a62a9b49/ont-ar25-interactive-final.pdf) [PacBio FY2025 财务业绩](https://www.pacb.com/press_releases/pacbio-announces-fourth-quarter-and-full-year-2025-financial-results/)
+序列量：122,627,292,300 个碱基。下载文件合计 73,841,588,662 字节（十进制 73.842 GB），共 2 个文件。
 
-## Bulk 转录组与小 RNA 测序
+数量依据：报告序列量为 1,226.3 亿个碱基，约相当于人类基因组 40× 测序量。
 
-较大的数据量和广泛的服务支持转录本取样，而不仅是基因组 DNA。小 RNA 制备会改变相关文件/参考序列问题。Data ID：23、24、25、26、27。bulk 和短 RNA 文库有文档记录的来源用途和序列数量。全文件属性仍未验证。[全球公开读段档案存量和年度增量](https://www.ebi.ac.uk/ena/portal/api/) [SeqMatic 服务和技术产品组合](https://www.seqmatic.com/services/) [Annoroad 港交所申报中的业务证明章节](https://www.hkexnews.hk/app/sehk/2026/108447/a132011/sehk26041501668.pdf) [BGI Americas 应用导航](https://bgiamericas.com/applications/) [Macrogen NGS 产品组合](https://www.macrogen.com/en/business/research/ngs)
+公开记录：[ERR17003126](https://www.ebi.ac.uk/ena/browser/view/ERR17003126)。建议参考序列：fa 编号 1 / GCF_000001405.39。
 
-## 长读长转录本测序
+## 数据 2：人类全基因组 — MGI T7（质量字符集中）
 
-基因组长读长不能自动代表转录本丰度、文库附带标签或全长转录本制备。Data ID：29。FL-cDNA 有依据；直接 RNA 和 PacBio 转录本条件仍未纳入，不能仅凭平台推断这些用途。[全球公开读段档案存量和年度增量](https://www.ebi.ac.uk/ena/portal/api/) [Annoroad 港交所申报中的业务证明章节](https://www.hkexnews.hk/app/sehk/2026/108447/a132011/sehk26041501668.pdf) [SeqMatic 服务和技术产品组合](https://www.seqmatic.com/services/) [Macrogen NGS 产品组合](https://www.macrogen.com/en/business/research/ngs) [Oxford Nanopore FY2025 年报](https://nanoporetech.com/api/assets/f/196663/x/e6a62a9b49/ont-ar25-interactive-final.pdf) [PacBio FY2025 财务业绩](https://www.pacb.com/press_releases/pacbio-announces-fourth-quarter-and-full-year-2025-financial-results/)
+这组人类全基因组数据与 Data 1 的质量字符分布不同。已保存的文件前缀中，最常见的质量字符分别占 R1 位置的 90.07% 和 R2 位置的 86.46%。这些结果只描述抽查到的读段，不能代表整个文件的分布，也不是压缩结果。
 
-## 单细胞表达、免疫及特征文库
+序列量：131,251,843,800 个碱基。下载文件合计 66,737,537,425 字节（十进制 66.738 GB），共 2 个文件。
 
-档案规模、现有服务和公司研究共同支持带标签文库这一需求，但没有测得独特的质量字符集合。Data ID：30、31、32、33。Smart-seq2 细胞提供有文档依据的转录组范围取样。匹配的 CITE ADT、mRNA 和 HTO 组分各包含其所属实验的全部四个输出。实际回收的细胞数、全文件配对关系和未经预览文件的属性仍未知。特征/条码定义可帮助解释数据或进行定制匹配，但不是通用无损压缩的要求。免疫受体原始组分仍未纳入。[全球公开读段档案存量和年度增量](https://www.ebi.ac.uk/ena/portal/api/) [SeqMatic 服务和技术产品组合](https://www.seqmatic.com/services/) [Annoroad 港交所申报中的业务证明章节](https://www.hkexnews.hk/app/sehk/2026/108447/a132011/sehk26041501668.pdf) [Novartis 提交的单细胞多组学系列](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE292621) [Cell Ranger FASTQ 输入](https://www.10xgenomics.com/support/software/cell-ranger/latest/analysis/inputs/cr-specifying-fastqs)
+数量依据：报告序列量为 1,312.5 亿个碱基，约相当于人类基因组 42× 测序量，处于常见全基因组测序规划范围内。
 
-## 基于测序的空间表达
+公开记录：[ERR16794642](https://www.ebi.ac.uk/ena/browser/view/ERR16794642)。建议参考序列：fa 编号 1 / GCF_000001405.39。
 
-坐标/标签结构及有文档记录的数据表示方式，说明了超出普通批量 RNA 的明确工作负载关联。Data ID：34。有记录的两个 Stereo-seq FASTQ 前缀已检查，读长分别为 35/100 个碱基。全文件获取、完整性和配对关系仍待确认。对于通用无损读段压缩，掩膜/坐标是可选信息；但空间重建或相关定制匹配需要这些信息。当前尚未纳入完整的 Visium 替代条件，但这不影响已选 Stereo-seq 原始读段的用途。[SeqMatic 服务和技术产品组合](https://www.seqmatic.com/services/) [Annoroad 港交所申报中的业务证明章节](https://www.hkexnews.hk/app/sehk/2026/108447/a132011/sehk26041501668.pdf) [dbGaP phs003751.v1.p1 研究元数据](https://www.ncbi.nlm.nih.gov/projects/gap/cgi-bin/study.cgi?study_id=phs003751.v1.p1) [华大研究：研究突破获全球关注](https://en.genomics.cn/news-6413.html) [MGI 收购 STOmics 和 CycloneSEQ](https://mgi-tech.eu/news/mgi-tech-announces-acquisition-of-stomics-and-cycloneseq/) [Stereo-seq SAW 格式常见问题](https://enfile.stomics.tech/Stereo-seq%20SAW%20FAQ%20version%20A3.pdf) [Xenium 输出格式](https://www.10xgenomics.com/support/software/xenium-onboard-analysis/latest/analysis/xoa-output-understanding-outputs) [Stereo-seq SAW 计算输入](https://www.stomics.tech/service/saw_8_1/docs/analysis/pipelines/index.html) [SingularG4X 产品/服务组合](https://www.singulargenomics.com/g4x)
+## 数据 3：人类全基因组 — MGI T7（四种质量字符）
 
-## 染色质、靶向蛋白-DNA 及邻近连接文库
+这组人类基因组数据的质量行只见四种字符，为 Data 1、Data 2 中较丰富的字符范围增加了另一种情况。数据来自 RPE1 倍性基准研究，因此这里不把它当作普通二倍体患者样本。观察到四种字符并不能说明这些质量值是如何产生的。
 
-相同的短读长或质量字符集合，并不会抹平不同的基因组取样方式/配对关系。混合物用途也不等于纯物种覆盖。Data ID：35、36、37、38、39。常规人类配对 bulk ATAC、水稻组蛋白 ChIP、人类 CUT&RUN、酵母 Hi-C 和 Ultima ATAC 都有不同且有文档记录的制备方式。宽泛的 OTHER 元数据本身不能证明采用 CUT&RUN。[全球公开读段档案存量和年度增量](https://www.ebi.ac.uk/ena/portal/api/) [SeqMatic 服务和技术产品组合](https://www.seqmatic.com/services/) [Annoroad 港交所申报中的业务证明章节](https://www.hkexnews.hk/app/sehk/2026/108447/a132011/sehk26041501668.pdf) [Novartis CUT&RUN 元数据 GSM7883167](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM7883167)
+序列量：127,540,227,000 个碱基。下载文件合计 48,041,300,140 字节（十进制 48.041 GB），共 2 个文件。
 
-## 甲基化和转化序列读段
+数量依据：报告序列量为 1,275.4 亿个碱基，落在该研究 8次有正产出的测序运行的范围内（共 9 条记录，其中 1 条总量为零）。
 
-纳入这一潜在组成/参考序列对照条件，是因为有文档记录的转化处理方式，而不是物种名称。Data ID：40。所选示例是公开研究中的代理样本。全文件结构、完整性和代表性均未确定。[全球公开读段档案存量和年度增量](https://www.ebi.ac.uk/ena/portal/api/) [CERTANIA 分子诊断/基因组学产品组合](https://certania.com/services/molecular-diagnostics-and-genomics) [SeqMatic 服务和技术产品组合](https://www.seqmatic.com/services/)
+公开记录：[SRR33329596](https://www.ebi.ac.uk/ena/browser/view/SRR33329596)。建议参考序列：fa 编号 1 / GCF_000001405.39。
 
-## 标记、基因组、病毒及法医靶向测序
+## 数据 4：人类全基因组 — NovaSeq X Plus
 
-run 数量很大，足以说明值得关注，但不意味着应按比例分配输入。疫情期间的沉积数据和项目集中度不能主导整个基准集合。Data ID：11、41、42、43、45。细菌 16S、真菌 ITS、病毒靶标、人类基因组靶标和水生 eDNA 均有明确的文库单位。细菌/真菌的具体亚区域仍未说明。这些输入并未确立常规法医面板条件。[全球公开读段档案存量和年度增量](https://www.ebi.ac.uk/ena/portal/api/) [NIST 法医参考物质认证](https://www.nist.gov/publications/make-it-snppy-updates-srm-2391d-pcr-based-dna-profiling-standard) [Annoroad 港交所申报中的业务证明章节](https://www.hkexnews.hk/app/sehk/2026/108447/a132011/sehk26041501668.pdf) [SeqMatic 服务和技术产品组合](https://www.seqmatic.com/services/) [CDC PulseNet 当前 WGS 用途](https://www.cdc.gov/pulsenet/php/about.html)
+这组数据代表常见的 Illumina 全基因组测序。输入是档案中完整的一次测序运行或泳道输出；实际使用者也可以把它作为独立于同一样本其他测序运行的文件接收和保存。其序列量接近来源研究的中间水平。
 
-## 微生物分离株及工业微生物基因组
+序列量：39,313,093,714 个碱基。下载文件合计 15,853,763,048 字节（十进制 15.854 GB），共 2 个文件。
 
-工业测序关联和参考序列用途支持纳入这一需求；仅凭发酵的经济价值或资源存量则不够。Data ID：48、49、50。细菌/酵母基因组输入是研究代理样本，不代表年度工业产量。[全球公开读段档案存量和年度增量](https://www.ebi.ac.uk/ena/portal/api/) [MIRRI-ERIC 服务目录](https://www.mirri.org/services/) [ILRI 测序平台](https://www.ilri.org/sequencing-platforms) [Angel Yeast 2023 年企业社会责任报告](https://en.angelyeast.com/upload/files/2024/2023-angel-yeast-csr-report.pdf) [EFSA 申请方 WGS 门户活动](https://www.efsa.europa.eu/en/events/ad-hoc-meeting-stakeholders-wgs-data-submission-efsa-mops-portal) [CDC PulseNet 当前 WGS 用途](https://www.cdc.gov/pulsenet/php/about.html) [华大基因 FY2025 年报](https://disc.static.szse.cn/disc/disk03/finalpage/2026-04-25/c79b8582-0ce3-4454-a325-c5a8f780bdd8.PDF)
+数量依据：该数据报告 393.1 亿个碱基；来源研究中 24次可比测序运行的中位数为 354.8 亿个碱基，且这一数量处于 NovaSeq X 档案中正产出次测序运行的中间一半范围内。
 
-## 鸟枪法群落和宏转录组
+公开记录：[ERR15383198](https://www.ebi.ac.uk/ena/browser/view/ERR15383198)。建议参考序列：fa 编号 1 / GCF_000001405.39。
 
-多种基因组、不均匀取样和参考序列覆盖不完整，都是值得纳入的潜在条件；标记文件不能作为通用替代品。Data ID：51、52、53、54、55。肠道、土壤和食品 shotgun DNA、长读长模拟群落以及发酵群落 RNA，分别代表不同的混合样本条件。混合物组成和参考序列集合仍未验证。[全球公开读段档案存量和年度增量](https://www.ebi.ac.uk/ena/portal/api/) [SeqMatic 服务和技术产品组合](https://www.seqmatic.com/services/) [BGI Americas 应用导航](https://bgiamericas.com/applications/) [Macrogen NGS 产品组合](https://www.macrogen.com/en/business/research/ngs) [华大基因 FY2025 年报](https://disc.static.szse.cn/disc/disk03/finalpage/2026-04-25/c79b8582-0ce3-4454-a325-c5a8f780bdd8.PDF) [CNSA 统计和官方汇总接口](https://db.cngb.org/cnsa/statistic/)
+## 数据 5：人类超长纳米孔读段
 
-## 环境 DNA 与生物多样性监测
+这组数据在常规纳米孔和 PacBio 一致性读段之外，补充了人类超长基因组读段。来源研究明确采用了超长读段测序。这里使用完整测序运行，呈现真实的数据类型，而不是从文件中挑出特别长的读段另行拼成输入。
 
-即使档案标签不明确或缺少市场分母，实际测序用途也足以支持相应覆盖；方法不确定性意味着不能假定文件等价，但不应因此否认已确认的用途。Data ID：45。选定的 Lugano ITD20-A/VENE 水生标记 run，用于代表有文档记录的样本相关 eDNA 用途。上传前的具体处理步骤仍需限定说明；该样本既不代表所有环境监测检测，也不代表完整 flow cell。[DArT 生态服务](https://www.diversityarrays.com/industries/ecologists-and-biodiversity/) [中国生态环境部关于 eDNA 监测的公开说明](https://www.mee.gov.cn/ywdt/hjywnews/202603/t20260312_1146462.shtml) [全球公开读段档案存量和年度增量](https://www.ebi.ac.uk/ena/portal/api/)
+序列量：49,183,304,334 个碱基。下载文件合计 40,884,662,813 字节（十进制 40.885 GB），共 1 个文件。
 
-## 食品混合物与真实性鉴定
+数量依据：该数据报告 491.8 亿个碱基；来源研究中 74次有正产出的测序运行的中位数为 516.5 亿个碱基（共 79 条记录，其中 5 条总量为零）。
 
-加工后的多真核生物食品混合物是一种真实应用场景，纯作物基因组或肠道微生物组都不能自动代表这种输入。Data ID：55。蜂蜜 shotgun DNA 提供了选定的食品混合物输入。其成分和精确的混合物参考序列集合尚未验证；也没有指定靶向型加工食品鉴定配置。[Food Forensics NGS 检测](https://www.foodforensics.co.uk/technical-solutions/ngs-testing) [河北食品研究所完成的乳品真伪研究](https://scjg.hebei.gov.cn/info/84546) [Thermo Fisher NGS 食品物种筛查](https://www.thermofisher.com/sg/en/home/industrial/food-beverage/food-authenticity-labeling/ngs-food-screening-species-identification.html)
+公开记录：[ERR12954382](https://www.ebi.ac.uk/ena/browser/view/ERR12954382)。建议参考序列：fa 编号 1 / GCF_000001405.39。
 
-## 生物制药基因组表征与序列质控
+## 数据 6：人类纳米孔读段 — 一个 ONT 测序流动槽
 
-直接关联 NGS/WGS 服务的证据，支持将其视为通用制药研究之外的工业数据用途。文库类型仍不明确，因此不能自行补出检测规格；但这不否定已确认的用途。Data ID：56。完整的 CHO 基因组组装文库，是一项公开的生产细胞参考组装研究输入。它没有指定生产测试检测项目；确切细胞系/构建体与参考序列的匹配关系仍未知。[GenomeScan 基因表征](https://genomescan.nl/genetic-characterization/) [HyQure NGS 服务](https://www.hyqure.com/gmp-ngs-services) [Eurofins 生物制药 NGS 服务](https://www.eurofins.com/en/biopharma-services/biopharma-product-testing/services/next-generation-sequencing-ngs/)
+这份有明确名称的 ONT 测序流动槽输出，代表当前 R10.4.1/Dorado 人类基因组测序。来源文件是完整 BAM。之后将按固定导出规则生成用于基准测试的 FASTQ；目前尚未执行该导出，因此确切读段数和碱基总量仍未知。
 
-# 材料及参考序列选择
+序列量：入选源文件的准确序列产量尚未确定。下载文件合计 171,763,325,052 字节（十进制 171.763 GB），共 1 个文件。
 
-人类临床与研究材料。人类是重要材料，涉及全基因组、外显子组/靶向、bulk 转录组和单细胞测序；生殖/拷贝数用途也已明确提出，其具体取样方式则需单独核查。Data ID：1、2、3、4、5、6、7、8、9、11、20、23、25、26、27、29、31、32、33、34、35、37、39。产前/拷贝数特定输入仍未纳入；应用目的不能证明取样方式。
+数量依据：发布说明称每个测序流动槽约产生 140 Gb。
 
-生物医学研究模型。保留有意义的模型/参考序列关系；不要求每个模式物种都配一个文件。Data ID：15、21、22、24、30。小鼠基因组和单细胞表达、拟南芥核基因组、HiFi 和 bulk RNA 等模型条件，代表不同的制备/参考序列设置。归一化参考混合物并非纯果蝇基因组材料。
+公开记录：[PAW70337 SUP 测序流动槽源文件](https://ont-open-data.s3.amazonaws.com/giab_2025.01/basecalling/sup/HG002/PAW70337/calls.sorted.bam)。建议参考序列：fa 编号 1 / GCF_000001405.39。
 
-畜牧、家禽及水生动物研究。应寻找有依据的动物群体/参考序列条件，并使物种与实际用途对应。数据 ID：14、18、19。公开的猪、家禽和水产养殖研究示例均有明确的基因组/参考序列及文件用途；这不能证明年度物种需求。
+使用前请注意：另行报告的比对分析总量尚未证实等于该 BAM/导出 FASTQ 的准确产量。规定的 FASTQ 导出尚未执行。
 
-作物基因组与育种/泛基因组材料。应选择不同的基因组/简化代表性/参考序列用途，而不是按植物名称列清单。Data ID：10、13、16、17。普通 SW1611 玉米基因组重测序、完整 Renan 小麦文库、Altus 马铃薯无 PCR 组装文库和藜麦 RAD，分别代表不同且有文档依据的制备/参考序列用途。这并非完整作物目录。
+## 数据 7：人类 PacBio HiFi 读段
 
-林业、野生和其他非模式生物材料。非模式生物及缺少参考序列的研究可能需要不同的参考关系；但不因此强制纳入任何物种。Data ID：12。云杉常规捕获增加了一个针叶树参考条件；缺少参考序列的非模式生物长基因组组装，以及有意采用近缘物种参考进行测试，仍未纳入。
+这组按条码区分的 PacBio 输出，在原始 PacBio CLR 和纳米孔读段之外，补充了 HiFi 一致性读段。它是有记录的一次测序细胞输出，并非任意截取的数据。同一样本的其他输出属于不同选择，不是这份输入中未列出的部分。
 
-细菌分离株及酵母/工业微生物。在有测序关联佐证时，覆盖紧凑参考基因组和微生物真核生物基因组用途。数据 ID：38、48、49、50。已提出同物种默认参考序列；确切分离株/菌株及工业生产身份仍未解决。
+序列量：48,501,907,479 个碱基。下载文件合计 23,718,059,148 字节（十进制 23.718 GB），共 1 个文件。
 
-宿主相关群落和环境群落。保留混合参考序列材料，并区分标记测序与鸟枪法/转录组文库。数据 ID：41、42、51、52、53、54。细菌16S、真菌 ITS、群落鸟枪法 DNA 和发酵 RNA 属于不同条件。土壤 DNA 不能证明土壤 RNA 谱。
+数量依据：提交来源将其标记为按条码区分的 HiFi 细胞输出，报告了 48,501,907,479 个碱基。
 
-水生环境与生物多样性材料。承认有证据支持的测序监测用途；在有文件佐证前，保留检测方法/形式尚未明确这一点。数据 ID：45。ITD20-A/VENE 是与样本关联、来自 Lugano 的水生标记输出。其上传前处理阶段仍需谨慎表述；不能据此声称涵盖整个流动槽。
+公开记录：[ERR14732808](https://www.ebi.ac.uk/ena/browser/view/ERR14732808)。建议参考序列：fa 编号 1 / GCF_000001405.39。
 
-多物种加工食品材料。应寻找有文档记录的食品混合物测序用途，而不是每种原料都选一个输入。数据 ID：52、55。蜂蜜鸟枪法 DNA 为食品混合物基因组输入提供依据。确切原料组成和固定的混合物参考序列集仍未核实。
+使用前请注意：所选数据量对应一个按条码区分的细胞输出，并非整个 Revio 测序细胞的产出，也不是该个体的全部文库。
 
-生物制药生产细胞/序列材料。在可行时，为已确认的基因组/序列表征工作采用有记录的公开代理样本。数据 ID：56。具名 CHO 基因组组装文库是公开的工业生产细胞研究输入；确切细胞系/构建体/参考序列是否匹配仍未解决。
+## 数据 8：人类 CycloneSEQ 纳米孔读段
 
-# 技术选择与仍待确认的问题
+这份文件让集合可以将另一种纳米孔技术与 Oxford Nanopore 一并测试。它包含 CycloneSEQ G400-ER 产生的人类 HG002 全基因组读段。所选 CNGB 下载内容是一个单端 FASTQ 文件，不是配对文件。调查中有公开研究和具名设备部署记录，支持将该技术纳入。
 
-Illumina——短读长 SBS 系统。其占公开档案存量 run 的 90.22%、占碱基数的 89.06%，且有实际供应商使用记录，足以说明其广泛相关性；按机型×检测项目拆分的联合统计也表明，不能把 MiSeq 与高通量 RNA/WGS 当作同一类工作负载。应依据覆盖判断，而不是每家公司挑一个文件。档案占比不是销量或中国市场主导地位，也不要求每种机型都纳入。选定 Data ID：4、9、10、12、13、15、16、17、24、26、30、31、32、33、35、36、37、38、40、41、42、43、45、48、49、50、52、53、54、55、56。[全球公开读段档案存量和年度增量](https://www.ebi.ac.uk/ena/portal/api/) [SeqMatic 服务和技术产品组合](https://www.seqmatic.com/services/) [ILRI 测序平台](https://www.ilri.org/sequencing-platforms) [Eurofins 人类 WGS 服务](https://eurofinsgenomics.eu/en/next-generation-sequencing/ngs-built-for-you/inview-genome/inview-whole-genome-sequencing/)
+序列量：入选源文件的准确序列产量尚未确定。下载文件合计 130,270,589,600 字节（十进制 130.271 GB），共 1 个文件。
 
-MGI / Complete Genomics——DNBSEQ/BGISEQ 短读长技术家族。DNBSEQ 占存量碱基的 4.56%、占年度增量碱基的 9.30%；BGISEQ 则是另一个独立标签。国内实际运营的供应商和国际服务网络均佐证其使用。基因组质量值条件、RNA 和空间用途均依据有文档记录的工作负载和文件证据，而非按机型或检测项目设定配额。不要把原始标签合并计算成市场份额，也不要据此推断样本的生产国家。选定 Data ID：1、2、3、14、18、19、23、25、34。[全球公开读段档案存量和年度增量](https://www.ebi.ac.uk/ena/portal/api/) [Complete Genomics 服务商网络](https://www.completegenomics.com/products/sequencing-service-providers/) [Annoroad 身份及平台产品组合](https://www.annoroad.com/en/technology/platform) [Novogene FY2025 年报](https://static.cninfo.com.cn/finalpage/2026-04-15/1225103513.PDF) [CNSA 统计和官方汇总接口](https://db.cngb.org/cnsa/statistic/)
+数量依据：清单中只有一个 CNGB FASTQ 文件 `WY_reads.fq.gz`，压缩后为 130,270,589,600 字节。确切读段数和碱基总量未知。
 
-Oxford Nanopore Technologies——纳米孔长读长系统。档案覆盖面和实际运营服务支持将其视为持续应用的技术家族；基因组与转录本用途之间的差异也值得考虑。应依据覆盖判断，而不是每家公司挑一个文件。仅凭平台名称无法确定直接 RNA、具体机型/化学体系，或实际读长/质量分布。选定 Data ID：5、6、21、29、51。[全球公开读段档案存量和年度增量](https://www.ebi.ac.uk/ena/portal/api/) [SeqMatic 服务和技术产品组合](https://www.seqmatic.com/services/) [ILRI 测序平台](https://www.ilri.org/sequencing-platforms) [Oxford Nanopore FY2025 年报](https://nanoporetech.com/api/assets/f/196663/x/e6a62a9b49/ont-ar25-interactive-final.pdf) [Dorado 输出文档](https://software-docs.nanoporetech.com/dorado/latest/basecaller/basecall_overview/)
+公开记录：[CNR1409093 / CNX1236558](https://db.cngb.org/search/run/CNR1409093/)。建议参考序列：fa 编号 1 / GCF_000001405.39。
 
-PacBio——SMRT / consensus-HiFi 长读长系统。存量包括 963,605 个 run 和 28,602 项研究，结合供应商运营和仪器业务记录，支持其相关性。人类原始 CLR、人类 HiFi 条码输出，以及有文档记录的植物 HiFi 组装读段，代表不同的数据表示。制造商给出的化学体系标签不能证明新的 FASTQ 属性。产品装机量不是序列字节数，也不意味着每种新化学体系都必须配一个输入。选定 Data ID：7、20、22。[全球公开读段档案存量和年度增量](https://www.ebi.ac.uk/ena/portal/api/) [SeqMatic 服务和技术产品组合](https://www.seqmatic.com/services/) [Annoroad 身份及平台产品组合](https://www.annoroad.com/en/technology/platform) [PacBio FY2025 财务业绩](https://www.pacb.com/press_releases/pacbio-announces-fourth-quarter-and-full-year-2025-financial-results/) [Solyntus 基因组测序联盟](https://www.plantbreeding.wur.nl/Solyntus/)
+使用前请注意：没有发布者提供的 MD5 值。文件大小与清单一致，并不能证明文件完整。确切读段数和碱基总量，以及它与 SRA 文件是否逐字节相同，均未知。
 
-Thermo Fisher Scientific——Ion Torrent 半导体测序。档案中的大量 run/研究记录、实际部署的靶向临床服务，以及具体的食品鉴定服务，共同支持其实际用途。应依据覆盖判断，而不是每家公司挑一个文件。服务可用性和档案历史支持关注半导体测序；当前选定的人类基因组靶标文库并不能代表所有商业检测。[全球公开读段档案存量和年度增量](https://www.ebi.ac.uk/ena/portal/api/) [CERTANIA 分子诊断/基因组学产品组合](https://certania.com/services/molecular-diagnostics-and-genomics) [Thermo Fisher NGS 食品物种筛查](https://www.thermofisher.com/sg/en/home/industrial/food-beverage/food-authenticity-labeling/ngs-food-screening-species-identification.html) [Ion Torrent 临床实验室实施案例](https://pmc.ncbi.nlm.nih.gov/articles/PMC10958377/)
+方法和数量依据：[CNGB测序运行与实验的精确元数据](https://db.cngb.org/search/experiment/CNX1236558/) [所选 CNGB 文件的有限前缀抽查](https://ftp.cngb.org/pub/CNSA/data7/CNP0007646/CNS1382495/CNX1236558/CNR1409093/WY_reads.fq.gz)
 
-Ultima Genomics——UG100 短读长家族。SeqMatic 明确报告其正在运营 Ultima；规模较小的公开档案和服务网络也佐证这一新兴生产用途，无须先证明 FASTQ 属性具有新颖性。应依据覆盖判断，而不是每家公司挑一个文件。不能由此推断广泛市场份额，也不要求每种 UG 机型都单独纳入。选定 Data ID：39。[全球公开读段档案存量和年度增量](https://www.ebi.ac.uk/ena/portal/api/) [SeqMatic 服务和技术产品组合](https://www.seqmatic.com/services/) [Ultima 认证服务商](https://www.ultimagenomics.com/products/certified-service-providers-old/)
+## 数据 9：人类外显子组测序
 
-Element Biosciences——AVITI 短读长家族。档案记录有 91,978 个 run 和 1,014 项研究，另有制造商报告的安装情况；这些证据不只是新颖性，而且也显示了使用集中度。应依据覆盖判断，而不是每家公司挑一个文件。多组学输出并非全部为 FASTQ。不能把一个大型档案项目等同于普遍采用。选定 Data ID：27。[全球公开读段档案存量和年度增量](https://www.ebi.ac.uk/ena/portal/api/) [Element 投资者演示](https://www.elementbiosciences.com/hubfs/element_biosciences_2025/pdfs/news_blog_pdf/Element-JPM-2025-Final.pdf)
+这组数据来自人类 FFPE 肿瘤研究，代表针对选定编码区进行测序的外显子组工作，而非全基因组测序。明确保留肿瘤样本这一背景，避免把其序列量和制备方式误当作普通生殖系样本。
 
-MGI / CycloneSEQ——CycloneSEQ 纳米孔系统。在凌恩生物和武汉华大服务点具名部署的产品特定证据，独立支持中国部署用途，不依赖稀少/含糊的档案标签。CNGB 列出一个 SINGLE FASTQ 源文件 CNR1409093 / CNX1236558，压缩后登记为 130,270,589,600 字节。没有发布者 MD5，也未证明该文件与相关 SRA 原始数据完全等价。制造商报告的部署情况不能证明全国装机份额、年度产量或具有独特实测属性的 FASTQ。选定 Data ID：8。[CycloneSEQ G400-ER 首批具名安装](https://www.mgi-tech.com/mgi-news/945.html) [MGI 收购 STOmics 和 CycloneSEQ](https://mgi-tech.eu/news/mgi-tech-announces-acquisition-of-stomics-and-cycloneseq/)
+序列量：5,446,687,469 个碱基。下载文件合计 2,415,095,443 字节（十进制 2.415 GB），共 2 个文件。
 
-10x Genomics——在此语境中并非测序仪制造商。实际运营服务和研究使用记录支持带标签的单细胞流程。文库用途与测序仪器是两个不同问题。确切 GEO 记录说明采用 10x Next GEM 3′ v3.0，并分别建立 ADT、mRNA 和 HTO 文库。每个组分都应使用全部四个输出。该化学体系背景不能证明实际回收的细胞数或已标准化的读段方向。样本 3 的细胞回收情况及未经预览文件的属性仍未知。特征定义对通用压缩是可选信息，但与定制匹配有关。选定 Data ID：31、32、33。[SeqMatic 服务和技术产品组合](https://www.seqmatic.com/services/) [Novartis 提交的单细胞多组学系列](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE292621) [Cell Ranger FASTQ 输入](https://www.10xgenomics.com/support/software/cell-ranger/latest/analysis/inputs/cr-specifying-fastqs)
+数量依据：来源研究中有 38次 FFPE 外显子组测序运行，碱基数中位数为 56.5 亿。
 
-10x Genomics / STOmics——已为该实际文库识别到外部兼容测序仪。供应商/研究使用记录及官方 Q4/Q40/输入说明，支持对坐标、标签和数据表示问题的关注。有文档记录的原始数据对和论文支持 Stereo-seq。其他空间成像/坐标产品不能据此假定为 FASTQ。Xenium/G4X 的图像/坐标输出本身不能证明需要 FASTQ；掩膜/特征也不能由基因组 FASTA 替代。选定 Data ID：34。[Annoroad 港交所申报中的业务证明章节](https://www.hkexnews.hk/app/sehk/2026/108447/a132011/sehk26041501668.pdf) [SeqMatic 服务和技术产品组合](https://www.seqmatic.com/services/) [华大研究：研究突破获全球关注](https://en.genomics.cn/news-6413.html) [Stereo-seq SAW 格式常见问题](https://enfile.stomics.tech/Stereo-seq%20SAW%20FAQ%20version%20A3.pdf) [Xenium 输出格式](https://www.10xgenomics.com/support/software/xenium-onboard-analysis/latest/analysis/xoa-output-understanding-outputs) [Stereo-seq SAW 计算输入](https://www.stomics.tech/service/saw_8_1/docs/analysis/pipelines/index.html) [MGI 收购 STOmics 和 CycloneSEQ](https://mgi-tech.eu/news/mgi-tech-announces-acquisition-of-stomics-and-cycloneseq/)
+公开记录：[ERR12411150](https://www.ebi.ac.uk/ena/browser/view/ERR12411150)。建议参考序列：fa 编号 1 / GCF_000001405.39。
 
-# 所选公开输入
+## 数据 10：玉米重测序
 
-本集合为常见的公开测序工作负载，以及有公开依据的实际应用或研究用途，提供了有价值的示例。它包含 52 个数据集：51 项有登记 FASTQ 来源路径，另有 1 个 BAM 源文件，之后还需要转换为 FASTQ。115 个物理源对象登记字节数合计为 1,419,456,345,104（1.419 十进制 TB）。源文件大小不是未压缩 FASTQ 大小、市场份额或基准测试结果。集合数量来自逐项决策，不是配额，也未被证明是最小值。
+这组无 PCR 玉米文库代表常规作物重测序。其序列量接近该研究 513 个有产量记录文库的中间水平。SW1611测序运行的两个 FASTQ 端均已列入。建议的 B73 参考序列属于同一物种，但来自不同自交系。
 
-[工作簿](../catalogue/benchmark_dataset.xlsx)中，fq 表按每个 Data ID 记录一个数据集，Files 表记录每个物理对象，fa 表列出带版本号的参考序列提案。Reasons、Coverage、Materials 和 Technology 工作表提供相应依据。下方序列数量以报告的碱基数表示，与登记的压缩源文件大小分别列示。各条目说明拟测试输入及仍需进行的准备工作。
+序列量：47,789,487,240 个碱基。下载文件合计 24,082,143,756 字节（十进制 24.082 GB），共 2 个文件。
 
-## 部分输入单位为何较小
+数量依据：主要面板研究将该工作描述为约 20× DNA 重测序。
 
-52 个完整输入单位中有 11 个登记压缩源数据少于 1 个十进制 GB。该计数汇总了每个数据集所选的全部配对端、run 和分块文件。登记的 gzip 字节、报告的序列碱基数以及读数/spot 数是不同指标；未测量未压缩 FASTQ 字节数。1 GB 只是描述性界限，不是纳入下限。
+公开记录：[SRR8906645](https://www.ebi.ac.uk/ena/browser/view/SRR8906645)。建议参考序列：fa 编号 10 / GCA_902167145.1。
 
-小靶标、简化代表性文库、短 RNA、单个细胞、样本标签和群落标记，都可能形成有意义的小文件。紧凑的细菌基因组也可以在小于 1 GB 的压缩输出中包含大量序列覆盖。下方每个条目都把样本、文库或交付组分与相关来源工作流的数据量联系起来。例如，完整的 8 文件 HTO 组分报告了 1,566,671,480 个碱基，登记压缩字节数为 687,740,927。来源队列中位数只提供背景信息，不是通过/不通过阈值，也不代表通用生产规范。
+使用前请注意：提交文件名显示数据经过修剪，但具体步骤未知。尚未检查实际 FASTQ 的读长和质量值。
 
-经过处理或拆分条码后的 FASTQ，仍可能代表真实研究或生产工作负载。若有文档说明，应描述其处理阶段；阶段未知并不能证明数据失败或不完整。这里的小输入均有来源单位、数量和实际用途证据支持，同时逐项说明其余不确定性。不会为了让小输入显得更大而重复、填充或强行合并。
+方法和数量依据：[玉米关联分析面板的主要研究](https://www.nature.com/articles/s41588-019-0427-6) [无 PCR 玉米实验记录](https://www.ebi.ac.uk/ena/browser/view/SRX5692588) [SW1611 玉米样本记录](https://www.ebi.ac.uk/ena/browser/view/SAMN11370298) [玉米测序运行数量及档案表示记录](https://www.ncbi.nlm.nih.gov/sra/SRR8906645)
 
-## Data 1. Homo sapiens — DNBSEQ-G400
+## 数据 11：人类靶向测序 — Ion Torrent
 
-这个具有广泛质量字符集合的人类 MGI 全基因组输入，有常规研究队列身份，报告 122.627 十亿 个碱基。已保存的 150 碱基读段前缀使用 41 种质量字符。它与 Data 2 中更集中的质量字符频率、Data 3 中仅有 4 种字符的表示相对照，作为广泛质量字符情形的人类 MGI 测序基线；不要求每种仪器型号都配一个输入。
+这组人类扩增子测序运行展示了半导体仪器上的靶向测序。它与全基因组测序的取样范围不同，也与 Illumina/MGI 输入使用不同技术。其序列量接近同一研究中 133次可比测序运行的中间水平。
 
-公开来源：[ERR17003126](https://www.ebi.ac.uk/ena/browser/view/ERR17003126)。输入单位：一个配对档案 run。
+序列量：1,497,990,828 个碱基。下载文件合计 1,154,396,293 字节（十进制 1.154 GB），共 1 个文件。
 
-报告数据量：122,627,292,300个碱基（122.627 十亿）。列出的来源对象：2个；73,841,588,662字节（73.842 十进制 GB）。fa ID 1 / GCF_000001405.39.。
+数量依据：所选具名扩增子次测序运行报告了 1,497,990,828 个碱基。
 
-数据量证据：122.63 十亿 个碱基约相当于 40× 人类基因组预算。匹配研究的 16 条记录中有 11 条报告了正值，其中位数为 115.23 十亿。这符合常规人类 WGS 规划，但原始碱基数不代表可用覆盖深度。
+公开记录：[DRR341924](https://www.ebi.ac.uk/ena/browser/view/DRR341924)。建议参考序列：fa 编号 1 / GCF_000001405.39。
 
-属性： 仅有已保存的非随机前缀汇总；全文件分布/完整性尚未确定。 读长： 文件 1： 150–150; 中位数 150; 文件 2： 150–150; 中位数 150. 质量字符数： 文件 1： 41; 文件 2： 41.
+## 数据 12：云杉靶向捕获测序
 
-限制与准备：将其作为广泛质量范围的锚点，而非额外的 G400 配额。完整文件的质量值分布尚未检查。检查完整文件及配对关系。
+这组云杉文库代表通过靶向捕获进行群体基因分型。其报告序列量约为 3.35 亿个碱基，远少于建议的 119.6 亿个碱基云杉参考序列。两者的差异值得用于考察参考序列压缩，但目前没有测量任何压缩效果。档案元数据将提交的三组泳道双端文件归为清单中的两个 FASTQ 读段端。
 
-## Data 2. Homo sapiens — DNBSEQ-T7
+序列量：335,384,842 个碱基。下载文件合计 177,775,032 字节（十进制 177.775 MB），共 2 个文件。
 
-该人类 T7 全基因组 run 提供了真实的质量字符频率对比，报告 131.252 十亿 个碱基。在已检查的质量位置中，最常见字符在 R1 占 90.07%，在 R2 占 86.46%。已保存的汇总显示，其质量分布比 Data 1 更集中。这些是非随机前缀观察，不是全文件冗余度或压缩结果；Data 1 仍是代表质量字符较多情形的 MGI 基线。
+数量依据：该档案次测序运行报告 335,384,842 个碱基，处于项目 7,729次测序运行的较低范围；这些次测序运行的中位数为 58,400 万个碱基。
 
-公开来源：[ERR16794642](https://www.ebi.ac.uk/ena/browser/view/ERR16794642)。输入单位：一个配对档案 run。
+公开记录：[SRR19440963](https://www.ebi.ac.uk/ena/browser/view/SRR19440963)。建议参考序列：fa 编号 15 / GCA_900067695.1。
 
-报告数据量：131,251,843,800个碱基（131.252 十亿）。列出的来源对象：2个；66,737,537,425字节（66.738 十进制 GB）。fa ID 1 / GCF_000001405.39.。
+使用前请注意：来源中的分组信息是元数据记录，并未核验文件内容是否合并或读段顺序。
 
-数据量证据：131.25 十亿 个碱基约相当于 42× 人类基因组预算，处于常见 WGS 规划范围。来源研究仅有这一个 run，因此不能独立确定总体分布。
+方法和数量依据：[云杉捕获实验与提交文件记录](https://www.ncbi.nlm.nih.gov/sra/SRX15494349) [带版本号的云杉组装元数据](https://www.ebi.ac.uk/ena/browser/view/GCA_900067695.1)
 
-属性： 仅有已保存的非随机前缀汇总；全文件分布/完整性尚未确定。 读长： 文件 1： 150–150; 中位数 150; 文件 2： 150–150; 中位数 150. 质量字符数： 文件 1： 40; 文件 2： 40.
+## 数据 13：藜麦简化基因组基因分型
 
-限制与准备：已保存前缀中，每个质量值位置的信息量约为 0.90/1.16 比特，Data 1 中约为 1.78/2.04 比特。这些只是前缀的边际统计；完整文件的分布及相关性尚未检查。检查完整文件及配对关系。
+这组 RAD 文库代表从基因组的特定区域进行作物基因分型。其序列量接近研究中 136次可比测序运行的中间水平。若换成全基因组大小的文件，测试的将是另一种任务；因此，这个完整双端测序运行是合适的小型输入。
 
-## Data 3. Homo sapiens — DNBSEQ-T7
+序列量：894,720,418 个碱基。下载文件合计 571,962,433 字节（十进制 571.962 MB），共 2 个文件。
 
-该输入提供观察到的四字符质量值表示。窄字符集是有用的条件，补充两种广字符集示例。
+数量依据：89,500 万个碱基 接近同类群体研究 136次测序运行的中位数 87,200 万个碱基。
 
-公开来源：[SRR33329596](https://www.ebi.ac.uk/ena/browser/view/SRR33329596)。输入单位：一个配对档案 run。
+公开记录：[DRR095727](https://www.ebi.ac.uk/ena/browser/view/DRR095727)。建议参考序列：fa 编号 16 / GCF_001683475.1。
 
-报告数据量：127,540,227,000个碱基（127.540 十亿）。列出的来源对象：2个；48,041,300,140字节（48.041 十进制 GB）。fa ID 1 / GCF_000001405.39.。
+## 数据 14：猪基因组测序（提供的质量值为常数）
 
-数据量证据：127.54 十亿 个碱基位于该研究 8 个正值 run 的范围内（共 9 条记录，其中 1 条总量为零）。其来源明确是 RPE1 倍性基准研究；这里没有将其描述为正常二倍体患者基因组。
+这组猪基因组测序运行补充了家畜测序，也提供了一份抽查质量值为常数的文件。质量值属于必须保留的输入字节；其来源未知，因此不能称为 MGI 原生质量输出的典型表现。
 
-属性： 仅有已保存的非随机前缀汇总；全文件分布/完整性尚未确定。 读长： 文件 1： 150–150; 中位数 150; 文件 2： 150–150; 中位数 150. 质量字符数： 文件 1： 4; 文件 2： 4.
+序列量：26,338,729,500 个碱基。下载文件合计 10,018,740,265 字节（十进制 10.019 GB），共 2 个文件。
 
-限制与准备：不要推断质量值为何只有四种符号，也不要将二倍体可用深度的说法用于混合倍性材料。检查完整文件及配对关系。
+数量依据：该数据报告 263.4 亿个碱基，接近来源研究 147次测序运行的中位数（约 261.9 亿），该研究的次测序运行产量分布很集中。
 
-## Data 4. Homo sapiens — Illumina NovaSeq X Plus
+公开记录：[SRR24804436](https://www.ebi.ac.uk/ena/browser/view/SRR24804436)。建议参考序列：fa 编号 2 / GCA_000003025.6。
 
-该输入提供主流 Illumina 基因组输出，规模为申报的运行/泳道，是自然的生产交付单位。
+使用前请注意：该数据在原研究中用于组装/重测序研究的一项组成部分。
 
-公开来源：[ERR15383198](https://www.ebi.ac.uk/ena/browser/view/ERR15383198)。输入单位：一个配对档案 run。
+## 数据 15：小鼠基因组测序
 
-报告数据量：39,313,093,714个碱基（39.313 十亿）。列出的来源对象：2个；15,853,763,048字节（15.854 十进制 GB）。fa ID 1 / GCF_000001405.39.。
+这组小鼠尾部 DNA测序运行将常用研究动物及其基因组参考序列纳入集合。它是一份完整的生殖系文库；在五份以类似方式制备的尾部文库中，其序列量最低，并非为本基准测试另行截取的子集。样本是否确实匹配建议的品系参考序列，仍待核实。
 
-数据量证据：39.31 十亿 个碱基接近其来源研究中 24 个可比 run 的中位数 35.48 十亿，也位于 NovaSeq X 档案正值数据量的四分位距内。
+序列量：100,892,053,998 个碱基。下载文件合计 48,335,307,261 字节（十进制 48.335 GB），共 2 个文件。
 
-属性： 仅有已保存的非随机前缀汇总；全文件分布/完整性尚未确定。 读长： 文件 1： 151–151; 中位数 151; 文件 2： 151–151; 中位数 151. 质量字符数： 文件 1： 4; 文件 2： 4.
+数量依据：五份制备方式相近的生殖系尾部样本报告 1,008.92–1,392.81 亿个碱基，中位数为 1,181.31 亿个碱基。
 
-限制与准备：这是申报的运行/泳道输入量，并非已证明完整的人类 30× 样本。原始碱基数不能说明样本级可用深度。检查完整文件及配对关系。
+公开记录：[ERR14032264](https://www.ebi.ac.uk/ena/browser/view/ERR14032264)。建议参考序列：fa 编号 3 / GCF_000001635.24。
 
-## Data 5. Homo sapiens — PromethION
+## 数据 16：小麦基因组组装 — Renan 文库
 
-该输入在当前常规纳米孔输出及 HiFi 之外，提供超长基因组表示。来源明确属于超长测序研究。
+这组小麦文库代表大型多倍体植物基因组研究。具名的 Renan 组装优化制备包含三个双端测序运行，六个文件全部纳入。这里按有记录的文库确定输入单位，没有拼接无关测序运行来凑到某个测序深度。
 
-公开来源：[ERR12954382](https://www.ebi.ac.uk/ena/browser/view/ERR12954382)。输入单位：一个档案 run。
+序列量：495,517,462,387 个碱基。下载文件合计 243,946,029,653 字节（十进制 243.946 GB），共 6 个文件。
 
-报告数据量：49,183,304,334个碱基（49.183 十亿）。列出的来源对象：1个；40,884,662,813字节（40.885 十进制 GB）。fa ID 1 / GCF_000001405.39.。
+数量依据：这三个输出对应同一样本和同一项具名制备。
 
-数据量证据：49.18 十亿 个碱基接近来源研究 74 个正产出 run 的中位数 51.65 十亿（共 79 条记录，其中 5 条总量为零）。这是可信的长读长 run/文库数据量。
+公开记录：[ERR6348210](https://www.ebi.ac.uk/ena/browser/view/ERR6348210), [ERR6348211](https://www.ebi.ac.uk/ena/browser/view/ERR6348211), [ERR6348212](https://www.ebi.ac.uk/ena/browser/view/ERR6348212)。建议参考序列：fa 编号 18 / GCA_937894285.1。
 
-属性： 仅有已保存的非随机前缀汇总；全文件分布/完整性尚未确定。 读长： 文件 1： 454–501182; 中位数 42100. 质量字符数： 文件 1： 77.
+## 数据 17：马铃薯基因组组装 — Altus 文库
 
-限制与准备：检查的长度前缀仅包含 456 条记录，不能说明完整读长分布的尾部，也不能代表多次测序运行构成的完整样本。测试前获取并核验所列完整文件。
+这组无 PCR 的 Altus 文库为集合补充了四倍体作物组装案例。输入是一份完整文库，其插入片段长度记录为 470 个碱基。这里指从两端测序的完整 DNA 插入片段长度，并非任一读段的长度，也不是两端读段之间的空隙。其他插入片段长度和条形码关联读段制备属于不同文库。
 
-## Data 6. Homo sapiens — PromethION
+序列量：70,556,516,868 个碱基。下载文件合计 52,291,517,076 字节（十进制 52.292 GB），共 2 个文件。
 
-该输入提供当前 R10.4.1/Dorado 基因组输出条件。所选对象是一个具名流动槽的完整 BAM，而非任意字节切片。
+数量依据：同一样本的三份文库插入片段均为 470 bp，分别报告 680.17 亿、705.57 亿和 709.76 亿个碱基。
 
-公开来源：[PAW70337 SUP flow-cell source](https://ont-open-data.s3.amazonaws.com/giab_2025.01/basecalling/sup/HG002/PAW70337/calls.sorted.bam)。输入单位：一个具名制造商 flow-cell BAM，尚待导出 FASTQ。
+公开记录：[SRR14993639](https://www.ebi.ac.uk/ena/browser/view/SRR14993639)。建议参考序列：fa 编号 6 / GCA_000226075.1。
 
-报告数据量：所选来源的确切序列产量尚未确定。列出的来源对象：1个；171,763,325,052字节（171.763十进制 GB）。fa ID 1 / GCF_000001405.39。
+使用前请注意：这里选取的是一份具名无 PCR 文库，不是该栽培品种组装项目的全部数据。
 
-规模依据：该发布资料称每个流动槽约产生140 Gb。精确的 PAW70337 SUP 分析摘要报告 153,264,463,825 个碱基和8,155,127条读段，且均在该分析中完成比对。其范围不同于所选的精确 BAM/导出产量。
+方法和数量依据：[Altus 马铃薯基因组组装项目](https://www.ebi.ac.uk/ena/browser/view/PRJNA718240)
 
-属性：仅有 BAM 源文件；未检查 FASTQ 前缀、读长、标题或质量分布。读长：未检查；仅有 BAM 源文件。质量字符数：未检查。
+## 数据 18：对虾基因组测序
 
-限制与准备：根据比对分析摘要，尚无法确定所选 BAM 转出 FASTQ 后的确切产出量。已声明的未配对主记录/名称处理规则目前只通过合成测试；若出现意外配对标志、重复主记录名称、缺失 SEQ 或缺失 QUAL，必须先审查，不能悄悄省略。准备后顺序不等同于仪器原始顺序。使用固定的 prepare_data6.py 规则：SAMtools 1.22/htslib 1.22，按名称排序，选取未配对主记录，采用存储的 QUAL，并拒绝缺少主记录质量值的情况。运行后会生成一个纯文本 FASTQ，以及含确切源/输出 SHA-256 和选项的收据。尚未对真实源文件执行准备。
+这组测序运行将水产育种研究中的海洋无脊椎动物纳入集合，扩展了人类、小鼠和家畜之外的动物基因组及参考序列。其序列量接近来源研究中十个可比测序运行的中间水平。
 
-## Data 7. Homo sapiens — Revio
+序列量：26,760,937,872 个碱基。下载文件合计 18,466,075,422 字节（十进制 18.466 GB），共 2 个文件。
 
-该输入提供共识长读段条件，与原始 CLR 和纳米孔不同。
+数量依据：该数据报告 267.6 亿个碱基，接近十个相同近交研究次测序运行的中位数 269.6 亿个碱基。
 
-公开来源：[ERR14732808](https://www.ebi.ac.uk/ena/browser/view/ERR14732808)。输入单位：具名 Revio 细胞/run 的完整条码特定输出；不是整个细胞，也不是含三个输出的完整样本文库。
+公开记录：[DRR1000971](https://www.ebi.ac.uk/ena/browser/view/DRR1000971)。建议参考序列：fa 编号 11 / GCF_042767895.1。
 
-报告数据量：48,501,907,479个碱基（48.502 十亿）。列出的来源对象：1个；23,718,059,148字节（23.718 十进制 GB）。fa ID 1 / GCF_000001405.39.。
+## 数据 19：鸡基因组测序
 
-数据量证据：提交的源数据将其识别为一个按条码区分的 HiFi 单细胞输出，报告 48,501,907,479 个碱基。同一份样本、同一文库的另外三个输出合计 135,306,939,495 个碱基；它们是完整文库的另一种选择，并非所选条码输出中缺少的部分。提交文件名记录为 m84046_230703_215053_s2.hifi_reads.bc2031.bam。实际选择的是另行登记的档案 FASTQ，而不是该 BAM。
+这组数据代表家禽基因组重测序，育种用途调查也支持将其纳入。来源是一项规模较大的蛋鸡研究，其序列量处于该研究测序运行报告值的中间 80% 范围内。
 
-属性： 仅有已保存的非随机前缀汇总；全文件分布/完整性尚未确定。 读长： 文件 1： 1947–38788; 中位数 19615. 质量字符数： 文件 1： 7.
+序列量：19,596,096,600 个碱基。下载文件合计 14,336,554,441 字节（十进制 14.337 GB），共 2 个文件。
 
-限制与准备：所选数据量是按条形码对应的细胞产出，不代表整个 Revio 芯片或该个体的所有文库。样本与参考序列是否精确匹配仍未核实。检查完整文件及配对关系。
+数量依据：该数据报告 196 亿个碱基，处于这项 1,004 层研究中间 80% 的 139–208 亿个碱基范围内。
 
-## Data 8. Homo sapiens — CycloneSEQ G400-ER (CNGB G400-ER label)
+公开记录：[ERR13943038](https://www.ebi.ac.uk/ena/browser/view/ERR13943038)。建议参考序列：fa 编号 12 / GCA_016699485.1。
 
-这个单文件 CNGB 来源用于提供预期的 CycloneSEQ 纳米孔条件。虽然档案标签稀少，但具体产品部署和公开研究支持该技术用途。选定对象为实验 CNX1236558 中的 CNR1409093，以一个 SINGLE FASTQ 文件提供。CNGB 元数据将其识别为 G400-ER 上的人类 HG002 基因组 WGS；尚未验证其与相关 SRA 表示的字节等价性。
+## 数据 20：人类 PacBio 原始 CLR 读段
 
-公开来源：[CNR1409093 / CNX1236558](https://db.cngb.org/search/run/CNR1409093/)。输入单位：一个选定的 CNGB run/源对象 CNR1409093，文件为 WY_reads.fq.gz；是单端 reads，不是配对端。
+这组 HG002 文库在 HiFi 一致性读段之外，补充了原始 PacBio CLR 读段。该文库明确标记为 HG002-CLR。其质量值和档案格式均按提交状态保留，不将其视为原生质量值或所有 PacBio 原始文件的代表。
 
-报告数据量：所选来源的确切序列产量尚未确定。列出的来源对象：1个；130,270,589,600字节（130.271十进制 GB）。fa ID 1 / GCF_000001405.39。
+序列量：113,896,753,645 个碱基。下载文件合计 34,654,458,158 字节（十进制 34.654 GB），共 1 个文件。
 
-数据量证据：选定的 WY_reads.fq.gz 对象登记压缩大小为 130,270,589,600 字节。CNGB 元数据记录其于 2025 年 12 月 4 日发布；尚未确定确切全文件读数和序列碱基产出量。不能用相关研究的数据量替代该文件的产出量；压缩源大小既不是生产规范，也不是未压缩 FASTQ 大小。
+数量依据：报告的原始序列量为 1,139 亿个碱基，是较大的基因组输入。
 
-单位和处理方式的来源：[CNGB 确切 run 和实验元数据](https://db.cngb.org/search/experiment/CNX1236558/) [对选定 CNGB 对象的有界前缀检查](https://ftp.cngb.org/pub/CNSA/data7/CNP0007646/CNS1382495/CNX1236558/CNR1409093/WY_reads.fq.gz)
+公开记录：[SRR8801873](https://www.ebi.ac.uk/ena/browser/view/SRR8801873)。建议参考序列：fa 编号 1 / GCF_000001405.39。
 
-属性：非随机前缀观察：传输 1,048,576 个压缩字节后，观察到 258 条完整记录；解压后的 FASTQ 为 2,432,831 字节。全文件读数/碱基总量、分布和完整性仍未验证。读长：258 条完整的非随机前缀记录为 355–28,912 个碱基。质量字符数：未记录。
+## 数据 21：植物纳米孔基因组组装
 
-限制与准备：该对象没有发布者 MD5，核验仅依据登记的 130,270,589,600 字节大小。大小一致本身不能证明内容完整。SINGLE 表示不是一对配对端。缓存的 CNGB 元数据将其标为人类 HG002 基因组 WGS、RANDOM 选择、G400-ER 以及 fragment/single 布局。与 SRA 原始数据的字节等价性尚未验证。前缀标题观察不能证明全文件配对或完整性。下载所列的唯一 CNGB 对象，获取后记录本地 SHA-256 并保留其身份。10 月 19 日保存的非随机前缀包含 258 条完整记录，且未观察到四行格式错误；基准测试前仍须确认全文件完整性和属性。这里尚未执行全文件准备或验证。
+这组拟南芥 Col-0 数据补充了纳米孔测序的植物核基因组组装读段。它是一次具名测序运行提交的完整 pass 类读段输出。fail 类读段和其他 basecall 输出属于不同的数据表示，并非这份输入中缺失的部分。
 
-## Data 9. Homo sapiens — Illumina NovaSeq 6000
+序列量：10,554,533,391 个碱基。下载文件合计 9,919,475,722 字节（十进制 9.919 GB），共 1 个文件。
 
-该输入提供主流人类外显子组取样。保留其真实肿瘤研究背景，不要称为通用胚系样本。
+数量依据：所选 pass 输出报告了 10,554,533,391 个碱基。
 
-公开来源：[ERR12411150](https://www.ebi.ac.uk/ena/browser/view/ERR12411150)。输入单位：一个配对档案 run。
+公开记录：[ERR13669551](https://www.ebi.ac.uk/ena/browser/view/ERR13669551)。建议参考序列：fa 编号 9 / GCF_000001735.4。
 
-报告数据量：5,446,687,469个碱基（5.447 十亿）。列出的来源对象：2个；2,415,095,443字节（2.415 十进制 GB）。fa ID 1 / GCF_000001405.39.。
+使用前请注意：所选 PASS 输出不包含 fail 类读段。
 
-规模依据：来源数据含38次 FFPE 外显子组运行，中位数为5.650 十亿个碱基。所选运行有5.447 十亿个碱基，名义富集范围为72 Mb。这支持限定范围内的来源流程，但不能证明可用肿瘤深度已经核实。
+## 数据 22：植物 PacBio HiFi 基因组组装
 
-属性： 仅有已保存的非随机前缀汇总；全文件分布/完整性尚未确定。 读长： 文件 1： 146–151; 中位数 151; 文件 2： 146–151; 中位数 151. 质量字符数： 文件 1： 3; 文件 2： 4.
+这组拟南芥 Col-0 读段补充了植物 HiFi 一致性测序。论文中的登录号、AT_HiFi 文库名称和报告序列量均与档案记录相符；确认其测序方法依据的是这些文档信息，而不是仅凭档案文件名中的 `_subreads`。
 
-限制与准备：72 Mb 富集靶标是名义值，并非实测的靶区序列量。预期的可用肿瘤深度及泳道与文库的精确分配仍未核实。检查完整文件及配对关系。
+序列量：22,904,700,074 个碱基。下载文件合计 18,526,201,575 字节（十进制 18.526 GB），共 1 个文件。
 
-## Data 10. Zea mays subsp. mays — Illumina NovaSeq 6000
+数量依据：已发表的植物 HiFi 读段集报告 229 亿个碱基；档案元数据对 AT_HiFi 的精确报告值为 22,904,700,074 个碱基。
 
-这个无 PCR 的 SW1611 玉米基因组文库代表普通作物群体重测序。报告 47.789 十亿 个碱基，支持将完整配对文库作为有文档记录的 521 系关联面板规模的示例。B73 参考序列与 SW1611 同属一个物种，但属于不同自交系；这明确了参考序列关系，却不声称栽培品种完全匹配。
+公开记录：[SRR14728885](https://www.ebi.ac.uk/ena/browser/view/SRR14728885)。建议参考序列：fa 编号 9 / GCF_000001735.4。
 
-公开来源：[SRR8906645](https://www.ebi.ac.uk/ena/browser/view/SRR8906645)。输入单位：SW1611 文库 L84 的一个完整已提交配对 run；包含档案 FASTQ 的两个配对端。
+使用前请注意：文档确认其为 HiFi 数据，并不能确定质量字符类型或整个文件的准确性。
 
-报告数据量：47,789,487,240个碱基（47.789 十亿）。列出的来源对象：2个；24,082,143,756字节（24.082 十进制 GB）。fa ID 10 / GCA_902167145.1.。
+## 数据 23：人类 RNA 测序 — MGI
 
-数据量证据：主要研究面板描述了约 20× DNA 重测序。513 项报告为正值的文库总量中，中位数为 47,915,875,698 个碱基，四分位距为 43,361,613,016–53,576,105,346。另有 8 项元数据总量为零，它们未纳入这些正值产出量分位数；这不能证明样本产出为零。该输入报告 47,789,487,240 个碱基。这些是来源队列比较，不代表玉米普遍生产规范。
+这组数据代表使用 MGI 短读段仪器进行的常规人类 RNA 测序，与人类基因组数据及 Illumina 表达文库形成补充。其序列量接近来源研究八次测序运行的中间水平。
 
-单位和处理方式的来源：[玉米关联分析面板主要研究](https://www.nature.com/articles/s41588-019-0427-6) [确切的无 PCR 玉米实验](https://www.ebi.ac.uk/ena/browser/view/SRX5692588) [确切的 SW1611 玉米样本](https://www.ebi.ac.uk/ena/browser/view/SAMN11370298) [玉米 run 的确切数量与表示](https://www.ncbi.nlm.nih.gov/sra/SRR8906645)
+序列量：4,828,141,800 个碱基。下载文件合计 3,817,894,154 字节（十进制 3.818 GB），共 2 个文件。
 
-属性： 未预览；未检查这些确切文件的读长、质量或标题概况。全文件完整性和配对关系仍未验证。 读长： 未检查。 质量字符数： 未检查。
+数量依据：该数据报告 48.3 亿个碱基，接近来源研究八次测序运行的中位数 48.1 亿个碱基，符合常见表达文库的序列量。
 
-限制与准备：确切实验记录说明这是无 PCR 的基因组 WGS。提交的别名 Q88_1.trimed.fq.gz 暗示文件经过修剪；具体流程以及是否与未经处理的仪器输出等价，仍未核实。NCBI 元数据显示 R1/R2 平均读长分别为 148.43/145.89 个碱基；这不是新检查的读长分布，也不是指定的名义循环长度。获取登记的两个确切档案配对端，并验证完整性、配对关系和准备后字节顺序。登记了发布者 MD5，但并未计算。固定参考序列版本，并一致核算参考序列字节。
+公开记录：[ERR10030615](https://www.ebi.ac.uk/ena/browser/view/ERR10030615)。建议参考序列：fa 编号 1 / GCF_000001405.39。
 
-## Data 11. Homo sapiens — Ion Torrent S5 XL
+## 数据 24：植物 RNA 测序
 
-该输入提供人类样本中的靶向半导体测序输出，与全基因组测序和食品标记文库不同。
+这组野生型拟南芥 Col-0 重复样本代表植物整体 RNA 测序。它是一份具名表达文库，序列量落在来源研究 14 个 RNA 输出的范围内。该比较支持这个具体案例，不代表普遍的产量要求。
 
-公开来源：[DRR341924](https://www.ebi.ac.uk/ena/browser/view/DRR341924)。输入单位：一个档案 run。
+序列量：7,102,948,500 个碱基。下载文件合计 3,632,286,064 字节（十进制 3.632 GB），共 2 个文件。
 
-报告数据量：1,497,990,828个碱基（1.498 十亿）。列出的来源对象：1个；1,154,396,293字节（1.154 十进制 GB）。fa ID 1 / GCF_000001405.39.。
+数量依据：来源研究的 14 个 RNA 输出报告 52.14–88.09 亿个碱基，中位数为 64.67 亿个碱基。
 
-规模依据：所选的具名扩增子运行报告 1,497,990,828 个碱基。来源研究中133次可比运行的中位数为1,644,565,071 个碱基。面板整体的可用深度尚未确定。
+公开记录：[SRR14627767](https://www.ebi.ac.uk/ena/browser/view/SRR14627767)。建议参考序列：fa 编号 9 / GCF_000001735.4。
 
-属性： 未预览；未检查读长、质量或标题概况，因此这些属性仍未知。全文件完整性和配对关系尚未确定。 读长： 未检查。 质量字符数： 未检查。
+## 数据 25：人类小 RNA 测序
 
-限制与准备：检查的来源资料指出这是 cfDNA 扩增子测序运行，但没有确定面板的确切范围，也未说明所提供读段与整合后读段之间的关系。这里不声称已对一般面板深度作出认证。完整获取、文件完整性、配对关系及任何辅助定义仍待核实。
+这组生物学重复样本代表小 RNA 测序。RNA 分子本身较短，因此输入规模自然较小；抽查到的读段长度为 18–44 个碱基。该文库的读段数和碱基数与来源研究相符。生物学目标本身无法说明数据提交前做过哪些修剪。
 
-## Data 12. Picea abies — Illumina HiSeq 2000
+序列量：284,297,641 个碱基。下载文件合计 291,749,840 字节（十进制 291.750 MB），共 1 个文件。
 
-该云杉输入用于相对于大型针叶树参考序列进行群体靶向捕获。选定的配对档案 run 报告 335,384,842 个碱基；拟议的同物种组装含 11,961,396,284 个碱基。这种“小靶标/大参考序列”关系是潜在的压缩条件，不是实测的压缩效果或参考序列成本结果。具名文库将提交的 6 个 lane/配对端文件，分为 3 个 lane，再对应到所选档案中的两个配对端。
+数量依据：该数据报告 1,264 万 条单端读段和 28,400 万个碱基；来源研究八次测序运行的碱基数中位数为 28,600 万，与之相符。
 
-公开来源：[SRR19440963](https://www.ebi.ac.uk/ena/browser/view/SRR19440963)。输入单位：一个具名捕获档案 run，选用档案中的 FASTQ 两端；对应的提交记录将三组 lane 配对在一起。
+公开记录：[DRR1089360](https://www.ebi.ac.uk/ena/browser/view/DRR1089360)。建议参考序列：fa 编号 1 / GCF_000001405.39。
 
-报告数据量：335,384,842个碱基（335.385 百万）。列出的来源对象：2个；177,775,032字节（177.775 十进制 MB）。fa ID 15 / GCA_900067695.1.。
+方法和数量依据：[具名小 RNA 重复样本记录](https://www.ncbi.nlm.nih.gov/sra/DRX1064881)
 
-规模依据：该归档运行报告 335,384,842 个碱基，在7,729次项目运行中处于较低范围；这些运行的中位数为584 百万个碱基。精确记录将 UME_081104_P72_WE10 下的 L001–L003 泳道配对分组。主要论文报告的是较早队列的40,018个探针和平均15×，并非这个较晚的文库。
+## 数据 26：人类 RNA 测序 — Illumina
 
-单位和处理方式的来源：[确切云杉捕获实验和已提交对象](https://www.ncbi.nlm.nih.gov/sra/SRX15494349) [带版本号的云杉组装元数据](https://www.ebi.ac.uk/ena/browser/view/GCA_900067695.1)
+这组数据代表常规 Illumina 人类表达文库，与 MGI 和较新的短读段 RNA 输入互为补充。其序列量接近来源研究 12次可比测序运行的中间水平。
 
-属性： 未预览；未检查读长、质量或标题概况，因此这些属性仍未知。全文件完整性和配对关系尚未确定。 读长： 未检查。 质量字符数： 未检查。
+序列量：4,002,783,900 个碱基。下载文件合计 1,795,309,208 字节（十进制 1.795 GB），共 2 个文件。
 
-限制与准备：来源分组只是元数据证据，并未通过检查文件正文验证合并方式或顺序。确切标准化表示和文库特定的可用靶标深度仍未验证。探针数不是靶标碱基数的分母；不能把此前队列中的 15× 套用于本 run。完整获取、完整性/配对检查及任何辅助定义均待处理。
+数量依据：该数据报告 40 亿个碱基，接近同类研究 12次测序运行的中位数 41.1 亿个碱基，并处于 NovaSeq RNA 正产出次测序运行的较宽范围内。
 
-## Data 13. Chenopodium quinoa — Illumina HiSeq 2500
+公开记录：[DRR1069746](https://www.ebi.ac.uk/ena/browser/view/DRR1069746)。建议参考序列：fa 编号 1 / GCF_000001405.39。
 
-这份藜麦 RAD 输入用于作物简化表示基因分型。其报告的8.95 亿个碱基接近136个匹配群体研究输出的中位数8.72 亿。完整双端运行适用于这一靶向取样规模；全基因组数据量代表的是另一类工作负载。
+## 数据 27：单端 RNA 测序 — Element AVITI
 
-公开来源：[DRR095727](https://www.ebi.ac.uk/ena/browser/view/DRR095727)。输入单位：一个配对档案 run。
+这组 AVITI 文库以有记录的单端 RNA 配置，补充了一种已投入商业使用的短读段技术。应按其实际配置进行测试，不宜与双端文库直接比较。其序列量接近来源研究 18次测序运行的中间水平。
 
-报告数据量：894,720,418个碱基（894.720 百万）。列出的来源对象：2个；571,962,433字节（571.962 十进制 MB）。fa ID 16 / GCF_001683475.1.。
+序列量：3,095,516,700 个碱基。下载文件合计 2,301,820,230 字节（十进制 2.302 GB），共 1 个文件。
 
-规模依据：8.95 亿个碱基，接近136次匹配群体研究运行的中位数（8.72 亿个碱基）。
+数量依据：该数据报告 31 亿个碱基，接近来源研究 18次测序运行的中位数 29.8 亿个碱基，并处于 20 项已知研究中 AVITI 单端 RNA 数据的较宽范围内。
 
-属性： 未预览；未检查读长、质量或标题概况，因此这些属性仍未知。全文件完整性和配对关系尚未确定。 读长： 未检查。 质量字符数： 未检查。
+公开记录：[SRR30608496](https://www.ebi.ac.uk/ena/browser/view/SRR30608496)。建议参考序列：fa 编号 1 / GCF_000001405.39。
 
-限制与准备：不得用全基因组测序深度标准评估 RAD。仅凭这些原始总量无法确定精确位点覆盖度。完整获取、文件完整性、配对关系及任何辅助定义仍待核实。
+## 数据 29：纳米孔转录本测序
 
-## Data 14. Sus scrofa — DNBSEQ-G400
+这组数据在纳米孔基因组读段之外，补充了来自转录本文库的纳米孔读段。来源将文库描述为全长文库，这是预期取样方式，并不保证每条提交的读段都长或完整。其读段数量与研究中的文库规模相当。
 
-该输入提供畜牧基因组材料和一种所提供恒定质量值的短读长表示。这一输入同时服务于两种条件。
+序列量：2,480,166,369 个碱基。下载文件合计 2,307,675,498 字节（十进制 2.308 GB），共 1 个文件。
 
-公开来源：[SRR24804436](https://www.ebi.ac.uk/ena/browser/view/SRR24804436)。输入单位：一个配对档案 run。
+数量依据：来源论文报告 72 个文库合计有 31,080 万 条原始读段，算术平均为 432 万 条。
 
-报告数据量：26,338,729,500个碱基（26.339 十亿）。列出的来源对象：2个；10,018,740,265字节（10.019 十进制 GB）。fa ID 2 / GCA_000003025.6.。
+公开记录：[SRR36288068](https://www.ebi.ac.uk/ena/browser/view/SRR36288068)。建议参考序列：fa 编号 1 / GCF_000001405.39。
 
-数据量证据：26.34 十亿 个碱基接近 147 个来源研究 run 的紧密中位数（约 26.19 十亿）。
+使用前请注意：这是同一研究内的规模参照，不是长 RNA 产量的一般标准。
 
-属性： 仅有已保存的非随机前缀汇总；全文件分布/完整性尚未确定。 读长： 文件 1： 150–150; 中位数 150; 文件 2： 150–150; 中位数 150. 质量字符数： 文件 1： 1; 文件 2： 1.
+## 数据 30：一个小鼠 Smart-seq2 细胞
 
-限制与准备：原始用途是组装/重测序研究的一部分。不得把所提供的恒定质量值宣传为典型的原生 MGI 质量值；其处理来源未知。检查完整文件及配对关系。
+这一个小鼠膀胱细胞补充了跨转录本的单细胞 RNA 测序，与 3′ CITE 文库形成补充。Smart-seq2 会从转录本不同位置取样，但不意味着每条读段都覆盖完整转录本。一个 SRA 测序运行的两个读段端均已纳入；其序列量处于 660 个有标注细胞的中间一半范围内。
 
-## Data 15. Mus musculus — Illumina NovaSeq 6000
+序列量：220,101,000 个碱基。下载文件合计 97,956,122 字节（十进制 97.956 MB），共 2 个文件。
 
-这是一个明确识别的小鼠生殖系尾组织全基因组文库，完整配对 run 报告 100.892 十亿 个碱基。5 个制备方式相近的尾组织文库范围为 100.892–139.281 十亿 个碱基。该输入是其中产出较低的一项，并非人为截取的子集；来源工作流证据支持其数据量，但不能据此确立普遍的小鼠生产规范。品系/参考序列身份仍需限定说明。
+数量依据：作者标注的 660 个膀胱细胞各有一个清单次测序运行；其报告序列量中位数为 182,126,200 个碱基，中间一半范围为 139,362,300–226,050,350 个碱基。
 
-公开来源：[ERR14032264](https://www.ebi.ac.uk/ena/browser/view/ERR14032264)。输入单位：一个完整的配对生殖系尾组织全基因组 run。
+公开记录：[SRR6520293](https://www.ebi.ac.uk/ena/browser/view/SRR6520293)。建议参考序列：fa 编号 3 / GCF_000001635.24。
 
-报告数据量：100,892,053,998个碱基（100.892 十亿）。列出的来源对象：2个；48,335,307,261字节（48.335 十进制 GB）。fa ID 3 / GCF_000001635.24.。
+使用前请注意：作者和档案均将其标为一次测序运行中的一个细胞。上传前的确切处理阶段和 FASTQ 实际属性尚未检查。
 
-规模依据：五个制备方式相近的胚系尾部输出含有100.892–139.281 十亿个碱基，中位数为118.131 十亿个碱基。这个完整运行的数据量为100.892 十亿个碱基，是其中产量较低的一次。更深的克隆文库未用作同质比较对象。
+方法和数量依据：[转录本范围单细胞图谱的主要研究](https://www.nature.com/articles/s41586-018-0590-4) [膀胱 Smart-seq2 方法与实验记录](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2967045) [单细胞测序运行与原始文件对应关系的官方记录](https://ftp.ncbi.nlm.nih.gov/geo/series/GSE109nnn/GSE109774/suppl/GSE109774_list_of_SRR_accessions_and_raw_filenames.txt.gz) [作者提供的膀胱单细胞注释](https://raw.githubusercontent.com/czbiohub-sf/tabula-muris/master/00_data_ingest/03_tissue_annotation_csv/Bladder_facs_annotation.csv) [Smart-seq2 实验 运行数量记录](https://www.ebi.ac.uk/ena/browser/view/SRX3607041) [所选 Smart-seq2测序运行记录](https://www.ebi.ac.uk/ena/browser/view/SRR6520293)
 
-属性： 所有登记文件均未预览；没有实测读长、质量或标题概况。 读长： 未预览。 质量字符数： 未预览。
+## 数据 31：CITE 抗体标签
 
-限制与准备：确切样本为 Mus musculus，但未说明其品系。拟议的小鼠参考序列只是同物种提案；尚未验证序列匹配。使用所有确切登记对象并保留 run 边界；测试前按需验证全文件完整性和配对关系。本版本没有执行准备或数据获取。
+这些文件包含与 Data 32、Data 33 同一 CITE 实验中的抗体衍生标签。它们与 mRNA 和样本标签读段承担不同作用，并非重复数据。该具名抗体标签文库的四个双端测序运行均已纳入，共八个文件。
 
-## Data 16. Triticum aestivum — Illumina NovaSeq 6000
+序列量：28,795,741,128 个碱基。下载文件合计 11,700,505,268 字节（十进制 11.701 GB），共 8 个文件。
 
-该 Renan 小麦基因组文库提供大型/多倍体核基因组组装背景。用于组装抛光的同一具名制备包含 3 个配对 run 输出，报告碱基数合计 495.517 十亿。6 个文件都应纳入，并保留各 run 边界。选择这一输入单位，是因为它对应有文档记录的文库，而非某个深度阈值，也不是为了减少字节数。
+数量依据：四个双端次测序运行共八个文件，报告碱基总量为 28,795,741,128。
 
-公开来源：[ERR6348210](https://www.ebi.ac.uk/ena/browser/view/ERR6348210), [ERR6348211](https://www.ebi.ac.uk/ena/browser/view/ERR6348211), [ERR6348212](https://www.ebi.ac.uk/ena/browser/view/ERR6348212)。输入单位：一个具名 Renan 基因组文库：3 个完整配对 run，共 6 个独立文件。
+公开记录：[SRR19066657](https://www.ebi.ac.uk/ena/browser/view/SRR19066657), [SRR19066658](https://www.ebi.ac.uk/ena/browser/view/SRR19066658), [SRR19066659](https://www.ebi.ac.uk/ena/browser/view/SRR19066659), [SRR19066661](https://www.ebi.ac.uk/ena/browser/view/SRR19066661)。建议参考序列：混合物/特征参考尚未确定；未指定单一基因组 FASTA。
 
-报告数据量：495,517,462,387个碱基（495.517 十亿）。列出的来源对象：6个；243,946,029,653字节（243.946 十进制 GB）。fa ID 18 / GCA_937894285.1.。
+使用前请注意：上样/回收目标不是实测回收细胞数。哪些文件抽查过前缀，请以“文件”工作表为准。
 
-规模依据：三个输出属于同一样本和具名制备。它们报告的495,517,462,387 个碱基是有记录的组装抛光文库数据量，并非为凑足30×而拼出的总量，也不是一般产量主张。
+## 数据 32：CITE mRNA 读段
 
-属性： 所有登记文件均未预览；没有实测读长、质量或标题概况。 读长： 未预览。 质量字符数： 未预览。
+这些文件包含匹配 CITE 实验中的 mRNA 读段。抗体标签和样本标签不能替代这份转录本文库。四个双端测序运行均已纳入，共八个文件，并与标签文库分开保存。
 
-限制与准备：这 3 个输出共同定义具名 Renan 文库，并不代表小麦普遍生产规范。同一栽培品种的参考序列身份目前仅在元数据层面提出；FASTA 内容和匹配关系均未验证。使用所有确切登记对象并保留 run 边界；测试前按需验证全文件完整性和配对关系。本版本没有执行准备或数据获取。
+序列量：73,686,380,444 个碱基。下载文件合计 38,755,683,391 字节（十进制 38.756 GB），共 8 个文件。
 
-## Data 17. Solanum tuberosum — Illumina HiSeq 2500
+数量依据：四个双端次测序运行共八个文件，报告碱基总量为 73,686,380,444。
 
-这个 Altus 马铃薯无 PCR 文库提供四倍体作物基因组组装输入，以及观察到的较长短读长表示。其报告 70.557 十亿 个碱基，来自一个具名、插入片段为 470 bp 的文库。这是有文档记录的材料/参考序列和制备条件；470 bp 描述插入片段，不是读长或每个拷贝的深度。
+公开记录：[SRR19066662](https://www.ebi.ac.uk/ena/browser/view/SRR19066662), [SRR19066664](https://www.ebi.ac.uk/ena/browser/view/SRR19066664), [SRR19066665](https://www.ebi.ac.uk/ena/browser/view/SRR19066665), [SRR19066666](https://www.ebi.ac.uk/ena/browser/view/SRR19066666)。建议参考序列：fa 编号 1 / GCF_000001405.39。
 
-公开来源：[SRR14993639](https://www.ebi.ac.uk/ena/browser/view/SRR14993639)。输入单位：完整具名的 potato_Altus_PR_2_470bp 配对 run/文库。
+使用前请注意：上样/回收目标不是实测回收细胞数。哪些文件抽查过前缀，请以“文件”工作表为准。
 
-报告数据量：70,556,516,868个碱基（70.557 十亿）。列出的来源对象：2个；52,291,517,076字节（52.292 十进制 GB）。fa ID 6 / GCA_000226075.1.。
+## 数据 33：CITE 样本标签
 
-规模依据：三个同一样本、插入片段为470 bp的文库分别含有68.017、70.557和70.976 十亿个碱基。不同的800 bp、mate-pair及 linked-read 制备属于其他文库，并非本输入遗漏的组分。
+这些文件包含与抗体标签和 mRNA 输入来自同一 CITE 实验的样本标签读段。它们用途不同，并非重复副本。四个双端测序运行全部纳入，共八个文件。标签定义可用于解释数据或构建自定义参考，但不是精确压缩和恢复 FASTQ 的必要条件。
 
-单位和处理方式的来源：[Altus 马铃薯基因组组装项目](https://www.ebi.ac.uk/ena/browser/view/PRJNA718240)
+序列量：1,566,671,480 个碱基。下载文件合计 687,740,927 字节（十进制 687.741 MB），共 8 个文件。
 
-属性： 仅有已保存的非随机前缀汇总；全文件分布/完整性尚未确定。 读长： 文件 1： 59–265; 中位数 265; 文件 2： 59–265; 中位数 265. 质量字符数： 文件 1： 28; 文件 2： 31.
+数量依据：四个双端次测序运行共八个文件，报告碱基总量为 1,566,671,480。
 
-限制与准备：这是一个具名的无 PCR 文库，并非该栽培品种的完整组装数据集。470 bp 指插入片段长度，不是读长，也不是经过核实的每拷贝深度。检查完整文件及配对关系。
+公开记录：[SRR19066668](https://www.ebi.ac.uk/ena/browser/view/SRR19066668), [SRR19066669](https://www.ebi.ac.uk/ena/browser/view/SRR19066669), [SRR19066671](https://www.ebi.ac.uk/ena/browser/view/SRR19066671), [SRR19066672](https://www.ebi.ac.uk/ena/browser/view/SRR19066672)。建议参考序列：混合物/特征参考尚未确定；未指定单一基因组 FASTA。
 
-## Data 18. Penaeus vannamei — DNBSEQ-T7
+使用前请注意：上样/回收目标不是实测回收细胞数。哪些文件抽查过前缀，请以“文件”工作表为准。
 
-该输入提供水产养殖/无脊椎动物基因组材料，应用育种调查支持其相关性。
+## 数据 34：空间转录组测序 — Stereo-seq
 
-公开来源：[DRR1000971](https://www.ebi.ac.uk/ena/browser/view/DRR1000971)。输入单位：一个配对档案 run。
+这组测序运行补充了空间转录组测序，其中条码读段和转录本读段用途不同，长度也可能不同。完整的具名测序运行规模较大，因为它是实际的空间测序输入。其捕获区域和细胞/网格深度均未知，不能从文件大小推断。
 
-报告数据量：26,760,937,872个碱基（26.761 十亿）。列出的来源对象：2个；18,466,075,422字节（18.466 十进制 GB）。fa ID 11 / GCF_042767895.1.。
+序列量：248,408,655,120 个碱基。下载文件合计 181,786,356,695 字节（十进制 181.786 GB），共 2 个文件。
 
-数据量证据：26.76 十亿 个碱基接近 10 个匹配近交系研究 run 的中位数 26.96 十亿。相对于引用的虾参考组装，按原始序列约为其长度的 15 倍。
+数量依据：具名的 L01 空间测序次测序运行报告了 248,408,655,120 个碱基。
 
-属性： 仅有已保存的非随机前缀汇总；全文件分布/完整性尚未确定。 读长： 文件 1： 35–150; 中位数 150; 文件 2： 35–150; 中位数 150. 质量字符数： 文件 1： 39; 文件 2： 39.
+公开记录：[SRR29351083](https://www.ebi.ac.uk/ena/browser/view/SRR29351083)。建议参考序列：fa 编号 1 / GCF_000001405.39。
 
-限制与准备：原始数据量与参考序列长度之比不等于比对覆盖度。精确的全样本分配仍需在后续准备阶段核实。检查完整文件、配对关系，以及样本与参考序列是否匹配。
+使用前请注意：捕获区域以及实测细胞/网格深度仍未知。
 
-## Data 19. Gallus gallus — DNBSEQ-T7
+## 数据 35：整体 ATAC 测序
 
-该输入提供家禽基因组材料。它有独立的应用用途依据，且所选输入来自一个规模可观的实际动物队列。
+这组 K562 文库代表常规的双端整体 ATAC 重复样本，取样对象是开放染色质，而不是全基因组 DNA 或 RNA。其序列量接近研究中 32次测序运行的中间水平；但总碱基数不能说明有多少有效且互不重复的片段。
 
-公开来源：[ERR13943038](https://www.ebi.ac.uk/ena/browser/view/ERR13943038)。输入单位：一个配对档案 run。
+序列量：9,954,897,900 个碱基。下载文件合计 4,218,603,299 字节（十进制 4.219 GB），共 2 个文件。
 
-报告数据量：19,596,096,600个碱基（19.596 十亿）。列出的来源对象：2个；14,336,554,441字节（14.337 十进制 GB）。fa ID 12 / GCA_016699485.1.。
+数量依据：来源研究中 32 次有正产出的 ATAC测序运行报告 66.12–194.62 亿个碱基，中位数为 101.46 亿个碱基。
 
-数据量证据：19.60 十亿 个碱基位于包含 1,004 层的研究 P10–P90 范围 13.90–20.80 十亿 内。
+公开记录：[SRR30495077](https://www.ebi.ac.uk/ena/browser/view/SRR30495077)。建议参考序列：fa 编号 1 / GCF_000001405.39。
 
-属性： 仅有已保存的非随机前缀汇总；全文件分布/完整性尚未确定。 读长： 文件 1： 150–150; 中位数 150; 文件 2： 150–150; 中位数 150. 质量字符数： 文件 1： 34; 文件 2： 35.
+## 数据 36：水稻 ChIP 测序
 
-限制与准备：一个应用队列足以支持所选示例，但不能代表全国或全球家禽生产的分布。检查完整文件、配对关系，以及样本与参考序列是否匹配。
+这组水稻文库补充了 ChIP 测序，其取样对象是与蛋白质结合的染色质。ATAC 和 CUT&RUN 的制备方式不同，不能替代 ChIP。其序列量接近研究中 11次可比测序运行的中间水平。
 
-## Data 20. Homo sapiens — Sequel
+序列量：7,848,285,900 个碱基。下载文件合计 3,388,187,408 字节（十进制 3.388 GB），共 2 个文件。
 
-该输入提供原始 CLR 基因组读段，与单独的共识长读段条件并列。确切的 HG002-CLR 文库身份说明了其处理角色；所提供的恒定质量值和归档表示仍需谨慎说明。
+数量依据：该数据报告 78.5 亿个碱基，接近研究中 11次测序运行的中位数 79.8 亿，并处于水稻 ChIP 数据较宽的中间 80% 范围（33.6–105.7 亿）内。
 
-公开来源：[SRR8801873](https://www.ebi.ac.uk/ena/browser/view/SRR8801873)。输入单位：一个档案 run。
+公开记录：[DRR1000045](https://www.ebi.ac.uk/ena/browser/view/DRR1000045)。建议参考序列：fa 编号 8 / GCA_014636035.1。
 
-报告数据量：113,896,753,645个碱基（113.897 十亿）。列出的来源对象：1个；34,654,458,158字节（34.654 十进制 GB）。fa ID 1 / GCF_000001405.39.。
+## 数据 37：人类 CUT&RUN 测序
 
-数据量证据：报告的 113.90 十亿 个原始碱基构成较大的基因组输入。其研究中只有这一条匹配记录，因此没有独立的研究内数据量分布可供比较。
+这组数据补充了 CUT&RUN。虽然档案只用宽泛的 OTHER 标签，但具体实验记录明确了方法。它与 ATAC、ChIP 输入互为补充，序列量处于研究中 30次可比测序运行的中间 80% 范围内。
 
-属性： 仅有已保存的非随机前缀汇总；全文件分布/完整性尚未确定。 读长： 文件 1： 51–87913; 中位数 13433. 质量字符数： 文件 1： 1.
+序列量：2,142,233,300 个碱基。下载文件合计 1,123,492,148 字节（十进制 1.123 GB），共 2 个文件。
 
-限制与准备：原始通过产量不能直接与 HiFi 共识产量或可用覆盖度比较。必须明确保留恒定质量值及其归档表示形式。检查完整文件及配对关系。
+数量依据：该数据报告 21.4 亿个碱基，处于匹配的 30次测序运行研究中间 80% 的 17.9–51.3 亿个碱基范围内。
 
-## Data 21. Arabidopsis thaliana — GridION
+公开记录：[SRR26362943](https://www.ebi.ac.uk/ena/browser/view/SRR26362943)。建议参考序列：fa 编号 1 / GCF_000001405.39; fa 编号 13 / GCF_000001215.4。
 
-该 Col-0 拟南芥来源明确记录为植物核基因组纳米孔组装实验。所选输入是一个具名运行的 ATRun2_SA_pass 完整提交输出，含有10.555 十亿个碱基。同一实验的其他碱基识别版本是替代表示，并非新增独立序列。
+使用前请注意：归一化所用参考组成以及处理后/可用测序深度仍未知。
 
-公开来源：[ERR13669551](https://www.ebi.ac.uk/ena/browser/view/ERR13669551)。输入单位：来自一个具名 run 的完整已提交 ATRun2_SA_pass 读段集。
+## 数据 38：酵母 Hi-C 测序
 
-报告数据量：10,554,533,391个碱基（10.555 十亿）。列出的来源对象：1个；9,919,475,722字节（9.919 十进制 GB）。fa ID 9 / GCF_000001735.4.。
+这组酵母文库补充了用于研究基因组区域间接触的邻近连接读段。其真核基因组参考序列较小，也不同于大型动植物参考序列。其序列量既处于来源研究的范围内，也落在更广泛的酵母 Hi-C 比较范围内。
 
-规模依据：所选的 pass 输出报告 10,554,533,391 个碱基。同一次运行的 fail 输出另含2,223,574,952 个碱基；其他碱基识别结果属于替代版本。主要来源记录的是植物核基因组组装实验，并非仅针对细胞器。
+序列量：15,039,534,000 个碱基。下载文件合计 7,074,255,254 字节（十进制 7.074 GB），共 2 个文件。
 
-属性： 所有登记文件均未预览；没有实测读长、质量或标题概况。 读长： 未预览。 质量字符数： 未预览。
+数量依据：该数据报告 150.4 亿个碱基，既处于其 56次测序运行研究的范围内，也处于更广泛酵母 Hi-C 数据中间 80% 的 17.8–264 亿个碱基范围内。
 
-限制与准备：所选 PASS 输出排除了 fail reads。确切碱基识别设置尚未确定，也不对整个 flow cell 或全文件属性作任何主张。使用所有确切登记对象并保留 run 边界；测试前按需验证全文件完整性和配对关系。本版本没有执行准备或数据获取。
+公开记录：[SRR30894055](https://www.ebi.ac.uk/ena/browser/view/SRR30894055)。建议参考序列：fa 编号 7 / GCF_000146045.2。
 
-## Data 22. Arabidopsis thaliana — Sequel II
+## 数据 39：Ultima 染色质可及性测序
 
-该拟南芥 Col-0 输入为核基因组组装提供了有文档记录的植物 HiFi 共识读段。作者给出的登录号、AT_HiFi 文库和 229 亿碱基的发表数量，与档案总量 22,904,700,074 个碱基一致。这样的文档对应关系支持其处理身份；但通用档案文件名含有 _subreads，并不能单独证明其采用共识处理或原始子读段处理。实际 FASTQ 质量字符集合和标题仍未检查。
+这组 Ultima 数据展示了已投入使用的测序技术在染色质可及性检测中的应用。其提供的是长度不一的单端读段，与常见的双端 ATAC 输入不同。序列量位于来源研究 248次测序运行的中间 80% 范围内。
 
-公开来源：[SRR14728885](https://www.ebi.ac.uk/ena/browser/view/SRR14728885)。输入单位：完整提交的 AT_HiFi 植物核基因组组装读段集。
+序列量：9,613,662,904 个碱基。下载文件合计 3,749,797,716 字节（十进制 3.750 GB），共 1 个文件。
 
-报告数据量：22,904,700,074个碱基（22.905 十亿）。列出的来源对象：1个；18,526,201,575字节（18.526 十进制 GB）。fa ID 9 / GCF_000001735.4.。
+数量依据：该数据报告 96.1 亿个碱基，处于这项 248次测序运行研究中间 80% 的 39.3–110.2 亿个碱基范围内。
 
-规模依据：已发表的植物 HiFi 读段集含有22.90 十亿个碱基；精确归档元数据为 AT_HiFi 报告 22,904,700,074 个碱基。登录号、文库和数量相符，无需重新检查正文。
+公开记录：[SRR34546226](https://www.ebi.ac.uk/ena/browser/view/SRR34546226)。建议参考序列：fa 编号 1 / GCF_000001405.39。
 
-属性： 所有登记文件均未预览；没有实测读长、质量或标题概况。 读长： 未预览。 质量字符数： 未预览。
+## 数据 40：水稻亚硫酸氢盐测序
 
-限制与准备：有文档依据的 HiFi 身份并不能确定特定质量字符集合或全文件准确性。档案文件名本身不能证明处理方式，且本轮没有检查新的前缀。使用所有确切登记对象并保留 run 边界；测试前按需验证全文件完整性和配对关系。本版本没有执行准备或数据获取。
+这组水稻文库补充了亚硫酸氢盐测序；其制备过程会改变所存储的序列字母。常规基因组测序或捕获测序并不具备相同条件。其序列量与来源研究及更广泛的水稻亚硫酸氢盐测序案例相当。
 
-## Data 23. Homo sapiens — DNBSEQ-G400
+序列量：19,651,497,831 个碱基。下载文件合计 9,477,168,274 字节（十进制 9.477 GB），共 2 个文件。
 
-该输入提供重要文库/技术条件：常规 MGI 转录组测序。
+数量依据：该数据报告 196.5 亿个碱基，接近其 6次测序运行研究的范围，也处于更广泛水稻亚硫酸氢盐数据中间 80% 的 77.7–226 亿个碱基范围内。
 
-公开来源：[ERR10030615](https://www.ebi.ac.uk/ena/browser/view/ERR10030615)。输入单位：一个配对档案 run。
+公开记录：[DRR1009870](https://www.ebi.ac.uk/ena/browser/view/DRR1009870)。建议参考序列：fa 编号 8 / GCA_014636035.1。
 
-报告数据量：4,828,141,800个碱基（4.828 十亿）。列出的来源对象：2个；3,817,894,154字节（3.818 十进制 GB）。fa ID 1 / GCF_000001405.39.。
+## 数据 41：真菌 ITS 群落标记
 
-数据量证据：4.83 十亿 个碱基接近来源研究 8 个 run 的中位数 4.81 十亿，属于合理的常规表达文库数据量。
+这组土壤根际真菌文库补充了 MiSeq ITS 标记测序。FL_fungi_1 提交的两个读段端均已纳入。其序列量接近同一研究 12 个 ITS 文库的中间水平；真菌文库与该研究的细菌 16S 文库分开比较。
 
-属性： 仅有已保存的非随机前缀汇总；全文件分布/完整性尚未确定。 读长： 文件 1： 100–100; 中位数 100; 文件 2： 100–100; 中位数 100. 质量字符数： 文件 1： 38; 文件 2： 38.
+序列量：42,963,536 个碱基。下载文件合计 19,328,691 字节（十进制 19.329 MB），共 2 个文件。
 
-限制与准备：在厘清计数口径前，不要将归档中的原始读段数直接与比对后读段标准比较。测试前检查完整文件及配对关系。
+数量依据：12 个目标匹配的 ITS 文库为 3,801.4–4,478.4 万个碱基，中位数为 4,267.8 万。
 
-## Data 24. Arabidopsis thaliana — Illumina NovaSeq 6000
+公开记录：[SRR30515680](https://www.ebi.ac.uk/ena/browser/view/SRR30515680)。建议参考序列：混合物/特征参考尚未确定；未指定单一基因组 FASTA。
 
-这个具名野生型 Col-0 植物表达重复样本，提供报告 7.103 十亿 个碱基的常规 bulk RNA 文库。来源研究的 14 个 RNA 输出范围为 5.214–8.809 十亿 个碱基，中位数为 6.467 十亿。明确的样本/制备单位和来源工作流数据量支持纳入该示例，但不代表整个市场的 RNA 生产规范。
+方法和数量依据：[真菌 ITS 文库及提交的双端文件记录](https://www.ncbi.nlm.nih.gov/sra/SRX25939332)
 
-公开来源：[SRR14627767](https://www.ebi.ac.uk/ena/browser/view/SRR14627767)。输入单位：一个完整的配对野生型表达重复样本。
+## 数据 42：细菌 16S 群落标记
 
-报告数据量：7,102,948,500个碱基（7.103 十亿）。列出的来源对象：2个；3,632,286,064字节（3.632 十进制 GB）。fa ID 9 / GCF_000001735.4.。
+这组土壤根际细菌文库补充了经典的 16S 群落标记测序。SH_bacteria_1 的两个读段端均已纳入。其序列量接近研究中 12 个细菌文库的中间水平；真菌 ITS 的目标不同，不能替代这组输入。
 
-规模依据：来源研究中的14个 RNA 输出范围为5.214–8.809 十亿个碱基，中位数为6.467 十亿个碱基。所选的7.103 十亿个碱基输入是一个具名野生型表达重复样本。
+序列量：32,742,178 个碱基。下载文件合计 17,916,463 字节（十进制 17.916 MB），共 2 个文件。
 
-属性： 所有登记文件均未预览；没有实测读长、质量或标题概况。 读长： 未预览。 质量字符数： 未预览。
+数量依据：12 个目标匹配的细菌 16S 文库为 2,153.7–4,235.1 万个碱基，中位数为 3,266.2 万。
 
-限制与准备：来源说明数据为分析目的经过修剪；这不能证明提交的 FASTQ 已修剪或未经处理。仅在使用相应模式时，拟议的基因组参考序列才需要适当注释。使用所有确切登记对象并保留 run 边界；测试前按需验证全文件完整性和配对关系。本版本没有执行准备或数据获取。
+公开记录：[SRR30515673](https://www.ebi.ac.uk/ena/browser/view/SRR30515673)。建议参考序列：混合物/特征参考尚未确定；未指定单一基因组 FASTA。
 
-## Data 25. Homo sapiens — DNBSEQ-G400
+方法和数量依据：[细菌 16S 文库及提交的双端文件记录](https://www.ncbi.nlm.nih.gov/sra/SRX25939339)
 
-这个具名的小 RNA 生物学重复样本，提供了已观察到的可变 18–44 碱基前缀表示。其报告的单端读数为 12.64 百万 条、碱基数为 284 百万，与 8-run 来源工作流相符。生物学上对短 RNA 的选择支持将其作为小文库示例，但不能据此确定提交文件是否经过计算修剪。
+## 数据 43：病毒扩增子测序
 
-公开来源：[DRR1089360](https://www.ebi.ac.uk/ena/browser/view/DRR1089360)。输入单位：一个档案 run。
+这组单个样本的病毒扩增子测序运行补充了小型基因组的靶向测序。其序列量接近 58 个可比样本输出的中间水平。采用人类全基因组规模的数据将无法代表这项任务。
 
-报告数据量：284,297,641个碱基（284.298 百万）。列出的来源对象：1个；291,749,840字节（291.750 十进制 MB）。fa ID 1 / GCF_000001405.39.。
+序列量：67,831,999 个碱基。下载文件合计 31,561,554 字节（十进制 31.562 MB），共 2 个文件。
 
-数据量证据：报告的单端读数为 12.64 百万 条、碱基数为 284 百万，与 8-run 研究相符；该研究的碱基数中位数为 286 百万。官方小 RNA 指南会因工作流程而异；这里的数据量是可信的研究文库示例。
+数量依据：该数据报告 6,783 万个碱基，接近 58 个可比样本次测序运行的中位数 7,335 万，且处于这些次测序运行的中间 80% 范围内。
 
-单位和处理方式的来源：[确切具名小 RNA 重复样本](https://www.ncbi.nlm.nih.gov/sra/DRX1064881)
+公开记录：[DRR1051020](https://www.ebi.ac.uk/ena/browser/view/DRR1051020)。建议参考序列：fa 编号 14 / NC_045512.2。
 
-属性： 仅有已保存的非随机前缀汇总；全文件分布/完整性尚未确定。 读长： 文件 1： 18–44; 中位数 22. 质量字符数： 文件 1： 40.
+## 数据 45：淡水环境 DNA 标记
 
-限制与准备：确切档案描述将其识别为按大小选择的短 RNA 文库，但不能证明归档前进行了计算修剪。保存的前缀读长不代表全文件分布。这里不设置统一的读数阈值，也不要求必须是未经处理的仪器输出。测试前检查完整文件和配对关系。
+这组数据补充了水生环境 DNA 标记测序。该文库对应 Lugano 的 ITD20 滤膜、A 提取和 VENE 标记组。档案中的两个读段端均已纳入。它是单个样本/标记的输出，并非整个测序池；上游过滤和拆分条码的具体阶段尚不清楚。
 
-## Data 26. Homo sapiens — Illumina NovaSeq 6000
+序列量：22,955,020 个碱基。下载文件合计 6,829,143 字节（十进制 6.829 MB），共 2 个文件。
 
-该输入提供主流 Illumina 表达文库。
+数量依据：精确元数据列出了 ITD20-A/VENE 文库、两个已提交的样本/标记 FASTQ，以及所选档案记录的两个读段端。
 
-公开来源：[DRR1069746](https://www.ebi.ac.uk/ena/browser/view/DRR1069746)。输入单位：一个配对档案 run。
+公开记录：[ERR7749063](https://www.ebi.ac.uk/ena/browser/view/ERR7749063)。建议参考序列：混合物/特征参考尚未确定；未指定单一基因组 FASTA。
 
-报告数据量：4,002,783,900个碱基（4.003 十亿）。列出的来源对象：2个；1,795,309,208字节（1.795 十进制 GB）。fa ID 1 / GCF_000001405.39.。
+使用前请注意：上游拆分条码和过滤具体在哪一步完成，仍未明确。
 
-数据量证据：4.00 十亿 个碱基接近 12 个匹配研究 run 的中位数 4.11 十亿，也位于更广泛 NovaSeq RNA 正值范围内。
+方法和数量依据：[水生短读段标记的档案输入单位](https://www.ebi.ac.uk/ena/browser/view/ERR7749063) [水生样本/地点官方表及命名说明](https://www.ebi.ac.uk/biostudies/studies/S-BSST391) [作者工作流程清单和样本表](https://github.com/envmetagen/mussels_package)
 
-属性： 未预览；未检查读长、质量或标题概况，因此这些属性仍未知。全文件完整性和配对关系尚未确定。 读长： 未检查。 质量字符数： 未检查。
+## 数据 48：结核分枝杆菌分离株
 
-限制与准备：该 RNA 归档涵盖多种文库设计。其原始数据量可支持合理性判断，但不能证明符合处理后或比对后读段标准。完整获取、文件完整性、配对关系及任何辅助定义仍待核实。
+这组数据在大肠杆菌之外补充了另一种小型细菌基因组，并提供了抽查为修剪读段的文件格式。其压缩下载量不足 1 GB，但相对于参考序列长度，报告的碱基数并不少。它略高于来源研究的第 90 百分位，并非典型中位数案例。
 
-## Data 27. Homo sapiens — Element AVITI
+序列量：833,183,051 个碱基。下载文件合计 549,265,430 字节（十进制 549.265 MB），共 2 个文件。
 
-该输入提供有记录单端 RNA 配置的已部署短读长技术。不要将双端 RNA 的预期强加于它。
+数量依据：83,300 万个碱基 约为参考序列长度的 189 倍（按原始碱基数计算）。
 
-公开来源：[SRR30608496](https://www.ebi.ac.uk/ena/browser/view/SRR30608496)。输入单位：一个档案 run。
+公开记录：[ERR11252400](https://www.ebi.ac.uk/ena/browser/view/ERR11252400)。建议参考序列：fa 编号 5 / GCF_000195955.2。
 
-报告数据量：3,095,516,700个碱基（3.096 十亿）。列出的来源对象：1个；2,301,820,230字节（2.302 十进制 GB）。fa ID 1 / GCF_000001405.39.。
+## 数据 49：大肠杆菌分离株
 
-数据量证据：3.10 十亿 个碱基接近 18 个来源研究 run 的中位数 2.98 十亿，也位于 20 项已知研究中更广泛 AVITI 单端 RNA 范围内。
+这组明确标记为 MG1655 菌株的数据，是具有紧凑参考序列的典型细菌分离株输入。该双端测序运行的序列量接近来源研究中位数，也接近更广泛的大肠杆菌比较值。样本与参考序列是否完全匹配，以及可用的比对覆盖度，仍需核实。
 
-属性： 未预览；未检查读长、质量或标题概况，因此这些属性仍未知。全文件完整性和配对关系尚未确定。 读长： 未检查。 质量字符数： 未检查。
+序列量：450,083,225 个碱基。下载文件合计 344,072,580 字节（十进制 344.073 MB），共 2 个文件。
 
-限制与准备：这支持一个公开研究输入；尚未检查化学体系特有的质量值分布。完整获取、文件完整性、配对关系及任何辅助定义仍待核实。
+数量依据：45,000 万个碱基 接近更广泛的大肠杆菌 Illumina 数据中位数 43,500 万，也接近其研究八次测序运行的中位数 42,800 万；按原始碱基数计算，约为参考序列长度的 97 倍。
 
-## Data 29. Homo sapiens — PromethION
+公开记录：[DRR171213](https://www.ebi.ac.uk/ena/browser/view/DRR171213)。建议参考序列：fa 编号 4 / GCF_000005845.2。
 
-该输入提供纳米孔转录本衍生读段，与长基因组读段分开。较短的原始平均长度不否定已提交的全长文库标签。
+## 数据 50：酵母全基因组测序
 
-公开来源：[SRR36288068](https://www.ebi.ac.uk/ena/browser/view/SRR36288068)。输入单位：一个带条码的转录本文库/run。
+这组数据在细菌分离株之外，补充了真核微生物的小型基因组。全基因组测序的制备方式也不同于酵母 Hi-C。其序列量接近来源研究较高水平，是一个高产量研究案例，并非普遍标准。
 
-报告数据量：2,480,166,369个碱基（2.480 十亿）。列出的来源对象：1个；2,307,675,498字节（2.308 十进制 GB）。fa ID 1 / GCF_000001405.39.。
+序列量：2,123,156,100 个碱基。下载文件合计 1,034,612,012 字节（十进制 1.035 GB），共 2 个文件。
 
-规模依据：来源论文报告72个文库共有3.108 亿条原始读段，算术平均值为432 万条。该输入有398 万条读段和2.48 十亿个碱基。
+数量依据：该数据报告 21.2 亿个碱基，接近来源研究 61次测序运行的上四分位数；按原始碱基数计算，约为参考序列长度的 176 倍。
 
-属性： 未预览；未检查读长、质量或标题概况，因此这些属性仍未知。全文件完整性和配对关系尚未确定。 读长： 未检查。 质量字符数： 未检查。
+公开记录：[SRR30502372](https://www.ebi.ac.uk/ena/browser/view/SRR30502372)。建议参考序列：fa 编号 7 / GCF_000146045.2。
 
-限制与准备：这为同一研究中的数据规模提供依据，但不能视为长 RNA 生产的一般标准。它不是直接 RNA 测序；原始平均长度也不能与论文中的过滤后/比对后平均长度直接比较。完整获取、文件完整性、配对关系及任何辅助定义仍待核实。
+## 数据 51：长读段模拟群落
 
-## Data 30. Mus musculus — Illumina NovaSeq 6000
+这组测序运行补充了来自已知基因组混合物的长读段。它不同于单一生物的基因组测序，也不同于短读段群落标记文库。来源明确说明这是对模拟群落进行超深度测序，因此应结合该研究目的理解其数据量。
 
-这一有文档记录的 Smart-seq2 小鼠细胞，为 3′ CITE 文库之外提供转录组范围的单细胞取样。确切细胞身份为膀胱组织中的 E20.D042253.3_9_M.1.1。一个完整登记的 SRA run 同时包含两个配对端，报告 220.101 百万 个碱基，处于匹配的作者注释细胞队列中间一半的范围内。转录组范围取样并不意味着每条短读段都覆盖完整转录本。
+序列量：16,506,755,978 个碱基。下载文件合计 17,147,527,495 字节（十进制 17.148 GB），共 1 个文件。
 
-公开来源：[SRR6520293](https://www.ebi.ac.uk/ena/browser/view/SRR6520293)。输入单位：一个作者注释的 Smart-seq2 细胞文库，位于一个 SRA run 中；包含档案 FASTQ 的两个配对端。
+数量依据：该数据报告 165.1 亿个碱基，接近来源研究四个正产出次测序运行的范围（共六条记录，其中两条总量为零）。
 
-报告数据量：220,101,000个碱基（220.101 百万）。列出的来源对象：2个；97,956,122字节（97.956 十进制 MB）。fa ID 3 / GCF_000001635.24.。
+公开记录：[ERR3152366](https://www.ebi.ac.uk/ena/browser/view/ERR3152366)。建议参考序列：混合物/特征参考尚未确定；未指定单一基因组 FASTA。
 
-数据量证据：在每个细胞各有一个登记 run 的 660 个作者注释膀胱细胞中，报告数据量的中位数为 182,126,200 个碱基，四分位距为 139,362,300–226,050,350。该细胞含 220,101,000 个碱基，位于这一中心区间的较高部分。另外 8 组已提交的单 run 数据无法与作者注释对应，因此不纳入这个分母。该比较支持将这种自然的单细胞数据量作为示例，但不代表一般服务或全球生产规范。
+## 数据 52：发酵群落 RNA 测序
 
-单位和处理方式的来源：[原始转录组范围单细胞图谱](https://www.nature.com/articles/s41586-018-0590-4) [精确的膀胱 Smart-seq2 方法与实验](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2967045) [官方单细胞 run 与原始文件对应关系](https://ftp.ncbi.nlm.nih.gov/geo/series/GSE109nnn/GSE109774/suppl/GSE109774_list_of_SRR_accessions_and_raw_filenames.txt.gz) [作者提供的膀胱单细胞注释](https://raw.githubusercontent.com/czbiohub-sf/tabula-muris/master/00_data_ingest/03_tissue_annotation_csv/Bladder_facs_annotation.csv) [确切 Smart-seq2 实验 run 数量](https://www.ebi.ac.uk/ena/browser/view/SRX3607041) [选定的确切 Smart-seq2 run](https://www.ebi.ac.uk/ena/browser/view/SRR6520293)
+这组双端文库代表在一个具名时间点对谷物发酵群落进行的 RNA 测序。其序列量落在五个有记录的时间点范围内，为混合群落增加了 RNA 测序任务，避免把所有宏基因组输入都视为 DNA 测序。
 
-属性： 未预览；未检查这些确切文件的读长、质量或标题概况。全文件完整性和配对关系仍未验证。 读长： 未检查。 质量字符数： 未检查。
+序列量：10,323,974,492 个碱基。下载文件合计 4,133,721,402 字节（十进制 4.134 GB），共 2 个文件。
 
-限制与准备：完整的官方文件名清单针对该确切孔/板/供体身份，列出一个 run 和两个原始 FASTQ 文件名。源标签 C1 未定义，也没有列出额外部分。完整性只以已提交 FASTQ 为边界，不包括全部仪器/index、比对后 BAM 或计数矩阵资源。作者注释不能证明上传前具体采用了哪一步处理。档案描述符标注名义读长为 100/100 个碱基的应用读段；实际文件属性尚未预览。获取所列的两个档案配对端，并核验完整性和配对关系。保留所选 FASTQ 的确切表示和顺序。拟议的同物种参考序列为 GRCm38.p4；确切供体亚系、转录本/patch 等价性以及研究所用辅助 ERCC 版本仍未核实。通用无损 FASTQ 压缩不要求这些解释性资源。
+数量依据：五个具名发酵时间点的数据量为 103.24–117.64 亿个碱基，中位数为 111.98 亿。
 
-## Data 31. Homo sapiens — Illumina NovaSeq 6000
+公开记录：[DRR1003246](https://www.ebi.ac.uk/ena/browser/view/DRR1003246)。建议参考序列：混合物/特征参考尚未确定；未指定单一基因组 FASTA。
 
-抗体衍生标签文库提供匹配 CITE 检测中的特征组分。它与 mRNA 文库和样本 hashtag 文库互为补充，并非重复数据。纳入同一组分实验的全部四个 run 输出：8 个文件共报告 28.796 十亿 个碱基。这定义的是完整交付的组分文库输入，不代表所有捕获孔或研究中的全部细胞。
+## 数据 53：土壤鸟枪法 群落 DNA
 
-公开来源：[SRR19066657](https://www.ebi.ac.uk/ena/browser/view/SRR19066657)、[SRR19066658](https://www.ebi.ac.uk/ena/browser/view/SRR19066658)、[SRR19066659](https://www.ebi.ac.uk/ena/browser/view/SRR19066659)、[SRR19066661](https://www.ebi.ac.uk/ena/browser/view/SRR19066661)。输入单位：完整 ADT 文库/组分，4 个配对 run，共 8 个单独文件。
+这组数据代表环境宏基因组鸟枪法 DNA 测序，与肠道和食品混合样本以及土壤靶向标记输入形成补充。其序列量接近研究中八次测序运行的中间水平，也符合更广泛的土壤数据比较。
 
-报告数据量：28,795,741,128个碱基（28.796 十亿）。列出的来源对象：8个；11,700,505,268字节（11.701 十进制 GB）。混合物/特征参考序列尚未确定；未指定单一基因组 FASTA。
+序列量：10,115,398,800 个碱基。下载文件合计 7,496,700,808 字节（十进制 7.497 GB），共 2 个文件。
 
-规模依据：该 ADT 组分实验的全部四个公开输出共报告 28,795,741,128 个碱基。共同来源仅说明化学体系和回收目标，并未报告实际选取的细胞数。
+数量依据：该数据报告 101.2 亿个碱基，接近其 8次测序运行研究的中位数 103.2 亿个碱基，且处于较广的土壤鸟枪法数据范围内；已知研究中位数的中位数为 129.1 亿个碱基。
 
-属性：已保存的非随机前缀观察仅适用于8个原始对象中的2个确切对象；其他对象均未预览。不据此声称掌握整个文库的属性概况。读长：观察结果仅覆盖 文件工作表中标明的两个确切文件。质量字符数：观察结果仅覆盖 文件工作表中标明的两个确切文件。
+公开记录：[DRR1000746](https://www.ebi.ac.uk/ena/browser/view/DRR1000746)。建议参考序列：混合物/特征参考尚未确定；未指定单一基因组 FASTA。
 
-限制与准备：捕获区域和观察到的细胞/bin 深度仍未知。来源研究的 12 项元数据总量中，只有 3 项为正值；这限制了数据量比较。捕获 lane 与 4 个测序 run 输出是不同层级，不能把所有目标细胞都归到这个组分。前缀观察只覆盖 Files 中标出的两个确切文件。保留所有登记的 run 输出并将两端分开。压缩前应验证全文件完整性和配对关系。尚未获取或拼接任何文件。
+## 数据 54：肠道鸟枪法 群落 DNA
 
-## Data 32. Homo sapiens — Illumina NovaSeq 6000
+这组数据代表常见的人体肠道鸟枪法 DNA 测序，与土壤和食品混合样本一起，补充了宿主相关群落。其序列量与来源研究及更广泛的肠道研究比较均相符。
 
-这个生物转录本文库为匹配的 CITE 检测提供 mRNA 组分；抗体标签和样本标签都不能替代它。纳入该组分实验的全部四个输出：8 个文件共报告 73.686 十亿 个碱基。其文件应与 ADT 和 HTO 组分分开；不能根据上样目标推断实际观察到的细胞回收数。
+序列量：6,596,836,500 个碱基。下载文件合计 3,130,599,344 字节（十进制 3.131 GB），共 2 个文件。
 
-公开来源：[SRR19066662](https://www.ebi.ac.uk/ena/browser/view/SRR19066662)、[SRR19066664](https://www.ebi.ac.uk/ena/browser/view/SRR19066664)、[SRR19066665](https://www.ebi.ac.uk/ena/browser/view/SRR19066665)、[SRR19066666](https://www.ebi.ac.uk/ena/browser/view/SRR19066666)。输入单位：完整 mRNA 文库/组分，4 个配对 run，共 8 个单独文件。
+数量依据：该数据报告 66 亿个碱基，接近其 30次测序运行研究的水平，也处于更广泛肠道鸟枪法数据中间 80% 的 2.9–98.6 亿个碱基范围内；各研究中位数的中位数为 48.1 亿个碱基。
 
-报告数据量：73,686,380,444个碱基（73.686 十亿）。列出的来源对象：8个；38,755,683,391字节（38.756 十进制 GB）。fa ID 1 / GCF_000001405.39.。
+公开记录：[DRR1003638](https://www.ebi.ac.uk/ena/browser/view/DRR1003638)。建议参考序列：混合物/特征参考尚未确定；未指定单一基因组 FASTA。
 
-规模依据：该 mRNA 组分实验的全部四个公开输出共报告73,686,380,444 个碱基。此处采用完整组分，而非任意截取某次运行的一部分。
+## 数据 55：蜂蜜鸟枪法 群落 DNA
 
-属性： 尚未记录任何登记对象的检查属性。 读长： 未预览。 质量字符数： 未预览。
+这组源自蜂蜜的测序运行补充了食品相关的鸟枪法 DNA 测序。它是一次完整的双端测序运行，序列量落在来源研究 63次测序运行的范围内。其参考序列环境包含混合来源，与纯作物基因组或细菌分离株不同；实际成分/群落比例尚未确定。
 
-限制与准备：来源资料给出的测序目标不是实际观察到的单细胞深度。实际回收细胞数及标准化后的读段方向仍未验证，所有登记文件均未预览。保留所有 run 输出并将两端分开。压缩前验证全文件完整性和配对关系。尚未获取或拼接任何文件。
+序列量：5,697,274,998 个碱基。下载文件合计 2,096,744,147 字节（十进制 2.097 GB），共 2 个文件。
 
-## Data 33. Homo sapiens — Illumina NovaSeq 6000
+数量依据：该数据报告 57 亿个碱基，处于 63 次匹配蜂蜜研究运行中间 80% 的 7.4–61.4 亿个碱基范围内。
 
-该 hashtag 文库提供匹配 CITE 检测所需的互补样本标签序列。纳入同一组分实验的全部 4 个输出：8 个文件共报告 1.567 十亿 个碱基。基因组 FASTA 不定义这些标签序列；自定义特征定义有助于解释数据或进行特征感知匹配，但不是通用无损 FASTQ 压缩的前提。
+公开记录：[SRR27931704](https://www.ebi.ac.uk/ena/browser/view/SRR27931704)。建议参考序列：混合物/特征参考尚未确定；未指定单一基因组 FASTA。
 
-公开来源：[SRR19066668](https://www.ebi.ac.uk/ena/browser/view/SRR19066668)、[SRR19066669](https://www.ebi.ac.uk/ena/browser/view/SRR19066669)、[SRR19066671](https://www.ebi.ac.uk/ena/browser/view/SRR19066671)、[SRR19066672](https://www.ebi.ac.uk/ena/browser/view/SRR19066672)。输入单位：完整 HTO 文库/组分，4 个配对 run，共 8 个单独文件。
+方法和数量依据：[蜂蜜鸟枪法 源样本记录](https://www.ebi.ac.uk/ena/browser/view/SRX23588786)
 
-报告数据量：1,566,671,480个碱基（1.567 十亿）。列出的来源对象：8个；687,740,927字节（687.741 十进制 MB）。混合物/特征参考序列尚未确定；未指定单一基因组 FASTA。
+## 数据 56：CHO 细胞系基因组组装
 
-规模依据：该 HTO 组分实验的全部四个输出共报告 1,566,671,480 个碱基，分布在8个文件中，列出的压缩字节总数为687,740,927。这是完整的具名标签组分，与 ADT 和 mRNA 分开；其压缩大小不能作为每个细胞的测序深度。
+这组具名 CHO 基因组文库补充了工业生产细胞系的基因组组装研究。两个双端测序运行均已纳入，共四个文件，覆盖完整的具名制备，而非其中一半。这是组装研究输入，不表示这类读段代表常规生产质控数据。
 
-属性： 尚未记录任何登记对象的检查属性。 读长： 未预览。 质量字符数： 未预览。
+序列量：77,003,500,500 个碱基。下载文件合计 57,234,426,121 字节（十进制 57.234 GB），共 4 个文件。
 
-限制与准备：实际细胞回收数和标签参考定义仍未解决。自定义特征定义可帮助解释数据或进行特征感知匹配，但通用无损压缩并不需要。保留所有登记的 run 输出并将两端分开。压缩前验证全文件完整性和配对关系。尚未获取或拼接任何文件。
+数量依据：同一具名 CHO 基因组制备的两个公开双端次测序运行共报告 77,003,500,500 个碱基。
 
-## Data 34. Homo sapiens — DNBSEQ-T7
+公开记录：[ERR2192893](https://www.ebi.ac.uk/ena/browser/view/ERR2192893), [ERR2192894](https://www.ebi.ac.uk/ena/browser/view/ERR2192894)。建议参考序列：fa 编号 17 / GCF_003668045.3。
 
-该输入提供空间条形码/转录本条件，包括不对称读段。若大文件大小反映真实输入单位，则适合纳入。
+使用前请注意：这份由两次测序运行组成的完整具名文库，并非 CHO 组装项目的全部数据。
 
-公开来源：[SRR29351083](https://www.ebi.ac.uk/ena/browser/view/SRR29351083)。输入单位：一个空间转录本档案 run。
+方法和数量依据：[具名 CHO 基因组组装文库](https://www.ebi.ac.uk/ena/browser/view/PRJEB12319)
 
-报告数据量：248,408,655,120个碱基（248.409 十亿）。列出的来源对象：2个；181,786,356,695字节（181.786 十进制 GB）。fa ID 1 / GCF_000001405.39.。
+# 下载、检查和准备文件
 
-规模依据：具名的 L01 空间组学运行报告 248,408,655,120 个碱基。来源研究的元数据中，12条记录有3条为正总量；所选数据量接近这三者的中间值。这个有限比较不能代表一般空间组学产量标准。
+[下载与校验和说明](../checksums/README.md)区分了发布者提供的 MD5 预期值和本地已完成的检查。状态表是带日期的快照，并不表示所有文件都已下载完成。文件大小一致不足以证明文件完整；压缩源文件的校验和也不能标识解压后的 FASTQ 字节。
 
-属性： 仅观察到非随机前缀；不据此推断全文件属性、配对关系或完整性。 读长： 文件 1： 100–100; 中位数 100.0; 文件 2： 35–35; 中位数 35.0. 质量字符数： 文件 1： 34; 文件 2： 35.
+请按[准备说明](preparation.md)检查源文件，将每个 gzip 文件分别解压，并记录未压缩 FASTQ 的字节数和 SHA-256。保留名称、序列、质量、顺序和格式；不要合并双端文件、不同测序运行或分块，不要规范化记录，也不要重新压缩准备后的输入。必须通过完整的 gzip CRC/文件结束检查。
 
-限制与准备：捕获区域以及观察到的细胞/bin 深度仍未知。12 项来源研究元数据总量中仅有 3 项为正值，因此数据量比较受到限制。掩膜和坐标是解释数据的资源，不是压缩所提供读段的前提。获取并检查登记的两个 FASTQ；全文件配对关系/完整性仍待核实。通用无损压缩不需要空间掩膜/坐标，但进行空间重建或相关定制匹配时需要这些信息。
+Data 6 须按指定的 SAMtools 1.22/htslib 1.22 规则导出。规则按 QNAME 自然排序，只保留未配对的主记录，使用已存质量值，并在主记录缺少质量值时停止。该规则已通过合成测试，但尚未用于真实 BAM。准备后的顺序不等于仪器原始顺序；FASTQ 也不会保留 BAM 标签或比对信息。
 
-## Data 35. Homo sapiens — Illumina NovaSeq 6000
+保存的前缀观察只适用于“文件”表中明确标识的对应文件。这些是非随机抽样，不能代表整个文件的分布，也不是完整性检查。FASTQ 质量行中的每个质量字符都表示编码后的质量值；“众数占比”指抽查质量位置中最常见字符所占比例。新文件或未抽查文件不能沿用其他文件的测量结果。
 
-该人类 K562 文库提供有记录的常规双端 bulk ATAC 重复样本，报告9.955 十亿个碱基。其32次运行来源组的中位数为10.146 十亿个碱基。来源资料记录了常规 bulk ATAC 制备；原始数据量不能证明可用的唯一片段数。
+Data 8 是 CNGB 的一个 SINGLE 文件，不是两个配对文件或多个分块。其全文件产量以及与相关 SRA 文件是否逐字节相同均未知。保存的文件前缀包含 258 条完整读段，读长为 355–28,912 个碱基；这不能说明整个文件的读长分布。没有发布者提供的 MD5。
 
-公开来源：[SRR30495077](https://www.ebi.ac.uk/ena/browser/view/SRR30495077)。输入单位：一个完整的配对 bulk ATAC 生物学重复样本。
+# 参考序列版本
 
-报告数据量：9,954,897,900个碱基（9.955 十亿）。列出的来源对象：2个；4,218,603,299字节（4.219 十进制 GB）。fa ID 1 / GCF_000001405.39.。
+这里列出 18 个带固定登录号版本的建议参考序列；本项目尚未下载或验证它们。“参考序列”工作表区分了来源页面和拟议的 FASTA 直接下载地址。物种相同并不代表品系、栽培品种或转录本靶标相同；混合群落或标签文库也不会被擅自指定一个单一基因组参考。
 
-规模依据：32次有正总量的 ATAC 来源运行范围为6.612–19.462 十亿个碱基，中位数为10.146 十亿个碱基。所选运行含有9.955 十亿个碱基，是有记录的整体样本重复。
+参考序列 1：Homo sapiens — GRCh38 / [GCF_000001405.39](https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/405/GCF_000001405.39_GRCh38.p13/GCF_000001405.39_GRCh38.p13_genomic.fna.gz)。仅提出同物种参考序列；样本、品系、靶标、contig 是否匹配以及 FASTA 内容均未核实。
 
-属性： 所有登记文件均未预览；没有实测读长、质量或标题概况。 读长： 未预览。 质量字符数： 未预览。
+参考序列 2：Sus scrofa — Sscrofa11.1 / [GCA_000003025.6](https://www.ncbi.nlm.nih.gov/datasets/genome/GCA_000003025.6/)。仅提出同物种参考序列；样本、品系、靶标、contig 是否匹配以及 FASTA 内容均未核实。
 
-限制与准备：来源资料确认这是 bulk ATAC 文库，但不能证明可用的唯一片段数，也不能证明分析流程成功。人类参考序列不能证明其与 K562 特定序列匹配。使用所有确切登记对象并保留 run 边界；测试前按需验证全文件完整性和配对关系。本版本没有执行准备或数据获取。
+参考序列 3：Mus musculus — GRCm38 / [GCF_000001635.24](https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/635/GCF_000001635.24_GRCm38.p4/GCF_000001635.24_GRCm38.p4_genomic.fna.gz)。为小鼠输入提出同物种基因组参考序列；样本、品系和靶标匹配情况及 FASTA 内容均未核实。对于 Smart-seq2，转录本/补丁等价性及辅助 ERCC 版本也尚未分别核实。
 
-## Data 36. Oryza sativa — Illumina NovaSeq 6000
+参考序列 4：Escherichia coli — ASM584 / [GCF_000005845.2](https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/005/845/GCF_000005845.2_ASM584v2/GCF_000005845.2_ASM584v2_genomic.fna.gz)。仅提出同物种参考序列；样本、品系、靶标、contig 是否匹配以及 FASTA 内容均未核实。
 
-该输入提供蛋白相关染色质取样，与 ATAC 和 CUT&RUN 不同。
+参考序列 5：Mycobacterium tuberculosis — ASM19595v2 (H37Rv) / [GCF_000195955.2](https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/195/955/GCF_000195955.2_ASM19595v2/GCF_000195955.2_ASM19595v2_genomic.fna.gz)。仅提出同物种参考序列；样本、品系、靶标、contig 是否匹配以及 FASTA 内容均未核实。
 
-公开来源：[DRR1000045](https://www.ebi.ac.uk/ena/browser/view/DRR1000045)。输入单位：一个配对档案 run。
+参考序列 6：Solanum tuberosum — SolTub_3.0 / [GCA_000226075.1](https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/226/075/GCA_000226075.1_SolTub_3.0/GCA_000226075.1_SolTub_3.0_genomic.fna.gz)。仅提出同物种参考序列；样本、品系、靶标、contig 是否匹配以及 FASTA 内容均未核实。
 
-报告数据量：7,848,285,900个碱基（7.848 十亿）。列出的来源对象：2个；3,388,187,408字节（3.388 十进制 GB）。fa ID 8 / GCA_014636035.1.。
+参考序列 7：Saccharomyces cerevisiae — R64 / [GCF_000146045.2](https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/146/045/GCF_000146045.2_R64/GCF_000146045.2_R64_genomic.fna.gz)。仅提出同物种参考序列；样本、品系、靶标、contig 是否匹配以及 FASTA 内容均未核实。
 
-规模依据：7.85 十亿个碱基，接近其11次运行研究的中位数（7.98 十亿个碱基），并位于更广泛的水稻 ChIP 测序 P10–P90 范围（3.36–10.57 十亿个碱基）内。
+参考序列 8：Oryza sativa — ASM1463603v1 / [GCA_014636035.1](https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/014/636/035/GCA_014636035.1_ASM1463603v1/GCA_014636035.1_ASM1463603v1_genomic.fna.gz)。仅提出同物种参考序列；样本、品系、靶标、contig 是否匹配以及 FASTA 内容均未核实。
 
-属性： 仅有已保存的非随机前缀汇总；全文件分布/完整性尚未确定。 读长： 未检查。 质量字符数： 未检查。
+参考序列 9：Arabidopsis thaliana — TAIR10.1 / [GCF_000001735.4](https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/735/GCF_000001735.4_TAIR10.1/GCF_000001735.4_TAIR10.1_genomic.fna.gz)。仅提出同物种参考序列；样本、品系、靶标、contig 是否匹配以及 FASTA 内容均未核实。
 
-限制与准备：原始读段对不能说明比对后、唯一比对或靶标特异性片段的产量。完整文件的获取与完整性，以及组成和表示形式的检查仍待完成；详见各项限制。
+参考序列 10：Zea mays — Zm-B73-REFERENCE-NAM-5.0 / [GCA_902167145.1](https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/902/167/145/GCA_902167145.1_Zm-B73-REFERENCE-NAM-5.0/GCA_902167145.1_Zm-B73-REFERENCE-NAM-5.0_genomic.fna.gz)。为 SW1611 提出同物种但不同自交系的 B73 参考序列。样本、栽培品种和 contig 是否匹配，以及 FASTA 内容均未核实。
 
-## Data 37. Homo sapiens — Illumina NovaSeq 6000
+参考序列 11：Penaeus vannamei — ASM4276789v1 / [GCF_042767895.1](https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_genomic.fna.gz)。仅提出同物种参考序列；样本、品系、靶标、contig 是否匹配以及 FASTA 内容均未核实。
 
-尽管归档标签宽泛为 OTHER，该输入仍提供由精确实验确定的制备条件。
+参考序列 12：Gallus gallus — bGalGal1.mat.broiler.GRCg7b / [GCA_016699485.1](https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/016/699/485/GCA_016699485.1_bGalGal1.mat.broiler.GRCg7b/GCA_016699485.1_bGalGal1.mat.broiler.GRCg7b_genomic.fna.gz)。仅提出同物种参考序列；样本、品系、靶标、contig 是否匹配以及 FASTA 内容均未核实。
 
-公开来源：[SRR26362943](https://www.ebi.ac.uk/ena/browser/view/SRR26362943)。输入单位：一个配对档案 run。
+参考序列 13：Drosophila melanogaster — Release 6 plus ISO1 MT / [GCF_000001215.4](https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/215/GCF_000001215.4_Release_6_plus_ISO1_MT/GCF_000001215.4_Release_6_plus_ISO1_MT_genomic.fna.gz)。仅提出同物种参考序列；样本、品系、靶标、contig 是否匹配以及 FASTA 内容均未核实。
 
-报告数据量：2,142,233,300个碱基（2.142 十亿）。列出的来源对象：2个；1,123,492,148字节（1.123 十进制 GB）。fa ID 1 / GCF_000001405.39; fa ID 13 / GCF_000001215.4.。
+参考序列 14：Severe acute respiratory syndrome coronavirus 2 — NC_045512.2 / [NC_045512.2](https://www.ncbi.nlm.nih.gov/nuccore/NC_045512.2)。按相同生物名称提出的参考序列；尚未测试分离株、变体和靶标是否兼容。
 
-数据量证据：2.14 十亿 个碱基位于匹配的 30-run 研究 P10–P90 范围 1.79–5.13 十亿 内。
+参考序列 15：Picea abies — Pabies01 / [GCA_900067695.1](https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/900/067/695/GCA_900067695.1_Pabies01/GCA_900067695.1_Pabies01_genomic.fna.gz)。提出的同物种组装版本；样本、品系、栽培品种和靶标匹配情况及 FASTA 内容均未核实。
 
-属性： 仅有已保存的非随机前缀汇总；全文件分布/完整性尚未确定。 读长： 未检查。 质量字符数： 未检查。
+参考序列 16：Chenopodium quinoa — ASM168347v1 / [GCF_001683475.1](https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/001/683/475/GCF_001683475.1_ASM168347v1/GCF_001683475.1_ASM168347v1_genomic.fna.gz)。提出的同物种组装版本；样本、品系、栽培品种和靶标匹配情况及 FASTA 内容均未核实。
 
-限制与准备：归一化参考组成及处理后的可用深度仍未知。不要将这一原始总量视为流程验收结果。完整文件的获取与完整性，以及组成和表示形式的检查仍待完成；详见各项限制。
+参考序列 17：Cricetulus griseus — CriGri-PICRH-1.0 / [GCF_003668045.3](https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/003/668/045/GCF_003668045.3_CriGri-PICRH-1.0/GCF_003668045.3_CriGri-PICRH-1.0_genomic.fna.gz)。提出的同物种组装版本；样本、品系、栽培品种和靶标匹配情况及 FASTA 内容均未核实。
 
-## Data 38. Saccharomyces cerevisiae — Illumina NovaSeq 6000
+参考序列 18：Triticum aestivum cultivar Renan — Triticum_aestivum_Renan_v2.1 / [GCA_937894285.1](https://www.ncbi.nlm.nih.gov/datasets/genome/GCA_937894285.1/)。同一 Renan 栽培品种的组装版本 v2.1；尚未实测读段匹配情况。
 
-该输入提供邻近连接读段和紧凑真核参考序列背景。
+Renan 的 GCA_937894285.1 是拟议的同一栽培品种组装版本。解释 CITE 标签或建立自定义参考时，可能需要标签定义和空间掩码/坐标；但要对所提供的 FASTQ 做精确压缩和恢复，并不需要这些信息。分类表是辅助文件，不是基因组参考序列。
 
-公开来源：[SRR30894055](https://www.ebi.ac.uk/ena/browser/view/SRR30894055)。输入单位：一个配对档案 run。
+# 多测序运行输入的完整文件清单
 
-报告数据量：15,039,534,000个碱基（15.040 十亿）。列出的来源对象：2个；7,074,255,254字节（7.074 十进制 GB）。fa ID 7 / GCF_000146045.2.。
+请保留这些测序运行的分界。“文件”工作表和 TSV 列出全部 115 个文件，包括常规双端测序运行的两个文件。以下文件名和 URL 均照清单原样列出，没有拼造合并后的文件名。
 
-数据量证据：15.04 十亿 个碱基既位于其 56-run 研究范围内，也位于更广泛酵母 Hi-C 的 P10–P90 范围 1.78–26.40 十亿 内。
+## 数据 16：小麦基因组组装 — Renan 文库 — 6 个文件
 
-属性： 未预览；未检查读长、质量或标题概况，因此这些属性仍未知。全文件完整性和配对关系尚未确定。 读长： 未检查。 质量字符数： 未检查。
+| 测序运行编号 | 读段端/用途 | 清单中的文件名 | 下载链接 |
+| --- | --- | --- | --- |
+| ERR6348210 | 读段端 1 | ERR6348210_1.fastq.gz | [ERR6348210_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR634/000/ERR6348210/ERR6348210_1.fastq.gz) |
+| ERR6348210 | 读段端 2 | ERR6348210_2.fastq.gz | [ERR6348210_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR634/000/ERR6348210/ERR6348210_2.fastq.gz) |
+| ERR6348211 | 读段端 1 | ERR6348211_1.fastq.gz | [ERR6348211_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR634/001/ERR6348211/ERR6348211_1.fastq.gz) |
+| ERR6348211 | 读段端 2 | ERR6348211_2.fastq.gz | [ERR6348211_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR634/001/ERR6348211/ERR6348211_2.fastq.gz) |
+| ERR6348212 | 读段端 1 | ERR6348212_1.fastq.gz | [ERR6348212_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR634/002/ERR6348212/ERR6348212_1.fastq.gz) |
+| ERR6348212 | 读段端 2 | ERR6348212_2.fastq.gz | [ERR6348212_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR634/002/ERR6348212/ERR6348212_2.fastq.gz) |
 
-限制与准备：这支持一项酵母研究运行，但不是通用的 Hi-C 目标。有效互作和预期空间分辨率需要与原始数据量分开评估。完整获取、文件完整性、配对关系及任何辅助定义仍待核实。
+## 数据 31：CITE 抗体标签 — 8 个文件
 
-## Data 39. Homo sapiens — UG 100
+| 测序运行编号 | 读段端/用途 | 清单中的文件名 | 下载链接 |
+| --- | --- | --- | --- |
+| SRR19066657 | 读段端 1 | SRR19066657_1.fastq.gz | [SRR19066657_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/057/SRR19066657/SRR19066657_1.fastq.gz) |
+| SRR19066657 | 读段端 2 | SRR19066657_2.fastq.gz | [SRR19066657_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/057/SRR19066657/SRR19066657_2.fastq.gz) |
+| SRR19066658 | 读段端 1 | SRR19066658_1.fastq.gz | [SRR19066658_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/058/SRR19066658/SRR19066658_1.fastq.gz) |
+| SRR19066658 | 读段端 2 | SRR19066658_2.fastq.gz | [SRR19066658_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/058/SRR19066658/SRR19066658_2.fastq.gz) |
+| SRR19066659 | 读段端 1 | SRR19066659_1.fastq.gz | [SRR19066659_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/059/SRR19066659/SRR19066659_1.fastq.gz) |
+| SRR19066659 | 读段端 2 | SRR19066659_2.fastq.gz | [SRR19066659_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/059/SRR19066659/SRR19066659_2.fastq.gz) |
+| SRR19066661 | 读段端 1 | SRR19066661_1.fastq.gz | [SRR19066661_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/061/SRR19066661/SRR19066661_1.fastq.gz) |
+| SRR19066661 | 读段端 2 | SRR19066661_2.fastq.gz | [SRR19066661_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/061/SRR19066661/SRR19066661_2.fastq.gz) |
 
-该输入提供有部署/研究依据的技术，产生可变长度单端读段，并包含实际可及性检测。
+## 数据 32：CITE mRNA 读段 — 8 个文件
 
-公开来源：[SRR34546226](https://www.ebi.ac.uk/ena/browser/view/SRR34546226)。输入单位：一个档案 run。
+| 测序运行编号 | 读段端/用途 | 清单中的文件名 | 下载链接 |
+| --- | --- | --- | --- |
+| SRR19066662 | 读段端 1 | SRR19066662_1.fastq.gz | [SRR19066662_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/062/SRR19066662/SRR19066662_1.fastq.gz) |
+| SRR19066662 | 读段端 2 | SRR19066662_2.fastq.gz | [SRR19066662_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/062/SRR19066662/SRR19066662_2.fastq.gz) |
+| SRR19066664 | 读段端 1 | SRR19066664_1.fastq.gz | [SRR19066664_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/064/SRR19066664/SRR19066664_1.fastq.gz) |
+| SRR19066664 | 读段端 2 | SRR19066664_2.fastq.gz | [SRR19066664_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/064/SRR19066664/SRR19066664_2.fastq.gz) |
+| SRR19066665 | 读段端 1 | SRR19066665_1.fastq.gz | [SRR19066665_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/065/SRR19066665/SRR19066665_1.fastq.gz) |
+| SRR19066665 | 读段端 2 | SRR19066665_2.fastq.gz | [SRR19066665_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/065/SRR19066665/SRR19066665_2.fastq.gz) |
+| SRR19066666 | 读段端 1 | SRR19066666_1.fastq.gz | [SRR19066666_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/066/SRR19066666/SRR19066666_1.fastq.gz) |
+| SRR19066666 | 读段端 2 | SRR19066666_2.fastq.gz | [SRR19066666_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/066/SRR19066666/SRR19066666_2.fastq.gz) |
 
-报告数据量：9,613,662,904个碱基（9.614 十亿）。列出的来源对象：1个；3,749,797,716字节（3.750 十进制 GB）。fa ID 1 / GCF_000001405.39.。
+## 数据 33：CITE 样本标签 — 8 个文件
 
-规模依据：9.61 十亿个碱基，位于248次运行研究的 P10–P90 范围（3.93–11.02 十亿个碱基）内。
+| 测序运行编号 | 读段端/用途 | 清单中的文件名 | 下载链接 |
+| --- | --- | --- | --- |
+| SRR19066668 | 读段端 1 | SRR19066668_1.fastq.gz | [SRR19066668_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/068/SRR19066668/SRR19066668_1.fastq.gz) |
+| SRR19066668 | 读段端 2 | SRR19066668_2.fastq.gz | [SRR19066668_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/068/SRR19066668/SRR19066668_2.fastq.gz) |
+| SRR19066669 | 读段端 1 | SRR19066669_1.fastq.gz | [SRR19066669_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/069/SRR19066669/SRR19066669_1.fastq.gz) |
+| SRR19066669 | 读段端 2 | SRR19066669_2.fastq.gz | [SRR19066669_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/069/SRR19066669/SRR19066669_2.fastq.gz) |
+| SRR19066671 | 读段端 1 | SRR19066671_1.fastq.gz | [SRR19066671_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/071/SRR19066671/SRR19066671_1.fastq.gz) |
+| SRR19066671 | 读段端 2 | SRR19066671_2.fastq.gz | [SRR19066671_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/071/SRR19066671/SRR19066671_2.fastq.gz) |
+| SRR19066672 | 读段端 1 | SRR19066672_1.fastq.gz | [SRR19066672_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/072/SRR19066672/SRR19066672_1.fastq.gz) |
+| SRR19066672 | 读段端 2 | SRR19066672_2.fastq.gz | [SRR19066672_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/072/SRR19066672/SRR19066672_2.fastq.gz) |
 
-属性： 仅观察到非随机前缀；不据此推断全文件属性、配对关系或完整性。 读长： 文件 1： 47–323; 中位数 163.0. 质量字符数： 文件 1： 11.
+## 数据 56：CHO 细胞系基因组组装 — 4 个文件
 
-限制与准备：不得直接套用 Illumina 双端读段或流程通过标准。原始总量和已保存前缀均不能说明完整文件的属性。完整获取、文件完整性、配对关系及任何辅助定义仍待核实。
+| 测序运行编号 | 读段端/用途 | 清单中的文件名 | 下载链接 |
+| --- | --- | --- | --- |
+| ERR2192893 | 读段端 1 | ERR2192893_1.fastq.gz | [ERR2192893_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR219/003/ERR2192893/ERR2192893_1.fastq.gz) |
+| ERR2192893 | 读段端 2 | ERR2192893_2.fastq.gz | [ERR2192893_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR219/003/ERR2192893/ERR2192893_2.fastq.gz) |
+| ERR2192894 | 读段端 1 | ERR2192894_1.fastq.gz | [ERR2192894_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR219/004/ERR2192894/ERR2192894_1.fastq.gz) |
+| ERR2192894 | 读段端 2 | ERR2192894_2.fastq.gz | [ERR2192894_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR219/004/ERR2192894/ERR2192894_2.fastq.gz) |
 
-## Data 40. Oryza sativa — Illumina HiSeq 4000
+# 更新与引用
 
-该输入提供转化序列基因组文库。常规捕获或 WGS 不能代表这一条件。
-
-公开来源：[DRR1009870](https://www.ebi.ac.uk/ena/browser/view/DRR1009870)。输入单位：一个配对档案 run。
-
-报告数据量：19,651,497,831个碱基（19.651 十亿）。列出的来源对象：2个；9,477,168,274字节（9.477 十进制 GB）。fa ID 8 / GCA_014636035.1.。
-
-数据量证据：19.65 十亿 个碱基接近其 6-run 研究数据量，也位于更广泛水稻亚硫酸氢盐测序的 P10–P90 范围 7.77–22.60 十亿 内。
-
-属性： 未预览；未检查读长、质量或标题概况，因此这些属性仍未知。全文件完整性和配对关系尚未确定。 读长： 未检查。 质量字符数： 未检查。
-
-限制与准备：原始总量不能支持有关胞嘧啶比对覆盖度、转化效率或压缩收益的结论。完整获取、文件完整性、配对关系及任何辅助定义仍待核实。
-
-## 数据41. 根际土壤真菌群落 — Illumina MiSeq
-
-这个具名根际土壤文库提供真菌 ITS 标记测序，包含已提交 FASTQ 的两端。确切文库为 FL_fungi_1，BioSample 为 SAMN43469068。其报告 42.964 百万 个碱基，与 12 个匹配 ITS 文库中位数 42.678 百万 相符。这是自然的具名标记文库输出，不必代表整个测序混合池。
-
-公开来源：[SRR30515680](https://www.ebi.ac.uk/ena/browser/view/SRR30515680)。输入单位：一个完整的配对真菌 ITS 文库。
-
-报告数据量：42,963,536个碱基（42.964 百万）。列出的来源对象：2个；19,328,691字节（19.329 十进制 MB）。混合物/特征参考序列尚未确定；未指定单一基因组 FASTA。
-
-规模依据：12个靶标匹配 ITS 文库范围为38.014–44.784 百万个碱基，中位数为42.678 百万个碱基。所选数据量为42,963,536 个碱基；12个细菌16S输出不纳入此比较。
-
-单位和处理方式的来源：[确切真菌 ITS 文库和已提交配对文件](https://www.ncbi.nlm.nih.gov/sra/SRX25939332)
-
-属性： 所有登记文件均未预览；没有实测读长、质量或标题概况。 读长： 未预览。 质量字符数： 未预览。
-
-限制与准备：ITS 的确切亚区域以及上传前的修剪/过滤步骤均未说明。提交记录的 Original 状态说明源对象身份，不表示它们是未经处理的仪器原始读段。经过处理但仍有实际意义的 FASTQ 可以纳入；单个番茄或真菌基因组则不能代表该群落参考条件。使用所有确切登记对象，并保留 run 边界；测试前按需验证全文件完整性和配对关系。本版本没有执行准备或数据获取。
-
-## 数据42. 根际土壤细菌群落 — Illumina MiSeq
-
-这个具名细菌群落 16S 文库提供已提交的 FASTQ 两端。确切文库为 SH_bacteria_1，BioSample 为 SAMN43469053。其报告 32.742 百万 个碱基，与 12 个匹配靶标的输出中位数 32.662 百万 接近。它作为有文档记录的单文库单位，代表与真菌 ITS 分开的细菌标记工作负载。
-
-公开来源：[SRR30515673](https://www.ebi.ac.uk/ena/browser/view/SRR30515673)。输入单位：一个完整的配对细菌 16S 文库。
-
-报告数据量：32,742,178个碱基（32.742 百万）。列出的来源对象：2个；17,916,463字节（17.916 十进制 MB）。混合物/特征参考序列尚未确定；未指定单一基因组 FASTA。
-
-规模依据：12个靶标匹配的细菌16S文库范围为21.537–42.351 百万个碱基，中位数为32.662 百万个碱基。所选具名文库报告32,742,178 个碱基，列有两个端。
-
-单位和处理方式的来源：[确切细菌 16S 文库和已提交配对文件](https://www.ncbi.nlm.nih.gov/sra/SRX25939339)
-
-属性： 所有登记文件均未预览；没有实测读长、质量或标题概况。 读长： 未预览。 质量字符数： 未预览。
-
-限制与准备：16S 的确切亚区域以及上传前处理阶段均未说明。不能从文件元数据推断是否进行了合并，也不能推断是否为未经处理的原始输出；不假定该群落只有一个基因组参考。使用所有确切登记对象并保留 run 边界；测试前按需验证全文件完整性和配对关系。本版本没有执行准备或数据获取。
-
-## Data 43. Severe acute respiratory syndrome coronavirus 2 — NextSeq 1000
-
-这次标本规模的病毒扩增子运行提供小基因组靶向测序条件。报告的67.83 百万个碱基符合58个可比标本输出的范围，接近其中位数73.35 百万。对这种靶向病毒输入，不应采用人类全基因组交付量作为标准。
-
-公开来源：[DRR1051020](https://www.ebi.ac.uk/ena/browser/view/DRR1051020)。输入单位：一个配对档案 run。
-
-报告数据量：67,831,999个碱基（67.832 百万）。列出的来源对象：2个；31,561,554字节（31.562 十进制 MB）。fa ID 14 / NC_045512.2.。
-
-规模依据：67.83 百万个碱基，接近58次可比标本运行的中位数（73.35 百万个碱基），且位于其 P10–P90 范围内。
-
-属性： 仅有已保存的非随机前缀汇总；全文件分布/完整性尚未确定。 读长： 未检查。 质量字符数： 未检查。
-
-限制与准备：这是合理的标本规模靶向测序输入。靶标方案、覆盖广度和可用深度尚未检查。完整文件的获取与完整性，以及组成和表示形式的检查仍待完成；详见各项限制。
-
-## 数据45. 淡水宏基因组 — Illumina MiSeq
-
-这份短读长水生标记输入关联 Lugano 的 ITD20 滤膜、A 提取物及 VENE 标记组。它提供归档的两个读段端，以及来自样本关联研究输出的22,955,020个碱基。其靶标/参考关系不同于分离株基因组和微生物鸟枪法数据。
-
-公开来源：[ERR7749063](https://www.ebi.ac.uk/ena/browser/view/ERR7749063)。输入单位：与 ITD20-A / VENE 样本关联的标记输出；一个配对档案 run，含 FASTQ 两端。
-
-报告数据量：22,955,020个碱基（22.955 百万）。列出的来源对象：2个；6,829,143字节（6.829 十进制 MB）。混合物/特征参考序列尚未确定；未指定单一基因组 FASTA。
-
-规模依据：精确元数据列出 ITD20-A/VENE 文库、与样本/标记关联的两端提交 FASTQ，以及所选的两个归档端。研究补充样本表将 ITD20 对应到 Lugano 水体滤膜。这支持按标记划分的归档单位，而非整个流动槽，也不是通用的环境 DNA 交付量。
-
-单位和处理方式的来源：[确切的短读长水生标记档案单位](https://www.ebi.ac.uk/ena/browser/view/ERR7749063) [官方水生样本/地点表及命名说明](https://www.ebi.ac.uk/biostudies/studies/S-BSST391) [作者流程清单和样本表](https://github.com/envmetagen/mussels_package)
-
-属性： 仅观察到非随机前缀；不据此推断全文件属性、配对关系或完整性。 读长： 文件 1： 151–151; 中位数 151.0. 质量字符数： 文件 1： 27.
-
-限制与准备：上游具体的拆分条码和过滤边界仍未解决。作者的流程清单/样本表描述的是 2019 年较早一批 run，未列出当前所选登录号，因此无法据此确定这些文件确切的归档阶段。全文件完整性和配对关系尚未验证。完整获取、完整性/配对检查及任何辅助定义均待处理。
-
-## Data 48. Mycobacterium tuberculosis — NextSeq 2000
-
-该细菌分离株输入提供了具名 E. coli 菌株之外的紧凑参考序列条件，并包含观察到的修剪读段表示。它报告 833 百万 个碱基，按原始序列约相当于 189 个参考基因组长度，略高于匹配的 350-run 研究的第 90 百分位数。压缩后小于 1 GB，与这一可观的分离株数据量相符。
-
-公开来源：[ERR11252400](https://www.ebi.ac.uk/ena/browser/view/ERR11252400)。输入单位：一个配对档案 run。
-
-报告数据量：833,183,051个碱基（833.183 百万）。列出的来源对象：2个；549,265,430字节（549.265 十进制 MB）。fa ID 5 / GCF_000195955.2.。
-
-规模依据：8.33 亿个碱基，按原始碱基数计约为参考序列长度的189倍。它略高于匹配的350次运行研究的第90百分位（7.90 亿个碱基），而非高出数个数量级。
-
-属性： 仅有已保存的非随机前缀汇总；全文件分布/完整性尚未确定。 读长： 文件 1： 35–151; 中位数 151; 文件 2： 35–151; 中位数 151. 质量字符数： 文件 1： 6; 文件 2： 6.
-
-限制与准备：原始数据量不等于可用覆盖度。样本与参考序列是否精确一致仍未核实。检查完整文件及配对关系。
-
-## Data 49. Escherichia coli str. K-12 substr. MG1655 — Illumina MiSeq
-
-具名的 E. coli MG1655 菌株提供了紧凑细菌参考序列和经典分离株文库条件。其配对 run 报告 450 百万 个碱基，与更广泛 E. coli 比较队列的 435 百万 中位数以及八个 run 的研究中位数 428 百万 接近；按原始序列量约相当于 97 个参考基因组长度。样本/参考序列是否精确匹配以及有效覆盖仍未验证。
-
-公开来源：[DRR171213](https://www.ebi.ac.uk/ena/browser/view/DRR171213)。输入单位：一个配对档案 run。
-
-报告数据量：450,083,225个碱基（450.083 百万）。列出的来源对象：2个；344,072,580字节（344.073 十进制 MB）。fa ID 4 / GCF_000005845.2.。
-
-数据量证据：450 百万 个碱基接近更广泛 E. coli Illumina 数据的中位数 435 百万，也接近其 8-run 研究中位数 428 百万；按原始序列约为参考序列长度的 97 倍。
-
-属性： 未预览；未检查读长、质量或标题概况，因此这些属性仍未知。全文件完整性和配对关系尚未确定。 读长： 未检查。 质量字符数： 未检查。
-
-限制与准备：这支持一个标准分离株输入。完整文件的完整性，以及实际样本与参考序列的一致性，仍需后续核查。完整获取、文件完整性、配对关系及任何辅助定义仍待核实。
-
-## Data 50. Saccharomyces cerevisiae — Illumina NovaSeq 6000
-
-该输入补充了紧凑的微生物真核基因组，与细菌分离株和酵母 Hi-C 并列。
-
-公开来源：[SRR30502372](https://www.ebi.ac.uk/ena/browser/view/SRR30502372)。输入单位：一个配对档案 run。
-
-报告数据量：2,123,156,100个碱基（2.123 十亿）。列出的来源对象：2个；1,034,612,012字节（1.035 十进制 GB）。fa ID 7 / GCF_000146045.2.。
-
-数据量证据：2.12 十亿 个碱基接近其 61-run 研究的上四分位数，按原始序列约为参考序列长度的 176 倍。这是偏高但可信的酵母研究输入。
-
-属性： 未预览；未检查读长、质量或标题概况，因此这些属性仍未知。全文件完整性和配对关系尚未确定。 读长： 未检查。 质量字符数： 未检查。
-
-限制与准备：研究的倍性和杂合性缺失（LOH）目的有明确说明。不要声称所有酵母生产通常都使用这一深度，也不要将单倍体参考序列的比例换算成每个拷贝的覆盖度。完整获取、文件完整性、配对关系及任何辅助定义仍待核实。
-
-## 数据51. 宏基因组 — GridION
-
-该输入提供已知的多基因组长读长条件，与纯基因组和短标记文库不同。
-
-公开来源：[ERR3152366](https://www.ebi.ac.uk/ena/browser/view/ERR3152366)。输入单位：一个档案 run。
-
-报告数据量：16,506,755,978个碱基（16.507 十亿）。列出的来源对象：1个；17,147,527,495字节（17.148 十进制 GB）。混合物/特征参考序列尚未确定；未指定单一基因组 FASTA。
-
-数据量证据：16.51 十亿 个碱基接近来源研究 4 个正值 run 的范围（共 6 条记录，其中 2 条总量为零）。该研究明确针对模拟群落的超深度测序。
-
-属性： 仅有已保存的非随机前缀汇总；全文件分布/完整性尚未确定。 读长： 文件 1： 50–32099; 中位数 4038. 质量字符数： 文件 1： 60.
-
-限制与准备：这是实际的模拟群落研究输入，不是普通土壤或临床宏基因组的深度。必须保留其人为设定的组成和当前碱基识别版本信息。检查完整文件及配对关系。
-
-## 数据52. 食品发酵宏基因组 — Illumina NovaSeq 6000
-
-这是一个标注了时间点的谷物发酵群落 RNA 文库，完整配对 run 报告 10.324 十亿 个碱基。5 个有文档记录的时间点范围为 10.324–11.764 十亿 个碱基。这些数量支持该来源工作流的数据量；服务商给出的 12 十亿 碱基示例仅作背景，不是纳入阈值。所选材料是发酵群落，其组成和参考序列覆盖仍未验证。
-
-公开来源：[DRR1003246](https://www.ebi.ac.uk/ena/browser/view/DRR1003246)。输入单位：一个完整的配对发酵时间点 RNA 文库。
-
-报告数据量：10,323,974,492个碱基（10.324 十亿）。列出的来源对象：2个；4,133,721,402字节（4.134 十进制 GB）。混合物/特征参考序列尚未确定；未指定单一基因组 FASTA。
-
-规模依据：五个具名发酵时间点含有10.324–11.764 十亿个碱基，中位数为11.198 十亿个碱基。所选的第13天运行含有10,323,974,492 个碱基。独立的12 Gb 服务示例仅提供背景，并非数值下限。
-
-属性： 所有登记文件均未预览；没有实测读长、质量或标题概况。 读长： 未预览。 质量字符数： 未预览。
-
-限制与准备：来源资料将其识别为某一发酵时间点的群落 RNA，但不能证明它是未经处理的仪器输出。群落组成和固定的转录本参考序列集合仍未验证。使用所有确切登记对象并保留 run 边界；测试前按需验证全文件完整性和配对关系。本版本没有执行准备或数据获取。
-
-## 数据53. 土壤宏基因组 — HiSeq X Ten
-
-该输入提供环境鸟枪法 DNA，与宿主相关及食品混合物并列。
-
-公开来源：[DRR1000746](https://www.ebi.ac.uk/ena/browser/view/DRR1000746)。输入单位：一个配对档案 run。
-
-报告数据量：10,115,398,800个碱基（10.115 十亿）。列出的来源对象：2个；7,496,700,808字节（7.497 十进制 GB）。混合物/特征参考序列尚未确定；未指定单一基因组 FASTA。
-
-数据量证据：10.12 十亿 个碱基接近其 8-run 研究中位数 10.32 十亿，并位于广泛的土壤 shotgun 范围内；已知研究中位数的中位数为 12.91 十亿。
-
-属性： 未预览；未检查读长、质量或标题概况，因此这些属性仍未知。全文件完整性和配对关系尚未确定。 读长： 未检查。 质量字符数： 未检查。
-
-限制与准备：这些总量无法测定群落复杂度或各生物的比例，也不据此指定单一基因组覆盖度。完整获取、文件完整性、配对关系及任何辅助定义仍待核实。
-
-## 数据54. 人类肠道宏基因组 — Illumina NovaSeq 6000
-
-该输入提供有依据的宿主相关鸟枪法样本，作为集合中的常规肠道 DNA 示例。
-
-公开来源：[DRR1003638](https://www.ebi.ac.uk/ena/browser/view/DRR1003638)。输入单位：一个配对档案 run。
-
-报告数据量：6,596,836,500个碱基（6.597 十亿）。列出的来源对象：2个；3,130,599,344字节（3.131 十进制 GB）。混合物/特征参考序列尚未确定；未指定单一基因组 FASTA。
-
-规模依据：6.60 十亿个碱基，接近其30次运行研究的数据量，也在更广泛的肠道鸟枪法测序 P10–P90 范围（0.29–9.86 十亿个碱基）内；各研究中位数的中位数为4.81 十亿个碱基。
-
-属性： 未预览；未检查读长、质量或标题概况，因此这些属性仍未知。全文件完整性和配对关系尚未确定。 读长： 未检查。 质量字符数： 未检查。
-
-限制与准备：申报的运行数据量及来源研究背景支持将其作为肠道宏基因组鸟枪法示例。完整生物样本的分配方式及文件整体属性仍未核实。完整获取、文件完整性、配对关系及任何辅助定义仍待核实。
-
-## 数据55. 食品宏基因组 — Illumina NovaSeq 6000
-
-这条蜂蜜来源的 shotgun DNA run 用于食品混合物基因组测序：一个配对档案 run 报告 5.697 十亿 个碱基。该数量与包含 63 个 run 的蜂蜜研究队列相符。混合食品来源参考序列条件不同于纯作物基因组、细菌分离株和肠道群落；此处不声称已测量其具体成分。
-
-公开来源：[SRR27931704](https://www.ebi.ac.uk/ena/browser/view/SRR27931704)。输入单位：一个配对档案 run。
-
-报告数据量：5,697,274,998个碱基（5.697 十亿）。列出的来源对象：2个；2,096,744,147字节（2.097 十进制 GB）。混合物/特征参考序列尚未确定；未指定单一基因组 FASTA。
-
-规模依据：5.70 十亿个碱基，位于63次匹配蜂蜜研究运行的 P10–P90 范围（0.74–6.14 十亿个碱基）内。
-
-单位和处理方式的来源：[确切蜂蜜 shotgun 来源样本](https://www.ebi.ac.uk/ena/browser/view/SRX23588786)
-
-属性： 未预览；未检查读长、质量或标题概况，因此这些属性仍未知。全文件完整性和配对关系尚未确定。 读长： 未检查。 质量字符数： 未检查。
-
-限制与准备：这支持一项按产品划分的研究运行，但不能证明食品行业的一般交付规范，也没有测得群落组成。完整获取、文件完整性、配对关系及任何辅助定义仍待核实。
-
-## Data 56. Cricetulus griseus — Illumina HiSeq 2500
-
-该完整的 CHO 基因组组装文库提供工业生产细胞参考组装研究输入。同一具名制备的两个配对 run 均纳入：4 个文件共报告 77,003,500,500 个碱基。具名文库定义了自然的组装数据单位；具体细胞系/参考序列匹配关系及全文件属性仍未验证。
-
-公开来源：[ERR2192893](https://www.ebi.ac.uk/ena/browser/view/ERR2192893), [ERR2192894](https://www.ebi.ac.uk/ena/browser/view/ERR2192894)。输入单位：完整 CHO 基因组文库/组分：2 个配对 run，共 4 个独立文件。
-
-报告数据量：77,003,500,500个碱基（77.004 十亿）。列出的来源对象：4个；57,234,426,121字节（57.234 十进制 GB）。fa ID 17 / GCF_003668045.3.。
-
-规模依据：同一具名 CHO 基因组制备的两个公开双端运行合计报告77,003,500,500 个碱基。二者均纳入，作为一个完整具名文库；这是对申报组装输入的来源流程支持，并非通用产量标准。
-
-单位和处理方式的来源：[具名 CHO 基因组组装文库](https://www.ebi.ac.uk/ena/browser/view/PRJEB12319)
-
-属性： 尚未记录任何登记对象的检查属性。 读长： 未预览。 质量字符数： 未预览。
-
-限制与准备：完整的两个 run 命名文库并不等于整个 CHO 组装项目。已提交 CRAM 由所选档案 FASTQ 配对端表示；尚未从正文核实标准化后的表示及原生顺序。保留所有登记的 run 输出并将两个配对端分开。压缩前验证全文件完整性和配对关系。尚未获取或拼接任何文件。
-
-# 带版本号的参考序列及后续 FASTQ 制备
-
-下方列出已使用的 18 个参考序列身份及其 fa ID。Renan 的 GCA_937894285.1 是拟议的同一栽培品种组装。落地页与可直接下载的 gzip FASTA 路径分别标注。尚未获取或验证任何参考序列正文。同物种不等于菌株、栽培品种、转录本或靶标匹配。人类/果蝇归一化参考序列提案不等于纯果蝇基因组覆盖。标记和群落输入不会被擅自分配单一基因组 FASTA。
-
-fa ID 1: Homo sapiens — GRCh38 / [GCF_000001405.39](https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/405/GCF_000001405.39_GRCh38.p13/GCF_000001405.39_GRCh38.p13_genomic.fna.gz)。可直接下载的 gzip FASTA 路径。仅为同物种参考序列提案；样本/品系/靶标/contig 匹配关系及 FASTA 内容均未验证。
-
-fa ID 2: Sus scrofa — Sscrofa11.1 / [GCA_000003025.6](https://www.ncbi.nlm.nih.gov/datasets/genome/GCA_000003025.6/)。登录号落地页；确切 FASTA 获取路径仍待确定。仅为同物种参考序列提案；样本/品系/靶标/contig 匹配关系及 FASTA 内容均未验证。
-
-fa ID 3：小鼠——GRCm38 / [GCF_000001635.24](https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/635/GCF_000001635.24_GRCm38.p4/GCF_000001635.24_GRCm38.p4_genomic.fna.gz)。提供可直接下载的 gzip FASTA 路径。该同物种基因组参考序列拟用于小鼠输入；样本/品系/靶标匹配关系和 FASTA 内容尚未验证。对于 Smart-seq2，转录本/patch 等价性以及辅助 ERCC 版本也需单独核实。
-
-fa ID 4: Escherichia coli — ASM584 / [GCF_000005845.2](https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/005/845/GCF_000005845.2_ASM584v2/GCF_000005845.2_ASM584v2_genomic.fna.gz)。可直接下载的 gzip FASTA 路径。仅为同物种参考序列提案；样本/品系/靶标/contig 匹配关系及 FASTA 内容均未验证。
-
-fa ID 5: Mycobacterium tuberculosis — ASM19595v2 (H37Rv) / [GCF_000195955.2](https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/195/955/GCF_000195955.2_ASM19595v2/GCF_000195955.2_ASM19595v2_genomic.fna.gz)。可直接下载的 gzip FASTA 路径。仅为同物种参考序列提案；样本/品系/靶标/contig 匹配关系及 FASTA 内容均未验证。
-
-fa ID 6: Solanum tuberosum — SolTub_3.0 / [GCA_000226075.1](https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/226/075/GCA_000226075.1_SolTub_3.0/GCA_000226075.1_SolTub_3.0_genomic.fna.gz)。可直接下载的 gzip FASTA 路径。仅为同物种参考序列提案；样本/品系/靶标/contig 匹配关系及 FASTA 内容均未验证。
-
-fa ID 7: Saccharomyces cerevisiae — R64 / [GCF_000146045.2](https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/146/045/GCF_000146045.2_R64/GCF_000146045.2_R64_genomic.fna.gz)。可直接下载的 gzip FASTA 路径。仅为同物种参考序列提案；样本/品系/靶标/contig 匹配关系及 FASTA 内容均未验证。
-
-fa ID 8: Oryza sativa — ASM1463603v1 / [GCA_014636035.1](https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/014/636/035/GCA_014636035.1_ASM1463603v1/GCA_014636035.1_ASM1463603v1_genomic.fna.gz)。可直接下载的 gzip FASTA 路径。仅为同物种参考序列提案；样本/品系/靶标/contig 匹配关系及 FASTA 内容均未验证。
-
-fa ID 9: Arabidopsis thaliana — TAIR10.1 / [GCF_000001735.4](https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/735/GCF_000001735.4_TAIR10.1/GCF_000001735.4_TAIR10.1_genomic.fna.gz)。可直接下载的 gzip FASTA 路径。仅为同物种参考序列提案；样本/品系/靶标/contig 匹配关系及 FASTA 内容均未验证。
-
-fa ID 10：玉米——Zm-B73-REFERENCE-NAM-5.0 / [GCA_902167145.1](https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/902/167/145/GCA_902167145.1_Zm-B73-REFERENCE-NAM-5.0/GCA_902167145.1_Zm-B73-REFERENCE-NAM-5.0_genomic.fna.gz)。可直接下载的 gzip FASTA 路径。该 B73 参考序列与 SW1611 同属一个物种，但属于不同自交系。具体样本/栽培品种/contig 匹配关系和 FASTA 内容仍未验证。
-
-fa ID 11: Penaeus vannamei — ASM4276789v1 / [GCF_042767895.1](https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_genomic.fna.gz)。可直接下载的 gzip FASTA 路径。仅为同物种参考序列提案；样本/品系/靶标/contig 匹配关系及 FASTA 内容均未验证。
-
-fa ID 12：鸡——bGalGal1.mat.broiler.GRCg7b / [GCA_016699485.1](https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/016/699/485/GCA_016699485.1_bGalGal1.mat.broiler.GRCg7b/GCA_016699485.1_bGalGal1.mat.broiler.GRCg7b_genomic.fna.gz)。可直接下载的 gzip FASTA 路径。仅为同物种参考序列提案；样本/品系/靶标/contig 匹配关系及 FASTA 内容均未验证。
-
-fa ID 13：果蝇——Release 6 plus ISO1 MT / [GCF_000001215.4](https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/215/GCF_000001215.4_Release_6_plus_ISO1_MT/GCF_000001215.4_Release_6_plus_ISO1_MT_genomic.fna.gz)。可直接下载的 gzip FASTA 路径。仅为同物种参考序列提案；样本/品系/靶标/contig 匹配关系及 FASTA 内容均未验证。
-
-fa ID 14: Severe acute respiratory syndrome coronavirus 2 — NC_045512.2 / [NC_045512.2](https://www.ncbi.nlm.nih.gov/nuccore/NC_045512.2)。登录号落地页；确切 FASTA 获取路径仍待确定。该参考序列是基于同一生物名称提出的标签方案，尚未测试其与分离株/变体/靶标的兼容性。
-
-fa ID 15: Picea abies — Pabies01 / [GCA_900067695.1](https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/900/067/695/GCA_900067695.1_Pabies01/GCA_900067695.1_Pabies01_genomic.fna.gz)。可直接下载的 gzip FASTA 路径。拟议的同物种组装；样本/品系/栽培品种/靶标匹配关系及 FASTA 内容均未验证。
-
-fa ID 16: Chenopodium quinoa — ASM168347v1 / [GCF_001683475.1](https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/001/683/475/GCF_001683475.1_ASM168347v1/GCF_001683475.1_ASM168347v1_genomic.fna.gz)。可直接下载的 gzip FASTA 路径。拟议的同物种组装；样本/品系/栽培品种/靶标匹配关系及 FASTA 内容均未验证。
-
-fa ID 17：仓鼠——Cricetulus griseus / [GCF_003668045.3](https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/003/668/045/GCF_003668045.3_CriGri-PICRH-1.0/GCF_003668045.3_CriGri-PICRH-1.0_genomic.fna.gz)。可直接下载的 gzip FASTA 路径。该组装仅为同物种提案；样本/品系/栽培品种/靶标匹配关系和 FASTA 内容均未验证。
-
-fa ID 18: Triticum aestivum cultivar Renan — Triticum_aestivum_Renan_v2.1 / [GCA_937894285.1](https://www.ncbi.nlm.nih.gov/datasets/genome/GCA_937894285.1/)。登录号落地页；之后还需选定确切 FASTA 对象。该组装对应同一 Renan 栽培品种，版本为 assemblyv2.1；尚无实测读段匹配结果。
-
-通用无损压缩测试检查的是所选 FASTQ 字节能否恢复。空间掩膜、坐标、特征表和基因组 FASTA 并非自动必需。若所选压缩程序依赖参考序列，则应固定带版本号的参考序列；特征感知匹配或后续重建可能还需要额外定义。组分身份、实际文件可访问性和所选表示方式是彼此独立的要求。
-
-测试前，应通过可用的公开路径获取所列的确切对象，验证全文件完整性和组分关系，并固定准备后的 FASTQ 字节。对不同压缩程序，应一致核算参考序列字节和准备过程。保留原始文件与准备后文件的不同身份。本软件包规定了选择方案和未来准备步骤；已保存的前缀观察只适用于各自明确标注的范围，尚无整个集合的验证结果或压缩结果。打包过程没有处理真实源数据。
-
-对每个登记的 gzip 源文件分别进行完整 gzip CRC/截断验证，并用 `gzip -dc` 解压。原样保留标题行、序列、质量字符、记录顺序和格式。配对端、run 和分块文件保持分离；不得拼接、重新压缩、修剪、规范化或重排格式。拒绝不完整的解压输出。记录 gzip 版本和准确命令、源身份和容器校验和、输出字节数及输出 SHA-256。源 gzip 校验和与准备后 FASTQ 哈希代表不同字节流。参见[准备命令](preparation.md)。
-
-Data 6 仅有 BAM 源文件。针对其比对 SUP flow cell 的分析报告了 153,264,463,825 个碱基和 8,155,127 条 reads，但这些数值未经核实，不能视为所选 BAM 转出 FASTQ 后的确切产出量。固定但尚未执行的[准备规则](preparation.md)使用 SAMtools 1.22/htslib 1.22，按自然 QNAME 顺序排序，选取未配对主记录，使用已存储的质量值，并在主记录缺少质量值时停止。规则执行时会记录确切源/输出哈希和选项。准备后顺序不是仪器原始顺序。无损目标是生成的 FASTQ，而不是 BAM 标签/比对信息。
-
-Data 8：选定的一个 CNGB run/源对象 CNR1409093，文件名为 WY_reads.fq.gz；是单端 reads，不是配对端。该对象没有发布者 MD5，核验仅依据登记的 130,270,589,600 字节大小。大小一致本身不能证明内容完整。SINGLE 表示也不代表一对配对端。缓存的 CNGB 元数据将其标为人类 HG002 基因组 WGS、RANDOM 选择、G400-ER 以及 fragment/single 布局。与 SRA 原始数据的字节等价性尚未验证。前缀标题观察不能证明全文件配对或完整性。属性：在传输 1,048,576 个压缩字节后，从非随机前缀中观察到 258 条完整记录；解压后 FASTQ 为 2,432,831 字节。全文件读数/碱基总量、分布和完整性仍未验证。读长：258 条完整的非随机前缀记录为 355–28,912 个碱基。
-
-Data 22 有文档依据的 HiFi 身份，且源文件与产出量已精确对应。文件名中的 _subreads 是档案中的表示名称，不能单独证明它是原始子读段还是共识处理结果。实际质量字符/标题尚未预览。空间掩膜/坐标以及 CITE 特征/条码定义，只有在特定解释或定制参考匹配时需要；通用逐字节无损压缩不需要。分类表是辅助资料，不是基因组参考，也不是纳入条件。
-
-# 多次运行及分块输入的确切文件
-
-每行对应一个确切的物理对象。名称和 URL 均按所列元数据原样保留。保留显示的运行边界以及双端/分块角色；没有虚构拼接后的文件名或合并归档登录号。Files 工作表包含全部115个对象的同类细节。
-
-## 数据16 — Renan 小麦品种 — 6个文件
-
-| 运行/端或分块 | 确切物理文件名 | 列出的完整 URL |
-| --- | --- | --- |
-| ERR6348210；读段端1 | ERR6348210_1.fastq.gz | [https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR634/000/ERR6348210/ERR6348210_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR634/000/ERR6348210/ERR6348210_1.fastq.gz) |
-| ERR6348210；读段端2 | ERR6348210_2.fastq.gz | [https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR634/000/ERR6348210/ERR6348210_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR634/000/ERR6348210/ERR6348210_2.fastq.gz) |
-| ERR6348211；读段端1 | ERR6348211_1.fastq.gz | [https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR634/001/ERR6348211/ERR6348211_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR634/001/ERR6348211/ERR6348211_1.fastq.gz) |
-| ERR6348211；读段端2 | ERR6348211_2.fastq.gz | [https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR634/001/ERR6348211/ERR6348211_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR634/001/ERR6348211/ERR6348211_2.fastq.gz) |
-| ERR6348212；读段端1 | ERR6348212_1.fastq.gz | [https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR634/002/ERR6348212/ERR6348212_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR634/002/ERR6348212/ERR6348212_1.fastq.gz) |
-| ERR6348212；读段端2 | ERR6348212_2.fastq.gz | [https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR634/002/ERR6348212/ERR6348212_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR634/002/ERR6348212/ERR6348212_2.fastq.gz) |
-
-## 数据31 — CITE ADT — 8个文件
-
-| 运行/端或分块 | 确切物理文件名 | 列出的完整 URL |
-| --- | --- | --- |
-| SRR19066657；读段端1 | SRR19066657_1.fastq.gz | [https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/057/SRR19066657/SRR19066657_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/057/SRR19066657/SRR19066657_1.fastq.gz) |
-| SRR19066657；读段端2 | SRR19066657_2.fastq.gz | [https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/057/SRR19066657/SRR19066657_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/057/SRR19066657/SRR19066657_2.fastq.gz) |
-| SRR19066658；读段端1 | SRR19066658_1.fastq.gz | [https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/058/SRR19066658/SRR19066658_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/058/SRR19066658/SRR19066658_1.fastq.gz) |
-| SRR19066658；读段端2 | SRR19066658_2.fastq.gz | [https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/058/SRR19066658/SRR19066658_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/058/SRR19066658/SRR19066658_2.fastq.gz) |
-| SRR19066659；读段端1 | SRR19066659_1.fastq.gz | [https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/059/SRR19066659/SRR19066659_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/059/SRR19066659/SRR19066659_1.fastq.gz) |
-| SRR19066659；读段端2 | SRR19066659_2.fastq.gz | [https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/059/SRR19066659/SRR19066659_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/059/SRR19066659/SRR19066659_2.fastq.gz) |
-| SRR19066661；读段端1 | SRR19066661_1.fastq.gz | [https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/061/SRR19066661/SRR19066661_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/061/SRR19066661/SRR19066661_1.fastq.gz) |
-| SRR19066661；读段端2 | SRR19066661_2.fastq.gz | [https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/061/SRR19066661/SRR19066661_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/061/SRR19066661/SRR19066661_2.fastq.gz) |
-
-## 数据32 — CITE mRNA — 8个文件
-
-| 运行/端或分块 | 确切物理文件名 | 列出的完整 URL |
-| --- | --- | --- |
-| SRR19066662；读段端1 | SRR19066662_1.fastq.gz | [https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/062/SRR19066662/SRR19066662_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/062/SRR19066662/SRR19066662_1.fastq.gz) |
-| SRR19066662；读段端2 | SRR19066662_2.fastq.gz | [https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/062/SRR19066662/SRR19066662_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/062/SRR19066662/SRR19066662_2.fastq.gz) |
-| SRR19066664；读段端1 | SRR19066664_1.fastq.gz | [https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/064/SRR19066664/SRR19066664_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/064/SRR19066664/SRR19066664_1.fastq.gz) |
-| SRR19066664；读段端2 | SRR19066664_2.fastq.gz | [https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/064/SRR19066664/SRR19066664_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/064/SRR19066664/SRR19066664_2.fastq.gz) |
-| SRR19066665；读段端1 | SRR19066665_1.fastq.gz | [https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/065/SRR19066665/SRR19066665_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/065/SRR19066665/SRR19066665_1.fastq.gz) |
-| SRR19066665；读段端2 | SRR19066665_2.fastq.gz | [https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/065/SRR19066665/SRR19066665_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/065/SRR19066665/SRR19066665_2.fastq.gz) |
-| SRR19066666；读段端1 | SRR19066666_1.fastq.gz | [https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/066/SRR19066666/SRR19066666_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/066/SRR19066666/SRR19066666_1.fastq.gz) |
-| SRR19066666；读段端2 | SRR19066666_2.fastq.gz | [https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/066/SRR19066666/SRR19066666_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/066/SRR19066666/SRR19066666_2.fastq.gz) |
-
-## 数据33 — CITE HTO — 8个文件
-
-| 运行/端或分块 | 确切物理文件名 | 列出的完整 URL |
-| --- | --- | --- |
-| SRR19066668；读段端1 | SRR19066668_1.fastq.gz | [https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/068/SRR19066668/SRR19066668_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/068/SRR19066668/SRR19066668_1.fastq.gz) |
-| SRR19066668；读段端2 | SRR19066668_2.fastq.gz | [https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/068/SRR19066668/SRR19066668_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/068/SRR19066668/SRR19066668_2.fastq.gz) |
-| SRR19066669；读段端1 | SRR19066669_1.fastq.gz | [https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/069/SRR19066669/SRR19066669_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/069/SRR19066669/SRR19066669_1.fastq.gz) |
-| SRR19066669；读段端2 | SRR19066669_2.fastq.gz | [https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/069/SRR19066669/SRR19066669_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/069/SRR19066669/SRR19066669_2.fastq.gz) |
-| SRR19066671；读段端1 | SRR19066671_1.fastq.gz | [https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/071/SRR19066671/SRR19066671_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/071/SRR19066671/SRR19066671_1.fastq.gz) |
-| SRR19066671；读段端2 | SRR19066671_2.fastq.gz | [https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/071/SRR19066671/SRR19066671_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/071/SRR19066671/SRR19066671_2.fastq.gz) |
-| SRR19066672；读段端1 | SRR19066672_1.fastq.gz | [https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/072/SRR19066672/SRR19066672_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/072/SRR19066672/SRR19066672_1.fastq.gz) |
-| SRR19066672；读段端2 | SRR19066672_2.fastq.gz | [https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/072/SRR19066672/SRR19066672_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/072/SRR19066672/SRR19066672_2.fastq.gz) |
-
-## 数据56 — CHO 具名文库 — 4个文件
-
-| 运行/端或分块 | 确切物理文件名 | 列出的完整 URL |
-| --- | --- | --- |
-| ERR2192893；读段端1 | ERR2192893_1.fastq.gz | [https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR219/003/ERR2192893/ERR2192893_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR219/003/ERR2192893/ERR2192893_1.fastq.gz) |
-| ERR2192893；读段端2 | ERR2192893_2.fastq.gz | [https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR219/003/ERR2192893/ERR2192893_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR219/003/ERR2192893/ERR2192893_2.fastq.gz) |
-| ERR2192894；读段端1 | ERR2192894_1.fastq.gz | [https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR219/004/ERR2192894/ERR2192894_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR219/004/ERR2192894/ERR2192894_1.fastq.gz) |
-| ERR2192894；读段端2 | ERR2192894_2.fastq.gz | [https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR219/004/ERR2192894/ERR2192894_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR219/004/ERR2192894/ERR2192894_2.fastq.gz) |
-
-# 年度维护
-
-每年更新一次，以最近一个已完成的 9 月作为截止：纳入该截止日前的存量及此前 12 个月首次公开的增量。沿用未变化且已审计的证据，并更新影响判断的重要实际用途/部署主张。重新评估有用的工作负载、材料、文库、技术和参考序列条件，以及有代表性的输入量。只有存在有文档依据的数据问题或能改进覆盖时，才新增、替换或删除条目，并记录失去/增加的用途和确切输入单位。维持不变也是有效结论。本集合并未证明是最小集合，也没有目标数量。
+每年复核档案和实际用途证据。在同一数据集版本内，保持数据编号和精确文件清单稳定。[版本说明](../VERSIONING.md)解释哪些变化需要新版本；增加核验结果并不表示输入字节发生变化。仓库署名方式及当前许可状态见[引用说明](../CITATION.md)和[权利与许可](../RIGHTS.md)。本集合提供测试输入及其依据，不提供实测压缩结果。

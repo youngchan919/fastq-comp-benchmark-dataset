@@ -1,6 +1,6 @@
 {
   "title": "FASTQ compression benchmark dataset",
-  "edition_date": "19 October 2026",
+  "edition_date": "2026-10-20",
   "eligibility_cutoff": "30 September 2026",
   "data_id_policy": "Stable Data IDs identify current input units; see the authoritative fq list.",
   "counts": {
@@ -101,7 +101,7 @@
           "verification_expected": "publisher-md5+size"
         }
       ],
-      "reason": "This broad-quality human MGI whole-genome input has an ordinary family-study identity and 122.627 billion reported bases. The saved 150-base prefixes use 41 quality characters. It anchors broad-quality human MGI sequencing beside the more concentrated quality frequencies in Data 2 and the four-symbol representation in Data 3; one input per instrument model is not required.",
+      "reason": "This human whole-genome run represents routine MGI short-read sequencing. Its inspected reads use a wide range of quality characters. Together with Data 2 and 3, it lets a compressor face different quality patterns without changing the broad human-genome task.",
       "limits": "Use this as the broad-quality anchor, not an extra G400 quota. Complete-file quality distributions remain unchecked.",
       "preparation": "Check whole files and pairing before testing.",
       "coverage_needs": [
@@ -119,7 +119,9 @@
       "run_accessions": [
         "ERR17003126"
       ],
-      "display_name": "Human"
+      "display_name": "Human genome — MGI G400",
+      "amount_summary": "122.63 billion bases is roughly a 40x human-genome budget.",
+      "checks_summary": "Use this as the broad-quality anchor, not an extra G400 quota."
     },
     {
       "no": 2,
@@ -188,7 +190,7 @@
           "verification_expected": "publisher-md5+size"
         }
       ],
-      "reason": "This human T7 whole-genome run supplies a real quality-frequency contrast at 131.252 billion reported bases. The most common symbol occupies 90.07% of inspected quality positions in R1 and 86.46% in R2. Saved summaries show a more concentrated quality distribution than Data 1. These are nonrandom prefix observations, not measured whole-file redundancy or compressor results; Data 1 remains the broad-quality MGI anchor.",
+      "reason": "This human whole-genome run adds a different quality pattern from Data 1. In the saved prefixes, the most common quality character accounts for 90.07% of R1 positions and 86.46% of R2 positions. These observations describe only the inspected reads; they do not establish a whole-file distribution or a compression result.",
       "limits": "Saved prefixes give about 0.90/1.16 bits per quality position versus 1.78/2.04 for Data 1. These are marginal prefix summaries; full-file distributions and correlations remain unchecked.",
       "preparation": "Check whole files and pairing before testing.",
       "coverage_needs": [
@@ -206,7 +208,9 @@
       "run_accessions": [
         "ERR16794642"
       ],
-      "display_name": "Human"
+      "display_name": "Human genome — MGI T7, concentrated qualities",
+      "amount_summary": "131.25 billion bases is roughly a 42x human-genome budget, within common WGS planning.",
+      "checks_summary": "Saved prefixes give about 0.90/1.16 bits per quality position versus 1.78/2.04 for Data 1."
     },
     {
       "no": 3,
@@ -275,7 +279,7 @@
           "verification_expected": "publisher-md5+size"
         }
       ],
-      "reason": "This input supplies the observed four-symbol quality representation. A narrow alphabet is a useful condition beyond the two broad-alphabet examples.",
+      "reason": "This human genomic run adds a four-symbol quality pattern to the broader quality ranges in Data 1 and 2. It comes from an RPE1 ploidy-benchmark study, so it is not presented as an ordinary diploid patient sample. Seeing four symbols does not establish how the qualities were produced.",
       "limits": "Do not infer why the qualities have four symbols or use a diploid usable-depth claim for the mixed-ploidy material.",
       "preparation": "Check whole files and pairing before testing.",
       "coverage_needs": [
@@ -293,7 +297,9 @@
       "run_accessions": [
         "SRR33329596"
       ],
-      "display_name": "Human"
+      "display_name": "Human genome — MGI T7, four-symbol qualities",
+      "amount_summary": "127.54 billion bases lies within the eight-positive-run study range (nine records; one zero total).",
+      "checks_summary": "Do not infer why the qualities have four symbols or use a diploid usable-depth claim for the mixed-ploidy material."
     },
     {
       "no": 4,
@@ -362,7 +368,7 @@
           "verification_expected": "publisher-md5+size"
         }
       ],
-      "reason": "This input supplies mainstream Illumina genomic output at a declared run/lane scale, a natural production delivery unit.",
+      "reason": "This run represents mainstream Illumina whole-genome sequencing. The input is a complete deposited run/lane output, a unit that users can receive and store separately from other runs of the same sample. Its amount is close to the middle of its source study.",
       "limits": "This is a declared run/lane input, not a demonstrated complete 30× human sample. Raw bases do not establish usable sample-level depth.",
       "preparation": "Check whole files and pairing before testing.",
       "coverage_needs": [
@@ -380,7 +386,9 @@
       "run_accessions": [
         "ERR15383198"
       ],
-      "display_name": "Human"
+      "display_name": "Human genome — NovaSeq X Plus",
+      "amount_summary": "39.31 billion bases is close to the 35.48-billion median of 24 comparable runs in its source study and within the positive-volume NovaSeq X archive middle-half range.",
+      "checks_summary": "This is a declared run/lane input, not a demonstrated complete 30× human sample."
     },
     {
       "no": 5,
@@ -432,7 +440,7 @@
           "verification_expected": "publisher-md5+size"
         }
       ],
-      "reason": "This input supplies the ultra-long genomic representation alongside current ordinary nanopore output and HiFi. The source explicitly belongs to an ultra-long sequencing study.",
+      "reason": "This input adds ultra-long human genomic reads alongside the ordinary nanopore and PacBio consensus inputs. The source study explicitly used ultra-long sequencing. The complete run provides a real example of that workload rather than a file assembled by selecting unusually long reads here.",
       "limits": "The inspected length prefix contains only 456 records. It does not establish the complete read-length tail or an entire multi-run sample.",
       "preparation": "Acquire and verify the complete listed file before testing.",
       "coverage_needs": [
@@ -451,7 +459,9 @@
       "run_accessions": [
         "ERR12954382"
       ],
-      "display_name": "Human"
+      "display_name": "Human ultra-long nanopore reads",
+      "amount_summary": "49.18 billion bases is close to the median 51.65 billion among 74 positive-yield source-study runs (79 records; five zero totals).",
+      "checks_summary": "The inspected length prefix contains only 456 records."
     },
     {
       "no": 6,
@@ -505,9 +515,9 @@
           "verification_expected": "size-only"
         }
       ],
-      "reason": "This input supplies a current R10.4.1/Dorado genomic output condition. The chosen object is a whole named flow-cell BAM, rather than an arbitrary byte slice.",
+      "reason": "This named ONT flow-cell output represents current R10.4.1/Dorado human genomic sequencing. It is supplied as a complete BAM file. A fixed export rule will create the FASTQ to benchmark; that export has not been run, and its exact read and base totals are not yet known.",
       "limits": "Exact selected BAM/export yield has not been established from the mapped-analysis summary. The declared unpaired-primary/name policy has only synthetic validation; unexpected pairing flags, duplicate primary names, absent SEQ or absent QUAL require review instead of silent omission. Prepared order is not native instrument order.",
-      "preparation": "Use the pinned prepare_data6.py rule: SAMtools 1.22/htslib 1.22, name-sort, primary unpaired records, stored QUAL and rejection of missing primary qualities. One plain FASTQ and a receipt with exact source/output SHA-256 and options are produced when run. Real-source preparation has not been executed.",
+      "preparation": "Use the pinned prepare_data6.py rule: SAMtools 1.22/htslib 1.22, name-sort, primary unpaired records, stored QUAL and rejection of missing primary qualities. One plain FASTQ and a preparation log with exact source/output SHA-256 and options are produced when run. Real-source preparation has not been executed.",
       "coverage_needs": [
         "Human genome-wide sequencing",
         "Reference genomes, pangenomes and non-model assembly"
@@ -524,7 +534,9 @@
       "run_accessions": [
         "ONT_GIAB2025_HG002_PAW70337_SUP"
       ],
-      "display_name": "Human"
+      "display_name": "Human nanopore reads — one ONT flow cell",
+      "amount_summary": "The release describes about 140 Gb per flow cell.",
+      "checks_summary": "The separate mapped-analysis totals are not verified as the exact BAM/export yield. The specified FASTQ export has not been run."
     },
     {
       "no": 7,
@@ -577,7 +589,7 @@
           "verification_expected": "publisher-md5+size"
         }
       ],
-      "reason": "This input supplies the consensus-long-read condition, which differs from raw CLR and nanopore.",
+      "reason": "This barcode-specific PacBio output adds HiFi consensus reads alongside raw PacBio CLR and nanopore reads. It is a documented output from one sequencing cell, not an arbitrary slice. Other outputs from the same sample are separate choices, not unlisted parts of this declared input.",
       "limits": "The selected amount is a barcode-specific cell output, not an entire Revio cell or every library for the individual. Exact sample/reference matching remains unverified.",
       "preparation": "Check whole files and pairing before testing.",
       "coverage_needs": [
@@ -596,7 +608,9 @@
       "run_accessions": [
         "ERR14732808"
       ],
-      "display_name": "Human"
+      "display_name": "Human PacBio HiFi reads",
+      "amount_summary": "The submitted source identifies a barcode-specific HiFi cell output with 48,501,907,479 reported bases.",
+      "checks_summary": "The selected amount is a barcode-specific cell output, not an entire Revio cell or every library for the individual."
     },
     {
       "no": 8,
@@ -650,7 +664,7 @@
           }
         }
       ],
-      "reason": "This single-file CNGB source supplies the intended CycloneSEQ nanopore condition. Product-specific deployments and public research support that technology role despite sparse archive labels. The selected object is CNR1409093 in experiment CNX1236558, supplied as one SINGLE FASTQ file. CNGB metadata identifies HG002 genomic WGS on G400-ER; exact byte equivalence to the associated SRA representation has not been verified.",
+      "reason": "This file lets the collection test another nanopore technology alongside Oxford Nanopore. It contains human HG002 whole-genome reads from CycloneSEQ G400-ER. The chosen CNGB download is one single-read FASTQ file, not paired mates. The survey links the public research and named installations that support including this technology.",
       "limits": "No publisher MD5 is available for this object; verification is size-only against the listed 130,270,589,600 bytes. Size agreement alone does not prove content integrity. The SINGLE representation is not a pair of mates. Cached CNGB metadata identifies human HG002 genomic WGS, RANDOM selection, G400-ER and fragment/single layout. Exact byte equivalence to the SRA originals remains unverified. Prefix header observations do not establish whole-file pairing or integrity.",
       "preparation": "Download the one exact listed CNGB object, record a local SHA-256 after acquisition and preserve its identity. A saved 19 October nonrandom prefix has 258 complete records and no observed four-line format errors; confirm complete integrity and properties before benchmarking. No full-file preparation or validation has been executed here.",
       "coverage_needs": [
@@ -669,11 +683,13 @@
       "run_accessions": [
         "CNR1409093"
       ],
-      "display_name": "CycloneSEQ CNGB single-file source",
+      "display_name": "Human CycloneSEQ nanopore reads",
       "unit_evidence_ids": [
         "CNGB_DATA8",
         "CNGB_DATA8_PREFIX"
-      ]
+      ],
+      "amount_summary": "One CNGB FASTQ file, WY_reads.fq.gz, is listed at 130,270,589,600 compressed bytes. Its exact total reads and bases are unknown.",
+      "checks_summary": "No publisher MD5 is available. Matching the listed size is not a full integrity check. Exact total reads and bases, and byte equivalence to SRA files, are unknown."
     },
     {
       "no": 9,
@@ -742,7 +758,7 @@
           "verification_expected": "publisher-md5+size"
         }
       ],
-      "reason": "This input supplies mainstream human exome sampling. Keep its actual tumor-study context visible rather than calling it a generic germline sample.",
+      "reason": "This library represents human exome sequencing, which samples selected coding regions rather than the whole genome. It comes from an FFPE tumour study. Keeping that context explicit avoids treating its amount and preparation as a generic germline sample.",
       "limits": "The 72 Mb enrichment target is nominal, not measured on-target sequence. Intended usable tumor depth and the exact lane-to-library allocation remain unverified.",
       "preparation": "Check whole files and pairing before testing.",
       "coverage_needs": [
@@ -760,7 +776,9 @@
       "run_accessions": [
         "ERR12411150"
       ],
-      "display_name": "Human"
+      "display_name": "Human exome sequencing",
+      "amount_summary": "The source has 38 FFPE exome runs with median 5.650 billion bases.",
+      "checks_summary": "The 72 Mb enrichment target is nominal, not measured on-target sequence."
     },
     {
       "no": 10,
@@ -831,7 +849,7 @@
           "verification_expected": "publisher-md5+size"
         }
       ],
-      "reason": "This PCR-free SW1611 maize genomic library supplies ordinary crop population resequencing. Its 47.789 billion reported bases support the complete paired library at the scale of the documented 521-line association panel. The B73 reference is the same species but a different inbred line, giving an explicit reference relationship without claiming exact cultivar matching.",
+      "reason": "This PCR-free maize library represents ordinary crop resequencing. Its amount is close to the middle of the study's 513 libraries with reported yields. Both FASTQ ends of the SW1611 run are included. The proposed B73 reference is from the same species but a different inbred line.",
       "size_evidence": "The primary panel study describes approximately 20× DNA resequencing. Its 513 positive reported library totals have median 47,915,875,698 bases and interquartile range 43,361,613,016–53,576,105,346. Eight zero-valued metadata totals are outside those positive-yield quantiles, not proven zero-yield samples. This input has 47,789,487,240 reported bases. These are source-cohort comparisons, not universal maize production norms.",
       "limits": "The exact experiment states PCR-free genomic WGS. Its submitted alias Q88_1.trimed.fq.gz indicates trimming; the exact pipeline and untouched-instrument equivalence are unverified. NCBI metadata reports mean R1/R2 lengths of 148.43/145.89 bases, not newly inspected distributions or a specified nominal cycle length.",
       "preparation": "Acquire both exact listed archive ends and verify integrity, pairing and prepared-byte order. Publisher MD5 values are listed, not computed. Fix reference version and account for reference bytes consistently.",
@@ -849,13 +867,15 @@
       "run_accessions": [
         "SRR8906645"
       ],
-      "display_name": "Maize SW1611 PCR-free genomic library",
+      "display_name": "Maize resequencing",
       "unit_evidence_ids": [
         "MAIZE_PANEL",
         "MAIZE_EXPERIMENT",
         "MAIZE_SAMPLE",
         "MAIZE_COUNTS"
-      ]
+      ],
+      "amount_summary": "The primary panel study describes approximately 20× DNA resequencing.",
+      "checks_summary": "Trimming is indicated by the submitted filename, but the exact steps are unknown. The actual FASTQ lengths and qualities have not been inspected."
     },
     {
       "no": 11,
@@ -908,7 +928,7 @@
           "verification_expected": "publisher-md5+size"
         }
       ],
-      "reason": "This input supplies targeted semiconductor output in a human sample, distinct from genome-wide sequencing and food-marker libraries.",
+      "reason": "This human amplicon run adds targeted sequencing on a semiconductor instrument. It differs from whole-genome sequencing in what is sampled and from the Illumina/MGI inputs in technology. Its amount is close to the middle of 133 comparable runs from the same study.",
       "limits": "The inspected source identifies a cfDNA amplicon run, but does not establish exact panel extent or the relation between supplied and integrated reads. No general panel-depth certification is claimed.",
       "preparation": "Full acquisition/integrity/pairing and any auxiliary definitions pending.",
       "coverage_needs": [
@@ -927,7 +947,9 @@
       "run_accessions": [
         "DRR341924"
       ],
-      "display_name": "Homo sapiens"
+      "display_name": "Human targeted sequencing — Ion Torrent",
+      "amount_summary": "The selected named amplicon run has 1,497,990,828 reported bases.",
+      "checks_summary": "The inspected source identifies a cfDNA amplicon run, but does not establish exact panel extent or the relation between supplied and integrated reads."
     },
     {
       "no": 12,
@@ -997,7 +1019,7 @@
           "verification_expected": "publisher-md5+size"
         }
       ],
-      "reason": "This spruce input supplies population target capture against a large conifer reference. The selected paired archive run has 335,384,842 reported bases; the proposed same-species assembly contains 11,961,396,284 bases. This small-target/large-reference relationship is a prospective compression condition, not a measured compression or reference-cost result. The named library groups six submitted lane/mate files across three lanes into the two selected archive ends.",
+      "reason": "This spruce library represents population genotyping by target capture. Its 335 million reported bases are small relative to the proposed 11.96-billion-base spruce reference. That contrast is worth testing for reference-based compression, but no effect has been measured. The archive groups three submitted lane pairs into the two listed FASTQ ends.",
       "limits": "The source grouping is metadata evidence, not body-level merge or order verification. Exact normalized representation and library-specific usable target depth remain unverified. Probe count is not a target-base denominator; the earlier cohort’s 15× is not assigned to this run.",
       "preparation": "Full acquisition/integrity/pairing and any auxiliary definitions pending.",
       "coverage_needs": [
@@ -1016,11 +1038,13 @@
       "run_accessions": [
         "SRR19440963"
       ],
-      "display_name": "Picea abies",
+      "display_name": "Spruce target capture",
       "unit_evidence_ids": [
         "UNIT12",
         "SPRUCE_REFERENCE"
-      ]
+      ],
+      "amount_summary": "The 335,384,842-base archive run lies in the lower range of 7,729 project runs with median 584 million bases.",
+      "checks_summary": "The source grouping is metadata evidence, not body-level merge or order verification."
     },
     {
       "no": 13,
@@ -1090,7 +1114,7 @@
           "verification_expected": "publisher-md5+size"
         }
       ],
-      "reason": "This quinoa RAD input supplies reduced-representation crop genotyping. Its 895 million reported bases are close to the 872-million median of 136 matching population-study outputs. The complete paired run is meaningful at that targeted sampling scale; a whole-genome amount would describe a different workload.",
+      "reason": "This RAD library represents crop genotyping from selected parts of a genome. Its amount is close to the middle of 136 comparable study runs. A whole-genome-sized file would describe a different task, so this complete paired run is an appropriate small input.",
       "limits": "Do not assess RAD using whole-genome depth. Exact locus coverage is not established by these raw totals.",
       "preparation": "Full acquisition/integrity/pairing and any auxiliary definitions pending.",
       "coverage_needs": [
@@ -1108,7 +1132,9 @@
       "run_accessions": [
         "DRR095727"
       ],
-      "display_name": "Chenopodium quinoa"
+      "display_name": "Quinoa reduced-representation genotyping",
+      "amount_summary": "895 million bases is close to the median 872 million among 136 matching population-study runs.",
+      "checks_summary": "Do not assess RAD using whole-genome depth."
     },
     {
       "no": 14,
@@ -1177,7 +1203,7 @@
           "verification_expected": "publisher-md5+size"
         }
       ],
-      "reason": "This input supplies livestock genomic material and one supplied constant-quality short-read representation. This one input serves both conditions.",
+      "reason": "This pig genomic run covers livestock sequencing and a file in which the inspected qualities are constant. Those qualities are part of the bytes to preserve. Their origin is unknown, so they are not described as typical native MGI quality output.",
       "limits": "The original role is an assembly/resequencing study component. The supplied constant qualities must not be advertised as typical native MGI qualities; their processing origin is unknown.",
       "preparation": "Check whole files and pairing before testing.",
       "coverage_needs": [
@@ -1195,7 +1221,9 @@
       "run_accessions": [
         "SRR24804436"
       ],
-      "display_name": "Pig"
+      "display_name": "Pig genome with supplied constant qualities",
+      "amount_summary": "26.34 billion bases is close to the very tight approximately 26.19-billion median of 147 source-study runs.",
+      "checks_summary": "The original role is an assembly/resequencing study component."
     },
     {
       "no": 15,
@@ -1266,7 +1294,7 @@
           "verification_expected": "size-only"
         }
       ],
-      "reason": "This is an explicitly identified mouse germline-tail whole-genome library, with 100.892 billion reported bases in a complete paired run. Five similarly prepared tail libraries contain 100.892–139.281 billion bases. It is the lower-yield member of that group, not an artificial subset; the source-workflow evidence supports its amount without establishing a universal mouse-production norm. Strain/reference identity remains qualified.",
+      "reason": "This mouse tail-DNA run adds a commonly used research animal and its genome reference. It is one complete germline library. Its amount is the lowest of five similarly prepared tail libraries, rather than a subset created for this benchmark. The sample's exact match to the proposed strain reference still needs checking.",
       "limits": "The exact sample is Mus musculus, but its strain is not stated. The proposed mouse reference is a same-species proposal; no sequence match is verified.",
       "preparation": "Use every exact listed object and preserve run boundaries; verify full-file integrity and pairing where applicable before testing. No preparation or acquisition was performed for this edition.",
       "coverage_needs": [
@@ -1284,7 +1312,9 @@
       "run_accessions": [
         "ERR14032264"
       ],
-      "display_name": "Mouse"
+      "display_name": "Mouse genome sequencing",
+      "amount_summary": "Five like-prepared germline-tail outputs contain 100.892–139.281 billion bases, with median 118.131 billion.",
+      "checks_summary": "The exact sample is Mus musculus, but its strain is not stated."
     },
     {
       "no": 16,
@@ -1423,7 +1453,7 @@
           "verification_expected": "size-only"
         }
       ],
-      "reason": "This Renan wheat genomic library supplies the large/polyploid nuclear-genome assembly context. Its three paired run outputs belong to one named preparation used for assembly polishing and together contain 495.517 billion reported bases. Include all six files, keeping run boundaries. The chosen unit follows the documented library, not a numerical depth threshold or a preference for fewer bytes.",
+      "reason": "This wheat library represents work on a large, polyploid plant genome. All three paired runs of the named Renan assembly-polishing preparation are included: six files in total. The unit follows the documented library, rather than combining unrelated runs to reach a chosen depth.",
       "limits": "The three outputs define the named Renan library, not a universal wheat production norm. The same-cultivar reference identity is proposed at metadata level; FASTA contents and matching remain unverified.",
       "preparation": "Use every exact listed object and preserve run boundaries; verify full-file integrity and pairing where applicable before testing. No preparation or acquisition was performed for this edition.",
       "coverage_needs": [
@@ -1443,7 +1473,9 @@
         "ERR6348211",
         "ERR6348212"
       ],
-      "display_name": "Wheat cultivar Renan"
+      "display_name": "Wheat genome assembly — Renan library",
+      "amount_summary": "The three outputs share the same sample and named preparation.",
+      "checks_summary": "The three outputs define the named Renan library, not a universal wheat production norm."
     },
     {
       "no": 17,
@@ -1512,7 +1544,7 @@
           "verification_expected": "publisher-md5+size"
         }
       ],
-      "reason": "This Altus potato PCR-free library supplies a tetraploid crop genome-assembly input and the observed longer short-read representation. Its 70.557 billion reported bases belong to one named 470 bp-insert library. This is a documented material/reference and preparation setting; 470 bp describes the insert, not read length or per-copy depth.",
+      "reason": "This PCR-free Altus library adds a tetraploid crop-assembly example. The input is one complete library with a documented 470-base insert. The 470 bases describe the full DNA insert sequenced from both ends, not the length of either read or just the gap between them. Other insert sizes and linked-read preparations are separate libraries.",
       "limits": "This is one named PCR-free library, not the entire cultivar assembly dataset. The 470 bp figure is insert size, not read length or verified per-copy depth.",
       "preparation": "Check whole files and pairing before testing.",
       "coverage_needs": [
@@ -1530,10 +1562,12 @@
       "run_accessions": [
         "SRR14993639"
       ],
-      "display_name": "Potato",
+      "display_name": "Potato genome assembly — Altus library",
       "unit_evidence_ids": [
         "POTATO_PROJECT"
-      ]
+      ],
+      "amount_summary": "Three same-sample libraries with 470 bp inserts contain 68.017,70.557 and 70.976 billion bases.",
+      "checks_summary": "This is one named PCR-free library, not the entire cultivar assembly dataset."
     },
     {
       "no": 18,
@@ -1602,7 +1636,7 @@
           "verification_expected": "publisher-md5+size"
         }
       ],
-      "reason": "This input supplies the aquaculture/invertebrate genomic material supported by the applied breeding-use survey.",
+      "reason": "This run adds a marine invertebrate used in aquaculture breeding research. It gives the collection an animal genome and reference beyond human, mouse and livestock. Its amount is close to the middle of ten comparable runs in the source study.",
       "limits": "Raw reference-size ratios are not mapped coverage. The precise whole-sample allocation remains a later preparation check.",
       "preparation": "Check complete files, pairing and sample/reference matching before testing.",
       "coverage_needs": [
@@ -1620,7 +1654,9 @@
       "run_accessions": [
         "DRR1000971"
       ],
-      "display_name": "Whiteleg shrimp"
+      "display_name": "Shrimp genome sequencing",
+      "amount_summary": "26.76 billion bases is close to the 26.96-billion median among ten matched inbreeding-study runs.",
+      "checks_summary": "Raw reference-size ratios are not mapped coverage."
     },
     {
       "no": 19,
@@ -1689,7 +1725,7 @@
           "verification_expected": "publisher-md5+size"
         }
       ],
-      "reason": "This input supplies poultry genomic material. It has an independent applied-use basis and a selected input drawn from a substantial actual animal cohort.",
+      "reason": "This input covers poultry genome resequencing, supported by the breeding-use survey. It is drawn from a substantial study of laying hens. Its amount falls within the middle 80% of the study's reported run amounts.",
       "limits": "One applied cohort supports the selected example; it is not a national or global poultry production distribution.",
       "preparation": "Check complete files, pairing and sample/reference matching before testing.",
       "coverage_needs": [
@@ -1707,7 +1743,9 @@
       "run_accessions": [
         "ERR13943038"
       ],
-      "display_name": "Chicken"
+      "display_name": "Chicken genome sequencing",
+      "amount_summary": "19.60 billion bases lies within the 13.90–20.80-billion middle-80% range of the 1,004-layer study.",
+      "checks_summary": "One applied cohort supports the selected example; it is not a national or global poultry production distribution."
     },
     {
       "no": 20,
@@ -1759,7 +1797,7 @@
           "verification_expected": "publisher-md5+size"
         }
       ],
-      "reason": "This input supplies raw CLR genomic reads alongside the separate consensus-long-read condition. The exact HG002-CLR library identity establishes its processing role; constant supplied qualities and archive representation remain qualified.",
+      "reason": "This HG002 library adds raw PacBio CLR reads alongside HiFi consensus reads. The exact library is labelled HG002-CLR. Its supplied quality values and archive format are kept as deposited; they are not assumed to describe native qualities or every raw PacBio file.",
       "limits": "Raw pass yield must not be compared directly with HiFi consensus yield or usable coverage. Constant supplied qualities and their archive representation remain explicit.",
       "preparation": "Check whole files and pairing before testing.",
       "coverage_needs": [
@@ -1777,7 +1815,9 @@
       "run_accessions": [
         "SRR8801873"
       ],
-      "display_name": "Human"
+      "display_name": "Human raw PacBio CLR reads",
+      "amount_summary": "113.90 billion reported raw bases is a substantial genomic input.",
+      "checks_summary": "Raw pass yield must not be compared directly with HiFi consensus yield or usable coverage."
     },
     {
       "no": 21,
@@ -1831,7 +1871,7 @@
           "verification_expected": "size-only"
         }
       ],
-      "reason": "This Col-0 Arabidopsis source explicitly documents a plant nuclear-genome nanopore assembly experiment. The chosen 10.555-billion-base input is the complete submitted ATRun2_SA_pass output of one named run. Alternative basecalls of the same experiment are alternative representations, not additional independent sequence.",
+      "reason": "This Arabidopsis Col-0 input adds plant nuclear-genome assembly reads from nanopore sequencing. It is the complete submitted pass-read output of one named run. Fail reads and alternative basecalls are separate representations, not missing pieces of this chosen file.",
       "limits": "The chosen PASS output excludes fail reads. Exact basecaller settings are not established, and no whole-flow-cell or whole-file property claim is made.",
       "preparation": "Use every exact listed object and preserve run boundaries; verify full-file integrity and pairing where applicable before testing. No preparation or acquisition was performed for this edition.",
       "coverage_needs": [
@@ -1849,7 +1889,9 @@
       "run_accessions": [
         "ERR13669551"
       ],
-      "display_name": "Arabidopsis Col-0"
+      "display_name": "Plant nanopore genome assembly",
+      "amount_summary": "The chosen pass output contains 10,554,533,391 reported bases.",
+      "checks_summary": "The chosen PASS output excludes fail reads."
     },
     {
       "no": 22,
@@ -1903,7 +1945,7 @@
           "verification_expected": "size-only"
         }
       ],
-      "reason": "This Arabidopsis Col-0 input supplies documented plant HiFi consensus reads for a nuclear assembly. The author-listed accession, AT_HiFi library and 22.90-billion-base published quantity agree with the archive total 22,904,700,074 bases. That documentary join supports its processing identity; the generic archive filename containing _subreads proves neither consensus nor raw-subread processing by itself. Its actual FASTQ quality alphabet and headers remain unexamined.",
+      "reason": "This Arabidopsis Col-0 readset adds plant HiFi consensus sequencing. The paper's accession, AT_HiFi library name and reported amount agree with the archive record. That documentation establishes the method; the archive filename containing _subreads does not establish it by itself.",
       "limits": "Documentary HiFi identity does not establish a particular quality alphabet or whole-file accuracy. The archive filename alone is not processing proof; no new prefix was examined.",
       "preparation": "Use every exact listed object and preserve run boundaries; verify full-file integrity and pairing where applicable before testing. No preparation or acquisition was performed for this edition.",
       "coverage_needs": [
@@ -1921,7 +1963,9 @@
       "run_accessions": [
         "SRR14728885"
       ],
-      "display_name": "Arabidopsis Col-0"
+      "display_name": "Plant PacBio HiFi genome assembly",
+      "amount_summary": "The published plant HiFi readset contains 22.90 billion bases; exact archive metadata reports 22,904,700,074 bases for AT_HiFi.",
+      "checks_summary": "Documentary HiFi identity does not establish a particular quality alphabet or whole-file accuracy."
     },
     {
       "no": 23,
@@ -1990,7 +2034,7 @@
           "verification_expected": "publisher-md5+size"
         }
       ],
-      "reason": "This input supplies ordinary MGI transcript sequencing as an important library/technology condition.",
+      "reason": "This input represents ordinary human RNA sequencing on MGI short-read instruments. It complements the human genomic inputs and the Illumina expression library. Its amount is close to the middle of eight runs in its source study.",
       "limits": "Do not compare archive raw read counts directly with an aligned-read standard without resolving the count convention.",
       "preparation": "Check whole files and pairing before testing.",
       "coverage_needs": [
@@ -2008,7 +2052,9 @@
       "run_accessions": [
         "ERR10030615"
       ],
-      "display_name": "Human"
+      "display_name": "Human RNA sequencing — MGI",
+      "amount_summary": "4.83 billion bases is near the 4.81-billion median of eight source-study runs and is a plausible ordinary expression-library amount.",
+      "checks_summary": "Do not compare archive raw read counts directly with an aligned-read standard without resolving the count convention."
     },
     {
       "no": 24,
@@ -2079,7 +2125,7 @@
           "verification_expected": "size-only"
         }
       ],
-      "reason": "This named wild-type Col-0 plant expression replicate supplies an ordinary bulk-RNA library with 7.103 billion reported bases. Fourteen source-study RNA outputs span 5.214–8.809 billion bases, with median 6.467 billion. The clear sample/preparation unit and source-workflow amount support this example; they are not a market-wide RNA production norm.",
+      "reason": "This wild-type Arabidopsis Col-0 replicate represents bulk plant RNA sequencing. It is one named expression library, with an amount within the range of fourteen RNA outputs in the source study. The comparison supports this example, not a universal production requirement.",
       "limits": "The source describes trimming for analysis; that does not prove the deposited FASTQ was trimmed or untouched. The proposed genomic reference needs an appropriate annotation only for modes that use it.",
       "preparation": "Use every exact listed object and preserve run boundaries; verify full-file integrity and pairing where applicable before testing. No preparation or acquisition was performed for this edition.",
       "coverage_needs": [
@@ -2097,7 +2143,9 @@
       "run_accessions": [
         "SRR14627767"
       ],
-      "display_name": "Arabidopsis Col-0"
+      "display_name": "Plant RNA sequencing",
+      "amount_summary": "Fourteen RNA outputs in the source study span 5.214–8.809 billion bases, with median 6.467 billion.",
+      "checks_summary": "The source describes trimming for analysis; that does not prove the deposited FASTQ was trimmed or untouched."
     },
     {
       "no": 25,
@@ -2149,7 +2197,7 @@
           "verification_expected": "publisher-md5+size"
         }
       ],
-      "reason": "This named small-RNA biological replicate supplies the observed variable 18–44-base prefix representation. Its 12.64 million reported single reads and 284 million bases fit the eight-run source workflow. Biological selection of short RNA supports this small-library role; it does not identify the computational trimming stage of the deposited file.",
+      "reason": "This biological replicate represents small-RNA sequencing. Short RNA molecules make it a naturally small input; the inspected reads vary from 18 to 44 bases. The library's read and base totals fit the source study. Its biological target does not establish which trimming steps were applied before deposition.",
       "limits": "The exact archive description identifies a size-selected short-RNA library, but does not establish computational trimming before deposition. Saved prefix lengths are not whole-file distributions. No universal read-count threshold or untouched-instrument-output requirement is applied.",
       "preparation": "Check whole files and pairing before testing.",
       "coverage_needs": [
@@ -2167,10 +2215,12 @@
       "run_accessions": [
         "DRR1089360"
       ],
-      "display_name": "Human",
+      "display_name": "Human small-RNA sequencing",
       "unit_evidence_ids": [
         "UNIT25"
-      ]
+      ],
+      "amount_summary": "12.64 million reported single reads and 284 million bases match the eight-run study, whose base median is 286 million.",
+      "checks_summary": "The exact archive description identifies a size-selected short-RNA library, but does not establish computational trimming before deposition."
     },
     {
       "no": 26,
@@ -2240,7 +2290,7 @@
           "verification_expected": "publisher-md5+size"
         }
       ],
-      "reason": "This input supplies a mainstream Illumina expression library.",
+      "reason": "This input represents a conventional Illumina human expression library. It complements the MGI and newer short-read RNA inputs. Its amount is close to the middle of twelve comparable runs in the source study.",
       "limits": "The broad RNA archive includes several library designs. Its raw volume supports plausibility, not compliance with a processed/aligned-read standard.",
       "preparation": "Full acquisition/integrity/pairing and any auxiliary definitions pending.",
       "coverage_needs": [
@@ -2258,7 +2308,9 @@
       "run_accessions": [
         "DRR1069746"
       ],
-      "display_name": "Homo sapiens"
+      "display_name": "Human RNA sequencing — Illumina",
+      "amount_summary": "4.00 billion bases is close to the 4.11-billion median of 12 matching study runs and within the wider positive-volume NovaSeq RNA range.",
+      "checks_summary": "The broad RNA archive includes several library designs."
     },
     {
       "no": 27,
@@ -2311,7 +2363,7 @@
           "verification_expected": "publisher-md5+size"
         }
       ],
-      "reason": "This input supplies a deployed short-read technology in its documented single-end RNA configuration. Do not force paired-end RNA expectations onto it.",
+      "reason": "This AVITI library adds a commercially deployed short-read technology in its documented single-end RNA configuration. It should be tested as supplied, rather than judged against a paired-end library. Its amount is close to the middle of eighteen source-study runs.",
       "limits": "This supports a public research input. Chemistry-specific quality distributions are still unexamined.",
       "preparation": "Full acquisition/integrity/pairing and any auxiliary definitions pending.",
       "coverage_needs": [
@@ -2329,7 +2381,9 @@
       "run_accessions": [
         "SRR30608496"
       ],
-      "display_name": "Homo sapiens"
+      "display_name": "Single-end RNA sequencing — Element AVITI",
+      "amount_summary": "3.10 billion bases is close to the 2.98-billion median of 18 source-study runs and within the wider AVITI single-end RNA range across 20 known studies.",
+      "checks_summary": "This supports a public research input."
     },
     {
       "no": 29,
@@ -2382,7 +2436,7 @@
           "verification_expected": "publisher-md5+size"
         }
       ],
-      "reason": "This input supplies nanopore transcript-derived reads separately from long genomic reads. The short raw mean does not invalidate the submitted full-length-library label.",
+      "reason": "This input adds nanopore reads from a transcript-derived library, alongside nanopore genomic reads. The source documents a full-length library; that describes the intended sampling, not a guarantee that every deposited read is long or complete. Its read count is comparable to the study's library amounts.",
       "limits": "This is same-study scale support, not a general long-RNA production norm. It is not direct RNA, and raw mean length is not comparable with the paper’s filtered/aligned mean.",
       "preparation": "Full acquisition/integrity/pairing and any auxiliary definitions pending.",
       "coverage_needs": [
@@ -2400,7 +2454,9 @@
       "run_accessions": [
         "SRR36288068"
       ],
-      "display_name": "Homo sapiens"
+      "display_name": "Nanopore transcript sequencing",
+      "amount_summary": "The source paper reports 310.8 million raw reads across 72 libraries, an arithmetic average of 4.32 million.",
+      "checks_summary": "This is same-study scale support, not a general long-RNA production norm."
     },
     {
       "no": 30,
@@ -2471,7 +2527,7 @@
           "verification_expected": "publisher-md5+size"
         }
       ],
-      "reason": "This documented Smart-seq2 mouse cell supplies transcript-wide individual-cell sampling alongside the 3-prime CITE libraries. The exact cell is E20.D042253.3_9_M.1.1 from bladder tissue. One complete listed SRA run contains both paired ends and 220.101 million reported bases, within the matched annotated-cell cohort’s middle half. Transcript-wide sampling does not mean each short read spans a whole transcript.",
+      "reason": "This mouse bladder cell adds transcript-wide single-cell RNA sequencing alongside the 3-prime CITE libraries. Smart-seq2 samples across transcripts; it does not make every read span a whole transcript. Both ends of one SRA run are included, with an amount within the middle half of 660 annotated cells.",
       "size_evidence": "Among 660 author-annotated bladder cells with one listed run each, reported amounts have median 182,126,200 bases and interquartile range 139,362,300–226,050,350. This cell has 220,101,000 bases, in the upper portion of that central range. Eight additional deposited one-run groups do not join the authors’ annotation and are outside this denominator. The comparison supports this natural individual-cell amount, not a general service or worldwide production norm.",
       "limits": "The full official filename manifest lists one run and two original FASTQ names for this exact well/plate/donor identity. Source label C1 is undefined; no additional part is listed. Completeness is at the deposited-FASTQ boundary, not all instrument/index, aligned-BAM or count-matrix assets. The author annotation does not certify the exact pre-upload processing stage. Archive descriptors specify nominal 100/100-base application reads; actual file properties remain unpreviewed.",
       "preparation": "Acquire both listed archive ends and verify integrity and pairing. Keep the exact chosen FASTQ representation and order. Same-species GRCm38.p4 is proposed; exact donor substrain, transcript/patch equivalence and the study’s auxiliary ERCC version remain unverified. Such interpretation assets are not required for generic lossless FASTQ compression.",
@@ -2489,7 +2545,7 @@
       "run_accessions": [
         "SRR6520293"
       ],
-      "display_name": "Mouse transcript-wide Smart-seq2 cell",
+      "display_name": "One mouse Smart-seq2 cell",
       "unit_evidence_ids": [
         "CELL_ATLAS",
         "CELL_METHOD",
@@ -2497,7 +2553,9 @@
         "CELL_ANNOTATION",
         "CELL_QUANTITIES",
         "CELL_RUN"
-      ]
+      ],
+      "amount_summary": "Among 660 author-annotated bladder cells with one listed run each, reported amounts have median 182,126,200 bases and middle-half range 139,362,300–226,050,350.",
+      "checks_summary": "The author and archive identify one cell in one run. The exact pre-upload processing stage and actual FASTQ properties remain unexamined."
     },
     {
       "no": 31,
@@ -2670,7 +2728,7 @@
           "verification_expected": "size-only"
         }
       ],
-      "reason": "The antibody-derived tag library supplies the feature component of a matched CITE assay. It complements the mRNA and sample-hashtag libraries rather than duplicating them. Include all four run outputs of this same component experiment: 28.796 billion reported bases in eight files. This defines the complete supplied component-library input, not every capture well or all cells in the study.",
+      "reason": "These files contain the antibody-derived tags from the same CITE experiment as Data 32 and 33. They complement the mRNA and sample-tag reads rather than duplicating them. All four paired runs are included: eight files from this named antibody-tag library.",
       "limits": "Recovery targets are not observed recovered cells. The five capture lanes are distinct from the four sequencing-run outputs, and all target cells cannot be assigned to this component. Prefix observations cover only the two exact files identified in Files.",
       "preparation": "Keep all listed run outputs and both ends separate. Validate full-file integrity and pairing before compression. No files were acquired or concatenated.",
       "coverage_needs": [
@@ -2685,7 +2743,9 @@
         "SRR19066659",
         "SRR19066661"
       ],
-      "display_name": "CITE ADT"
+      "display_name": "CITE antibody tags",
+      "amount_summary": "The four paired runs contain 28,795,741,128 reported bases across eight files.",
+      "checks_summary": "Loading/recovery targets are not measured recovered-cell counts. See Files for exactly which files, if any, have inspected prefixes."
     },
     {
       "no": 32,
@@ -2858,7 +2918,7 @@
           "verification_expected": "publisher-md5+size"
         }
       ],
-      "reason": "The biological-transcript library supplies the mRNA component of the matched CITE assay; antibody and sample tags cannot replace it. Include all four outputs of this component experiment: 73.686 billion reported bases in eight files. Keep its files separate from the ADT and HTO components and do not infer observed cell recovery from loading targets.",
+      "reason": "These files contain the mRNA reads from the matched CITE experiment. Antibody tags and sample tags cannot substitute for this transcript library. All four paired runs are included, with eight files kept separate from the tag libraries.",
       "limits": "The source sequencing target is not observed per-cell depth. Actual recovered cells and normalized read orientation remain unverified; all listed files are unpreviewed.",
       "preparation": "Keep all listed run outputs and both ends separate. Validate full-file integrity and pairing before compression. No files were acquired or concatenated.",
       "coverage_needs": [
@@ -2879,7 +2939,9 @@
         "SRR19066665",
         "SRR19066666"
       ],
-      "display_name": "CITE mRNA"
+      "display_name": "CITE mRNA reads",
+      "amount_summary": "The four paired runs contain 73,686,380,444 reported bases across eight files.",
+      "checks_summary": "Loading/recovery targets are not measured recovered-cell counts. See Files for exactly which files, if any, have inspected prefixes."
     },
     {
       "no": 33,
@@ -3052,7 +3114,7 @@
           "verification_expected": "size-only"
         }
       ],
-      "reason": "This hashtag library supplies the complementary sample-tag sequences of the matched CITE assay. Include all four outputs of the same component experiment: 1.567 billion reported bases in eight files. Genomic FASTA does not define these tag sequences; custom feature definitions are relevant to interpretation or feature-aware matching, not a prerequisite for generic lossless FASTQ compression.",
+      "reason": "These files contain the sample-tag reads from the same CITE experiment as the antibody-tag and mRNA inputs. They play a different role and are not replicate copies. All four paired runs are included: eight files. Tag definitions may help interpretation or a custom reference, but are not needed for exact FASTQ compression and recovery.",
       "limits": "Actual cell recovery and tag-reference definitions remain unresolved. Custom feature definitions aid interpretation or feature-aware matching; they are not required for generic lossless compression.",
       "preparation": "Keep all listed run outputs and both ends separate. Validate full-file integrity and pairing before compression. No files were acquired or concatenated.",
       "coverage_needs": [
@@ -3067,7 +3129,9 @@
         "SRR19066671",
         "SRR19066672"
       ],
-      "display_name": "CITE HTO"
+      "display_name": "CITE sample tags",
+      "amount_summary": "The four paired runs contain 1,566,671,480 reported bases across eight files.",
+      "checks_summary": "Loading/recovery targets are not measured recovered-cell counts. See Files for exactly which files, if any, have inspected prefixes."
     },
     {
       "no": 34,
@@ -3137,7 +3201,7 @@
           "verification_expected": "publisher-md5+size"
         }
       ],
-      "reason": "This input supplies the spatial barcode/transcript condition, including its asymmetric reads. Large size is appropriate when it reflects the real input unit.",
+      "reason": "This run adds spatial transcript sequencing, where barcode and transcript reads serve different roles and can have different lengths. The complete named run is large because it is a real spatial input. Its capture area and cell/bin depths are unknown; neither should be inferred from file size.",
       "limits": "Capture area and observed cell/bin depths remain unknown. Only three of twelve source-study metadata totals are positive, limiting the amount comparison. Masks and coordinates are interpretation assets, not prerequisites for compression of the supplied reads.",
       "preparation": "Acquire and check the two listed FASTQs; whole-file pairing/integrity remain pending. Spatial masks/coordinates are not required for generic lossless compression, but are needed for reconstruction or relevant custom matching.",
       "coverage_needs": [
@@ -3155,7 +3219,9 @@
       "run_accessions": [
         "SRR29351083"
       ],
-      "display_name": "Homo sapiens"
+      "display_name": "Spatial transcript sequencing — Stereo-seq",
+      "amount_summary": "The named L01 spatial run contains 248,408,655,120 reported bases.",
+      "checks_summary": "Capture area and observed cell/bin depths remain unknown."
     },
     {
       "no": 35,
@@ -3226,7 +3292,7 @@
           "verification_expected": "size-only"
         }
       ],
-      "reason": "This human K562 library supplies a documented conventional paired bulk-ATAC replicate with 9.955 billion reported bases. Its 32-run source group has median 10.146 billion bases. The source documents its conventional bulk-ATAC preparation; raw amount does not establish usable unique fragments.",
+      "reason": "This K562 library represents a conventional paired bulk-ATAC replicate. It samples accessible chromatin rather than genome-wide DNA or RNA. Its amount is close to the middle of 32 study runs, although total bases do not establish the number of useful, distinct fragments.",
       "limits": "The source establishes a bulk ATAC library, not usable unique-fragment counts or an analysis-pipeline pass. The human reference does not prove K562-specific sequence matching.",
       "preparation": "Use every exact listed object and preserve run boundaries; verify full-file integrity and pairing where applicable before testing. No preparation or acquisition was performed for this edition.",
       "coverage_needs": [
@@ -3244,7 +3310,9 @@
       "run_accessions": [
         "SRR30495077"
       ],
-      "display_name": "Human K562"
+      "display_name": "Bulk ATAC sequencing",
+      "amount_summary": "Thirty-two positive ATAC source runs span 6.612–19.462 billion bases, with median 10.146 billion.",
+      "checks_summary": "The source establishes a bulk ATAC library, not usable unique-fragment counts or an analysis-pipeline pass."
     },
     {
       "no": 36,
@@ -3313,7 +3381,7 @@
           "verification_expected": "publisher-md5+size"
         }
       ],
-      "reason": "This input supplies protein-associated chromatin sampling, distinct from ATAC and CUT&RUN.",
+      "reason": "This rice library adds ChIP sequencing, which samples protein-associated chromatin. ATAC and CUT&RUN use different preparations and do not replace it. Its amount is close to the middle of eleven comparable runs in the study.",
       "limits": "Raw pairs do not establish aligned, unique or target-specific fragment yield.",
       "preparation": "Whole-file acquisition/integrity and component/representation checks pending; see individual limits.",
       "coverage_needs": [
@@ -3331,7 +3399,9 @@
       "run_accessions": [
         "DRR1000045"
       ],
-      "display_name": "Rice"
+      "display_name": "Rice ChIP sequencing",
+      "amount_summary": "7.85 billion bases is close to its 11-run study median of 7.98 billion and within the wider rice ChIP middle-80% range of 3.36–10.57 billion.",
+      "checks_summary": "Raw pairs do not establish aligned, unique or target-specific fragment yield."
     },
     {
       "no": 37,
@@ -3400,7 +3470,7 @@
           "verification_expected": "publisher-md5+size"
         }
       ],
-      "reason": "This input supplies the preparation established by the exact experiment despite the archive’s broad OTHER label.",
+      "reason": "This run adds CUT&RUN, documented by its exact experiment even though the archive uses the broad OTHER label. It complements ATAC and ChIP inputs. Its amount falls within the middle 80% of thirty comparable study runs.",
       "limits": "Normalization-reference composition and processed/usable depth remain unknown. Do not treat this raw total as a pipeline acceptance result.",
       "preparation": "Whole-file acquisition/integrity and component/representation checks pending; see individual limits.",
       "coverage_needs": [
@@ -3423,7 +3493,9 @@
       "run_accessions": [
         "SRR26362943"
       ],
-      "display_name": "Human"
+      "display_name": "Human CUT&RUN sequencing",
+      "amount_summary": "2.14 billion bases lies inside the matched 30-run study’s middle-80% range of 1.79–5.13 billion.",
+      "checks_summary": "Normalization-reference composition and processed/usable depth remain unknown."
     },
     {
       "no": 38,
@@ -3493,7 +3565,7 @@
           "verification_expected": "publisher-md5+size"
         }
       ],
-      "reason": "This input supplies proximity-ligation reads and a compact eukaryotic reference context.",
+      "reason": "This yeast library adds proximity-ligation reads used to study contacts between genome regions. Its compact eukaryotic reference also differs from the large animal and plant references. Its amount lies within both the source-study range and the wider yeast Hi-C comparison.",
       "limits": "This supports a yeast research run, not a universal Hi-C target. Valid contacts and intended spatial resolution remain separate from raw volume.",
       "preparation": "Full acquisition/integrity/pairing and any auxiliary definitions pending.",
       "coverage_needs": [
@@ -3511,7 +3583,9 @@
       "run_accessions": [
         "SRR30894055"
       ],
-      "display_name": "Saccharomyces cerevisiae"
+      "display_name": "Yeast Hi-C sequencing",
+      "amount_summary": "15.04 billion bases is within both its 56-run study range and the wider yeast Hi-C middle-80% range of 1.78–26.40 billion.",
+      "checks_summary": "This supports a yeast research run, not a universal Hi-C target."
     },
     {
       "no": 39,
@@ -3564,7 +3638,7 @@
           "verification_expected": "publisher-md5+size"
         }
       ],
-      "reason": "This input supplies a supported deployed/research technology with variable-length single-read output and an actual accessibility assay.",
+      "reason": "This Ultima input adds a deployed sequencing technology in an accessibility assay. The supplied single-read, variable-length format differs from the conventional paired ATAC input. Its amount is within the middle 80% of the 248-run source study.",
       "limits": "Do not apply Illumina paired-read or pipeline-pass rules directly. Raw total and the saved prefix do not establish whole-file properties.",
       "preparation": "Full acquisition/integrity/pairing and any auxiliary definitions pending.",
       "coverage_needs": [
@@ -3582,7 +3656,9 @@
       "run_accessions": [
         "SRR34546226"
       ],
-      "display_name": "Homo sapiens"
+      "display_name": "Human accessibility sequencing — Ultima",
+      "amount_summary": "9.61 billion bases lies within the 248-run study’s middle-80% range of 3.93–11.02 billion.",
+      "checks_summary": "Do not apply Illumina paired-read or pipeline-pass rules directly."
     },
     {
       "no": 40,
@@ -3652,7 +3728,7 @@
           "verification_expected": "publisher-md5+size"
         }
       ],
-      "reason": "This input supplies a transformed-sequence genomic library. Ordinary capture or WGS does not provide this condition.",
+      "reason": "This rice library adds bisulfite sequencing, whose preparation changes the sequence letters being stored. Ordinary genome sequencing or capture does not supply the same condition. Its amount is comparable to its source study and the wider rice bisulfite examples.",
       "limits": "No claim of mapped cytosine coverage, conversion efficiency or compression benefit follows from raw totals.",
       "preparation": "Full acquisition/integrity/pairing and any auxiliary definitions pending.",
       "coverage_needs": [
@@ -3670,7 +3746,9 @@
       "run_accessions": [
         "DRR1009870"
       ],
-      "display_name": "Oryza sativa"
+      "display_name": "Rice bisulfite sequencing",
+      "amount_summary": "19.65 billion bases is close to its six-run study and within the wider rice bisulfite middle-80% range of 7.77–22.60 billion.",
+      "checks_summary": "No claim of mapped cytosine coverage, conversion efficiency or compression benefit follows from raw totals."
     },
     {
       "no": 41,
@@ -3741,7 +3819,7 @@
           "verification_expected": "size-only"
         }
       ],
-      "reason": "This named rhizosphere-soil library supplies fungal ITS marker sequencing with both submitted FASTQ ends. The exact library is FL_fungi_1, BioSample SAMN43469068. Its 42.964 million reported bases fit twelve ITS-matched libraries with median 42.678 million. This is a natural named marker-library output; it need not represent a whole sequencing pool.",
+      "reason": "This soil-root fungal library adds ITS marker sequencing on MiSeq. Both submitted read ends of FL_fungi_1 are included. Its amount is close to the middle of twelve ITS libraries from the same study. Those fungal libraries are compared separately from the study's bacterial 16S libraries.",
       "limits": "The exact ITS subregion and pre-upload trimming/filtering stage remain unspecified. Submitted Original status identifies source objects, not untouched instrument reads. A processed but meaningful FASTQ remains eligible; a single tomato or fungal genome would not define this community reference.",
       "preparation": "Use every exact listed object and preserve run boundaries; verify full-file integrity and pairing where applicable before testing. No preparation or acquisition was performed for this edition.",
       "coverage_needs": [
@@ -3753,10 +3831,12 @@
       "run_accessions": [
         "SRR30515680"
       ],
-      "display_name": "Soil fungal community",
+      "display_name": "Fungal ITS community markers",
       "unit_evidence_ids": [
         "UNIT41"
-      ]
+      ],
+      "amount_summary": "Twelve target-matched ITS libraries span 38.014–44.784 million bases, with median 42.678 million.",
+      "checks_summary": "The exact ITS subregion and pre-upload trimming/filtering stage remain unspecified."
     },
     {
       "no": 42,
@@ -3827,7 +3907,7 @@
           "verification_expected": "size-only"
         }
       ],
-      "reason": "This named bacterial-community 16S library supplies both submitted FASTQ ends. The exact library is SH_bacteria_1, BioSample SAMN43469053. Its 32.742 million reported bases are close to the twelve target-matched outputs’ median of 32.662 million. It supplies a bacterial marker workload separately from fungal ITS, at a documented per-library boundary.",
+      "reason": "This soil-root bacterial library adds classic 16S community-marker sequencing. Both read ends of SH_bacteria_1 are included. Its amount is close to the middle of twelve bacterial libraries from the study; fungal ITS is a different target and does not replace this input.",
       "limits": "The exact 16S subregion and pre-upload processing stage remain unspecified. Neither merging nor untouched raw output is inferred from the file metadata; no single-genome community reference is assumed.",
       "preparation": "Use every exact listed object and preserve run boundaries; verify full-file integrity and pairing where applicable before testing. No preparation or acquisition was performed for this edition.",
       "coverage_needs": [
@@ -3839,10 +3919,12 @@
       "run_accessions": [
         "SRR30515673"
       ],
-      "display_name": "Soil bacterial community",
+      "display_name": "Bacterial 16S community markers",
       "unit_evidence_ids": [
         "UNIT42"
-      ]
+      ],
+      "amount_summary": "Twelve target-matched bacterial 16S libraries span 21.537–42.351 million bases, with median 32.662 million.",
+      "checks_summary": "The exact 16S subregion and pre-upload processing stage remain unspecified."
     },
     {
       "no": 43,
@@ -3911,7 +3993,7 @@
           "verification_expected": "publisher-md5+size"
         }
       ],
-      "reason": "This specimen-scale viral-amplicon run supplies a small-genome target-sequencing condition. Its 67.83 million reported bases fit 58 comparable specimen outputs, near their 73.35-million median. A human whole-genome delivery amount would be inappropriate for this targeted viral input.",
+      "reason": "This specimen-level viral amplicon run adds targeted sequencing of a small genome. Its amount is close to the middle of 58 comparable specimen outputs. A human whole-genome-sized delivery would not represent this task.",
       "limits": "This is a plausible specimen-scale targeted input. Target scheme, breadth and usable depth have not been checked.",
       "preparation": "Whole-file acquisition/integrity and component/representation checks pending; see individual limits.",
       "coverage_needs": [
@@ -3929,7 +4011,9 @@
       "run_accessions": [
         "DRR1051020"
       ],
-      "display_name": "SARS-CoV-2"
+      "display_name": "Viral amplicon sequencing",
+      "amount_summary": "67.83 million bases is near the 73.35-million median among 58 comparable specimen runs, inside their middle-80% range.",
+      "checks_summary": "This is a plausible specimen-scale targeted input."
     },
     {
       "no": 45,
@@ -3999,7 +4083,7 @@
           "verification_expected": "publisher-md5+size"
         }
       ],
-      "reason": "This short-read aquatic marker input is associated with filter ITD20, extraction A and marker set VENE in Lugano. It supplies both archive read ends and 22,955,020 reported bases from a sample-associated research output. Its target/reference relationship differs from isolate genomes and microbial shotgun data.",
+      "reason": "This input adds aquatic environmental-DNA marker sequencing. The library is associated with filter ITD20, extraction A and marker set VENE from Lugano. Both archive read ends are included. It is a sample/marker output, not an entire sequencing pool; the exact upstream filtering and barcode-splitting stage is unknown.",
       "limits": "The precise upstream demultiplexing and filtering boundary remains unresolved. The author workflow manifest/sample sheet describes an older 2019 run set and does not list the selected accessions; it cannot establish these files’ exact deposited stage. Full-file integrity and pairing remain unverified.",
       "preparation": "Full acquisition/integrity/pairing and any auxiliary definitions pending.",
       "coverage_needs": [
@@ -4012,12 +4096,14 @@
       "run_accessions": [
         "ERR7749063"
       ],
-      "display_name": "freshwater metagenome",
+      "display_name": "Freshwater environmental-DNA markers",
       "unit_evidence_ids": [
         "UNIT45",
         "EDNA_TABLE",
         "EDNA_WORKFLOW"
-      ]
+      ],
+      "amount_summary": "Exact metadata lists the ITD20-A/VENE library, both submitted sample/marker-associated FASTQs and the two chosen archive ends.",
+      "checks_summary": "The precise upstream demultiplexing and filtering boundary remains unresolved."
     },
     {
       "no": 48,
@@ -4086,7 +4172,7 @@
           "verification_expected": "publisher-md5+size"
         }
       ],
-      "reason": "This bacterial-isolate input supplies a compact-reference context beyond the named E. coli strain and includes an observed trimmed-read representation. Its 833 million reported bases are approximately 189 reference lengths in raw sequence, modestly above the matched 350-run study’s upper decile. Sub-GB compressed size is compatible with that substantial isolate amount.",
+      "reason": "This input adds a compact bacterial genome beyond E. coli and an inspected trimmed-read format. Its compressed size is below one GB, yet its reported bases are substantial relative to the reference. It lies somewhat above the source study's upper decile, rather than being an ordinary median example.",
       "limits": "Raw volume is not usable coverage. Exact sample-strain/reference agreement remains unverified.",
       "preparation": "Check whole files and pairing before testing.",
       "coverage_needs": [
@@ -4104,7 +4190,9 @@
       "run_accessions": [
         "ERR11252400"
       ],
-      "display_name": "Tuberculosis bacterium"
+      "display_name": "Tuberculosis bacterial isolate",
+      "amount_summary": "833 million bases is about 189 times the reference length in raw bases.",
+      "checks_summary": "Raw volume is not usable coverage."
     },
     {
       "no": 49,
@@ -4174,7 +4262,7 @@
           "verification_expected": "publisher-md5+size"
         }
       ],
-      "reason": "The explicitly named E. coli MG1655 strain supplies a compact bacterial-reference and classic isolate-library condition. Its 450-million-base paired run is close to the broader E. coli comparator median of 435 million and its eight-run study median of 428 million, approximately 97 reference lengths in raw sequence. Exact sample/reference agreement and usable coverage remain unverified.",
+      "reason": "This named MG1655 strain provides a classic bacterial-isolate input with a compact reference. The paired run's amount is close to both its source-study median and the broader E. coli comparison. Exact sample/reference agreement and usable mapped coverage still need checking.",
       "limits": "This supports a standard isolate input. Full-file integrity and actual sample/reference sequence agreement remain later checks.",
       "preparation": "Full acquisition/integrity/pairing and any auxiliary definitions pending.",
       "coverage_needs": [
@@ -4192,7 +4280,9 @@
       "run_accessions": [
         "DRR171213"
       ],
-      "display_name": "Escherichia coli str. K-12 substr. MG1655"
+      "display_name": "E. coli bacterial isolate",
+      "amount_summary": "450 million bases is close to the broader E. coli Illumina median of 435 million and its eight-run study median of 428 million; it is about 97 times the reference length in raw bases.",
+      "checks_summary": "This supports a standard isolate input."
     },
     {
       "no": 50,
@@ -4262,7 +4352,7 @@
           "verification_expected": "publisher-md5+size"
         }
       ],
-      "reason": "This input supplies a compact eukaryotic microbial genome alongside bacterial isolates and yeast Hi-C.",
+      "reason": "This input adds a compact eukaryotic microbial genome alongside bacterial isolates. Genome sequencing also differs from the yeast Hi-C preparation. Its amount is toward the upper end of its study, making it a high-yield research example rather than a claimed universal norm.",
       "limits": "Its ploidy/LOH study purpose is explicit. Do not claim all yeast production normally uses this depth or convert haploid-reference ratios into per-copy coverage.",
       "preparation": "Full acquisition/integrity/pairing and any auxiliary definitions pending.",
       "coverage_needs": [
@@ -4280,7 +4370,9 @@
       "run_accessions": [
         "SRR30502372"
       ],
-      "display_name": "Saccharomyces cerevisiae"
+      "display_name": "Yeast whole-genome sequencing",
+      "amount_summary": "2.12 billion bases is near the upper quartile of its 61-run study and about 176 times the reference length in raw bases.",
+      "checks_summary": "Its ploidy/LOH study purpose is explicit."
     },
     {
       "no": 51,
@@ -4332,7 +4424,7 @@
           "verification_expected": "publisher-md5+size"
         }
       ],
-      "reason": "This input supplies a known multi-genome long-read setting, distinct from pure genomes and short marker libraries.",
+      "reason": "This run adds long reads from a known mixture of genomes. It differs from single-organism genome sequencing and short community-marker libraries. The source explicitly describes ultra-deep sequencing of a mock community, so its amount belongs to that research purpose.",
       "limits": "This represents a real mock/community research input, not an ordinary soil or clinical metagenome depth. The deliberate composition and current basecalling vintage must stay visible.",
       "preparation": "Check whole files and pairing before testing.",
       "coverage_needs": [
@@ -4344,7 +4436,9 @@
       "run_accessions": [
         "ERR3152366"
       ],
-      "display_name": "Mock microbial mixture"
+      "display_name": "Long-read mock community",
+      "amount_summary": "16.51 billion bases is close to the four-positive-run source-study range (six records; two zero totals).",
+      "checks_summary": "This represents a real mock/community research input, not an ordinary soil or clinical metagenome depth."
     },
     {
       "no": 52,
@@ -4415,7 +4509,7 @@
           "verification_expected": "size-only"
         }
       ],
-      "reason": "This cereal-fermentation community-RNA library is a named timepoint, with 10.324 billion reported bases in one complete paired run. Five documented timepoints span 10.324–11.764 billion bases. These quantities support the source-workflow amount; the 12-billion-base service example is context rather than an admission threshold. The chosen material is a fermentation community; its composition and reference coverage remain unverified.",
+      "reason": "This paired library represents RNA sequencing of a cereal-fermentation community at one named timepoint. Its amount lies within five documented timepoints. It adds a mixed-community RNA task, rather than treating all metagenomic inputs as DNA sequencing.",
       "limits": "The source identifies community RNA from a fermentation timepoint, but untouched instrument-output status is not certified. Community composition and a fixed transcript-reference set remain unverified.",
       "preparation": "Use every exact listed object and preserve run boundaries; verify full-file integrity and pairing where applicable before testing. No preparation or acquisition was performed for this edition.",
       "coverage_needs": [
@@ -4427,7 +4521,9 @@
       "run_accessions": [
         "DRR1003246"
       ],
-      "display_name": "Fermentation community"
+      "display_name": "Fermentation community RNA",
+      "amount_summary": "Five named fermentation timepoints contain 10.324–11.764 billion bases, with median 11.198 billion.",
+      "checks_summary": "The source identifies community RNA from a fermentation timepoint, but untouched instrument-output status is not certified."
     },
     {
       "no": 53,
@@ -4497,7 +4593,7 @@
           "verification_expected": "publisher-md5+size"
         }
       ],
-      "reason": "This input supplies environmental shotgun DNA alongside host-associated and food mixtures.",
+      "reason": "This input represents environmental shotgun DNA sequencing. It complements the gut and food mixtures and the targeted soil-marker inputs. Its amount is close to the middle of eight study runs and consistent with the wider soil comparison.",
       "limits": "Community complexity and organism proportions are not measured by these totals. No single-genome coverage is assigned.",
       "preparation": "Full acquisition/integrity/pairing and any auxiliary definitions pending.",
       "coverage_needs": [
@@ -4509,7 +4605,9 @@
       "run_accessions": [
         "DRR1000746"
       ],
-      "display_name": "soil metagenome"
+      "display_name": "Soil shotgun community DNA",
+      "amount_summary": "10.12 billion bases is close to its eight-run study median of 10.32 billion and within the broad soil shotgun range; the median of known-study medians is 12.91 billion.",
+      "checks_summary": "Community complexity and organism proportions are not measured by these totals."
     },
     {
       "no": 54,
@@ -4579,7 +4677,7 @@
           "verification_expected": "publisher-md5+size"
         }
       ],
-      "reason": "This input supplies a mainstream host-associated shotgun input as the collection’s ordinary gut-DNA example.",
+      "reason": "This input represents ordinary human-gut shotgun DNA sequencing. It provides a host-associated community alongside soil and food mixtures. Its amount fits both its source study and the wider gut-study comparison.",
       "limits": "The declared run amount and source-study context support this gut shotgun example. Full biological-sample allocation and whole-file properties remain unverified.",
       "preparation": "Full acquisition/integrity/pairing and any auxiliary definitions pending.",
       "coverage_needs": [
@@ -4591,7 +4689,9 @@
       "run_accessions": [
         "DRR1003638"
       ],
-      "display_name": "human gut metagenome"
+      "display_name": "Gut shotgun community DNA",
+      "amount_summary": "6.60 billion bases is close to its 30-run study and inside the wider gut shotgun middle-80% range of 0.29–9.86 billion; the median of study medians is 4.81 billion.",
+      "checks_summary": "The declared run amount and source-study context support this gut shotgun example."
     },
     {
       "no": 55,
@@ -4661,7 +4761,7 @@
           "verification_expected": "publisher-md5+size"
         }
       ],
-      "reason": "This honey-origin shotgun DNA run supplies food-mixture genomic sequencing, with 5.697 billion reported bases in one paired archive run. Its amount fits the 63-run honey-study cohort. A mixed food-origin reference setting differs from pure crop genomes, bacterial isolates and gut communities; measured ingredient composition is not asserted.",
+      "reason": "This honey-derived run adds food-associated shotgun DNA sequencing. It is a complete paired run with an amount within the source study's 63-run range. The mixed reference setting differs from pure crop genomes and bacterial isolates; the actual ingredient/community proportions are not established.",
       "limits": "This supports a per-product research run. It does not establish general food-industry delivery norms or measured community composition.",
       "preparation": "Full acquisition/integrity/pairing and any auxiliary definitions pending.",
       "coverage_needs": [
@@ -4674,10 +4774,12 @@
       "run_accessions": [
         "SRR27931704"
       ],
-      "display_name": "food metagenome",
+      "display_name": "Honey shotgun community DNA",
       "unit_evidence_ids": [
         "HONEY_SAMPLE"
-      ]
+      ],
+      "amount_summary": "5.70 billion bases lies within the 0.74–6.14-billion middle-80% range of 63 matched honey-study runs.",
+      "checks_summary": "This supports a per-product research run."
     },
     {
       "no": 56,
@@ -4782,7 +4884,7 @@
           "verification_expected": "publisher-md5+size"
         }
       ],
-      "reason": "This complete CHO genomic assembly library supplies an industrial production-cell reference-assembly research input. Both paired runs of the same named preparation are included: 77,003,500,500 reported bases in four files. The named library defines a natural assembly-data unit; exact cell-line/reference agreement and whole-file properties remain unverified.",
+      "reason": "This named CHO genomic library adds genome-assembly research on an industrial production cell line. Both paired runs are included: four files, not half of the named preparation. It is an assembly input, not a claim that these reads represent routine manufacturing quality control.",
       "limits": "The complete two-run named library is not the entire CHO assembly project. Submitted CRAM is represented by the selected archive FASTQ ends; the normalized representation and native order have not been body-verified.",
       "preparation": "Keep all listed run outputs and both ends separate. Validate full-file integrity and pairing before compression. No files were acquired or concatenated.",
       "coverage_needs": [
@@ -4801,10 +4903,12 @@
         "ERR2192893",
         "ERR2192894"
       ],
-      "display_name": "CHO named library",
+      "display_name": "CHO cell-line genome assembly",
       "unit_evidence_ids": [
         "CHO_LIBRARY"
-      ]
+      ],
+      "amount_summary": "Two public paired runs of the same named CHO genomic preparation sum to 77,003,500,500 reported bases.",
+      "checks_summary": "The complete two-run named library is not the entire CHO assembly project."
     }
   ],
   "references": [
@@ -5803,7 +5907,7 @@
     }
   ],
   "limits": [
-    "The collection is specified from public metadata and documentary evidence; no data downloads, uploads, previews, exports or benchmarks were performed for this edition.",
+    "This catalogue specifies public files for FASTQ compression tests. The dated verification table reports completed local checks separately; source acquisition and FASTQ preparation are not the same as a compression benchmark.",
     "Saved nonrandom prefix observations apply only to the exact files identified in Files. Other objects are unpreviewed.",
     "Source-study amounts support scoped input units rather than market-wide production norms. Listed source bytes are not uncompressed FASTQ bytes.",
     "Cyclone source byte equivalence and whole-file yield remain unverified; the ONT BAM requires the documented future FASTQ export.",
@@ -5842,7 +5946,7 @@
       "status": "Specified; no real source decompressed during packaging",
       "benchmark_target": "Uncompressed FASTQ bytes only; downloaded gzip objects are source containers, not benchmark inputs.",
       "policy": "For each listed gzip source separately, require successful full gzip CRC/truncation validation and gzip -dc decompression. Preserve headers, sequences, quality characters, record order and formatting exactly. Keep mates, runs and chunks separate; do not concatenate, recompress, trim, normalize or reformat. Reject incomplete decompression outputs.",
-      "receipt": "Record gzip version and exact commands, source identity and source-container checksum, output byte count and output SHA-256. Source gzip checksums and prepared FASTQ hashes identify different byte streams."
+      "receipt": "Record gzip version and exact commands, source identity and source-container checksum, output byte count and output SHA-256. The downloaded gzip and prepared FASTQ have different bytes and different hashes."
     }
   },
   "schema_version": "1.0",
@@ -5851,5 +5955,6 @@
     "repository_url": null,
     "project_license": null,
     "status": "Author attribution and project license have not been specified; no license grant is implied. Third-party sources retain their own terms."
-  }
+  },
+  "dataset_version": "1.0.0"
 }

@@ -8,6 +8,6 @@
 **仓库：** [youngchan919/fastq-comp-benchmark-dataset](https://github.com/youngchan919/fastq-comp-benchmark-dataset)  
 **作者、项目 DOI 和项目许可证：** 尚未提供
 
-请为实际使用的输入引用原始档案登录号、参考组装版本和主要论文。相关公开链接见[报告](docs/report.md)、[清单](catalogue/manifest.json)和[来源登记表](../evidence/evidence_register.json)。
+请为实际使用的输入引用原始档案登录号、参考组装版本和主要论文。相关公开链接见[报告](docs/report.md)、[共享清单](../catalogue/manifest.json)和[来源登记表](../evidence/evidence_register.json)。
 
 若要进行可复现的基准测试，请在这些信息确定后记录清单的确切 SHA-256 和仓库修订版本，并同时记录源文件/准备后文件哈希、准备规则及参考版本。待相关信息提供后，方可补全项目级引用。

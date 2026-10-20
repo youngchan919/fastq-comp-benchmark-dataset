@@ -132,19 +132,31 @@ class Downloader:
                            "--retry-connrefused", "--retry-on-http-error=408,429,500,502,503,504",
                            "--no-use-server-timestamps", "--output-document", str(partial),
                            "--", job["url"]]
-                with log.open("ab") as errors:
-                    with self.lock:
-                        if self.stopped.is_set():
-                            raise InterruptedError("Interrupted before transfer")
-                        process = subprocess.Popen(command, stdout=subprocess.DEVNULL, stderr=errors)
-                        self.processes.add(process)
-                    try:
-                        code = process.wait()
-                    finally:
+                environment = os.environ.copy()
+                environment["LC_ALL"] = "C"
+                for attempt in range(self.retries + 1):
+                    with log.open("ab") as errors:
+                        offset = errors.tell()
                         with self.lock:
-                            self.processes.discard(process)
-                if self.stopped.is_set():
-                    raise InterruptedError("Interrupted; partial file retained")
+                            if self.stopped.is_set():
+                                raise InterruptedError("Interrupted before transfer")
+                            process = subprocess.Popen(command, stdout=subprocess.DEVNULL, stderr=errors, env=environment)
+                            self.processes.add(process)
+                        try:
+                            code = process.wait()
+                        finally:
+                            with self.lock:
+                                self.processes.discard(process)
+                    if self.stopped.is_set():
+                        raise InterruptedError("Interrupted; partial file retained")
+                    with log.open("rb") as errors:
+                        errors.seek(offset)
+                        transient_proxy_failure = (code == 4 and
+                            b"Proxy tunneling failed: Service Unavailable" in errors.read())
+                    if not transient_proxy_failure or attempt == self.retries:
+                        break
+                    if self.stopped.wait(min(60, 5 * (attempt + 1))):
+                        raise InterruptedError("Interrupted during proxy retry; partial file retained")
                 if code:
                     raise ValueError("wget exited {}. See {}. Partial file retained".format(code, log))
             result["verification"] = verification or self.verify(job, partial)

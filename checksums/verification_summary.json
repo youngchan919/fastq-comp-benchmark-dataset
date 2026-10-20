@@ -1,0 +1,13 @@
+{
+  "snapshot_UTC": "2026-10-20T03:39:26.216321+00:00",
+  "dataset_version": "1.0.0",
+  "source_files": 115,
+  "statuses": {
+    "Awaiting verification": 5,
+    "Incomplete": 12,
+    "Not downloaded": 83,
+    "Publisher MD5 matched": 13,
+    "Size matched only": 2
+  },
+  "scope": "Compressed/source files only. Publisher MD5 and size are checked where recorded; no decompressed-FASTQ or calculated SHA256 baseline is supplied."
+}

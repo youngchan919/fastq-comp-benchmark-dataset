@@ -7,15 +7,15 @@
 3	SRR33329596	读段端 2；配对关系未核实	SRR33329596_2.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR333/096/SRR33329596/SRR33329596_2.fastq.gz	23917243162	7965de42c493d39079bd5149029c49e8	发布方 MD5 + 文件大小
 4	ERR15383198	读段端 1；配对关系未核实	ERR15383198_1.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR153/098/ERR15383198/ERR15383198_1.fastq.gz	7800690319	8fc6c9260fcb4db2b1cbda4f127d0577	发布方 MD5 + 文件大小
 4	ERR15383198	读段端 2；配对关系未核实	ERR15383198_2.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR153/098/ERR15383198/ERR15383198_2.fastq.gz	8053072729	0bb2e59b89a8e3e7142db3b7c8c7f550	发布方 MD5 + 文件大小
-5	ERR12954382	单个已提供的 FASTQ 对象	ERR12954382.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR129/082/ERR12954382/ERR12954382.fastq.gz	40884662813	af1b2ff363348359df43a940df11e782	发布方 MD5 + 文件大小
+5	ERR12954382	单个已提供的 FASTQ 文件	ERR12954382.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR129/082/ERR12954382/ERR12954382.fastq.gz	40884662813	af1b2ff363348359df43a940df11e782	发布方 MD5 + 文件大小
 6	ONT_GIAB2025_HG002_PAW70337_SUP	BAM 源；后续导出 FASTQ	calls.sorted.bam	https://ont-open-data.s3.amazonaws.com/giab_2025.01/basecalling/sup/HG002/PAW70337/calls.sorted.bam	171763325052		仅文件大小
-7	ERR14732808	单个已提供的 FASTQ 对象	ERR14732808.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR147/008/ERR14732808/ERR14732808.fastq.gz	23718059148	02119da2edc76873883a3d45bb06292d	发布方 MD5 + 文件大小
-8	CNR1409093	单端读段 FASTQ 源；不是配对端	WY_reads.fq.gz	https://ftp.cngb.org/pub/CNSA/data7/CNP0007646/CNS1382495/CNX1236558/CNR1409093/WY_reads.fq.gz	130270589600		仅文件大小
+7	ERR14732808	单个已提供的 FASTQ 文件	ERR14732808.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR147/008/ERR14732808/ERR14732808.fastq.gz	23718059148	02119da2edc76873883a3d45bb06292d	发布方 MD5 + 文件大小
+8	CNR1409093	单端 FASTQ 文件；不是配对端	WY_reads.fq.gz	https://ftp.cngb.org/pub/CNSA/data7/CNP0007646/CNS1382495/CNX1236558/CNR1409093/WY_reads.fq.gz	130270589600		仅文件大小
 9	ERR12411150	读段端 1；配对关系未核实	ERR12411150_1.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR124/050/ERR12411150/ERR12411150_1.fastq.gz	1236812735	31bb374421ac8ec01a73630d2c071822	发布方 MD5 + 文件大小
 9	ERR12411150	读段端 2；配对关系未核实	ERR12411150_2.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR124/050/ERR12411150/ERR12411150_2.fastq.gz	1178282708	f749bda3240421d925d6be7ef9be856f	发布方 MD5 + 文件大小
 10	SRR8906645	读段端 1；配对关系未核实	SRR8906645_1.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR890/005/SRR8906645/SRR8906645_1.fastq.gz	11721474721	2a91c354a264e9e469be30c24dd51511	发布方 MD5 + 文件大小
 10	SRR8906645	读段端 2；配对关系未核实	SRR8906645_2.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR890/005/SRR8906645/SRR8906645_2.fastq.gz	12360669035	ef45350ab58b2c954d97f197cc77a2fd	发布方 MD5 + 文件大小
-11	DRR341924	单个已提供的 FASTQ 对象	DRR341924.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/DRR341/DRR341924/DRR341924.fastq.gz	1154396293	63b476a89d297829653aefe9bffd8feb	发布方 MD5 + 文件大小
+11	DRR341924	单个已提供的 FASTQ 文件	DRR341924.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/DRR341/DRR341924/DRR341924.fastq.gz	1154396293	63b476a89d297829653aefe9bffd8feb	发布方 MD5 + 文件大小
 12	SRR19440963	读段端 1；配对关系未核实	SRR19440963_1.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR194/063/SRR19440963/SRR19440963_1.fastq.gz	84094469	288c22eebd5b361d5f68254a9135a234	发布方 MD5 + 文件大小
 12	SRR19440963	读段端 2；配对关系未核实	SRR19440963_2.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR194/063/SRR19440963/SRR19440963_2.fastq.gz	93680563	fe36b62c479d9b19c33507bc11c3ad8c	发布方 MD5 + 文件大小
 13	DRR095727	读段端 1；配对关系未核实	DRR095727_1.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/DRR095/DRR095727/DRR095727_1.fastq.gz	284083916	614f3ff4e099e02b827dd99161d4e96e	发布方 MD5 + 文件大小
@@ -36,18 +36,18 @@
 18	DRR1000971	读段端 2；配对关系未核实	DRR1000971_2.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/DRR100/001/DRR1000971/DRR1000971_2.fastq.gz	9517115245	e39eecb0ee2d1af7543829cdf614d6ee	发布方 MD5 + 文件大小
 19	ERR13943038	读段端 1；配对关系未核实	ERR13943038_1.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR139/038/ERR13943038/ERR13943038_1.fastq.gz	7073707491	fc8900f4db83a4f5f8362301fb22174f	发布方 MD5 + 文件大小
 19	ERR13943038	读段端 2；配对关系未核实	ERR13943038_2.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR139/038/ERR13943038/ERR13943038_2.fastq.gz	7262846950	6040de72e357a5e53a2d851f36a6beff	发布方 MD5 + 文件大小
-20	SRR8801873	单个已提供的 FASTQ 对象	SRR8801873_subreads.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR880/003/SRR8801873/SRR8801873_subreads.fastq.gz	34654458158	7ec5065560cdb4f39864c0240c564258	发布方 MD5 + 文件大小
-21	ERR13669551	单个已提供的 FASTQ 对象	ERR13669551.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR136/051/ERR13669551/ERR13669551.fastq.gz	9919475722		仅文件大小
-22	SRR14728885	单个已提供的 FASTQ 对象	SRR14728885_subreads.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR147/085/SRR14728885/SRR14728885_subreads.fastq.gz	18526201575		仅文件大小
+20	SRR8801873	单个已提供的 FASTQ 文件	SRR8801873_subreads.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR880/003/SRR8801873/SRR8801873_subreads.fastq.gz	34654458158	7ec5065560cdb4f39864c0240c564258	发布方 MD5 + 文件大小
+21	ERR13669551	单个已提供的 FASTQ 文件	ERR13669551.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR136/051/ERR13669551/ERR13669551.fastq.gz	9919475722		仅文件大小
+22	SRR14728885	单个已提供的 FASTQ 文件	SRR14728885_subreads.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR147/085/SRR14728885/SRR14728885_subreads.fastq.gz	18526201575		仅文件大小
 23	ERR10030615	读段端 1；配对关系未核实	ERR10030615_1.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR100/015/ERR10030615/ERR10030615_1.fastq.gz	1888027116	e17dafb95042259a29fbc6d3f2c097b5	发布方 MD5 + 文件大小
 23	ERR10030615	读段端 2；配对关系未核实	ERR10030615_2.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR100/015/ERR10030615/ERR10030615_2.fastq.gz	1929867038	784efa3fefb5c5afa7cf593868edf3f0	发布方 MD5 + 文件大小
 24	SRR14627767	读段端 1	SRR14627767_1.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR146/067/SRR14627767/SRR14627767_1.fastq.gz	1813977281		仅文件大小
 24	SRR14627767	读段端 2	SRR14627767_2.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR146/067/SRR14627767/SRR14627767_2.fastq.gz	1818308783		仅文件大小
-25	DRR1089360	单个已提供的 FASTQ 对象	DRR1089360.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/DRR108/000/DRR1089360/DRR1089360.fastq.gz	291749840	25242d2be8d6643e56e3a6c37f985439	发布方 MD5 + 文件大小
+25	DRR1089360	单个已提供的 FASTQ 文件	DRR1089360.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/DRR108/000/DRR1089360/DRR1089360.fastq.gz	291749840	25242d2be8d6643e56e3a6c37f985439	发布方 MD5 + 文件大小
 26	DRR1069746	读段端 1；配对关系未核实	DRR1069746_1.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/DRR106/006/DRR1069746/DRR1069746_1.fastq.gz	892042873	4b1b18571365c85b7caca190939a3856	发布方 MD5 + 文件大小
 26	DRR1069746	读段端 2；配对关系未核实	DRR1069746_2.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/DRR106/006/DRR1069746/DRR1069746_2.fastq.gz	903266335	e9158c4fbdaddcd09d70aafbdd72ee8d	发布方 MD5 + 文件大小
-27	SRR30608496	单个已提供的 FASTQ 对象	SRR30608496.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR306/096/SRR30608496/SRR30608496.fastq.gz	2301820230	cd82870c5dec2c054213b2eedd83b6a7	发布方 MD5 + 文件大小
-29	SRR36288068	单个已提供的 FASTQ 对象	SRR36288068_1.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR362/068/SRR36288068/SRR36288068_1.fastq.gz	2307675498	2ccdadb0244f7ca2a31694254d5bf185	发布方 MD5 + 文件大小
+27	SRR30608496	单个已提供的 FASTQ 文件	SRR30608496.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR306/096/SRR30608496/SRR30608496.fastq.gz	2301820230	cd82870c5dec2c054213b2eedd83b6a7	发布方 MD5 + 文件大小
+29	SRR36288068	单个已提供的 FASTQ 文件	SRR36288068_1.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR362/068/SRR36288068/SRR36288068_1.fastq.gz	2307675498	2ccdadb0244f7ca2a31694254d5bf185	发布方 MD5 + 文件大小
 30	SRR6520293	读段端 1；配对关系未核实	SRR6520293_1.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR652/003/SRR6520293/SRR6520293_1.fastq.gz	47706724	8e82e9a6cb7654b1e5c74c0a307e280d	发布方 MD5 + 文件大小
 30	SRR6520293	读段端 2；配对关系未核实	SRR6520293_2.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR652/003/SRR6520293/SRR6520293_2.fastq.gz	50249398	dee32fd233d52affb528dcb9aabcce16	发布方 MD5 + 文件大小
 31	SRR19066657	读段端 1	SRR19066657_1.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/057/SRR19066657/SRR19066657_1.fastq.gz	210436296		仅文件大小
@@ -84,7 +84,7 @@
 37	SRR26362943	读段端 2；配对关系未核实	SRR26362943_2.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR263/043/SRR26362943/SRR26362943_2.fastq.gz	579571399	ea0567a1936c4f13bfac22c15220a762	发布方 MD5 + 文件大小
 38	SRR30894055	读段端 1；配对关系未核实	SRR30894055_1.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR308/055/SRR30894055/SRR30894055_1.fastq.gz	3575888177	c5f417b27fe45b2bbc5501b9e915448e	发布方 MD5 + 文件大小
 38	SRR30894055	读段端 2；配对关系未核实	SRR30894055_2.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR308/055/SRR30894055/SRR30894055_2.fastq.gz	3498367077	62025eff3b234b119868073217d9723d	发布方 MD5 + 文件大小
-39	SRR34546226	单个已提供的 FASTQ 对象	SRR34546226.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR345/026/SRR34546226/SRR34546226.fastq.gz	3749797716	0bb160b8b9d33931145dd831e6d5b6dc	发布方 MD5 + 文件大小
+39	SRR34546226	单个已提供的 FASTQ 文件	SRR34546226.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR345/026/SRR34546226/SRR34546226.fastq.gz	3749797716	0bb160b8b9d33931145dd831e6d5b6dc	发布方 MD5 + 文件大小
 40	DRR1009870	读段端 1；配对关系未核实	DRR1009870_1.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/DRR100/000/DRR1009870/DRR1009870_1.fastq.gz	4750428009	cded459621ee4c320dde58e9683fc65b	发布方 MD5 + 文件大小
 40	DRR1009870	读段端 2；配对关系未核实	DRR1009870_2.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/DRR100/000/DRR1009870/DRR1009870_2.fastq.gz	4726740265	208c6b3827beb564f000604a5ca3d59a	发布方 MD5 + 文件大小
 41	SRR30515680	读段端 1	SRR30515680_1.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR305/080/SRR30515680/SRR30515680_1.fastq.gz	8279598		仅文件大小
@@ -101,7 +101,7 @@
 49	DRR171213	读段端 2；配对关系未核实	DRR171213_2.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/DRR171/DRR171213/DRR171213_2.fastq.gz	190460910	9bab0c328906d3684268510558b2d4a7	发布方 MD5 + 文件大小
 50	SRR30502372	读段端 1；配对关系未核实	SRR30502372_1.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR305/072/SRR30502372/SRR30502372_1.fastq.gz	507415288	c4d8768c5cf19674da74d3da39deba0a	发布方 MD5 + 文件大小
 50	SRR30502372	读段端 2；配对关系未核实	SRR30502372_2.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR305/072/SRR30502372/SRR30502372_2.fastq.gz	527196724	a4f2176a781790957f2fe46679bba7f7	发布方 MD5 + 文件大小
-51	ERR3152366	单个已提供的 FASTQ 对象	ERR3152366.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR315/006/ERR3152366/ERR3152366.fastq.gz	17147527495	ffbb0daf168c08a6c4c9393481546bcc	发布方 MD5 + 文件大小
+51	ERR3152366	单个已提供的 FASTQ 文件	ERR3152366.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR315/006/ERR3152366/ERR3152366.fastq.gz	17147527495	ffbb0daf168c08a6c4c9393481546bcc	发布方 MD5 + 文件大小
 52	DRR1003246	读段端 1	DRR1003246_1.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/DRR100/006/DRR1003246/DRR1003246_1.fastq.gz	2061270208		仅文件大小
 52	DRR1003246	读段端 2	DRR1003246_2.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/DRR100/006/DRR1003246/DRR1003246_2.fastq.gz	2072451194		仅文件大小
 53	DRR1000746	读段端 1；配对关系未核实	DRR1000746_1.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/DRR100/006/DRR1000746/DRR1000746_1.fastq.gz	3868414190	3e895c769599e581255f00a60f68e03c	发布方 MD5 + 文件大小
