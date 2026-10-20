@@ -6,19 +6,19 @@ Use the exact file list in the [manifest](../catalogue/manifest.json) and [Files
 
 ## Preserve the declared input unit
 
-A paired run requires both listed ends. The Renan library contains three paired runs/six files; each CITE component contains four outputs/eight files; the CHO library contains two paired runs/four files. Keep run boundaries and the matched component identities. Do not silently drop files, concatenate unrelated inputs or expand a named library to every preparation from its biological sample.
+A paired run requires both listed ends. The selected Thatcher wheat input, each CITE component and the CHO input each contain one complete paired run with two FASTQ files. Keep the distinct CITE component identities and both ends of every run. Do not silently drop files, concatenate unrelated inputs or expand a run to every library from its biological sample.
 
 Data8 contains one SINGLE CNGB object, `WY_reads.fq.gz`. It is not a pair or two chunks. CNGB metadata links its project/sample/experiment/run identifiers and release on 4 December 2025. Its 130,270,589,600-byte expectation has no publisher MD5. Its exact whole-file read/base yield and byte equivalence to associated SRA representations remain unverified.
 
 ## Verify acquired sources before testing
 
-The shared downloader lists the files and reports their verification status. For 73 files it has a publisher MD5 and listed size; 42 have no recorded publisher checksum. Neither a catalogue entry nor a successful request implies completed verification. Where no publisher checksum exists, record a local SHA-256 for subsequent reproducibility, recognizing that a local hash alone does not independently authenticate the publisher's content.
+The shared downloader lists the files and reports their verification status. For 75 files it has a publisher MD5 and listed size; 16 have no recorded publisher checksum. Neither a catalogue entry nor a successful request implies completed verification. Where no publisher checksum exists, record a local SHA-256 for subsequent reproducibility, recognizing that a local hash alone does not independently authenticate the publisher's content.
 
 The reference table distinguishes versioned source pages from proposed direct FASTA routes. Reference size/checksum information is incomplete; a first-character FASTA check is not a full-file or accession-identity check. Confirm full FASTA integrity, the pinned version and the relationship to the chosen sample before a reference-based comparison. Mixed communities and feature libraries do not receive invented single-genome references. Spatial masks/coordinates and CITE feature definitions are needed for particular interpretation or custom matching, not generic byte-identical compression.
 
 ## Gzip sources: uncompressed FASTQ is the benchmark target
 
-**Benchmark inputs are uncompressed FASTQ bytes.** Downloaded gzip files are download containers, not inputs to the compressors being compared. Decompress each listed source separately, preserving every header, sequence, quality character, record, order and formatting byte. Do not concatenate mates, runs or chunks; do not trim, normalize, reformat or recompress the prepared FASTQ.
+**Benchmark inputs are uncompressed FASTQ bytes**. Downloaded gzip files are download containers, not inputs to the compressors being compared. Decompress each listed source separately, preserving every header, sequence, quality character, record, order and formatting byte. Do not concatenate mates, runs or chunks; do not trim, normalize, reformat or recompress the prepared FASTQ.
 
 After downloaded-file verification, run the following Bash commands for each exact listed file. This example prepares one maize mate; repeat separately for its other mate and every other selected gzip source, using the corresponding paths. Use fresh output names. Successful `gzip -t` and `gzip -dc` require a complete gzip stream with valid CRC/length checks; an error or truncation stops the workflow. A failed `.part` output is not a benchmark input.
 

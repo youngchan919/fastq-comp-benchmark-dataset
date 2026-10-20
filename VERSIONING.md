@@ -2,12 +2,13 @@
 
 [Home](README.md)
 
-The current collection is **v1.0.0**. `VERSION` and `dataset_version` in the catalogue identify it. `schema_version` describes the manifest format and is separate.
+The current collection is **v1.1.0**. `VERSION` and `dataset_version` identify the pinned catalogue; `schema_version` describes its machine-readable format separately. Dataset numbers identify entries within a version. Cite the version, public source identities and prepared FASTQ hashes when comparing results.
 
-A data version fixes the selected files, declared complete input units, reference versions and the rules that determine prepared FASTQ bytes. Some source checksums and preparation results are still unknown; a version number does not claim that all files have been downloaded or verified. The dated verification table reports that separately.
+- **Minor data version, such as v1.1.0:** changed selected files, complete input units, reference choices or catalogue numbering, while keeping the same benchmark meaning and preparation policy.
+- **Major data version, such as v2.0.0:** incompatible changes to the benchmark definition, prepared-byte policy or catalogue interpretation.
+- **Patch, such as v1.1.1:** corrected documentation, compatible tools or added verification results with unchanged selected input bytes and scientific definitions.
+- **Annual review:** reconsider evidence and availability once a year; a review does not require changing inputs.
 
-- **New input bytes or scientific definition:** use a new data version, such as v2.0.0, when adding/removing files or changing their contents, references or prepared-byte rules. Keep previous release tags unchanged.
-- **Same inputs, improved repository:** use a patch version, such as v1.0.1, for corrected documentation, compatible tooling or added verification results that do not change the test inputs.
-- **Annual review:** reconsider the evidence and availability once a year. A review does not require changing files or creating a new data version.
+Published tags are immutable, including v1.0.0. A correction uses a new tag, never a moved tag. Use a fresh version-specific download directory so different catalogues do not mix files under the same numbered paths. A version number does not establish that files have finished downloading, passed integrity checks or matched their proposed references.
 
-Release tags are immutable. A published tag must continue to identify the same Git commit; corrections use a new tag. Use the dataset version and the prepared FASTQ hashes when reporting a benchmark. A publisher checksum, a downloaded-file hash and a prepared-FASTQ hash identify different things and should be labelled accordingly.
+Source checksums and prepared FASTQ hashes concern different bytes and must be labelled separately. Unknown hashes and continuing downloads remain explicit in the dated verification table.

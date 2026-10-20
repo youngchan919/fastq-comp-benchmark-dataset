@@ -1,10 +1,15 @@
 import html,re,zipfile
+from markdown_it import MarkdownIt
+
+MARKDOWN = MarkdownIt("commonmark")
+
+def normalize_bold(text):
+    return re.sub(r"\*\*([^*\n]+?)([：。；，！？、:;,.!?]+)\*\*", r"**\1**\2", text)
 from xml.sax.saxutils import escape
 
 def write_documents(blocks, OUT):
     def inline(s):
-     s=html.escape(s);s=re.sub(r'\[([^\]]+)\]\(([^)]+)\)',lambda m:f'<a href="{m[2]}">{m[1]}</a>',s)
-     return re.sub(r'\*\*(.*?)\*\*',r'<strong>\1</strong>',s)
+     return MARKDOWN.renderInline(normalize_bold(s))
     ht=['<!doctype html><meta charset="utf-8"><title>FASTQ compression benchmark dataset</title><style>body{font:16px/1.55 Arial,sans-serif;color:#183047;max-width:1100px;margin:40px auto;padding:0 24px}h1{font-size:27px;margin-top:34px}h2{font-size:19px;margin-top:22px}table{border-collapse:collapse;width:100%;font-size:14px}th,td{border:1px solid #bdcbd3;padding:8px;text-align:left;vertical-align:top}th{background:#e7eff4}a{color:#075b9a}tr{break-inside:avoid}h1,h2{break-after:avoid}</style>']
     for b in blocks:
      if b['type']=='table':ht.append('<table><thead><tr>'+''.join('<th>'+inline(x)+'</th>' for x in b['headers'])+'</tr></thead><tbody>'+''.join('<tr>'+''.join('<td>'+inline(x)+'</td>' for x in row)+'</tr>' for row in b['rows'])+'</tbody></table>')
@@ -12,12 +17,24 @@ def write_documents(blocks, OUT):
     (OUT/'report.html').write_text('\n'.join(ht))
     
     W='http://schemas.openxmlformats.org/wordprocessingml/2006/main';RR='http://schemas.openxmlformats.org/officeDocument/2006/relationships';rels=[]
-    def run(s):return '<w:r><w:t xml:space="preserve">'+escape(s)+'</w:t></w:r>'
+    def run(s, bold=False, italic=False, code=False, linked=False):
+     props=('<w:b/>' if bold else '')+('<w:i/>' if italic else '')+('<w:rFonts w:ascii="Courier New" w:hAnsi="Courier New"/>' if code else '')+('<w:color w:val="0563C1"/><w:u w:val="single"/>' if linked else '')
+     return '<w:r>'+('<w:rPr>'+props+'</w:rPr>' if props else '')+'<w:t xml:space="preserve">'+escape(s)+'</w:t></w:r>'
     def content(s):
-     s=s.replace('**','');parts=[];pos=0
-     for m in re.finditer(r'\[([^\]]+)\]\(([^)]+)\)',s):
-      parts.append(run(s[pos:m.start()]));rels.append(m[2]);parts.append(f'<w:hyperlink r:id="rId{len(rels)}"><w:r><w:rPr><w:color w:val="0563C1"/><w:u w:val="single"/></w:rPr><w:t>'+escape(m[1])+'</w:t></w:r></w:hyperlink>');pos=m.end()
-     return ''.join(parts)+run(s[pos:])
+     parts=[];bold=0;italic=0;link=None
+     for token in MARKDOWN.parseInline(normalize_bold(s))[0].children or []:
+      if token.type=='strong_open':bold+=1
+      elif token.type=='strong_close':bold-=1
+      elif token.type=='em_open':italic+=1
+      elif token.type=='em_close':italic-=1
+      elif token.type=='link_open':
+       rels.append(token.attrGet('href'));link=len(rels)
+      elif token.type=='link_close':link=None
+      elif token.type in ['text','code_inline','softbreak','hardbreak']:
+       value=' ' if token.type in ['softbreak','hardbreak'] else token.content
+       part=run(value,bold>0,italic>0,token.type=='code_inline',link is not None)
+       parts.append('<w:hyperlink r:id="rId'+str(link)+'">'+part+'</w:hyperlink>' if link is not None else part)
+     return ''.join(parts)
     def xp(s,style='Normal'):return '<w:p><w:pPr><w:pStyle w:val="'+style+'"/></w:pPr>'+content(s)+'</w:p>'
     body=[]
     for b in blocks:

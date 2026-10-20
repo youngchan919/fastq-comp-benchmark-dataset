@@ -2,12 +2,12 @@
   "title": "FASTQ compression benchmark dataset",
   "edition_date": "2026-10-20",
   "eligibility_cutoff": "30 September 2026",
-  "data_id_policy": "Stable Data IDs identify current input units; see the authoritative fq list.",
+  "data_id_policy": "Consecutive Data IDs 1–52 identify inputs within this dataset version. Use public run/source identities and file hashes when comparing versions.",
   "counts": {
     "selected_datasets": 52,
-    "source_objects": 115,
-    "listed_source_bytes": 1419456345104,
-    "known_reported_sequence_bases": 2029937896053,
+    "source_objects": 91,
+    "listed_source_bytes": 1404952612896,
+    "known_reported_sequence_bases": 2012275239298,
     "datasets_without_exact_source_base_total": [
       6,
       8
@@ -27,11 +27,11 @@
       "Ultima Genomics": 1
     },
     "source_object_formats": {
-      "FASTQ.gz": 114,
+      "FASTQ.gz": 90,
       "BAM": 1
     },
-    "publisher_md5_objects": 73,
-    "size_only_objects": 42
+    "publisher_md5_objects": 75,
+    "size_only_objects": 16
   },
   "selected": [
     {
@@ -1318,143 +1318,76 @@
     },
     {
       "no": 16,
-      "identity": "Renan_CGB_AAAD_DE",
+      "identity": "ERR9904291",
       "source_format": "FASTQ",
-      "source_url": "https://www.ebi.ac.uk/ena/browser/view/ERR6348210",
+      "source_url": "https://www.ebi.ac.uk/ena/browser/view/ERR9904291",
       "manufacturer": "Illumina",
       "technology": "Short-read technology; actual properties separately scoped",
       "metadata": {
-        "study": "PRJEB46515",
-        "sample": "SAMEA9446191",
-        "experiment": "ERX5979812; ERX5979813; ERX5979814",
+        "study": "PRJEB53839",
+        "sample": "SAMEA110237947",
+        "experiment": "ERX9447126",
         "organism": "Triticum aestivum",
         "archive_organism_label": "Triticum aestivum",
-        "common_name": "Wheat cultivar Renan",
+        "common_name": "Wheat cultivar Thatcher",
         "source": "GENOMIC",
-        "preparation": "RANDOM",
+        "preparation": "Ordinary genomic resequencing",
         "strategy": "WGS",
         "model": "Illumina NovaSeq 6000",
         "layout": "PAIRED",
-        "first_public": "2021-07-22",
-        "reported_read_count": "3555113614",
-        "reported_base_count": 495517462387,
-        "named_sample": "CGB_AAAD_DE",
-        "library": "CGB_AAAD_DE",
-        "unit": "One named Renan genomic library: three complete paired runs and six separate files"
+        "first_public": "2023-03-06",
+        "reported_read_count": "3616481672",
+        "reported_base_count": 542472250800,
+        "named_sample": "Thatcher",
+        "library": "Thatcher WGS",
+        "unit": "One complete paired Thatcher whole-genome resequencing run; two FASTQ ends",
+        "nominal_read_length": "150 bases per end; documented configuration, not an observed profile"
       },
       "properties": {
         "quality_characters": "Unpreviewed",
         "quality_ascii": "Unpreviewed",
         "lengths": "Unpreviewed",
         "headers": "Unpreviewed",
-        "scope": "All listed files are unpreviewed; no measured length, quality or header profile is available."
+        "scope": "These exact files have not been inspected; nominal configuration and source documentation are not measured FASTQ properties."
       },
       "files": [
         {
-          "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR634/000/ERR6348210/ERR6348210_1.fastq.gz",
-          "listed_bytes": 42404288433,
-          "publisher_md5": "",
+          "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR990/001/ERR9904291/ERR9904291_1.fastq.gz",
+          "listed_bytes": 134140507815,
+          "publisher_md5": "343695382fd39ab8c3ecafa7df291f07",
           "format": "FASTQ.gz",
           "role": "Read end 1",
-          "run_accession": "ERR6348210",
-          "physical_name": "ERR6348210_1.fastq.gz",
+          "run_accession": "ERR9904291",
+          "physical_name": "ERR9904291_1.fastq.gz",
           "properties": {
             "quality_characters": "Unpreviewed",
             "quality_ascii": "Unpreviewed",
             "lengths": "Unpreviewed",
             "headers": "Unpreviewed",
-            "scope": "This exact object was not previewed. Metadata/library labels are not measured read properties."
+            "scope": "These exact files have not been inspected; nominal configuration and source documentation are not measured FASTQ properties."
           },
-          "verification_expected": "size-only"
+          "verification_expected": "publisher-md5+size"
         },
         {
-          "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR634/000/ERR6348210/ERR6348210_2.fastq.gz",
-          "listed_bytes": 44610482314,
-          "publisher_md5": "",
+          "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR990/001/ERR9904291/ERR9904291_2.fastq.gz",
+          "listed_bytes": 139673389603,
+          "publisher_md5": "e1ff15fae4faef4a45691e9b789ef276",
           "format": "FASTQ.gz",
           "role": "Read end 2",
-          "run_accession": "ERR6348210",
-          "physical_name": "ERR6348210_2.fastq.gz",
+          "run_accession": "ERR9904291",
+          "physical_name": "ERR9904291_2.fastq.gz",
           "properties": {
             "quality_characters": "Unpreviewed",
             "quality_ascii": "Unpreviewed",
             "lengths": "Unpreviewed",
             "headers": "Unpreviewed",
-            "scope": "This exact object was not previewed. Metadata/library labels are not measured read properties."
+            "scope": "These exact files have not been inspected; nominal configuration and source documentation are not measured FASTQ properties."
           },
-          "verification_expected": "size-only"
-        },
-        {
-          "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR634/001/ERR6348211/ERR6348211_1.fastq.gz",
-          "listed_bytes": 36890202547,
-          "publisher_md5": "",
-          "format": "FASTQ.gz",
-          "role": "Read end 1",
-          "run_accession": "ERR6348211",
-          "physical_name": "ERR6348211_1.fastq.gz",
-          "properties": {
-            "quality_characters": "Unpreviewed",
-            "quality_ascii": "Unpreviewed",
-            "lengths": "Unpreviewed",
-            "headers": "Unpreviewed",
-            "scope": "This exact object was not previewed. Metadata/library labels are not measured read properties."
-          },
-          "verification_expected": "size-only"
-        },
-        {
-          "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR634/001/ERR6348211/ERR6348211_2.fastq.gz",
-          "listed_bytes": 38757495770,
-          "publisher_md5": "",
-          "format": "FASTQ.gz",
-          "role": "Read end 2",
-          "run_accession": "ERR6348211",
-          "physical_name": "ERR6348211_2.fastq.gz",
-          "properties": {
-            "quality_characters": "Unpreviewed",
-            "quality_ascii": "Unpreviewed",
-            "lengths": "Unpreviewed",
-            "headers": "Unpreviewed",
-            "scope": "This exact object was not previewed. Metadata/library labels are not measured read properties."
-          },
-          "verification_expected": "size-only"
-        },
-        {
-          "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR634/002/ERR6348212/ERR6348212_1.fastq.gz",
-          "listed_bytes": 39470024560,
-          "publisher_md5": "",
-          "format": "FASTQ.gz",
-          "role": "Read end 1",
-          "run_accession": "ERR6348212",
-          "physical_name": "ERR6348212_1.fastq.gz",
-          "properties": {
-            "quality_characters": "Unpreviewed",
-            "quality_ascii": "Unpreviewed",
-            "lengths": "Unpreviewed",
-            "headers": "Unpreviewed",
-            "scope": "This exact object was not previewed. Metadata/library labels are not measured read properties."
-          },
-          "verification_expected": "size-only"
-        },
-        {
-          "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR634/002/ERR6348212/ERR6348212_2.fastq.gz",
-          "listed_bytes": 41813536029,
-          "publisher_md5": "",
-          "format": "FASTQ.gz",
-          "role": "Read end 2",
-          "run_accession": "ERR6348212",
-          "physical_name": "ERR6348212_2.fastq.gz",
-          "properties": {
-            "quality_characters": "Unpreviewed",
-            "quality_ascii": "Unpreviewed",
-            "lengths": "Unpreviewed",
-            "headers": "Unpreviewed",
-            "scope": "This exact object was not previewed. Metadata/library labels are not measured read properties."
-          },
-          "verification_expected": "size-only"
+          "verification_expected": "publisher-md5+size"
         }
       ],
-      "reason": "This wheat library represents work on a large, polyploid plant genome. All three paired runs of the named Renan assembly-polishing preparation are included: six files in total. The unit follows the documented library, rather than combining unrelated runs to reach a chosen depth.",
-      "limits": "The three outputs define the named Renan library, not a universal wheat production norm. The same-cultivar reference identity is proposed at metadata level; FASTA contents and matching remain unverified.",
+      "reason": "This ordinary wheat resequencing run adds a large, polyploid crop genome. Both FASTQ ends of one Thatcher sample are included. The primary study reports about 542.5 billion bases and 35× coverage for this sample; this is a real study input, not a subset made to reach a benchmark size. The proposed Renan assembly is from the same species but a different cultivar.",
+      "limits": "The proposed reference is Renan, not Thatcher; exact read/reference matching remains unverified. Nominal paired 150-base sequencing is documented, but actual FASTQ lengths, qualities, headers and integrity have not been examined.",
       "preparation": "Use every exact listed object and preserve run boundaries; verify full-file integrity and pairing where applicable before testing. No preparation or acquisition was performed for this edition.",
       "coverage_needs": [
         "Reference genomes, pangenomes and non-model assembly"
@@ -1463,19 +1396,22 @@
         {
           "fa_no": 18,
           "accession_version": "GCA_937894285.1",
-          "relationship": "Same Renan cultivar assemblyv2.1; no measured read match."
+          "relationship": "Same species, different cultivar: Thatcher reads with the proposed Renan GCA_937894285.1 assembly; no measured read match."
         }
       ],
-      "reported_sequence_scope": "Archive-reported complete named input unit; no paired-count multiplier.",
-      "size_evidence": "The three outputs share the same sample and named preparation. Their 495,517,462,387 reported bases are the documented assembly-polishing library amount, not a sum engineered to reach 30× or an average production claim.",
+      "reported_sequence_scope": "Archive-reported bases for one complete paired run; no read-count multiplier.",
+      "size_evidence": "The primary wheat study reports 542.5 Gb and 35× for Thatcher. Exact accepted archive metadata gives 542,472,250,800 bases for one paired run. This supports this resequencing example, not a universal wheat yield or measured usable depth.",
       "run_accessions": [
-        "ERR6348210",
-        "ERR6348211",
-        "ERR6348212"
+        "ERR9904291"
       ],
-      "display_name": "Wheat genome assembly — Renan library",
-      "amount_summary": "The three outputs share the same sample and named preparation.",
-      "checks_summary": "The three outputs define the named Renan library, not a universal wheat production norm."
+      "display_name": "Wheat whole-genome resequencing — Thatcher",
+      "amount_summary": "One Thatcher resequencing run contains 542,472,250,800 reported bases; the primary study reports approximately 542.5 Gb and 35×.",
+      "checks_summary": "The proposed reference is Renan, not Thatcher; exact read/reference matching remains unverified. Nominal paired 150-base sequencing is documented, but actual FASTQ lengths, qualities, headers and integrity have not been examined.",
+      "unit_evidence_ids": [
+        "INPUT_WHEAT_THATCHER",
+        "INPUT_WHEAT_PAPER",
+        "ENA_SINGLE_RUN_METADATA"
+      ]
     },
     {
       "no": 17,
@@ -2386,7 +2322,7 @@
       "checks_summary": "This supports a public research input."
     },
     {
-      "no": 29,
+      "no": 28,
       "identity": "SRR36288068",
       "source_format": "FASTQ",
       "source_url": "https://www.ebi.ac.uk/ena/browser/view/SRR36288068",
@@ -2459,7 +2395,7 @@
       "checks_summary": "This is same-study scale support, not a general long-RNA production norm."
     },
     {
-      "no": 30,
+      "no": 29,
       "identity": "SRR6520293",
       "source_format": "FASTQ",
       "source_url": "https://www.ebi.ac.uk/ena/browser/view/SRR6520293",
@@ -2558,8 +2494,8 @@
       "checks_summary": "The author and archive identify one cell in one run. The exact pre-upload processing stage and actual FASTQ properties remain unexamined."
     },
     {
-      "no": 31,
-      "identity": "CITE_ADRA03_IOF1_3_ADT",
+      "no": 30,
+      "identity": "SRR19066659",
       "source_format": "FASTQ",
       "source_url": "https://www.ebi.ac.uk/ena/browser/view/SRR19066659",
       "manufacturer": "Illumina",
@@ -2575,90 +2511,22 @@
         "strategy": "OTHER",
         "model": "Illumina NovaSeq 6000",
         "platform": "ILLUMINA",
-        "layout": "PAIRED (each run)",
+        "layout": "PAIRED",
         "first_public": "2025-05-04",
-        "reported_read_count": "327224331",
+        "reported_read_count": "153168982",
         "named_sample": "ADRA03_IOF1_3_A [ADT-derived cDNA]",
-        "reported_base_count": 28795741128,
+        "reported_base_count": 13478870416,
         "library": "ADT",
-        "unit": "Complete ADT library/component: 4 paired runs, 8 separate files"
+        "unit": "One complete paired antibody-tag (ADT) archive run; two FASTQ ends"
       },
       "properties": {
-        "quality_characters": "Observations cover only the two exact files identified in Files",
-        "quality_ascii": "Observations cover only the two exact files identified in Files",
-        "lengths": "Observations cover only the two exact files identified in Files",
-        "headers": "Not examined",
-        "scope": "Saved nonrandom prefix observations apply only to 2 exact original objects of 8; other objects are unpreviewed. No whole-library profile is claimed."
+        "quality_characters": "File 1: 2; File 2: 1",
+        "quality_ascii": "File 1: 36–63; File 2: 63–63",
+        "lengths": "File 1: 60–60; median 60.0; File 2: 28–28; median 28.0",
+        "headers": "File 1: Not recorded in reused aggregate; File 2: Not recorded in reused aggregate",
+        "scope": "Saved nonrandom prefixes cover these two exact files only; they do not establish whole-file distributions, pairing or integrity."
       },
       "files": [
-        {
-          "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/057/SRR19066657/SRR19066657_1.fastq.gz",
-          "listed_bytes": 210436296,
-          "publisher_md5": "",
-          "format": "FASTQ.gz",
-          "role": "Read end 1",
-          "run_accession": "SRR19066657",
-          "physical_name": "SRR19066657_1.fastq.gz",
-          "properties": {
-            "quality_characters": "Unpreviewed",
-            "quality_ascii": "Unpreviewed",
-            "lengths": "Unpreviewed",
-            "headers": "Unpreviewed",
-            "scope": "This exact object was not previewed. Metadata/library labels are not measured read properties."
-          },
-          "verification_expected": "size-only"
-        },
-        {
-          "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/057/SRR19066657/SRR19066657_2.fastq.gz",
-          "listed_bytes": 202561618,
-          "publisher_md5": "",
-          "format": "FASTQ.gz",
-          "role": "Read end 2",
-          "run_accession": "SRR19066657",
-          "physical_name": "SRR19066657_2.fastq.gz",
-          "properties": {
-            "quality_characters": "Unpreviewed",
-            "quality_ascii": "Unpreviewed",
-            "lengths": "Unpreviewed",
-            "headers": "Unpreviewed",
-            "scope": "This exact object was not previewed. Metadata/library labels are not measured read properties."
-          },
-          "verification_expected": "size-only"
-        },
-        {
-          "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/058/SRR19066658/SRR19066658_1.fastq.gz",
-          "listed_bytes": 194969801,
-          "publisher_md5": "",
-          "format": "FASTQ.gz",
-          "role": "Read end 1",
-          "run_accession": "SRR19066658",
-          "physical_name": "SRR19066658_1.fastq.gz",
-          "properties": {
-            "quality_characters": "Unpreviewed",
-            "quality_ascii": "Unpreviewed",
-            "lengths": "Unpreviewed",
-            "headers": "Unpreviewed",
-            "scope": "This exact object was not previewed. Metadata/library labels are not measured read properties."
-          },
-          "verification_expected": "size-only"
-        },
-        {
-          "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/058/SRR19066658/SRR19066658_2.fastq.gz",
-          "listed_bytes": 187605836,
-          "publisher_md5": "",
-          "format": "FASTQ.gz",
-          "role": "Read end 2",
-          "run_accession": "SRR19066658",
-          "physical_name": "SRR19066658_2.fastq.gz",
-          "properties": {
-            "quality_characters": "Unpreviewed",
-            "quality_ascii": "Unpreviewed",
-            "lengths": "Unpreviewed",
-            "headers": "Unpreviewed",
-            "scope": "This exact object was not previewed. Metadata/library labels are not measured read properties."
-          },
-          "verification_expected": "size-only"
-        },
         {
           "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/059/SRR19066659/SRR19066659_1.fastq.gz",
           "listed_bytes": 2822699619,
@@ -2692,66 +2560,33 @@
             "scope": "Saved observations apply to this exact URL only; Observed nonrandom prefix only; nonrandom prefix only, no whole-file/pair/integrity inference."
           },
           "verification_expected": "publisher-md5+size"
-        },
-        {
-          "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/061/SRR19066661/SRR19066661_1.fastq.gz",
-          "listed_bytes": 2812639473,
-          "publisher_md5": "",
-          "format": "FASTQ.gz",
-          "role": "Read end 1",
-          "run_accession": "SRR19066661",
-          "physical_name": "SRR19066661_1.fastq.gz",
-          "properties": {
-            "quality_characters": "Unpreviewed",
-            "quality_ascii": "Unpreviewed",
-            "lengths": "Unpreviewed",
-            "headers": "Unpreviewed",
-            "scope": "This exact object was not previewed. Metadata/library labels are not measured read properties."
-          },
-          "verification_expected": "size-only"
-        },
-        {
-          "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/061/SRR19066661/SRR19066661_2.fastq.gz",
-          "listed_bytes": 2633453382,
-          "publisher_md5": "",
-          "format": "FASTQ.gz",
-          "role": "Read end 2",
-          "run_accession": "SRR19066661",
-          "physical_name": "SRR19066661_2.fastq.gz",
-          "properties": {
-            "quality_characters": "Unpreviewed",
-            "quality_ascii": "Unpreviewed",
-            "lengths": "Unpreviewed",
-            "headers": "Unpreviewed",
-            "scope": "This exact object was not previewed. Metadata/library labels are not measured read properties."
-          },
-          "verification_expected": "size-only"
         }
       ],
-      "reason": "These files contain the antibody-derived tags from the same CITE experiment as Data 32 and 33. They complement the mRNA and sample-tag reads rather than duplicating them. All four paired runs are included: eight files from this named antibody-tag library.",
-      "limits": "Recovery targets are not observed recovered cells. The five capture lanes are distinct from the four sequencing-run outputs, and all target cells cannot be assigned to this component. Prefix observations cover only the two exact files identified in Files.",
+      "reason": "These antibody-derived tag reads complement the mRNA input in Data 31 and sample-tag input in Data 32 from the same CITE experiment. The selected input is one complete paired ADT run, with both ends. Tags carry a different kind of information from transcript reads; the three components are not replicate copies.",
+      "limits": "This is one archive run, not every output of the component experiment. Recovery targets are not measured recovered-cell counts; exact pre-upload processing and whole-file properties remain unverified.",
       "preparation": "Keep all listed run outputs and both ends separate. Validate full-file integrity and pairing before compression. No files were acquired or concatenated.",
       "coverage_needs": [
         "Single-cell expression, immune and feature libraries"
       ],
       "reference_proposals": [],
-      "reported_sequence_scope": "Sum of all documented same-library/component archive outputs; no paired-count multiplier.",
-      "size_evidence": "All four public outputs of this ADT component experiment sum to 28,795,741,128 reported bases. The common source documents chemistry and recovery targets, not observed selected-cell counts.",
+      "reported_sequence_scope": "Archive-reported bases for one complete paired component run, not the sum of all component outputs.",
+      "size_evidence": "13478870416 archive-reported bases in the selected paired run. Among the two largest outputs from each of 19 ADT experiments (38 runs), reported bases have median 13.065736 billion and range 10.638356–18.672885 billion. The comparisons are within the same component type and source study, not global production norms; the larger-output subset is explicit for ADT/mRNA.",
       "run_accessions": [
-        "SRR19066657",
-        "SRR19066658",
-        "SRR19066659",
-        "SRR19066661"
+        "SRR19066659"
       ],
       "display_name": "CITE antibody tags",
-      "amount_summary": "The four paired runs contain 28,795,741,128 reported bases across eight files.",
-      "checks_summary": "Loading/recovery targets are not measured recovered-cell counts. See Files for exactly which files, if any, have inspected prefixes."
+      "amount_summary": "Among the two largest outputs from each of 19 ADT experiments (38 runs), reported bases have median 13.065736 billion and range 10.638356–18.672885 billion. The selected run has 13,478,870,416 reported bases.",
+      "checks_summary": "The two listed ends define this run. Cell-recovery targets do not establish its actual cell count; observations, where available, apply only to these exact files.",
+      "unit_evidence_ids": [
+        "INPUT_CITE_COMPONENTS",
+        "ENA_SINGLE_RUN_METADATA"
+      ]
     },
     {
-      "no": 32,
-      "identity": "CITE_ADRA03_IOF1_3_mRNA",
+      "no": 31,
+      "identity": "SRR19066665",
       "source_format": "FASTQ",
-      "source_url": "https://www.ebi.ac.uk/ena/browser/view/SRR19066666",
+      "source_url": "https://www.ebi.ac.uk/ena/browser/view/SRR19066665",
       "manufacturer": "Illumina",
       "technology": "Short-read technology; actual properties separately scoped",
       "metadata": {
@@ -2765,94 +2600,26 @@
         "strategy": "OTHER",
         "model": "Illumina NovaSeq 6000",
         "platform": "ILLUMINA",
-        "layout": "PAIRED (each run)",
+        "layout": "PAIRED",
         "first_public": "2025-05-04",
-        "reported_read_count": "819275227",
+        "reported_read_count": "394057846",
         "named_sample": "ADRA03_IOF1_3_G [mRNA-derived cDNA]",
-        "reported_base_count": 73686380444,
+        "reported_base_count": 35465206140,
         "library": "mRNA",
-        "unit": "Complete mRNA library/component: 4 paired runs, 8 separate files"
+        "unit": "One complete paired mRNA archive run; two FASTQ ends"
       },
       "properties": {
         "quality_characters": "Unpreviewed",
         "quality_ascii": "Unpreviewed",
         "lengths": "Unpreviewed",
         "headers": "Unpreviewed",
-        "scope": "No inspected properties are recorded for any listed object."
+        "scope": "These exact files have not been inspected; nominal configuration and source documentation are not measured FASTQ properties."
       },
       "files": [
         {
-          "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/062/SRR19066662/SRR19066662_1.fastq.gz",
-          "listed_bytes": 233945114,
-          "publisher_md5": "",
-          "format": "FASTQ.gz",
-          "role": "Read end 1",
-          "run_accession": "SRR19066662",
-          "physical_name": "SRR19066662_1.fastq.gz",
-          "properties": {
-            "quality_characters": "Unpreviewed",
-            "quality_ascii": "Unpreviewed",
-            "lengths": "Unpreviewed",
-            "headers": "Unpreviewed",
-            "scope": "This exact object was not previewed. Metadata/library labels are not measured read properties."
-          },
-          "verification_expected": "size-only"
-        },
-        {
-          "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/062/SRR19066662/SRR19066662_2.fastq.gz",
-          "listed_bytes": 346315626,
-          "publisher_md5": "",
-          "format": "FASTQ.gz",
-          "role": "Read end 2",
-          "run_accession": "SRR19066662",
-          "physical_name": "SRR19066662_2.fastq.gz",
-          "properties": {
-            "quality_characters": "Unpreviewed",
-            "quality_ascii": "Unpreviewed",
-            "lengths": "Unpreviewed",
-            "headers": "Unpreviewed",
-            "scope": "This exact object was not previewed. Metadata/library labels are not measured read properties."
-          },
-          "verification_expected": "size-only"
-        },
-        {
-          "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/064/SRR19066664/SRR19066664_1.fastq.gz",
-          "listed_bytes": 229818659,
-          "publisher_md5": "",
-          "format": "FASTQ.gz",
-          "role": "Read end 1",
-          "run_accession": "SRR19066664",
-          "physical_name": "SRR19066664_1.fastq.gz",
-          "properties": {
-            "quality_characters": "Unpreviewed",
-            "quality_ascii": "Unpreviewed",
-            "lengths": "Unpreviewed",
-            "headers": "Unpreviewed",
-            "scope": "This exact object was not previewed. Metadata/library labels are not measured read properties."
-          },
-          "verification_expected": "size-only"
-        },
-        {
-          "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/064/SRR19066664/SRR19066664_2.fastq.gz",
-          "listed_bytes": 340196441,
-          "publisher_md5": "",
-          "format": "FASTQ.gz",
-          "role": "Read end 2",
-          "run_accession": "SRR19066664",
-          "physical_name": "SRR19066664_2.fastq.gz",
-          "properties": {
-            "quality_characters": "Unpreviewed",
-            "quality_ascii": "Unpreviewed",
-            "lengths": "Unpreviewed",
-            "headers": "Unpreviewed",
-            "scope": "This exact object was not previewed. Metadata/library labels are not measured read properties."
-          },
-          "verification_expected": "size-only"
-        },
-        {
           "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/065/SRR19066665/SRR19066665_1.fastq.gz",
           "listed_bytes": 7470502301,
-          "publisher_md5": "",
+          "publisher_md5": "446802545b0de17e0e1810831f5bf8b3",
           "format": "FASTQ.gz",
           "role": "Read end 1",
           "run_accession": "SRR19066665",
@@ -2864,12 +2631,12 @@
             "headers": "Unpreviewed",
             "scope": "This exact object was not previewed. Metadata/library labels are not measured read properties."
           },
-          "verification_expected": "size-only"
+          "verification_expected": "publisher-md5+size"
         },
         {
           "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/065/SRR19066665/SRR19066665_2.fastq.gz",
           "listed_bytes": 11163780638,
-          "publisher_md5": "",
+          "publisher_md5": "de29baa3a5f98d40362d287f63196ded",
           "format": "FASTQ.gz",
           "role": "Read end 2",
           "run_accession": "SRR19066665",
@@ -2881,45 +2648,11 @@
             "headers": "Unpreviewed",
             "scope": "This exact object was not previewed. Metadata/library labels are not measured read properties."
           },
-          "verification_expected": "size-only"
-        },
-        {
-          "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/066/SRR19066666/SRR19066666_1.fastq.gz",
-          "listed_bytes": 7607604460,
-          "publisher_md5": "c338270f823a40d98ba7c864c599f5a1",
-          "format": "FASTQ.gz",
-          "role": "Read end 1",
-          "run_accession": "SRR19066666",
-          "physical_name": "SRR19066666_1.fastq.gz",
-          "properties": {
-            "quality_characters": "Not examined",
-            "quality_ascii": "Not examined",
-            "lengths": "Not examined",
-            "headers": "Not recorded in reused aggregate",
-            "scope": "No inspected properties recorded for this exact object in reused evidence; no new prefix examined."
-          },
-          "verification_expected": "publisher-md5+size"
-        },
-        {
-          "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/066/SRR19066666/SRR19066666_2.fastq.gz",
-          "listed_bytes": 11363520152,
-          "publisher_md5": "26b62596c2c6067007fc43e6541dd961",
-          "format": "FASTQ.gz",
-          "role": "Read end 2",
-          "run_accession": "SRR19066666",
-          "physical_name": "SRR19066666_2.fastq.gz",
-          "properties": {
-            "quality_characters": "Not examined",
-            "quality_ascii": "Not examined",
-            "lengths": "Not examined",
-            "headers": "Not recorded in reused aggregate",
-            "scope": "No inspected properties recorded for this exact object in reused evidence; no new prefix examined."
-          },
           "verification_expected": "publisher-md5+size"
         }
       ],
-      "reason": "These files contain the mRNA reads from the matched CITE experiment. Antibody tags and sample tags cannot substitute for this transcript library. All four paired runs are included, with eight files kept separate from the tag libraries.",
-      "limits": "The source sequencing target is not observed per-cell depth. Actual recovered cells and normalized read orientation remain unverified; all listed files are unpreviewed.",
+      "reason": "These mRNA reads provide the transcript component of the same CITE experiment as the antibody-tag input in Data 30 and sample-tag input in Data 32. Both FASTQ ends of one complete paired run are included. The tag libraries cannot substitute for this expression library.",
+      "limits": "This is one archive run, not every output of the component experiment. Recovery targets are not measured recovered-cell counts; exact pre-upload processing and whole-file properties remain unverified.",
       "preparation": "Keep all listed run outputs and both ends separate. Validate full-file integrity and pairing before compression. No files were acquired or concatenated.",
       "coverage_needs": [
         "Single-cell expression, immune and feature libraries"
@@ -2931,21 +2664,22 @@
           "relationship": "Same-species proposal only; sample/strain/target/contig match and FASTA contents unverified."
         }
       ],
-      "reported_sequence_scope": "Sum of all documented same-library/component archive outputs; no paired-count multiplier.",
-      "size_evidence": "All four public outputs of this mRNA component experiment sum to73,686,380,444 reported bases. The whole component is used rather than one arbitrary run fraction.",
+      "reported_sequence_scope": "Archive-reported bases for one complete paired component run, not the sum of all component outputs.",
+      "size_evidence": "35465206140 archive-reported bases in the selected paired run. Among the two largest outputs from each of 19 mRNA experiments (38 runs), reported bases have median 38.490196 billion and range 34.674149–52.108714 billion. The comparisons are within the same component type and source study, not global production norms; the larger-output subset is explicit for ADT/mRNA.",
       "run_accessions": [
-        "SRR19066662",
-        "SRR19066664",
-        "SRR19066665",
-        "SRR19066666"
+        "SRR19066665"
       ],
       "display_name": "CITE mRNA reads",
-      "amount_summary": "The four paired runs contain 73,686,380,444 reported bases across eight files.",
-      "checks_summary": "Loading/recovery targets are not measured recovered-cell counts. See Files for exactly which files, if any, have inspected prefixes."
+      "amount_summary": "Among the two largest outputs from each of 19 mRNA experiments (38 runs), reported bases have median 38.490196 billion and range 34.674149–52.108714 billion. The selected run has 35,465,206,140 reported bases.",
+      "checks_summary": "The two listed ends define this run. Cell-recovery targets do not establish its actual cell count; observations, where available, apply only to these exact files.",
+      "unit_evidence_ids": [
+        "INPUT_CITE_COMPONENTS",
+        "ENA_SINGLE_RUN_METADATA"
+      ]
     },
     {
-      "no": 33,
-      "identity": "CITE_ADRA03_IOF1_3_HTO",
+      "no": 32,
+      "identity": "SRR19066668",
       "source_format": "FASTQ",
       "source_url": "https://www.ebi.ac.uk/ena/browser/view/SRR19066668",
       "manufacturer": "Illumina",
@@ -2961,20 +2695,20 @@
         "strategy": "OTHER",
         "model": "Illumina NovaSeq 6000",
         "platform": "ILLUMINA",
-        "layout": "PAIRED (each run)",
+        "layout": "PAIRED",
         "first_public": "2025-05-04",
-        "reported_read_count": "18875560",
+        "reported_read_count": "4738266",
         "named_sample": "ADRA03_IOF1_3_H [HTO-derived cDNA]",
-        "reported_base_count": 1566671480,
+        "reported_base_count": 393276078,
         "library": "HTO",
-        "unit": "Complete HTO library/component: 4 paired runs, 8 separate files"
+        "unit": "One complete paired sample-tag (HTO) archive run; two FASTQ ends"
       },
       "properties": {
         "quality_characters": "Unpreviewed",
         "quality_ascii": "Unpreviewed",
         "lengths": "Unpreviewed",
         "headers": "Unpreviewed",
-        "scope": "No inspected properties are recorded for any listed object."
+        "scope": "These exact files have not been inspected; nominal configuration and source documentation are not measured FASTQ properties."
       },
       "files": [
         {
@@ -3010,131 +2744,30 @@
             "scope": "No inspected properties recorded for this exact object in reused evidence; no new prefix examined."
           },
           "verification_expected": "publisher-md5+size"
-        },
-        {
-          "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/069/SRR19066669/SRR19066669_1.fastq.gz",
-          "listed_bytes": 91461268,
-          "publisher_md5": "",
-          "format": "FASTQ.gz",
-          "role": "Read end 1",
-          "run_accession": "SRR19066669",
-          "physical_name": "SRR19066669_1.fastq.gz",
-          "properties": {
-            "quality_characters": "Unpreviewed",
-            "quality_ascii": "Unpreviewed",
-            "lengths": "Unpreviewed",
-            "headers": "Unpreviewed",
-            "scope": "This exact object was not previewed. Metadata/library labels are not measured read properties."
-          },
-          "verification_expected": "size-only"
-        },
-        {
-          "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/069/SRR19066669/SRR19066669_2.fastq.gz",
-          "listed_bytes": 76995199,
-          "publisher_md5": "",
-          "format": "FASTQ.gz",
-          "role": "Read end 2",
-          "run_accession": "SRR19066669",
-          "physical_name": "SRR19066669_2.fastq.gz",
-          "properties": {
-            "quality_characters": "Unpreviewed",
-            "quality_ascii": "Unpreviewed",
-            "lengths": "Unpreviewed",
-            "headers": "Unpreviewed",
-            "scope": "This exact object was not previewed. Metadata/library labels are not measured read properties."
-          },
-          "verification_expected": "size-only"
-        },
-        {
-          "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/071/SRR19066671/SRR19066671_1.fastq.gz",
-          "listed_bytes": 95797640,
-          "publisher_md5": "",
-          "format": "FASTQ.gz",
-          "role": "Read end 1",
-          "run_accession": "SRR19066671",
-          "physical_name": "SRR19066671_1.fastq.gz",
-          "properties": {
-            "quality_characters": "Unpreviewed",
-            "quality_ascii": "Unpreviewed",
-            "lengths": "Unpreviewed",
-            "headers": "Unpreviewed",
-            "scope": "This exact object was not previewed. Metadata/library labels are not measured read properties."
-          },
-          "verification_expected": "size-only"
-        },
-        {
-          "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/071/SRR19066671/SRR19066671_2.fastq.gz",
-          "listed_bytes": 79941040,
-          "publisher_md5": "",
-          "format": "FASTQ.gz",
-          "role": "Read end 2",
-          "run_accession": "SRR19066671",
-          "physical_name": "SRR19066671_2.fastq.gz",
-          "properties": {
-            "quality_characters": "Unpreviewed",
-            "quality_ascii": "Unpreviewed",
-            "lengths": "Unpreviewed",
-            "headers": "Unpreviewed",
-            "scope": "This exact object was not previewed. Metadata/library labels are not measured read properties."
-          },
-          "verification_expected": "size-only"
-        },
-        {
-          "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/072/SRR19066672/SRR19066672_1.fastq.gz",
-          "listed_bytes": 92837697,
-          "publisher_md5": "",
-          "format": "FASTQ.gz",
-          "role": "Read end 1",
-          "run_accession": "SRR19066672",
-          "physical_name": "SRR19066672_1.fastq.gz",
-          "properties": {
-            "quality_characters": "Unpreviewed",
-            "quality_ascii": "Unpreviewed",
-            "lengths": "Unpreviewed",
-            "headers": "Unpreviewed",
-            "scope": "This exact object was not previewed. Metadata/library labels are not measured read properties."
-          },
-          "verification_expected": "size-only"
-        },
-        {
-          "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/072/SRR19066672/SRR19066672_2.fastq.gz",
-          "listed_bytes": 77989001,
-          "publisher_md5": "",
-          "format": "FASTQ.gz",
-          "role": "Read end 2",
-          "run_accession": "SRR19066672",
-          "physical_name": "SRR19066672_2.fastq.gz",
-          "properties": {
-            "quality_characters": "Unpreviewed",
-            "quality_ascii": "Unpreviewed",
-            "lengths": "Unpreviewed",
-            "headers": "Unpreviewed",
-            "scope": "This exact object was not previewed. Metadata/library labels are not measured read properties."
-          },
-          "verification_expected": "size-only"
         }
       ],
-      "reason": "These files contain the sample-tag reads from the same CITE experiment as the antibody-tag and mRNA inputs. They play a different role and are not replicate copies. All four paired runs are included: eight files. Tag definitions may help interpretation or a custom reference, but are not needed for exact FASTQ compression and recovery.",
-      "limits": "Actual cell recovery and tag-reference definitions remain unresolved. Custom feature definitions aid interpretation or feature-aware matching; they are not required for generic lossless compression.",
+      "reason": "These sample-tag reads provide the sample-identification component of the same CITE experiment as Data 30 and Data 31. Both ends of one complete paired HTO run are included. It is a naturally small tag input; a tag definition may help interpretation or custom reference matching, but generic lossless compression does not require one.",
+      "limits": "This is one archive run, not every output of the component experiment. Recovery targets are not measured recovered-cell counts; exact pre-upload processing and whole-file properties remain unverified.",
       "preparation": "Keep all listed run outputs and both ends separate. Validate full-file integrity and pairing before compression. No files were acquired or concatenated.",
       "coverage_needs": [
         "Single-cell expression, immune and feature libraries"
       ],
       "reference_proposals": [],
-      "reported_sequence_scope": "Sum of all documented same-library/component archive outputs; no paired-count multiplier.",
-      "size_evidence": "All four outputs of this HTO component experiment sum to 1,566,671,480 reported bases in eight files, totalling 687,740,927 listed compressed bytes. This is the complete named tag component, separate from ADT and mRNA; its compressed size is not a per-cell sequence-depth measure.",
+      "reported_sequence_scope": "Archive-reported bases for one complete paired component run, not the sum of all component outputs.",
+      "size_evidence": "393276078 archive-reported bases in the selected paired run. Across all 62 HTO runs, reported bases have median 0.3823 billion and range 0.3335–1.5649 billion. The comparisons are within the same component type and source study, not global production norms; the larger-output subset is explicit for ADT/mRNA.",
       "run_accessions": [
-        "SRR19066668",
-        "SRR19066669",
-        "SRR19066671",
-        "SRR19066672"
+        "SRR19066668"
       ],
       "display_name": "CITE sample tags",
-      "amount_summary": "The four paired runs contain 1,566,671,480 reported bases across eight files.",
-      "checks_summary": "Loading/recovery targets are not measured recovered-cell counts. See Files for exactly which files, if any, have inspected prefixes."
+      "amount_summary": "Across all 62 HTO runs, reported bases have median 0.3823 billion and range 0.3335–1.5649 billion. The selected run has 393,276,078 reported bases.",
+      "checks_summary": "The two listed ends define this run. Cell-recovery targets do not establish its actual cell count; observations, where available, apply only to these exact files.",
+      "unit_evidence_ids": [
+        "INPUT_CITE_COMPONENTS",
+        "ENA_SINGLE_RUN_METADATA"
+      ]
     },
     {
-      "no": 34,
+      "no": 33,
       "identity": "SRR29351083",
       "source_format": "FASTQ",
       "source_url": "https://www.ebi.ac.uk/ena/browser/view/SRR29351083",
@@ -3224,7 +2857,7 @@
       "checks_summary": "Capture area and observed cell/bin depths remain unknown."
     },
     {
-      "no": 35,
+      "no": 34,
       "identity": "SRR30495077",
       "source_format": "FASTQ",
       "source_url": "https://www.ebi.ac.uk/ena/browser/view/SRR30495077",
@@ -3315,7 +2948,7 @@
       "checks_summary": "The source establishes a bulk ATAC library, not usable unique-fragment counts or an analysis-pipeline pass."
     },
     {
-      "no": 36,
+      "no": 35,
       "identity": "DRR1000045",
       "source_format": "FASTQ",
       "source_url": "https://www.ebi.ac.uk/ena/browser/view/DRR1000045",
@@ -3404,7 +3037,7 @@
       "checks_summary": "Raw pairs do not establish aligned, unique or target-specific fragment yield."
     },
     {
-      "no": 37,
+      "no": 36,
       "identity": "SRR26362943",
       "source_format": "FASTQ",
       "source_url": "https://www.ebi.ac.uk/ena/browser/view/SRR26362943",
@@ -3498,7 +3131,7 @@
       "checks_summary": "Normalization-reference composition and processed/usable depth remain unknown."
     },
     {
-      "no": 38,
+      "no": 37,
       "identity": "SRR30894055",
       "source_format": "FASTQ",
       "source_url": "https://www.ebi.ac.uk/ena/browser/view/SRR30894055",
@@ -3588,7 +3221,7 @@
       "checks_summary": "This supports a yeast research run, not a universal Hi-C target."
     },
     {
-      "no": 39,
+      "no": 38,
       "identity": "SRR34546226",
       "source_format": "FASTQ",
       "source_url": "https://www.ebi.ac.uk/ena/browser/view/SRR34546226",
@@ -3661,7 +3294,7 @@
       "checks_summary": "Do not apply Illumina paired-read or pipeline-pass rules directly."
     },
     {
-      "no": 40,
+      "no": 39,
       "identity": "DRR1009870",
       "source_format": "FASTQ",
       "source_url": "https://www.ebi.ac.uk/ena/browser/view/DRR1009870",
@@ -3751,7 +3384,7 @@
       "checks_summary": "No claim of mapped cytosine coverage, conversion efficiency or compression benefit follows from raw totals."
     },
     {
-      "no": 41,
+      "no": 40,
       "identity": "SRR30515680",
       "source_format": "FASTQ",
       "source_url": "https://www.ebi.ac.uk/ena/browser/view/SRR30515680",
@@ -3839,7 +3472,7 @@
       "checks_summary": "The exact ITS subregion and pre-upload trimming/filtering stage remain unspecified."
     },
     {
-      "no": 42,
+      "no": 41,
       "identity": "SRR30515673",
       "source_format": "FASTQ",
       "source_url": "https://www.ebi.ac.uk/ena/browser/view/SRR30515673",
@@ -3927,7 +3560,7 @@
       "checks_summary": "The exact 16S subregion and pre-upload processing stage remain unspecified."
     },
     {
-      "no": 43,
+      "no": 42,
       "identity": "DRR1051020",
       "source_format": "FASTQ",
       "source_url": "https://www.ebi.ac.uk/ena/browser/view/DRR1051020",
@@ -4016,7 +3649,7 @@
       "checks_summary": "This is a plausible specimen-scale targeted input."
     },
     {
-      "no": 45,
+      "no": 43,
       "identity": "ERR7749063",
       "source_format": "FASTQ",
       "source_url": "https://www.ebi.ac.uk/ena/browser/view/ERR7749063",
@@ -4106,7 +3739,7 @@
       "checks_summary": "The precise upstream demultiplexing and filtering boundary remains unresolved."
     },
     {
-      "no": 48,
+      "no": 44,
       "identity": "ERR11252400",
       "source_format": "FASTQ",
       "source_url": "https://www.ebi.ac.uk/ena/browser/view/ERR11252400",
@@ -4195,7 +3828,7 @@
       "checks_summary": "Raw volume is not usable coverage."
     },
     {
-      "no": 49,
+      "no": 45,
       "identity": "DRR171213",
       "source_format": "FASTQ",
       "source_url": "https://www.ebi.ac.uk/ena/browser/view/DRR171213",
@@ -4285,7 +3918,7 @@
       "checks_summary": "This supports a standard isolate input."
     },
     {
-      "no": 50,
+      "no": 46,
       "identity": "SRR30502372",
       "source_format": "FASTQ",
       "source_url": "https://www.ebi.ac.uk/ena/browser/view/SRR30502372",
@@ -4375,7 +4008,7 @@
       "checks_summary": "Its ploidy/LOH study purpose is explicit."
     },
     {
-      "no": 51,
+      "no": 47,
       "identity": "ERR3152366",
       "source_format": "FASTQ",
       "source_url": "https://www.ebi.ac.uk/ena/browser/view/ERR3152366",
@@ -4441,7 +4074,7 @@
       "checks_summary": "This represents a real mock/community research input, not an ordinary soil or clinical metagenome depth."
     },
     {
-      "no": 52,
+      "no": 48,
       "identity": "DRR1003246",
       "source_format": "FASTQ",
       "source_url": "https://www.ebi.ac.uk/ena/browser/view/DRR1003246",
@@ -4526,7 +4159,7 @@
       "checks_summary": "The source identifies community RNA from a fermentation timepoint, but untouched instrument-output status is not certified."
     },
     {
-      "no": 53,
+      "no": 49,
       "identity": "DRR1000746",
       "source_format": "FASTQ",
       "source_url": "https://www.ebi.ac.uk/ena/browser/view/DRR1000746",
@@ -4610,7 +4243,7 @@
       "checks_summary": "Community complexity and organism proportions are not measured by these totals."
     },
     {
-      "no": 54,
+      "no": 50,
       "identity": "DRR1003638",
       "source_format": "FASTQ",
       "source_url": "https://www.ebi.ac.uk/ena/browser/view/DRR1003638",
@@ -4694,7 +4327,7 @@
       "checks_summary": "The declared run amount and source-study context support this gut shotgun example."
     },
     {
-      "no": 55,
+      "no": 51,
       "identity": "SRR27931704",
       "source_format": "FASTQ",
       "source_url": "https://www.ebi.ac.uk/ena/browser/view/SRR27931704",
@@ -4782,110 +4415,76 @@
       "checks_summary": "This supports a per-product research run."
     },
     {
-      "no": 56,
-      "identity": "CHO_DN427020C_A1",
+      "no": 52,
+      "identity": "ERR2189808",
       "source_format": "FASTQ",
-      "source_url": "https://www.ebi.ac.uk/ena/browser/view/ERR2192894",
+      "source_url": "https://www.ebi.ac.uk/ena/browser/view/ERR2189808",
       "manufacturer": "Illumina",
       "technology": "Short-read technology; actual properties separately scoped",
       "metadata": {
         "study": "PRJEB12319",
-        "sample": "SAMEA3709418",
-        "experiment": "ERX2249008; ERX2249009",
+        "sample": "SAMEA3709419",
+        "experiment": "ERX2245923",
         "organism": "Cricetulus griseus",
         "common_name": "",
         "source": "GENOMIC",
-        "preparation": "RANDOM",
+        "preparation": "PCR-free / RANDOM",
         "strategy": "WGS",
         "model": "Illumina HiSeq 2500",
         "platform": "ILLUMINA",
-        "layout": "PAIRED (each run)",
-        "first_public": "2017-11-09",
-        "reported_read_count": "308014002",
-        "named_sample": "CHO6262359",
-        "reported_base_count": 77003500500,
-        "library": "CHO genomic",
-        "unit": "Complete CHO genomic library/component: 2 paired runs, 4 separate files"
+        "layout": "PAIRED",
+        "first_public": "2017-11-06",
+        "reported_read_count": "536779966",
+        "named_sample": "CHO6262360",
+        "reported_base_count": 67097495750,
+        "library": "CHO6262360 PCR-free genomic WGS",
+        "unit": "One complete paired CHO6262360 genomic WGS run; two ENA FASTQ ends"
       },
       "properties": {
         "quality_characters": "Unpreviewed",
         "quality_ascii": "Unpreviewed",
         "lengths": "Unpreviewed",
         "headers": "Unpreviewed",
-        "scope": "No inspected properties are recorded for any listed object."
+        "scope": "These exact files have not been inspected; nominal configuration and source documentation are not measured FASTQ properties."
       },
       "files": [
         {
-          "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR219/003/ERR2192893/ERR2192893_1.fastq.gz",
-          "listed_bytes": 13354044614,
-          "publisher_md5": "",
+          "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR218/008/ERR2189808/ERR2189808_1.fastq.gz",
+          "listed_bytes": 19592529755,
+          "publisher_md5": "8616eae04e85d28d0f16e4ba10127bc2",
           "format": "FASTQ.gz",
           "role": "Read end 1",
-          "run_accession": "ERR2192893",
-          "physical_name": "ERR2192893_1.fastq.gz",
+          "run_accession": "ERR2189808",
+          "physical_name": "ERR2189808_1.fastq.gz",
           "properties": {
             "quality_characters": "Unpreviewed",
             "quality_ascii": "Unpreviewed",
             "lengths": "Unpreviewed",
             "headers": "Unpreviewed",
-            "scope": "This exact object was not previewed. Metadata/library labels are not measured read properties."
-          },
-          "verification_expected": "size-only"
-        },
-        {
-          "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR219/003/ERR2192893/ERR2192893_2.fastq.gz",
-          "listed_bytes": 14657139879,
-          "publisher_md5": "",
-          "format": "FASTQ.gz",
-          "role": "Read end 2",
-          "run_accession": "ERR2192893",
-          "physical_name": "ERR2192893_2.fastq.gz",
-          "properties": {
-            "quality_characters": "Unpreviewed",
-            "quality_ascii": "Unpreviewed",
-            "lengths": "Unpreviewed",
-            "headers": "Unpreviewed",
-            "scope": "This exact object was not previewed. Metadata/library labels are not measured read properties."
-          },
-          "verification_expected": "size-only"
-        },
-        {
-          "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR219/004/ERR2192894/ERR2192894_1.fastq.gz",
-          "listed_bytes": 13935483402,
-          "publisher_md5": "43d5bbd08394e6915b80b7de04d746ea",
-          "format": "FASTQ.gz",
-          "role": "Read end 1",
-          "run_accession": "ERR2192894",
-          "physical_name": "ERR2192894_1.fastq.gz",
-          "properties": {
-            "quality_characters": "Not examined",
-            "quality_ascii": "Not examined",
-            "lengths": "Not examined",
-            "headers": "Not recorded in reused aggregate",
-            "scope": "No inspected properties recorded for this exact object in reused evidence; no new prefix examined."
+            "scope": "These exact files have not been inspected; nominal configuration and source documentation are not measured FASTQ properties."
           },
           "verification_expected": "publisher-md5+size"
         },
         {
-          "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR219/004/ERR2192894/ERR2192894_2.fastq.gz",
-          "listed_bytes": 15287758226,
-          "publisher_md5": "c8ea35d9aa9fdd27b37a1e5b5f73f936",
+          "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR218/008/ERR2189808/ERR2189808_2.fastq.gz",
+          "listed_bytes": 20148385096,
+          "publisher_md5": "732db44c8021c51ee48f9216831aa687",
           "format": "FASTQ.gz",
           "role": "Read end 2",
-          "run_accession": "ERR2192894",
-          "physical_name": "ERR2192894_2.fastq.gz",
+          "run_accession": "ERR2189808",
+          "physical_name": "ERR2189808_2.fastq.gz",
           "properties": {
-            "quality_characters": "Not examined",
-            "quality_ascii": "Not examined",
-            "lengths": "Not examined",
-            "headers": "Not recorded in reused aggregate",
-            "scope": "No inspected properties recorded for this exact object in reused evidence; no new prefix examined."
+            "quality_characters": "Unpreviewed",
+            "quality_ascii": "Unpreviewed",
+            "lengths": "Unpreviewed",
+            "headers": "Unpreviewed",
+            "scope": "These exact files have not been inspected; nominal configuration and source documentation are not measured FASTQ properties."
           },
           "verification_expected": "publisher-md5+size"
         }
       ],
-      "reason": "This named CHO genomic library adds genome-assembly research on an industrial production cell line. Both paired runs are included: four files, not half of the named preparation. It is an assembly input, not a claim that these reads represent routine manufacturing quality control.",
-      "limits": "The complete two-run named library is not the entire CHO assembly project. Submitted CRAM is represented by the selected archive FASTQ ends; the normalized representation and native order have not been body-verified.",
+      "reason": "This PCR-free CHO genomic run represents genome-assembly research on an industrial production-cell lineage. Both ends of one named CHO6262360 sample are included, with 67.10 billion reported bases. It is an assembly-related genomic workload, not a manufacturing quality-control assay or the entire project.",
+      "limits": "ENA generated the listed FASTQs from submitted CRAM; they are not certified untouched instrument files. The exact CHO derivative and agreement with the proposed reference remain unknown. The files and their order, lengths, qualities and integrity have not been examined.",
       "preparation": "Keep all listed run outputs and both ends separate. Validate full-file integrity and pairing before compression. No files were acquired or concatenated.",
       "coverage_needs": [
         "Biopharma genomic characterization and sequence quality control"
@@ -4897,18 +4496,18 @@
           "relationship": "Proposed same-species assembly; sample/strain/cultivar/target matching and FASTA content unverified."
         }
       ],
-      "reported_sequence_scope": "Sum of all documented same-library/component archive outputs; no paired-count multiplier.",
-      "size_evidence": "Two public paired runs of the same named CHO genomic preparation sum to 77,003,500,500 reported bases. Both are included as one complete named library; this is source-workflow support for the declared assembly input, not a universal production norm.",
+      "reported_sequence_scope": "Archive-reported bases for one complete paired run; ENA FASTQs regenerated from submitted CRAM.",
+      "size_evidence": "The selected paired run contains 67,097,495,750 archive-reported bases in the named CHO6262360 assembly-project sample. This is a complete run, not a whole-project total or an empirically established industry-wide yield norm.",
       "run_accessions": [
-        "ERR2192893",
-        "ERR2192894"
+        "ERR2189808"
       ],
-      "display_name": "CHO cell-line genome assembly",
+      "display_name": "CHO genome-assembly research",
       "unit_evidence_ids": [
-        "CHO_LIBRARY"
+        "INPUT_CHO6262360",
+        "ENA_SINGLE_RUN_METADATA"
       ],
-      "amount_summary": "Two public paired runs of the same named CHO genomic preparation sum to 77,003,500,500 reported bases.",
-      "checks_summary": "The complete two-run named library is not the entire CHO assembly project."
+      "amount_summary": "The named CHO6262360 paired genomic run contains 67,097,495,750 reported bases.",
+      "checks_summary": "ENA generated the listed FASTQs from submitted CRAM; they are not certified untouched instrument files. The exact CHO derivative and agreement with the proposed reference remain unknown. The files and their order, lengths, qualities and integrity have not been examined."
     }
   ],
   "references": [
@@ -5157,7 +4756,7 @@
       "accession_version": "GCA_937894285.1",
       "route": "https://www.ncbi.nlm.nih.gov/datasets/genome/GCA_937894285.1/",
       "route_type": "Accession landing page; exactFASTA object must be chosen later",
-      "relationship": "Same Renan cultivar assemblyv2.1; no measured read match.",
+      "relationship": "Same species, different cultivar: proposed Renan assembly for Thatcher wheat reads; exact matching is unverified.",
       "download_filename": "GCA_937894285.1_Triticum_aestivum_Renan_v2.1_genomic.fna.gz",
       "download_url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/937/894/285/GCA_937894285.1_Triticum_aestivum_Renan_v2.1/GCA_937894285.1_Triticum_aestivum_Renan_v2.1_genomic.fna.gz",
       "listed_bytes": null,
@@ -5258,7 +4857,7 @@
       "global_evidence": "ONT/PacBio archive breadth and operating-provider portfolios establish continuing long-read use across materials.",
       "china_evidence": "New provider discoveries document wheat and grape/buckwheat/sugarcane research services; existing breeding-reference projects offer corroboration.",
       "status": "Selected documentary roles with preparation limits and visible unfilled subconditions",
-      "limits": "Human long-read, mouse, wheat Renan, potato short-read, animal and Arabidopsis nuclear-genome roles have selected inputs. Plant HiFi processing is documented; its FASTQ properties remain unpreviewed. Reference-poor non-model assembly and intentional related-species reference testing remain general coverage boundaries. Cyclone whole-file yield and byte equivalence to the associated SRA originals remain unverified.",
+      "limits": "Human long-read, mouse, wheat Thatcher, potato short-read, animal and Arabidopsis nuclear-genome roles have selected inputs. Plant HiFi processing is documented; its FASTQ properties remain unpreviewed. Reference-poor non-model assembly and intentional related-species reference testing remain general coverage boundaries. Cyclone whole-file yield and byte equivalence to the associated SRA originals remain unverified.",
       "evidence_ids": [
         "A01",
         "N06",
@@ -5295,7 +4894,7 @@
     {
       "need": "Long-read transcript sequencing",
       "selected_numbers": [
-        29
+        28
       ],
       "reason": "Genomic long reads do not automatically represent transcript concentration, library-associated tags or full-length transcript preparation.",
       "global_evidence": "Provider long-read portfolios and public FL-cDNA/transcript joints support research relevance.",
@@ -5314,16 +4913,16 @@
     {
       "need": "Single-cell expression, immune and feature libraries",
       "selected_numbers": [
+        29,
         30,
         31,
-        32,
-        33
+        32
       ],
       "reason": "Archive weight, available services and company research corroborate the tagged-library need without any measured unique quality alphabet.",
       "global_evidence": "Single-cell transcriptomic source accounts for 7.44% of stock bases and 11.37% of annual-increment bases. CRO offerings include10x/Parse and multiome.",
       "china_evidence": "Domestic providers report single-cell work across broad material types, not a fixed organism list.",
       "status": "Documented biological/ADT/HTO FASTQ roles selected; complete assay interpretation is not asserted",
-      "limits": "The Smart-seq2 cell supplies documented transcript-wide sampling. Matched CITE ADT, mRNA and HTO components each include all four outputs of their experiment. Actual recovered cells, whole-file pairing and unpreviewed properties remain unknown. Feature/barcode definitions aid interpretation or custom matching, not generic lossless compression. Immune-receptor raw components remain unfilled.",
+      "limits": "The Smart-seq2 cell supplies documented transcript-wide sampling. The selected CITE ADT, mRNA and HTO components each contain one complete paired run with two FASTQ files. Actual recovered cells, whole-file pairing and unpreviewed properties remain unknown. Feature/barcode definitions aid interpretation or custom matching, not generic lossless compression. Immune-receptor raw components remain unfilled.",
       "evidence_ids": [
         "A01",
         "N07",
@@ -5335,7 +4934,7 @@
     {
       "need": "Sequencing-based spatial expression",
       "selected_numbers": [
-        34
+        33
       ],
       "reason": "Coordinate/tag structures and documented representations give a clear workload relationship beyond generic bulk RNA.",
       "global_evidence": "Provider Visium/CytAssist and company/academic research support a real use; archive labels do not give a clean spatial census.",
@@ -5357,11 +4956,11 @@
     {
       "need": "Chromatin, targeted protein-DNA and proximity libraries",
       "selected_numbers": [
+        34,
         35,
         36,
         37,
-        38,
-        39
+        38
       ],
       "reason": "Shared short-read length or alphabet does not collapse different genomic sampling/pair relationships. A mixture role is not pure-species coverage.",
       "global_evidence": "ChIP-Seq 528,615 runs/21,319 studies and ATAC285,961/9,288 establish breadth; Hi-C has substantial bases and study coverage. Applied CUT&RUN is documented separately.",
@@ -5378,7 +4977,7 @@
     {
       "need": "Methylation and transformed-sequence reads",
       "selected_numbers": [
-        40
+        39
       ],
       "reason": "Documented transformation, rather than a species name, motivates the prospective composition/reference contrast.",
       "global_evidence": "Bisulfite-Seq 295,839 stock runs/5,593 studies and 63,930 annual-increment runs; methylation services are explicit.",
@@ -5395,10 +4994,10 @@
       "need": "Marker, genomic, viral and forensic target sequencing",
       "selected_numbers": [
         11,
+        40,
         41,
         42,
-        43,
-        45
+        43
       ],
       "reason": "Huge run counts justify attention but not proportional input allocation. Pandemic deposits and project concentration must not determine the whole benchmark.",
       "global_evidence": "AMPLICON is 41.52% of stock runs but 4.66% of bases. MiSeq community/genomic joints and forensic NGS certification establish distinct contexts.",
@@ -5416,9 +5015,9 @@
     {
       "need": "Microbial isolates and industrial microbial genomes",
       "selected_numbers": [
-        48,
-        49,
-        50
+        44,
+        45,
+        46
       ],
       "reason": "An industrial sequencing link and reference role justify the need; fermentation economic value or resource deposit alone does not.",
       "global_evidence": "Large isolate labels and public bacterial WGS surveillance support breadth; microbial resource services distinguish identification sequencing from genomics.",
@@ -5438,11 +5037,11 @@
     {
       "need": "Shotgun communities and metatranscriptomes",
       "selected_numbers": [
-        51,
-        52,
-        53,
-        54,
-        55
+        47,
+        48,
+        49,
+        50,
+        51
       ],
       "reason": "Multiple genomes, uneven sampling and incomplete reference coverage are meaningful prospective conditions; a marker file is not a generic replacement.",
       "global_evidence": "METAGENOMIC is 21.04% of stock runs and 31.34% of annual-increment runs. Gut, soil, marine and wastewater labels are independently substantial.",
@@ -5461,7 +5060,7 @@
     {
       "need": "Environmental DNA and biodiversity monitoring",
       "selected_numbers": [
-        45
+        43
       ],
       "reason": "Actual sequencing use justifies coverage even without a clean archive label or market denominator; method uncertainty prevents presumed file equivalence, not recognition of the use.",
       "global_evidence": "Ecological sequencing-based services and public community research support application breadth, without proving every ecological test is sequencing.",
@@ -5477,7 +5076,7 @@
     {
       "need": "Food mixtures and authenticity",
       "selected_numbers": [
-        55
+        51
       ],
       "reason": "Processed multi-eukaryotic food mixtures are a real applied use that neither a pure crop genome nor a gut microbiome automatically represents.",
       "global_evidence": "Food Forensics offers NGS ingredient identification; the Thermo/SGS product link supplies a concrete technology/workflow offering.",
@@ -5493,13 +5092,13 @@
     {
       "need": "Biopharma genomic characterization and sequence quality control",
       "selected_numbers": [
-        56
+        52
       ],
       "reason": "Direct NGS/WGS service links establish an industrial data use beyond generic pharma research. Library uncertainty does not erase that confirmed use, but prevents an invented assay specification.",
       "global_evidence": "GenomeScan explicitly offers producer-cell WGS; Eurofins advertises biopharma NGS characterization/testing.",
       "china_evidence": "HyQure advertises NGS quality characterization to biopharma customers; exact sequencing site and volumes remain unresolved.",
       "status": "Selected documentary roles with preparation limits and visible unfilled subconditions",
-      "limits": "The complete CHO genomic assembly library is a public production-cell reference-assembly research input. It does not specify a manufacturing-testing assay; exact cell-line/construct/reference match remains unknown.",
+      "limits": "The complete paired CHO genomic run is a public production-cell reference-assembly research input. It does not specify a manufacturing-testing assay; exact cell-line/construct/reference match remains unknown.",
       "evidence_ids": [
         "N20",
         "N21",
@@ -5526,14 +5125,14 @@
         25,
         26,
         27,
-        29,
+        28,
+        30,
         31,
         32,
         33,
         34,
-        35,
-        37,
-        39
+        36,
+        38
       ],
       "reason": "Major material for genome-wide, exome/targeted, bulk-transcript and single-cell sequencing, with reproductive/copy-number use explicit and its sampling method checked separately.",
       "limits": "Prenatal/copy-number-specific input remains unfilled; purpose does not establish sampling.",
@@ -5552,7 +5151,7 @@
         21,
         22,
         24,
-        30
+        29
       ],
       "reason": "Preserve a meaningful model/reference interaction; no file for every model species.",
       "limits": "Mouse genomic and single-cell expression and Arabidopsis nuclear-genome, HiFi and bulk-RNA model conditions supply different preparation/reference settings. The normalization-reference mixture is not pure fly genomic material.",
@@ -5588,7 +5187,7 @@
         17
       ],
       "reason": "Choose distinct genomic/reduced-representation/reference roles, not a plant-name checklist.",
-      "limits": "Ordinary SW1611 maize genomic resequencing, the full Renan wheat library, Altus potato PCR-free assembly library and quinoa RAD supply distinct documented preparation/reference roles. This is not a complete crop catalogue.",
+      "limits": "Ordinary SW1611 maize genomic resequencing, ordinary Thatcher wheat resequencing, Altus potato PCR-free assembly library and quinoa RAD supply distinct documented preparation/reference roles. This is not a complete crop catalogue.",
       "evidence_ids": [
         "A01",
         "N06",
@@ -5614,10 +5213,10 @@
     {
       "material": "Bacterial isolates and yeast/industrial microbes",
       "selected_numbers": [
-        38,
-        48,
-        49,
-        50
+        37,
+        44,
+        45,
+        46
       ],
       "reason": "Cover compact-reference and microbial eukaryotic genomic roles when a sequencing link is documented.",
       "limits": "Same-species defaults are proposed; exact isolate/strain and industrial-production identity remain unresolved.",
@@ -5632,12 +5231,12 @@
     {
       "material": "Host-associated and environmental communities",
       "selected_numbers": [
+        40,
         41,
-        42,
-        51,
-        52,
-        53,
-        54
+        47,
+        48,
+        49,
+        50
       ],
       "reason": "Preserve mixed-reference material and distinguish markers from shotgun/transcript libraries.",
       "limits": "Bacterial 16S, fungal ITS, community shotgun DNA and fermentation RNA are distinct conditions. Soil DNA does not establish a soil RNA profile.",
@@ -5651,7 +5250,7 @@
     {
       "material": "Aquatic environmental and biodiversity material",
       "selected_numbers": [
-        45
+        43
       ],
       "reason": "Recognize demonstrated sequencing-based monitoring; keep exact assay/form unresolved until documented.",
       "limits": "ITD20-A/VENE is a sample-associated aquatic marker output from Lugano. Its exact pre-upload stages remain qualified; no whole-flow-cell claim follows.",
@@ -5663,8 +5262,8 @@
     {
       "material": "Processed multi-species food material",
       "selected_numbers": [
-        52,
-        55
+        48,
+        51
       ],
       "reason": "Seek a documented food-mixture sequencing role, not one input per ingredient species.",
       "limits": "Honey shotgun DNA supplies a food-mixture genomic input. Exact ingredient composition and a fixed mixture-reference set remain unverified.",
@@ -5677,10 +5276,10 @@
     {
       "material": "Biopharma production-cell/sequence material",
       "selected_numbers": [
-        56
+        52
       ],
       "reason": "Use a documented public proxy for confirmed genomic/sequence-characterization work when feasible.",
-      "limits": "The named CHO genomic assembly library is a public industrial production-cell research input; exact cell-line/construct/reference match remains unresolved.",
+      "limits": "The named CHO genomic assembly-project run is a public industrial production-cell research input; exact cell-line/construct/reference match remains unresolved.",
       "evidence_ids": [
         "N20",
         "N21",
@@ -5713,27 +5312,27 @@
         17,
         24,
         26,
+        29,
         30,
         31,
         32,
-        33,
+        34,
         35,
         36,
         37,
-        38,
+        39,
         40,
         41,
         42,
         43,
+        44,
         45,
+        46,
         48,
         49,
         50,
-        52,
-        53,
-        54,
-        55,
-        56
+        51,
+        52
       ]
     },
     {
@@ -5759,7 +5358,7 @@
         19,
         23,
         25,
-        34
+        33
       ]
     },
     {
@@ -5780,8 +5379,8 @@
         5,
         6,
         21,
-        29,
-        51
+        28,
+        47
       ]
     },
     {
@@ -5834,7 +5433,7 @@
         "B04"
       ],
       "selected_numbers": [
-        39
+        38
       ]
     },
     {
@@ -5872,7 +5471,7 @@
       "family": "Not sequencer manufacturers in this role",
       "library_supplier": "Single-cell and feature-library workflow supplier",
       "reason": "Operating provider services and research use support tagged single-cell workflows. Library roles are separate from the sequencing instrument.",
-      "selection_reason": "Exact GEO documents 10x Next GEM 3′ v3.0 and separate ADT, mRNA and HTO libraries. Use all four outputs per component. This chemistry context does not certify recovered cells or normalized read orientation.",
+      "selection_reason": "Exact GEO documents 10x Next GEM 3′ v3.0 and separate ADT, mRNA and HTO libraries. Each selected component is one complete paired run with two FASTQ files. The three libraries provide complementary antibody-tag, transcript and sample-tag reads, not replicate copies. This chemistry context does not certify recovered cells or normalized read orientation.",
       "limits": "Exact sample 3 cell recovery and unpreviewed-file properties remain unknown. Feature definitions are optional for generic compression and relevant to custom matching.",
       "evidence_ids": [
         "N07",
@@ -5880,9 +5479,9 @@
         "T01"
       ],
       "selected_numbers": [
+        30,
         31,
-        32,
-        33
+        32
       ]
     },
     {
@@ -5902,7 +5501,7 @@
         "B02"
       ],
       "selected_numbers": [
-        34
+        33
       ]
     }
   ],
@@ -5921,14 +5520,14 @@
       12,
       13,
       25,
-      30,
-      33,
+      29,
+      32,
+      40,
       41,
       42,
       43,
-      45,
-      48,
-      49
+      44,
+      45
     ],
     "unit_rule": "Sum all selected files, ends, runs and chunks of the declared logical dataset",
     "uncompressed_FASTQ_bytes": "Not measured",
@@ -5956,5 +5555,5 @@
     "project_license": null,
     "status": "Author attribution and project license have not been specified; no license grant is implied. Third-party sources retain their own terms."
   },
-  "dataset_version": "1.0.0"
+  "dataset_version": "1.1.0"
 }

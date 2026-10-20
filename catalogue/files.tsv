@@ -24,12 +24,8 @@ Data ID	Source run	Role	Filename	URL	Listed bytes	Publisher MD5	Expected verific
 14	SRR24804436	Read end 2; pairing unverified	SRR24804436_2.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR248/036/SRR24804436/SRR24804436_2.fastq.gz	5009001709	a47b7c44cd28e017ed8b223a1a63bae7	publisher-md5+size
 15	ERR14032264	Read end 1	ERR14032264_1.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR140/064/ERR14032264/ERR14032264_1.fastq.gz	23996507434		size-only
 15	ERR14032264	Read end 2	ERR14032264_2.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR140/064/ERR14032264/ERR14032264_2.fastq.gz	24338799827		size-only
-16	ERR6348210	Read end 1	ERR6348210_1.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR634/000/ERR6348210/ERR6348210_1.fastq.gz	42404288433		size-only
-16	ERR6348210	Read end 2	ERR6348210_2.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR634/000/ERR6348210/ERR6348210_2.fastq.gz	44610482314		size-only
-16	ERR6348211	Read end 1	ERR6348211_1.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR634/001/ERR6348211/ERR6348211_1.fastq.gz	36890202547		size-only
-16	ERR6348211	Read end 2	ERR6348211_2.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR634/001/ERR6348211/ERR6348211_2.fastq.gz	38757495770		size-only
-16	ERR6348212	Read end 1	ERR6348212_1.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR634/002/ERR6348212/ERR6348212_1.fastq.gz	39470024560		size-only
-16	ERR6348212	Read end 2	ERR6348212_2.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR634/002/ERR6348212/ERR6348212_2.fastq.gz	41813536029		size-only
+16	ERR9904291	Read end 1	ERR9904291_1.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR990/001/ERR9904291/ERR9904291_1.fastq.gz	134140507815	343695382fd39ab8c3ecafa7df291f07	publisher-md5+size
+16	ERR9904291	Read end 2	ERR9904291_2.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR990/001/ERR9904291/ERR9904291_2.fastq.gz	139673389603	e1ff15fae4faef4a45691e9b789ef276	publisher-md5+size
 17	SRR14993639	Read end 1; pairing unverified	SRR14993639_1.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR149/039/SRR14993639/SRR14993639_1.fastq.gz	25216578140	eb1b6ce0dc1c1455d50aa53fe94f9daa	publisher-md5+size
 17	SRR14993639	Read end 2; pairing unverified	SRR14993639_2.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR149/039/SRR14993639/SRR14993639_2.fastq.gz	27074938936	87303712f415926d7b83916b1c7c2340	publisher-md5+size
 18	DRR1000971	Read end 1; pairing unverified	DRR1000971_1.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/DRR100/001/DRR1000971/DRR1000971_1.fastq.gz	8948960177	46a0b3838c18dc1e6473cdfa0149e307	publisher-md5+size
@@ -47,70 +43,50 @@ Data ID	Source run	Role	Filename	URL	Listed bytes	Publisher MD5	Expected verific
 26	DRR1069746	Read end 1; pairing unverified	DRR1069746_1.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/DRR106/006/DRR1069746/DRR1069746_1.fastq.gz	892042873	4b1b18571365c85b7caca190939a3856	publisher-md5+size
 26	DRR1069746	Read end 2; pairing unverified	DRR1069746_2.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/DRR106/006/DRR1069746/DRR1069746_2.fastq.gz	903266335	e9158c4fbdaddcd09d70aafbdd72ee8d	publisher-md5+size
 27	SRR30608496	Single supplied FASTQ object	SRR30608496.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR306/096/SRR30608496/SRR30608496.fastq.gz	2301820230	cd82870c5dec2c054213b2eedd83b6a7	publisher-md5+size
-29	SRR36288068	Single supplied FASTQ object	SRR36288068_1.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR362/068/SRR36288068/SRR36288068_1.fastq.gz	2307675498	2ccdadb0244f7ca2a31694254d5bf185	publisher-md5+size
-30	SRR6520293	Read end 1; pairing unverified	SRR6520293_1.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR652/003/SRR6520293/SRR6520293_1.fastq.gz	47706724	8e82e9a6cb7654b1e5c74c0a307e280d	publisher-md5+size
-30	SRR6520293	Read end 2; pairing unverified	SRR6520293_2.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR652/003/SRR6520293/SRR6520293_2.fastq.gz	50249398	dee32fd233d52affb528dcb9aabcce16	publisher-md5+size
-31	SRR19066657	Read end 1	SRR19066657_1.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/057/SRR19066657/SRR19066657_1.fastq.gz	210436296		size-only
-31	SRR19066657	Read end 2	SRR19066657_2.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/057/SRR19066657/SRR19066657_2.fastq.gz	202561618		size-only
-31	SRR19066658	Read end 1	SRR19066658_1.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/058/SRR19066658/SRR19066658_1.fastq.gz	194969801		size-only
-31	SRR19066658	Read end 2	SRR19066658_2.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/058/SRR19066658/SRR19066658_2.fastq.gz	187605836		size-only
-31	SRR19066659	Read end 1	SRR19066659_1.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/059/SRR19066659/SRR19066659_1.fastq.gz	2822699619	ac597e415244dcac6731237f62365a37	publisher-md5+size
-31	SRR19066659	Read end 2	SRR19066659_2.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/059/SRR19066659/SRR19066659_2.fastq.gz	2636139243	cf21bf431cf4b155eb228dcf8feb89e3	publisher-md5+size
-31	SRR19066661	Read end 1	SRR19066661_1.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/061/SRR19066661/SRR19066661_1.fastq.gz	2812639473		size-only
-31	SRR19066661	Read end 2	SRR19066661_2.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/061/SRR19066661/SRR19066661_2.fastq.gz	2633453382		size-only
-32	SRR19066662	Read end 1	SRR19066662_1.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/062/SRR19066662/SRR19066662_1.fastq.gz	233945114		size-only
-32	SRR19066662	Read end 2	SRR19066662_2.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/062/SRR19066662/SRR19066662_2.fastq.gz	346315626		size-only
-32	SRR19066664	Read end 1	SRR19066664_1.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/064/SRR19066664/SRR19066664_1.fastq.gz	229818659		size-only
-32	SRR19066664	Read end 2	SRR19066664_2.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/064/SRR19066664/SRR19066664_2.fastq.gz	340196441		size-only
-32	SRR19066665	Read end 1	SRR19066665_1.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/065/SRR19066665/SRR19066665_1.fastq.gz	7470502301		size-only
-32	SRR19066665	Read end 2	SRR19066665_2.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/065/SRR19066665/SRR19066665_2.fastq.gz	11163780638		size-only
-32	SRR19066666	Read end 1	SRR19066666_1.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/066/SRR19066666/SRR19066666_1.fastq.gz	7607604460	c338270f823a40d98ba7c864c599f5a1	publisher-md5+size
-32	SRR19066666	Read end 2	SRR19066666_2.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/066/SRR19066666/SRR19066666_2.fastq.gz	11363520152	26b62596c2c6067007fc43e6541dd961	publisher-md5+size
-33	SRR19066668	Read end 1	SRR19066668_1.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/068/SRR19066668/SRR19066668_1.fastq.gz	93861607	1d081447f642565fbcc5c1055afa66b2	publisher-md5+size
-33	SRR19066668	Read end 2	SRR19066668_2.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/068/SRR19066668/SRR19066668_2.fastq.gz	78857475	19ef9d15c042f02a2d2f5b3d31f70d9b	publisher-md5+size
-33	SRR19066669	Read end 1	SRR19066669_1.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/069/SRR19066669/SRR19066669_1.fastq.gz	91461268		size-only
-33	SRR19066669	Read end 2	SRR19066669_2.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/069/SRR19066669/SRR19066669_2.fastq.gz	76995199		size-only
-33	SRR19066671	Read end 1	SRR19066671_1.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/071/SRR19066671/SRR19066671_1.fastq.gz	95797640		size-only
-33	SRR19066671	Read end 2	SRR19066671_2.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/071/SRR19066671/SRR19066671_2.fastq.gz	79941040		size-only
-33	SRR19066672	Read end 1	SRR19066672_1.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/072/SRR19066672/SRR19066672_1.fastq.gz	92837697		size-only
-33	SRR19066672	Read end 2	SRR19066672_2.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/072/SRR19066672/SRR19066672_2.fastq.gz	77989001		size-only
-34	SRR29351083	Read end 1; pairing unverified	SRR29351083_1.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR293/083/SRR29351083/SRR29351083_1.fastq.gz	60876521638	5b3bd28cc9ca50a1946ce60936e2092b	publisher-md5+size
-34	SRR29351083	Read end 2; pairing unverified	SRR29351083_2.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR293/083/SRR29351083/SRR29351083_2.fastq.gz	120909835057	edd9cd0464e9f585e99e2da41dcdb1cd	publisher-md5+size
-35	SRR30495077	Read end 1	SRR30495077_1.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR304/077/SRR30495077/SRR30495077_1.fastq.gz	2162370841		size-only
-35	SRR30495077	Read end 2	SRR30495077_2.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR304/077/SRR30495077/SRR30495077_2.fastq.gz	2056232458		size-only
-36	DRR1000045	Read end 1; pairing unverified	DRR1000045_1.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/DRR100/005/DRR1000045/DRR1000045_1.fastq.gz	1681954292	478936ad038b1ae33f9458cbbb1160d6	publisher-md5+size
-36	DRR1000045	Read end 2; pairing unverified	DRR1000045_2.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/DRR100/005/DRR1000045/DRR1000045_2.fastq.gz	1706233116	b64fbd711a5c265939ea3319a71c8694	publisher-md5+size
-37	SRR26362943	Read end 1; pairing unverified	SRR26362943_1.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR263/043/SRR26362943/SRR26362943_1.fastq.gz	543920749	d0abf230fd976d460bf5d3665ae961bb	publisher-md5+size
-37	SRR26362943	Read end 2; pairing unverified	SRR26362943_2.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR263/043/SRR26362943/SRR26362943_2.fastq.gz	579571399	ea0567a1936c4f13bfac22c15220a762	publisher-md5+size
-38	SRR30894055	Read end 1; pairing unverified	SRR30894055_1.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR308/055/SRR30894055/SRR30894055_1.fastq.gz	3575888177	c5f417b27fe45b2bbc5501b9e915448e	publisher-md5+size
-38	SRR30894055	Read end 2; pairing unverified	SRR30894055_2.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR308/055/SRR30894055/SRR30894055_2.fastq.gz	3498367077	62025eff3b234b119868073217d9723d	publisher-md5+size
-39	SRR34546226	Single supplied FASTQ object	SRR34546226.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR345/026/SRR34546226/SRR34546226.fastq.gz	3749797716	0bb160b8b9d33931145dd831e6d5b6dc	publisher-md5+size
-40	DRR1009870	Read end 1; pairing unverified	DRR1009870_1.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/DRR100/000/DRR1009870/DRR1009870_1.fastq.gz	4750428009	cded459621ee4c320dde58e9683fc65b	publisher-md5+size
-40	DRR1009870	Read end 2; pairing unverified	DRR1009870_2.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/DRR100/000/DRR1009870/DRR1009870_2.fastq.gz	4726740265	208c6b3827beb564f000604a5ca3d59a	publisher-md5+size
-41	SRR30515680	Read end 1	SRR30515680_1.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR305/080/SRR30515680/SRR30515680_1.fastq.gz	8279598		size-only
-41	SRR30515680	Read end 2	SRR30515680_2.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR305/080/SRR30515680/SRR30515680_2.fastq.gz	11049093		size-only
-42	SRR30515673	Read end 1	SRR30515673_1.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR305/073/SRR30515673/SRR30515673_1.fastq.gz	7635558		size-only
-42	SRR30515673	Read end 2	SRR30515673_2.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR305/073/SRR30515673/SRR30515673_2.fastq.gz	10280905		size-only
-43	DRR1051020	Read end 1; pairing unverified	DRR1051020_1.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/DRR105/000/DRR1051020/DRR1051020_1.fastq.gz	14712324	9aff8569a951b4eac495f9a721d63855	publisher-md5+size
-43	DRR1051020	Read end 2; pairing unverified	DRR1051020_2.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/DRR105/000/DRR1051020/DRR1051020_2.fastq.gz	16849230	0bebdf302338b860df0a8a72878c959a	publisher-md5+size
-45	ERR7749063	Read end 1; pairing unverified	ERR7749063_1.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR774/003/ERR7749063/ERR7749063_1.fastq.gz	2894419	5eb4ae1dbf3a0c6fd91292831e312b2b	publisher-md5+size
-45	ERR7749063	Read end 2; pairing unverified	ERR7749063_2.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR774/003/ERR7749063/ERR7749063_2.fastq.gz	3934724	3b55d0991b2b475c4fa2d30a2f5489d2	publisher-md5+size
-48	ERR11252400	Read end 1; pairing unverified	ERR11252400_1.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR112/000/ERR11252400/ERR11252400_1.fastq.gz	276409877	cce57268cf35ddbf75d5b55e5bf122a0	publisher-md5+size
-48	ERR11252400	Read end 2; pairing unverified	ERR11252400_2.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR112/000/ERR11252400/ERR11252400_2.fastq.gz	272855553	f305a9cacb1d95e418ef51f3d2ed4ef5	publisher-md5+size
-49	DRR171213	Read end 1; pairing unverified	DRR171213_1.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/DRR171/DRR171213/DRR171213_1.fastq.gz	153611670	4c9fc647eea1b4a5c6c269f167066c83	publisher-md5+size
-49	DRR171213	Read end 2; pairing unverified	DRR171213_2.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/DRR171/DRR171213/DRR171213_2.fastq.gz	190460910	9bab0c328906d3684268510558b2d4a7	publisher-md5+size
-50	SRR30502372	Read end 1; pairing unverified	SRR30502372_1.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR305/072/SRR30502372/SRR30502372_1.fastq.gz	507415288	c4d8768c5cf19674da74d3da39deba0a	publisher-md5+size
-50	SRR30502372	Read end 2; pairing unverified	SRR30502372_2.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR305/072/SRR30502372/SRR30502372_2.fastq.gz	527196724	a4f2176a781790957f2fe46679bba7f7	publisher-md5+size
-51	ERR3152366	Single supplied FASTQ object	ERR3152366.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR315/006/ERR3152366/ERR3152366.fastq.gz	17147527495	ffbb0daf168c08a6c4c9393481546bcc	publisher-md5+size
-52	DRR1003246	Read end 1	DRR1003246_1.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/DRR100/006/DRR1003246/DRR1003246_1.fastq.gz	2061270208		size-only
-52	DRR1003246	Read end 2	DRR1003246_2.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/DRR100/006/DRR1003246/DRR1003246_2.fastq.gz	2072451194		size-only
-53	DRR1000746	Read end 1; pairing unverified	DRR1000746_1.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/DRR100/006/DRR1000746/DRR1000746_1.fastq.gz	3868414190	3e895c769599e581255f00a60f68e03c	publisher-md5+size
-53	DRR1000746	Read end 2; pairing unverified	DRR1000746_2.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/DRR100/006/DRR1000746/DRR1000746_2.fastq.gz	3628286618	502eafd93733369fd50cabd06883e4d6	publisher-md5+size
-54	DRR1003638	Read end 1; pairing unverified	DRR1003638_1.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/DRR100/008/DRR1003638/DRR1003638_1.fastq.gz	1531996404	54db182d869e71ea2cdfed6b6ca07460	publisher-md5+size
-54	DRR1003638	Read end 2; pairing unverified	DRR1003638_2.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/DRR100/008/DRR1003638/DRR1003638_2.fastq.gz	1598602940	52f09a28efe2249302969e1eb5167647	publisher-md5+size
-55	SRR27931704	Read end 1; pairing unverified	SRR27931704_1.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR279/004/SRR27931704/SRR27931704_1.fastq.gz	1045156497	fa6404cccab35d0f6f44b06ea61bfcb3	publisher-md5+size
-55	SRR27931704	Read end 2; pairing unverified	SRR27931704_2.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR279/004/SRR27931704/SRR27931704_2.fastq.gz	1051587650	435e41392b52cd880eb44de82ec00799	publisher-md5+size
-56	ERR2192893	Read end 1	ERR2192893_1.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR219/003/ERR2192893/ERR2192893_1.fastq.gz	13354044614		size-only
-56	ERR2192893	Read end 2	ERR2192893_2.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR219/003/ERR2192893/ERR2192893_2.fastq.gz	14657139879		size-only
-56	ERR2192894	Read end 1	ERR2192894_1.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR219/004/ERR2192894/ERR2192894_1.fastq.gz	13935483402	43d5bbd08394e6915b80b7de04d746ea	publisher-md5+size
-56	ERR2192894	Read end 2	ERR2192894_2.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR219/004/ERR2192894/ERR2192894_2.fastq.gz	15287758226	c8ea35d9aa9fdd27b37a1e5b5f73f936	publisher-md5+size
+28	SRR36288068	Single supplied FASTQ object	SRR36288068_1.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR362/068/SRR36288068/SRR36288068_1.fastq.gz	2307675498	2ccdadb0244f7ca2a31694254d5bf185	publisher-md5+size
+29	SRR6520293	Read end 1; pairing unverified	SRR6520293_1.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR652/003/SRR6520293/SRR6520293_1.fastq.gz	47706724	8e82e9a6cb7654b1e5c74c0a307e280d	publisher-md5+size
+29	SRR6520293	Read end 2; pairing unverified	SRR6520293_2.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR652/003/SRR6520293/SRR6520293_2.fastq.gz	50249398	dee32fd233d52affb528dcb9aabcce16	publisher-md5+size
+30	SRR19066659	Read end 1	SRR19066659_1.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/059/SRR19066659/SRR19066659_1.fastq.gz	2822699619	ac597e415244dcac6731237f62365a37	publisher-md5+size
+30	SRR19066659	Read end 2	SRR19066659_2.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/059/SRR19066659/SRR19066659_2.fastq.gz	2636139243	cf21bf431cf4b155eb228dcf8feb89e3	publisher-md5+size
+31	SRR19066665	Read end 1	SRR19066665_1.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/065/SRR19066665/SRR19066665_1.fastq.gz	7470502301	446802545b0de17e0e1810831f5bf8b3	publisher-md5+size
+31	SRR19066665	Read end 2	SRR19066665_2.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/065/SRR19066665/SRR19066665_2.fastq.gz	11163780638	de29baa3a5f98d40362d287f63196ded	publisher-md5+size
+32	SRR19066668	Read end 1	SRR19066668_1.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/068/SRR19066668/SRR19066668_1.fastq.gz	93861607	1d081447f642565fbcc5c1055afa66b2	publisher-md5+size
+32	SRR19066668	Read end 2	SRR19066668_2.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/068/SRR19066668/SRR19066668_2.fastq.gz	78857475	19ef9d15c042f02a2d2f5b3d31f70d9b	publisher-md5+size
+33	SRR29351083	Read end 1; pairing unverified	SRR29351083_1.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR293/083/SRR29351083/SRR29351083_1.fastq.gz	60876521638	5b3bd28cc9ca50a1946ce60936e2092b	publisher-md5+size
+33	SRR29351083	Read end 2; pairing unverified	SRR29351083_2.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR293/083/SRR29351083/SRR29351083_2.fastq.gz	120909835057	edd9cd0464e9f585e99e2da41dcdb1cd	publisher-md5+size
+34	SRR30495077	Read end 1	SRR30495077_1.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR304/077/SRR30495077/SRR30495077_1.fastq.gz	2162370841		size-only
+34	SRR30495077	Read end 2	SRR30495077_2.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR304/077/SRR30495077/SRR30495077_2.fastq.gz	2056232458		size-only
+35	DRR1000045	Read end 1; pairing unverified	DRR1000045_1.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/DRR100/005/DRR1000045/DRR1000045_1.fastq.gz	1681954292	478936ad038b1ae33f9458cbbb1160d6	publisher-md5+size
+35	DRR1000045	Read end 2; pairing unverified	DRR1000045_2.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/DRR100/005/DRR1000045/DRR1000045_2.fastq.gz	1706233116	b64fbd711a5c265939ea3319a71c8694	publisher-md5+size
+36	SRR26362943	Read end 1; pairing unverified	SRR26362943_1.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR263/043/SRR26362943/SRR26362943_1.fastq.gz	543920749	d0abf230fd976d460bf5d3665ae961bb	publisher-md5+size
+36	SRR26362943	Read end 2; pairing unverified	SRR26362943_2.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR263/043/SRR26362943/SRR26362943_2.fastq.gz	579571399	ea0567a1936c4f13bfac22c15220a762	publisher-md5+size
+37	SRR30894055	Read end 1; pairing unverified	SRR30894055_1.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR308/055/SRR30894055/SRR30894055_1.fastq.gz	3575888177	c5f417b27fe45b2bbc5501b9e915448e	publisher-md5+size
+37	SRR30894055	Read end 2; pairing unverified	SRR30894055_2.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR308/055/SRR30894055/SRR30894055_2.fastq.gz	3498367077	62025eff3b234b119868073217d9723d	publisher-md5+size
+38	SRR34546226	Single supplied FASTQ object	SRR34546226.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR345/026/SRR34546226/SRR34546226.fastq.gz	3749797716	0bb160b8b9d33931145dd831e6d5b6dc	publisher-md5+size
+39	DRR1009870	Read end 1; pairing unverified	DRR1009870_1.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/DRR100/000/DRR1009870/DRR1009870_1.fastq.gz	4750428009	cded459621ee4c320dde58e9683fc65b	publisher-md5+size
+39	DRR1009870	Read end 2; pairing unverified	DRR1009870_2.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/DRR100/000/DRR1009870/DRR1009870_2.fastq.gz	4726740265	208c6b3827beb564f000604a5ca3d59a	publisher-md5+size
+40	SRR30515680	Read end 1	SRR30515680_1.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR305/080/SRR30515680/SRR30515680_1.fastq.gz	8279598		size-only
+40	SRR30515680	Read end 2	SRR30515680_2.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR305/080/SRR30515680/SRR30515680_2.fastq.gz	11049093		size-only
+41	SRR30515673	Read end 1	SRR30515673_1.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR305/073/SRR30515673/SRR30515673_1.fastq.gz	7635558		size-only
+41	SRR30515673	Read end 2	SRR30515673_2.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR305/073/SRR30515673/SRR30515673_2.fastq.gz	10280905		size-only
+42	DRR1051020	Read end 1; pairing unverified	DRR1051020_1.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/DRR105/000/DRR1051020/DRR1051020_1.fastq.gz	14712324	9aff8569a951b4eac495f9a721d63855	publisher-md5+size
+42	DRR1051020	Read end 2; pairing unverified	DRR1051020_2.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/DRR105/000/DRR1051020/DRR1051020_2.fastq.gz	16849230	0bebdf302338b860df0a8a72878c959a	publisher-md5+size
+43	ERR7749063	Read end 1; pairing unverified	ERR7749063_1.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR774/003/ERR7749063/ERR7749063_1.fastq.gz	2894419	5eb4ae1dbf3a0c6fd91292831e312b2b	publisher-md5+size
+43	ERR7749063	Read end 2; pairing unverified	ERR7749063_2.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR774/003/ERR7749063/ERR7749063_2.fastq.gz	3934724	3b55d0991b2b475c4fa2d30a2f5489d2	publisher-md5+size
+44	ERR11252400	Read end 1; pairing unverified	ERR11252400_1.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR112/000/ERR11252400/ERR11252400_1.fastq.gz	276409877	cce57268cf35ddbf75d5b55e5bf122a0	publisher-md5+size
+44	ERR11252400	Read end 2; pairing unverified	ERR11252400_2.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR112/000/ERR11252400/ERR11252400_2.fastq.gz	272855553	f305a9cacb1d95e418ef51f3d2ed4ef5	publisher-md5+size
+45	DRR171213	Read end 1; pairing unverified	DRR171213_1.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/DRR171/DRR171213/DRR171213_1.fastq.gz	153611670	4c9fc647eea1b4a5c6c269f167066c83	publisher-md5+size
+45	DRR171213	Read end 2; pairing unverified	DRR171213_2.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/DRR171/DRR171213/DRR171213_2.fastq.gz	190460910	9bab0c328906d3684268510558b2d4a7	publisher-md5+size
+46	SRR30502372	Read end 1; pairing unverified	SRR30502372_1.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR305/072/SRR30502372/SRR30502372_1.fastq.gz	507415288	c4d8768c5cf19674da74d3da39deba0a	publisher-md5+size
+46	SRR30502372	Read end 2; pairing unverified	SRR30502372_2.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR305/072/SRR30502372/SRR30502372_2.fastq.gz	527196724	a4f2176a781790957f2fe46679bba7f7	publisher-md5+size
+47	ERR3152366	Single supplied FASTQ object	ERR3152366.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR315/006/ERR3152366/ERR3152366.fastq.gz	17147527495	ffbb0daf168c08a6c4c9393481546bcc	publisher-md5+size
+48	DRR1003246	Read end 1	DRR1003246_1.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/DRR100/006/DRR1003246/DRR1003246_1.fastq.gz	2061270208		size-only
+48	DRR1003246	Read end 2	DRR1003246_2.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/DRR100/006/DRR1003246/DRR1003246_2.fastq.gz	2072451194		size-only
+49	DRR1000746	Read end 1; pairing unverified	DRR1000746_1.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/DRR100/006/DRR1000746/DRR1000746_1.fastq.gz	3868414190	3e895c769599e581255f00a60f68e03c	publisher-md5+size
+49	DRR1000746	Read end 2; pairing unverified	DRR1000746_2.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/DRR100/006/DRR1000746/DRR1000746_2.fastq.gz	3628286618	502eafd93733369fd50cabd06883e4d6	publisher-md5+size
+50	DRR1003638	Read end 1; pairing unverified	DRR1003638_1.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/DRR100/008/DRR1003638/DRR1003638_1.fastq.gz	1531996404	54db182d869e71ea2cdfed6b6ca07460	publisher-md5+size
+50	DRR1003638	Read end 2; pairing unverified	DRR1003638_2.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/DRR100/008/DRR1003638/DRR1003638_2.fastq.gz	1598602940	52f09a28efe2249302969e1eb5167647	publisher-md5+size
+51	SRR27931704	Read end 1; pairing unverified	SRR27931704_1.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR279/004/SRR27931704/SRR27931704_1.fastq.gz	1045156497	fa6404cccab35d0f6f44b06ea61bfcb3	publisher-md5+size
+51	SRR27931704	Read end 2; pairing unverified	SRR27931704_2.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR279/004/SRR27931704/SRR27931704_2.fastq.gz	1051587650	435e41392b52cd880eb44de82ec00799	publisher-md5+size
+52	ERR2189808	Read end 1	ERR2189808_1.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR218/008/ERR2189808/ERR2189808_1.fastq.gz	19592529755	8616eae04e85d28d0f16e4ba10127bc2	publisher-md5+size
+52	ERR2189808	Read end 2	ERR2189808_2.fastq.gz	https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR218/008/ERR2189808/ERR2189808_2.fastq.gz	20148385096	732db44c8021c51ee48f9216831aa687	publisher-md5+size

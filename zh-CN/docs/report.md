@@ -1,14 +1,14 @@
 # FASTQ 无损压缩基准数据集
 
-数据集版本 1.0.0 · 2026 年 10 月 20 日
+数据集版本 1.1.0 · 2026 年 10 月 20 日
 
 这份数据集用于测试 FASTQ 文件的无损压缩和解压。我们选择了 52 组公开数据，覆盖常见的测序技术和用途。每组数据都给出选择理由、下载地址和使用方法。这个仓库只保存清单和说明，测序文件需要另外下载。
 
 | 项目 | 数量 |
 | --- | --- |
 | 数据集 | 52（51 组 FASTQ 数据，另有 1 个 BAM 源文件） |
-| 待下载文件 | 115（114 个 gzip FASTQ 文件和 1 个 BAM 文件） |
-| 清单所列下载总字节数 | 1,419,456,345,104 |
+| 待下载文件 | 91 个文件（90 个 gzip FASTQ 文件和 1 个 BAM） |
+| 清单所列下载总字节数 | 1,404,952,612,896 |
 | 建议的参考序列版本 | 18 |
 
 公平的无损压缩测试，必须逐字节恢复未压缩 FASTQ，包括读段名称、序列、质量字符、顺序和格式。下载得到的 gzip 文件须先解压；唯一的 BAM 输入则须按准备说明中的固定规则导出。下载文件大小既不是未压缩 FASTQ 的大小，也不是压缩结果。
@@ -75,15 +75,15 @@ WGS 和 RNA-Seq 合计占报告碱基数的大部分；扩增子占存量测序�
 
 我们分别考察并交叉核查了广泛的应用组合、材料/行业记录，以及实际运营/已部署的服务路径。这是有明确目的的一手来源调查，并非具有代表性的销售抽样。供应商菜单证明服务可用；已完成研究、受委托服务、仪器部署和持续生产声明，分别能证明不同事项。[发现登记表](../../evidence/survey_discovery_register.csv)记录了检索路径、发现、排除项和未知情况。涉及芯片、蛋白质、图像或一般遗传检测的来源，并不都计为 FASTQ 需求。
 
-**临床与生殖用途。**CERTANIA 同时列出芯片和测序，因此不能把其整个生殖产品组合都视为读段数据需求。Annoroad 于 2026 年 4 月 15 日提交的招股草案显示，截至 2025 年 12 月 31 日，其无创产前检测（NIPT）和拷贝数测序（CNV-seq）解决方案已提供给 109 家医院和 15 家独立临床实验室。这些数字是服务机构数，不是年度检测数或 运行数。NIPT/CNV 描述的是应用用途；引用证据并未说明取样是全基因组还是靶向。NHS WGS、获认可的 Ion Torrent 实验室以及商业外显子组/NGS 检测则提供了其他实际用途证据。[CERTANIA 产品组合](https://certania.com/services/molecular-diagnostics-and-genomics) [Annoroad 2026 年申报文件](https://www.hkexnews.hk/app/sehk/2026/108447/a132011/sehk26041501668.pdf) [NHS 基因组服务](https://www.england.nhs.uk/nhs-genomic-medicine-service/) [靶向实验室服务](https://pmc.ncbi.nlm.nih.gov/articles/PMC10958377/) [Natera 2025 年报告](https://www.sec.gov/Archives/edgar/data/1604821/000110465926047801/ntra-20251231xars.pdf) [Burning Rock 2025 年报告](https://ir.brbiotech.com/static-files/c8cee243-84ea-4ac3-b94f-3b76dbabdcc4)
+**临床与生殖用途**。CERTANIA 同时列出芯片和测序，因此不能把其整个生殖产品组合都视为读段数据需求。Annoroad 于 2026 年 4 月 15 日提交的招股草案显示，截至 2025 年 12 月 31 日，其无创产前检测（NIPT）和拷贝数测序（CNV-seq）解决方案已提供给 109 家医院和 15 家独立临床实验室。这些数字是服务机构数，不是年度检测数或 运行数。NIPT/CNV 描述的是应用用途；引用证据并未说明取样是全基因组还是靶向。NHS WGS、获认可的 Ion Torrent 实验室以及商业外显子组/NGS 检测则提供了其他实际用途证据。[CERTANIA 产品组合](https://certania.com/services/molecular-diagnostics-and-genomics) [Annoroad 2026 年申报文件](https://www.hkexnews.hk/app/sehk/2026/108447/a132011/sehk26041501668.pdf) [NHS 基因组服务](https://www.england.nhs.uk/nhs-genomic-medicine-service/) [靶向实验室服务](https://pmc.ncbi.nlm.nih.gov/articles/PMC10958377/) [Natera 2025 年报告](https://www.sec.gov/Archives/edgar/data/1604821/000110465926047801/ntra-20251231xars.pdf) [Burning Rock 2025 年报告](https://ir.brbiotech.com/static-files/c8cee243-84ea-4ac3-b94f-3b76dbabdcc4)
 
-**群体、参考序列与生态材料。**DArT 明确提供基于测序的简化代表性基因分型服务；但并非每份基因型报告或生态项目都必然采用了这种方法。供应商的研究记录涉及小麦、葡萄/Vitis、荞麦和甘蔗的基因组/参考序列工作。PIC 报告其累计资源中包含 8,000 多头优良猪的基因组信息；另有家禽 WGS 论文和育种参考序列项目记录了已完成的研究。这些信息都不应换算成年度物种销售量。[DArTseq 服务](https://www.diversityarrays.com/services/dartseq/) [DArT 生态服务](https://www.diversityarrays.com/industries/ecologists-and-biodiversity/) [Annoroad 2026 年申报文件](https://www.hkexnews.hk/app/sehk/2026/108447/a132011/sehk26041501668.pdf) [Annoroad 研究记录](https://www.annoroad.com/) [PIC 基因组资源](https://cms.genusplc.com/pic-nz/services/data-capture/) [家禽 WGS 研究](https://link.springer.com/article/10.1186/s12711-026-01085-2) [育种参考序列项目](https://www.plantbreeding.wur.nl/Solyntus/)
+**群体、参考序列与生态材料**。DArT 明确提供基于测序的简化代表性基因分型服务；但并非每份基因型报告或生态项目都必然采用了这种方法。供应商的研究记录涉及小麦、葡萄/Vitis、荞麦和甘蔗的基因组/参考序列工作。PIC 报告其累计资源中包含 8,000 多头优良猪的基因组信息；另有家禽 WGS 论文和育种参考序列项目记录了已完成的研究。这些信息都不应换算成年度物种销售量。[DArTseq 服务](https://www.diversityarrays.com/services/dartseq/) [DArT 生态服务](https://www.diversityarrays.com/industries/ecologists-and-biodiversity/) [Annoroad 2026 年申报文件](https://www.hkexnews.hk/app/sehk/2026/108447/a132011/sehk26041501668.pdf) [Annoroad 研究记录](https://www.annoroad.com/) [PIC 基因组资源](https://cms.genusplc.com/pic-nz/services/data-capture/) [家禽 WGS 研究](https://link.springer.com/article/10.1186/s12711-026-01085-2) [育种参考序列项目](https://www.plantbreeding.wur.nl/Solyntus/)
 
-**环境与食品用途。**中国生态环境部介绍了实际水生 DNA 测序，并展示了长江 19 个监测断面的应用。具体文库和仪器尚未确定。Food Forensics 提供 NGS 成分鉴定服务；河北则报告了已完成的食品真伪测序研究，并将其与数字 PCR 区分。这些例子表明相关用途确实涉及测序，但具体靶标取样方式仍不清楚。没有测序关联证据的一般生态 DNA 检测仍只是待查线索。[生态环境部监测说明](https://www.mee.gov.cn/ywdt/hjywnews/202603/t20260312_1146462.shtml) [Food Forensics 服务](https://www.foodforensics.co.uk/technical-solutions/ngs-testing) [河北食品研究](https://scjg.hebei.gov.cn/info/84546) [食品 NGS 流程](https://www.thermofisher.com/sg/en/home/industrial/food-beverage/food-authenticity-labeling/ngs-food-screening-species-identification.html)
+**环境与食品用途**。中国生态环境部介绍了实际水生 DNA 测序，并展示了长江 19 个监测断面的应用。具体文库和仪器尚未确定。Food Forensics 提供 NGS 成分鉴定服务；河北则报告了已完成的食品真伪测序研究，并将其与数字 PCR 区分。这些例子表明相关用途确实涉及测序，但具体靶标取样方式仍不清楚。没有测序关联证据的一般生态 DNA 检测仍只是待查线索。[生态环境部监测说明](https://www.mee.gov.cn/ywdt/hjywnews/202603/t20260312_1146462.shtml) [Food Forensics 服务](https://www.foodforensics.co.uk/technical-solutions/ngs-testing) [河北食品研究](https://scjg.hebei.gov.cn/info/84546) [食品 NGS 流程](https://www.thermofisher.com/sg/en/home/industrial/food-beverage/food-authenticity-labeling/ngs-food-screening-species-identification.html)
 
-**生物制药与现代研究。**GenomeScan 明确提供生产细胞 WGS；Eurofins 和面向中国市场的 HyQure 服务宣传 NGS 表征。这些证据表明相关服务可用，但不能证明年度生产量，也不能说明所有质量控制测试都采用测序。SeqMatic 的实际运营服务区分 DNA/RNA、表观基因组、空间和单细胞流程；10x/Parse 是流程供应商，不是测序仪制造商。应用研究也支持部分带标签/功能性文库用途。[GenomeScan 服务](https://genomescan.nl/genetic-characterization/) [HyQure 服务](https://www.hyqure.com/gmp-ngs-services) [Eurofins BPT 服务](https://www.eurofins.com/en/biopharma-services/biopharma-product-testing/services/next-generation-sequencing-ngs/) [SeqMatic 产品组合](https://www.seqmatic.com/services/) [公司单细胞研究](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE292621) [公司 CUT&RUN 研究](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM7883167)
+**生物制药与现代研究**。GenomeScan 明确提供生产细胞 WGS；Eurofins 和面向中国市场的 HyQure 服务宣传 NGS 表征。这些证据表明相关服务可用，但不能证明年度生产量，也不能说明所有质量控制测试都采用测序。SeqMatic 的实际运营服务区分 DNA/RNA、表观基因组、空间和单细胞流程；10x/Parse 是流程供应商，不是测序仪制造商。应用研究也支持部分带标签/功能性文库用途。[GenomeScan 服务](https://genomescan.nl/genetic-characterization/) [HyQure 服务](https://www.hyqure.com/gmp-ngs-services) [Eurofins BPT 服务](https://www.eurofins.com/en/biopharma-services/biopharma-product-testing/services/next-generation-sequencing-ngs/) [SeqMatic 产品组合](https://www.seqmatic.com/services/) [公司单细胞研究](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE292621) [公司 CUT&RUN 研究](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM7883167)
 
-**规模与技术方向。**Novogene 报告 FY2025 产出序列为 45,885.51 TB，并将 1 TB 定义为 10¹² 个碱基；这是合并后的全球产出，不是存储字节数，也不是仅中国的产出。具名供应商的运营支持将 Ultima 与成熟的短读长/长读长技术家族一并纳入考虑。MGI 报告了 CycloneSEQ 在中国两个具名服务点的安装情况。Roche 于 2026 年 6 月 29 日发布 SBX，且在 7 月披露财务信息；这些有具体日期的材料，比未注明日期的一般研发脚注更适合说明时间背景，但发布或研究合作仍不能证明已广泛投入生产。这些是范围有限的业务/研究依据，不是因为新奇或公司规模而关注某项技术。[Novogene 2025 年报告](https://static.cninfo.com.cn/finalpage/2026-04-15/1225103513.PDF) [SeqMatic 产品组合](https://www.seqmatic.com/services/) [CycloneSEQ 安装情况](https://www.mgi-tech.com/mgi-news/945.html) [Roche 六月发布](https://www.roche.com/investors/updates/inv-update-2026-06-29) [Roche 七月业绩](https://www.roche.com/media/releases/med-cor-2026-07-23) [未注明日期的 Roche 页面](https://diagnostics.roche.com/global/en/products/product-category/lab-type/sequencing.html) [SBX 研究介绍](https://diagnostics.roche.com/se/en/diagnostics-insights/introductory-sequencing-by-expansion-webinar.html)
+**规模与技术方向**。Novogene 报告 FY2025 产出序列为 45,885.51 TB，并将 1 TB 定义为 10¹² 个碱基；这是合并后的全球产出，不是存储字节数，也不是仅中国的产出。具名供应商的运营支持将 Ultima 与成熟的短读长/长读长技术家族一并纳入考虑。MGI 报告了 CycloneSEQ 在中国两个具名服务点的安装情况。Roche 于 2026 年 6 月 29 日发布 SBX，且在 7 月披露财务信息；这些有具体日期的材料，比未注明日期的一般研发脚注更适合说明时间背景，但发布或研究合作仍不能证明已广泛投入生产。这些是范围有限的业务/研究依据，不是因为新奇或公司规模而关注某项技术。[Novogene 2025 年报告](https://static.cninfo.com.cn/finalpage/2026-04-15/1225103513.PDF) [SeqMatic 产品组合](https://www.seqmatic.com/services/) [CycloneSEQ 安装情况](https://www.mgi-tech.com/mgi-news/945.html) [Roche 六月发布](https://www.roche.com/investors/updates/inv-update-2026-06-29) [Roche 七月业绩](https://www.roche.com/media/releases/med-cor-2026-07-23) [未注明日期的 Roche 页面](https://diagnostics.roche.com/global/en/products/product-category/lab-type/sequencing.html) [SBX 研究介绍](https://diagnostics.roche.com/se/en/diagnostics-insights/introductory-sequencing-by-expansion-webinar.html)
 
 # 数据集的选择方法
 
@@ -93,8 +93,8 @@ WGS 和 RNA-Seq 合计占报告碱基数的大部分；扩增子占存量测序�
 | --- | --- |
 | 覆盖重要工作负载 | 结合档案 运行数、报告碱基数、研究覆盖面和有记录的实际用途来判断；不会因为出现某个物种、厂商或用途名称，就自动为其单独增加文件。 |
 | 保留有意义的差异 | 纳入重要的文库、技术、读段和参考序列差异。质量字符种类相近，并不表示字符出现频率也相近；有差异本身也不等于已证明压缩更有优势。 |
-| 选择完整且合适的输入单位 | 合适的输入可以是档案中的一次双端测序运行、一个细胞、一个测序流动槽输出，或一份有名称的多测序运行文库。比较数据量时须考虑任务和输入单位，不要只因文件较小而优先选择。 |
-| 固定输入字节和参考序列 | 列出所有配对文件、测序运行和分块。保持准备后的 FASTQ 字节完全不变，并记录参考序列版本及尚需完成的准备步骤。先确定输入，再测试压缩程序。 |
+| 选择完整且合适的输入单位 | 完整提交的一个测序运行或公开的厂商输出，都可能是合适的输入单位。应与相同任务、相同单位比较序列量；不要只为节省空间而偏选较小文件。 |
+| 固定输入字节和参考序列 | 列出构成该输入的全部文件。保留准备后 FASTQ 的确切字节，并说明参考序列版本和仍需进行的准备步骤。先确定输入，再测试压缩程序。 |
 
 来源研究的数据量可帮助判断具体案例是否合适，但不能代表普遍的生产标准。这里没有规定最低文件大小、目标数据集数量或评分，也不声称本集合已是最小可能集合。年度复核后，如果入选理由仍成立，可以保留原有输入。
 
@@ -102,7 +102,7 @@ WGS 和 RNA-Seq 合计占报告碱基数的大部分；扩增子占存量测序�
 
 集合包含人类及其他生物的基因组测序、整体/小 RNA 和单细胞 RNA、CITE 标签与空间读段、染色质文库、靶向标记、分离株和混合群落。工作簿中的“覆盖”“材料”和“技术”表说明这些用途与入选数据的对应关系；更详细的档案统计和来源说明也列于工作簿中。
 
-报告的序列碱基数、文件大小和 read/spot 计数是不同指标。已知的 50 个 FASTQ 输入合计报告 2,029,937,896,053 个碱基。Data 6 和 Data 8 的准确源序列量未知，因此不计入总数；也没有用相关分析结果或 SRA 数值代替。彼此重叠类别的研究数不作相加。
+报告的序列总量与文件大小、read/spot 数分开记录。已知的入选 FASTQ 序列总量为 2,012,275,239,298 个碱基，来自 50 个输入。Data 6 和 Data 8 的确切来源总量未知，未计入；没有用相关分析数据或 SRA 总量替代。不同类别的研究数可能重叠，因此不相加。
 
 # 为什么有些输入较小
 
@@ -110,7 +110,7 @@ WGS 和 RNA-Seq 合计占报告碱基数的大部分；扩增子占存量测序�
 
 # 52 组数据
 
-请结合[工作簿](../catalogue/benchmark_dataset.xlsx)、[全部文件链接](../catalogue/files.tsv)和[当前核验记录](../checksums/README.md)阅读以下选择理由。数据编号是稳定标识。每组数据分别列出报告序列量和清单中的下载字节数；工作簿“选择理由”表提供简要说明，“详细信息”表保留数量依据、处理注意事项及观察范围。
+请结合[工作簿](../catalogue/benchmark_dataset.xlsx)、[全部文件链接](../catalogue/files.tsv)和[当前核验说明](../checksums/README.md)阅读以下理由。Data ID 用于标识本版本中的条目。每项的数量是报告的序列量，所列字节数则是下载文件大小。工作簿的“Reasons”表提供简要说明，“Details”表保留完整的数据量依据、处理说明和观察范围。
 
 ## 数据 1：人类全基因组 — MGI G400
 
@@ -280,15 +280,17 @@ WGS 和 RNA-Seq 合计占报告碱基数的大部分；扩增子占存量测序�
 
 公开记录：[ERR14032264](https://www.ebi.ac.uk/ena/browser/view/ERR14032264)。建议参考序列：fa 编号 3 / GCF_000001635.24。
 
-## 数据 16：小麦基因组组装 — Renan 文库
+## 数据 16：小麦全基因组重测序 — Thatcher
 
-这组小麦文库代表大型多倍体植物基因组研究。具名的 Renan 组装优化制备包含三个双端测序运行，六个文件全部纳入。这里按有记录的文库确定输入单位，没有拼接无关测序运行来凑到某个测序深度。
+这次常规小麦重测序运行补充了大型多倍体作物基因组。纳入一个 Thatcher 样本的两个 FASTQ 端。主要研究报告该样本约有 5,425 亿个碱基，覆盖深度为 35×；这是实际研究输入，并非为凑基准规模而截取的子集。建议使用的 Renan 组装来自同一物种的另一栽培品种。
 
-序列量：495,517,462,387 个碱基。下载文件合计 243,946,029,653 字节（十进制 243.946 GB），共 6 个文件。
+序列量：542,472,250,800 个碱基（5,424.722508 亿）。下载：273,813,897,418 字节（273.814 十进制 GB），共 2 个文件。
 
-数量依据：这三个输出对应同一样本和同一项具名制备。
+数据量依据：一次 Thatcher 重测序运行报告 542,472,250,800 个碱基；主要研究报告约 542.5 Gb 和 35×。
 
-公开记录：[ERR6348210](https://www.ebi.ac.uk/ena/browser/view/ERR6348210), [ERR6348211](https://www.ebi.ac.uk/ena/browser/view/ERR6348211), [ERR6348212](https://www.ebi.ac.uk/ena/browser/view/ERR6348212)。建议参考序列：fa 编号 18 / GCA_937894285.1。
+公开记录：[ERR9904291](https://www.ebi.ac.uk/ena/browser/view/ERR9904291)。参考序列：fa 编号 18 / GCA_937894285.1。
+
+方法与数据量来源：[Thatcher 测序运行、实验和文件元数据](https://www.ebi.ac.uk/ena/browser/view/ERR9904291) [报告 Thatcher 重测序数据量的小麦研究](https://www.nature.com/articles/s41588-023-01401-2) [所选小麦、CITE 和 CHO 测序运行的 ENA 计数、公开日期和文件校验和](https://www.ebi.ac.uk/ena/portal/api/search?result=read_run&query=run_accession%3D%22ERR9904291%22+OR+run_accession%3D%22ERR2189808%22+OR+run_accession%3D%22SRR19066659%22+OR+run_accession%3D%22SRR19066665%22+OR+run_accession%3D%22SRR19066668%22&fields=run_accession%2Cread_count%2Cbase_count%2Cfirst_public%2Cfastq_bytes%2Cfastq_md5&format=json&limit=5)
 
 ## 数据 17：马铃薯基因组组装 — Altus 文库
 
@@ -410,7 +412,7 @@ WGS 和 RNA-Seq 合计占报告碱基数的大部分；扩增子占存量测序�
 
 公开记录：[SRR30608496](https://www.ebi.ac.uk/ena/browser/view/SRR30608496)。建议参考序列：fa 编号 1 / GCF_000001405.39。
 
-## 数据 29：纳米孔转录本测序
+## 数据 28：纳米孔转录本测序
 
 这组数据在纳米孔基因组读段之外，补充了来自转录本文库的纳米孔读段。来源将文库描述为全长文库，这是预期取样方式，并不保证每条提交的读段都长或完整。其读段数量与研究中的文库规模相当。
 
@@ -422,7 +424,7 @@ WGS 和 RNA-Seq 合计占报告碱基数的大部分；扩增子占存量测序�
 
 使用前请注意：这是同一研究内的规模参照，不是长 RNA 产量的一般标准。
 
-## 数据 30：一个小鼠 Smart-seq2 细胞
+## 数据 29：一个小鼠 Smart-seq2 细胞
 
 这一个小鼠膀胱细胞补充了跨转录本的单细胞 RNA 测序，与 3′ CITE 文库形成补充。Smart-seq2 会从转录本不同位置取样，但不意味着每条读段都覆盖完整转录本。一个 SRA 测序运行的两个读段端均已纳入；其序列量处于 660 个有标注细胞的中间一半范围内。
 
@@ -436,43 +438,49 @@ WGS 和 RNA-Seq 合计占报告碱基数的大部分；扩增子占存量测序�
 
 方法和数量依据：[转录本范围单细胞图谱的主要研究](https://www.nature.com/articles/s41586-018-0590-4) [膀胱 Smart-seq2 方法与实验记录](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2967045) [单细胞测序运行与原始文件对应关系的官方记录](https://ftp.ncbi.nlm.nih.gov/geo/series/GSE109nnn/GSE109774/suppl/GSE109774_list_of_SRR_accessions_and_raw_filenames.txt.gz) [作者提供的膀胱单细胞注释](https://raw.githubusercontent.com/czbiohub-sf/tabula-muris/master/00_data_ingest/03_tissue_annotation_csv/Bladder_facs_annotation.csv) [Smart-seq2 实验 运行数量记录](https://www.ebi.ac.uk/ena/browser/view/SRX3607041) [所选 Smart-seq2测序运行记录](https://www.ebi.ac.uk/ena/browser/view/SRR6520293)
 
-## 数据 31：CITE 抗体标签
+## 数据 30：CITE 抗体标签
 
-这些文件包含与 Data 32、Data 33 同一 CITE 实验中的抗体衍生标签。它们与 mRNA 和样本标签读段承担不同作用，并非重复数据。该具名抗体标签文库的四个双端测序运行均已纳入，共八个文件。
+这些抗体来源的标签读段，与同一 CITE 实验中 Data 31 的 mRNA 输入和 Data 32 的样本标签输入互为补充。所选输入是一次完整的 ADT 双端运行，两个读段端都包括在内。标签所含信息不同于转录本读段；三个组分不是重复拷贝。
 
-序列量：28,795,741,128 个碱基。下载文件合计 11,700,505,268 字节（十进制 11.701 GB），共 8 个文件。
+序列量：13,478,870,416 个碱基（13.479 十亿）。下载：5,458,838,862 字节（5.459 十进制 GB），共 2 个文件。
 
-数量依据：四个双端次测序运行共八个文件，报告碱基总量为 28,795,741,128。
+数据量依据：在 19 个 ADT 实验中，每个实验取数据量最大的两个输出，共 38 个运行；报告碱基数中位数为 13.065736 十亿，范围为 10.638356–18.672885 十亿。所选运行报告 13,478,870,416 个碱基。
 
-公开记录：[SRR19066657](https://www.ebi.ac.uk/ena/browser/view/SRR19066657), [SRR19066658](https://www.ebi.ac.uk/ena/browser/view/SRR19066658), [SRR19066659](https://www.ebi.ac.uk/ena/browser/view/SRR19066659), [SRR19066661](https://www.ebi.ac.uk/ena/browser/view/SRR19066661)。建议参考序列：混合物/特征参考尚未确定；未指定单一基因组 FASTA。
+公开记录：[SRR19066659](https://www.ebi.ac.uk/ena/browser/view/SRR19066659)。参考序列：混合物/特征参考尚未固定；未指定单一基因组 FASTA。
 
-使用前请注意：上样/回收目标不是实测回收细胞数。哪些文件抽查过前缀，请以“文件”工作表为准。
+使用前请注意：清单中的两个读段端构成这次测序运行。细胞回收目标不能证明实际细胞数；已有观察仅适用于这些确切文件。
 
-## 数据 32：CITE mRNA 读段
+方法与数据量来源：[CITE 组分运行元数据及匹配数据量比较](https://www.ebi.ac.uk/ena/browser/view/PRJNA834796) [所选小麦、CITE 和 CHO 测序运行的 ENA 计数、公开日期和文件校验和](https://www.ebi.ac.uk/ena/portal/api/search?result=read_run&query=run_accession%3D%22ERR9904291%22+OR+run_accession%3D%22ERR2189808%22+OR+run_accession%3D%22SRR19066659%22+OR+run_accession%3D%22SRR19066665%22+OR+run_accession%3D%22SRR19066668%22&fields=run_accession%2Cread_count%2Cbase_count%2Cfirst_public%2Cfastq_bytes%2Cfastq_md5&format=json&limit=5)
 
-这些文件包含匹配 CITE 实验中的 mRNA 读段。抗体标签和样本标签不能替代这份转录本文库。四个双端测序运行均已纳入，共八个文件，并与标签文库分开保存。
+## 数据 31：CITE mRNA 读段
 
-序列量：73,686,380,444 个碱基。下载文件合计 38,755,683,391 字节（十进制 38.756 GB），共 8 个文件。
+这些 mRNA 读段是同一 CITE 实验的转录本组分；Data 30 是抗体标签输入，Data 32 是样本标签输入。这里纳入一次完整双端运行的两个 FASTQ 端。标签文库不能替代这份表达文库。
 
-数量依据：四个双端次测序运行共八个文件，报告碱基总量为 73,686,380,444。
+序列量：35,465,206,140 个碱基（35.465 十亿）。下载：18,634,282,939 字节（18.634 十进制 GB），共 2 个文件。
 
-公开记录：[SRR19066662](https://www.ebi.ac.uk/ena/browser/view/SRR19066662), [SRR19066664](https://www.ebi.ac.uk/ena/browser/view/SRR19066664), [SRR19066665](https://www.ebi.ac.uk/ena/browser/view/SRR19066665), [SRR19066666](https://www.ebi.ac.uk/ena/browser/view/SRR19066666)。建议参考序列：fa 编号 1 / GCF_000001405.39。
+数据量依据：在 19 个 mRNA 实验中，每个实验取数据量最大的两个输出，共 38 个运行；报告碱基数中位数为 38.490196 十亿，范围为 34.674149–52.108714 十亿。所选运行报告 35,465,206,140 个碱基。
 
-使用前请注意：上样/回收目标不是实测回收细胞数。哪些文件抽查过前缀，请以“文件”工作表为准。
+公开记录：[SRR19066665](https://www.ebi.ac.uk/ena/browser/view/SRR19066665)。参考序列：fa 编号 1 / GCF_000001405.39。
 
-## 数据 33：CITE 样本标签
+使用前请注意：清单中的两个读段端构成这次测序运行。细胞回收目标不能证明实际细胞数；已有观察仅适用于这些确切文件。
 
-这些文件包含与抗体标签和 mRNA 输入来自同一 CITE 实验的样本标签读段。它们用途不同，并非重复副本。四个双端测序运行全部纳入，共八个文件。标签定义可用于解释数据或构建自定义参考，但不是精确压缩和恢复 FASTQ 的必要条件。
+方法与数据量来源：[CITE 组分运行元数据及匹配数据量比较](https://www.ebi.ac.uk/ena/browser/view/PRJNA834796) [所选小麦、CITE 和 CHO 测序运行的 ENA 计数、公开日期和文件校验和](https://www.ebi.ac.uk/ena/portal/api/search?result=read_run&query=run_accession%3D%22ERR9904291%22+OR+run_accession%3D%22ERR2189808%22+OR+run_accession%3D%22SRR19066659%22+OR+run_accession%3D%22SRR19066665%22+OR+run_accession%3D%22SRR19066668%22&fields=run_accession%2Cread_count%2Cbase_count%2Cfirst_public%2Cfastq_bytes%2Cfastq_md5&format=json&limit=5)
 
-序列量：1,566,671,480 个碱基。下载文件合计 687,740,927 字节（十进制 687.741 MB），共 8 个文件。
+## 数据 32：CITE 样本标签
 
-数量依据：四个双端次测序运行共八个文件，报告碱基总量为 1,566,671,480。
+这些样本标签读段用于识别同一 CITE 实验中的样本，与 Data 30 和 Data 31 相对应。这里纳入一次完整 HTO 双端运行的两个读段端。标签输入本身规模较小；标签定义有助于解释或自定义参考匹配，但一般的无损压缩并不需要它。
 
-公开记录：[SRR19066668](https://www.ebi.ac.uk/ena/browser/view/SRR19066668), [SRR19066669](https://www.ebi.ac.uk/ena/browser/view/SRR19066669), [SRR19066671](https://www.ebi.ac.uk/ena/browser/view/SRR19066671), [SRR19066672](https://www.ebi.ac.uk/ena/browser/view/SRR19066672)。建议参考序列：混合物/特征参考尚未确定；未指定单一基因组 FASTA。
+序列量：393,276,078 个碱基（393.276 百万）。下载：172,719,082 字节（172.719 十进制 MB），共 2 个文件。
 
-使用前请注意：上样/回收目标不是实测回收细胞数。哪些文件抽查过前缀，请以“文件”工作表为准。
+数据量依据：全部 62 个 HTO 运行的报告碱基数中位数为 0.3823 十亿，范围为 0.3335–1.5649 十亿。所选运行报告 393,276,078 个碱基。
 
-## 数据 34：空间转录组测序 — Stereo-seq
+公开记录：[SRR19066668](https://www.ebi.ac.uk/ena/browser/view/SRR19066668)。参考序列：混合物/特征参考尚未固定；未指定单一基因组 FASTA。
+
+使用前请注意：清单中的两个读段端构成这次测序运行。细胞回收目标不能证明实际细胞数；已有观察仅适用于这些确切文件。
+
+方法与数据量来源：[CITE 组分运行元数据及匹配数据量比较](https://www.ebi.ac.uk/ena/browser/view/PRJNA834796) [所选小麦、CITE 和 CHO 测序运行的 ENA 计数、公开日期和文件校验和](https://www.ebi.ac.uk/ena/portal/api/search?result=read_run&query=run_accession%3D%22ERR9904291%22+OR+run_accession%3D%22ERR2189808%22+OR+run_accession%3D%22SRR19066659%22+OR+run_accession%3D%22SRR19066665%22+OR+run_accession%3D%22SRR19066668%22&fields=run_accession%2Cread_count%2Cbase_count%2Cfirst_public%2Cfastq_bytes%2Cfastq_md5&format=json&limit=5)
+
+## 数据 33：空间转录组测序 — Stereo-seq
 
 这组测序运行补充了空间转录组测序，其中条码读段和转录本读段用途不同，长度也可能不同。完整的具名测序运行规模较大，因为它是实际的空间测序输入。其捕获区域和细胞/网格深度均未知，不能从文件大小推断。
 
@@ -484,7 +492,7 @@ WGS 和 RNA-Seq 合计占报告碱基数的大部分；扩增子占存量测序�
 
 使用前请注意：捕获区域以及实测细胞/网格深度仍未知。
 
-## 数据 35：整体 ATAC 测序
+## 数据 34：整体 ATAC 测序
 
 这组 K562 文库代表常规的双端整体 ATAC 重复样本，取样对象是开放染色质，而不是全基因组 DNA 或 RNA。其序列量接近研究中 32次测序运行的中间水平；但总碱基数不能说明有多少有效且互不重复的片段。
 
@@ -494,7 +502,7 @@ WGS 和 RNA-Seq 合计占报告碱基数的大部分；扩增子占存量测序�
 
 公开记录：[SRR30495077](https://www.ebi.ac.uk/ena/browser/view/SRR30495077)。建议参考序列：fa 编号 1 / GCF_000001405.39。
 
-## 数据 36：水稻 ChIP 测序
+## 数据 35：水稻 ChIP 测序
 
 这组水稻文库补充了 ChIP 测序，其取样对象是与蛋白质结合的染色质。ATAC 和 CUT&RUN 的制备方式不同，不能替代 ChIP。其序列量接近研究中 11次可比测序运行的中间水平。
 
@@ -504,7 +512,7 @@ WGS 和 RNA-Seq 合计占报告碱基数的大部分；扩增子占存量测序�
 
 公开记录：[DRR1000045](https://www.ebi.ac.uk/ena/browser/view/DRR1000045)。建议参考序列：fa 编号 8 / GCA_014636035.1。
 
-## 数据 37：人类 CUT&RUN 测序
+## 数据 36：人类 CUT&RUN 测序
 
 这组数据补充了 CUT&RUN。虽然档案只用宽泛的 OTHER 标签，但具体实验记录明确了方法。它与 ATAC、ChIP 输入互为补充，序列量处于研究中 30次可比测序运行的中间 80% 范围内。
 
@@ -516,7 +524,7 @@ WGS 和 RNA-Seq 合计占报告碱基数的大部分；扩增子占存量测序�
 
 使用前请注意：归一化所用参考组成以及处理后/可用测序深度仍未知。
 
-## 数据 38：酵母 Hi-C 测序
+## 数据 37：酵母 Hi-C 测序
 
 这组酵母文库补充了用于研究基因组区域间接触的邻近连接读段。其真核基因组参考序列较小，也不同于大型动植物参考序列。其序列量既处于来源研究的范围内，也落在更广泛的酵母 Hi-C 比较范围内。
 
@@ -526,7 +534,7 @@ WGS 和 RNA-Seq 合计占报告碱基数的大部分；扩增子占存量测序�
 
 公开记录：[SRR30894055](https://www.ebi.ac.uk/ena/browser/view/SRR30894055)。建议参考序列：fa 编号 7 / GCF_000146045.2。
 
-## 数据 39：Ultima 染色质可及性测序
+## 数据 38：人类染色质可及性测序 — Ultima
 
 这组 Ultima 数据展示了已投入使用的测序技术在染色质可及性检测中的应用。其提供的是长度不一的单端读段，与常见的双端 ATAC 输入不同。序列量位于来源研究 248次测序运行的中间 80% 范围内。
 
@@ -536,7 +544,7 @@ WGS 和 RNA-Seq 合计占报告碱基数的大部分；扩增子占存量测序�
 
 公开记录：[SRR34546226](https://www.ebi.ac.uk/ena/browser/view/SRR34546226)。建议参考序列：fa 编号 1 / GCF_000001405.39。
 
-## 数据 40：水稻亚硫酸氢盐测序
+## 数据 39：水稻亚硫酸氢盐测序
 
 这组水稻文库补充了亚硫酸氢盐测序；其制备过程会改变所存储的序列字母。常规基因组测序或捕获测序并不具备相同条件。其序列量与来源研究及更广泛的水稻亚硫酸氢盐测序案例相当。
 
@@ -546,7 +554,7 @@ WGS 和 RNA-Seq 合计占报告碱基数的大部分；扩增子占存量测序�
 
 公开记录：[DRR1009870](https://www.ebi.ac.uk/ena/browser/view/DRR1009870)。建议参考序列：fa 编号 8 / GCA_014636035.1。
 
-## 数据 41：真菌 ITS 群落标记
+## 数据 40：真菌 ITS 群落标记
 
 这组土壤根际真菌文库补充了 MiSeq ITS 标记测序。FL_fungi_1 提交的两个读段端均已纳入。其序列量接近同一研究 12 个 ITS 文库的中间水平；真菌文库与该研究的细菌 16S 文库分开比较。
 
@@ -558,7 +566,7 @@ WGS 和 RNA-Seq 合计占报告碱基数的大部分；扩增子占存量测序�
 
 方法和数量依据：[真菌 ITS 文库及提交的双端文件记录](https://www.ncbi.nlm.nih.gov/sra/SRX25939332)
 
-## 数据 42：细菌 16S 群落标记
+## 数据 41：细菌 16S 群落标记
 
 这组土壤根际细菌文库补充了经典的 16S 群落标记测序。SH_bacteria_1 的两个读段端均已纳入。其序列量接近研究中 12 个细菌文库的中间水平；真菌 ITS 的目标不同，不能替代这组输入。
 
@@ -570,7 +578,7 @@ WGS 和 RNA-Seq 合计占报告碱基数的大部分；扩增子占存量测序�
 
 方法和数量依据：[细菌 16S 文库及提交的双端文件记录](https://www.ncbi.nlm.nih.gov/sra/SRX25939339)
 
-## 数据 43：病毒扩增子测序
+## 数据 42：病毒扩增子测序
 
 这组单个样本的病毒扩增子测序运行补充了小型基因组的靶向测序。其序列量接近 58 个可比样本输出的中间水平。采用人类全基因组规模的数据将无法代表这项任务。
 
@@ -580,7 +588,7 @@ WGS 和 RNA-Seq 合计占报告碱基数的大部分；扩增子占存量测序�
 
 公开记录：[DRR1051020](https://www.ebi.ac.uk/ena/browser/view/DRR1051020)。建议参考序列：fa 编号 14 / NC_045512.2。
 
-## 数据 45：淡水环境 DNA 标记
+## 数据 43：淡水环境 DNA 标记
 
 这组数据补充了水生环境 DNA 标记测序。该文库对应 Lugano 的 ITD20 滤膜、A 提取和 VENE 标记组。档案中的两个读段端均已纳入。它是单个样本/标记的输出，并非整个测序池；上游过滤和拆分条码的具体阶段尚不清楚。
 
@@ -594,7 +602,7 @@ WGS 和 RNA-Seq 合计占报告碱基数的大部分；扩增子占存量测序�
 
 方法和数量依据：[水生短读段标记的档案输入单位](https://www.ebi.ac.uk/ena/browser/view/ERR7749063) [水生样本/地点官方表及命名说明](https://www.ebi.ac.uk/biostudies/studies/S-BSST391) [作者工作流程清单和样本表](https://github.com/envmetagen/mussels_package)
 
-## 数据 48：结核分枝杆菌分离株
+## 数据 44：结核分枝杆菌分离株
 
 这组数据在大肠杆菌之外补充了另一种小型细菌基因组，并提供了抽查为修剪读段的文件格式。其压缩下载量不足 1 GB，但相对于参考序列长度，报告的碱基数并不少。它略高于来源研究的第 90 百分位，并非典型中位数案例。
 
@@ -604,7 +612,7 @@ WGS 和 RNA-Seq 合计占报告碱基数的大部分；扩增子占存量测序�
 
 公开记录：[ERR11252400](https://www.ebi.ac.uk/ena/browser/view/ERR11252400)。建议参考序列：fa 编号 5 / GCF_000195955.2。
 
-## 数据 49：大肠杆菌分离株
+## 数据 45：大肠杆菌分离株
 
 这组明确标记为 MG1655 菌株的数据，是具有紧凑参考序列的典型细菌分离株输入。该双端测序运行的序列量接近来源研究中位数，也接近更广泛的大肠杆菌比较值。样本与参考序列是否完全匹配，以及可用的比对覆盖度，仍需核实。
 
@@ -614,7 +622,7 @@ WGS 和 RNA-Seq 合计占报告碱基数的大部分；扩增子占存量测序�
 
 公开记录：[DRR171213](https://www.ebi.ac.uk/ena/browser/view/DRR171213)。建议参考序列：fa 编号 4 / GCF_000005845.2。
 
-## 数据 50：酵母全基因组测序
+## 数据 46：酵母全基因组测序
 
 这组数据在细菌分离株之外，补充了真核微生物的小型基因组。全基因组测序的制备方式也不同于酵母 Hi-C。其序列量接近来源研究较高水平，是一个高产量研究案例，并非普遍标准。
 
@@ -624,7 +632,7 @@ WGS 和 RNA-Seq 合计占报告碱基数的大部分；扩增子占存量测序�
 
 公开记录：[SRR30502372](https://www.ebi.ac.uk/ena/browser/view/SRR30502372)。建议参考序列：fa 编号 7 / GCF_000146045.2。
 
-## 数据 51：长读段模拟群落
+## 数据 47：长读段模拟群落
 
 这组测序运行补充了来自已知基因组混合物的长读段。它不同于单一生物的基因组测序，也不同于短读段群落标记文库。来源明确说明这是对模拟群落进行超深度测序，因此应结合该研究目的理解其数据量。
 
@@ -634,7 +642,7 @@ WGS 和 RNA-Seq 合计占报告碱基数的大部分；扩增子占存量测序�
 
 公开记录：[ERR3152366](https://www.ebi.ac.uk/ena/browser/view/ERR3152366)。建议参考序列：混合物/特征参考尚未确定；未指定单一基因组 FASTA。
 
-## 数据 52：发酵群落 RNA 测序
+## 数据 48：发酵群落 RNA
 
 这组双端文库代表在一个具名时间点对谷物发酵群落进行的 RNA 测序。其序列量落在五个有记录的时间点范围内，为混合群落增加了 RNA 测序任务，避免把所有宏基因组输入都视为 DNA 测序。
 
@@ -644,7 +652,7 @@ WGS 和 RNA-Seq 合计占报告碱基数的大部分；扩增子占存量测序�
 
 公开记录：[DRR1003246](https://www.ebi.ac.uk/ena/browser/view/DRR1003246)。建议参考序列：混合物/特征参考尚未确定；未指定单一基因组 FASTA。
 
-## 数据 53：土壤鸟枪法 群落 DNA
+## 数据 49：土壤鸟枪法群落 DNA
 
 这组数据代表环境宏基因组鸟枪法 DNA 测序，与肠道和食品混合样本以及土壤靶向标记输入形成补充。其序列量接近研究中八次测序运行的中间水平，也符合更广泛的土壤数据比较。
 
@@ -654,7 +662,7 @@ WGS 和 RNA-Seq 合计占报告碱基数的大部分；扩增子占存量测序�
 
 公开记录：[DRR1000746](https://www.ebi.ac.uk/ena/browser/view/DRR1000746)。建议参考序列：混合物/特征参考尚未确定；未指定单一基因组 FASTA。
 
-## 数据 54：肠道鸟枪法 群落 DNA
+## 数据 50：肠道鸟枪法群落 DNA
 
 这组数据代表常见的人体肠道鸟枪法 DNA 测序，与土壤和食品混合样本一起，补充了宿主相关群落。其序列量与来源研究及更广泛的肠道研究比较均相符。
 
@@ -664,7 +672,7 @@ WGS 和 RNA-Seq 合计占报告碱基数的大部分；扩增子占存量测序�
 
 公开记录：[DRR1003638](https://www.ebi.ac.uk/ena/browser/view/DRR1003638)。建议参考序列：混合物/特征参考尚未确定；未指定单一基因组 FASTA。
 
-## 数据 55：蜂蜜鸟枪法 群落 DNA
+## 数据 51：蜂蜜鸟枪法群落 DNA
 
 这组源自蜂蜜的测序运行补充了食品相关的鸟枪法 DNA 测序。它是一次完整的双端测序运行，序列量落在来源研究 63次测序运行的范围内。其参考序列环境包含混合来源，与纯作物基因组或细菌分离株不同；实际成分/群落比例尚未确定。
 
@@ -676,19 +684,19 @@ WGS 和 RNA-Seq 合计占报告碱基数的大部分；扩增子占存量测序�
 
 方法和数量依据：[蜂蜜鸟枪法 源样本记录](https://www.ebi.ac.uk/ena/browser/view/SRX23588786)
 
-## 数据 56：CHO 细胞系基因组组装
+## 数据 52：CHO 基因组组装研究
 
-这组具名 CHO 基因组文库补充了工业生产细胞系的基因组组装研究。两个双端测序运行均已纳入，共四个文件，覆盖完整的具名制备，而非其中一半。这是组装研究输入，不表示这类读段代表常规生产质控数据。
+这次无 PCR 的 CHO 基因组测序运行代表工业生产细胞系的基因组组装研究。纳入具名 CHO6262360 样本的一次完整双端运行，报告 67.10 十亿个碱基。这是组装相关的基因组工作负载，不是制造质量控制检测，也不代表整个项目。
 
-序列量：77,003,500,500 个碱基。下载文件合计 57,234,426,121 字节（十进制 57.234 GB），共 4 个文件。
+序列量：67,097,495,750 个碱基（67.097 十亿）。下载：39,740,914,851 字节（39.741 十进制 GB），共 2 个文件。
 
-数量依据：同一具名 CHO 基因组制备的两个公开双端次测序运行共报告 77,003,500,500 个碱基。
+数据量依据：具名的 CHO6262360 双端基因组测序运行报告 67,097,495,750 个碱基。
 
-公开记录：[ERR2192893](https://www.ebi.ac.uk/ena/browser/view/ERR2192893), [ERR2192894](https://www.ebi.ac.uk/ena/browser/view/ERR2192894)。建议参考序列：fa 编号 17 / GCF_003668045.3。
+公开记录：[ERR2189808](https://www.ebi.ac.uk/ena/browser/view/ERR2189808)。参考序列：fa 编号 17 / GCF_003668045.3。
 
-使用前请注意：这份由两次测序运行组成的完整具名文库，并非 CHO 组装项目的全部数据。
+使用前请注意：ENA 根据提交的 CRAM 生成了清单中的 FASTQ；这些文件并未被认证为未经改动的仪器原始文件。确切的 CHO 衍生文件及其与建议参考序列是否一致仍未知。文件内容、顺序、读长、质量值和完整性均未检查。
 
-方法和数量依据：[具名 CHO 基因组组装文库](https://www.ebi.ac.uk/ena/browser/view/PRJEB12319)
+方法与数据量来源：[CHO6262360 双端基因组测序运行元数据](https://www.ebi.ac.uk/ena/browser/view/ERR2189808) [所选小麦、CITE 和 CHO 测序运行的 ENA 计数、公开日期和文件校验和](https://www.ebi.ac.uk/ena/portal/api/search?result=read_run&query=run_accession%3D%22ERR9904291%22+OR+run_accession%3D%22ERR2189808%22+OR+run_accession%3D%22SRR19066659%22+OR+run_accession%3D%22SRR19066665%22+OR+run_accession%3D%22SRR19066668%22&fields=run_accession%2Cread_count%2Cbase_count%2Cfirst_public%2Cfastq_bytes%2Cfastq_md5&format=json&limit=5)
 
 # 下载、检查和准备文件
 
@@ -740,72 +748,107 @@ Data 8 是 CNGB 的一个 SINGLE 文件，不是两个配对文件或多个分�
 
 参考序列 17：Cricetulus griseus — CriGri-PICRH-1.0 / [GCF_003668045.3](https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/003/668/045/GCF_003668045.3_CriGri-PICRH-1.0/GCF_003668045.3_CriGri-PICRH-1.0_genomic.fna.gz)。提出的同物种组装版本；样本、品系、栽培品种和靶标匹配情况及 FASTA 内容均未核实。
 
-参考序列 18：Triticum aestivum cultivar Renan — Triticum_aestivum_Renan_v2.1 / [GCA_937894285.1](https://www.ncbi.nlm.nih.gov/datasets/genome/GCA_937894285.1/)。同一 Renan 栽培品种的组装版本 v2.1；尚未实测读段匹配情况。
+fa 18：Triticum aestivum，Renan 栽培品种 — Triticum_aestivum_Renan_v2.1 / [GCA_937894285.1](https://www.ncbi.nlm.nih.gov/datasets/genome/GCA_937894285.1/)。同物种、不同栽培品种：为 Thatcher 小麦读段建议使用 Renan 组装；是否精确匹配尚未核实。
 
-Renan 的 GCA_937894285.1 是拟议的同一栽培品种组装版本。解释 CITE 标签或建立自定义参考时，可能需要标签定义和空间掩码/坐标；但要对所提供的 FASTQ 做精确压缩和恢复，并不需要这些信息。分类表是辅助文件，不是基因组参考序列。
+Renan GCA_937894285.1 是为 Thatcher 小麦读段提出的同物种、不同栽培品种参考序列。解释 CITE 标签或建立自定义参考时，可能需要标签定义以及空间掩膜/坐标；但对所提供 FASTQ 进行精确压缩和还原并不需要这些信息。分类表是辅助文件，不是基因组参考序列。
 
-# 多测序运行输入的完整文件清单
+# 每个输入的文件
 
-请保留这些测序运行的分界。“文件”工作表和 TSV 列出全部 115 个文件，包括常规双端测序运行的两个文件。以下文件名和 URL 均照清单原样列出，没有拼造合并后的文件名。
+以下列出全部入选文件。每次双端测序运行的两个读段端应分别保留为 FASTQ。一个 BAM 和一个单文件 CNGB 输入单独列出。文件名和 URL 均照目录原值记录。
 
-## 数据 16：小麦基因组组装 — Renan 文库 — 6 个文件
-
-| 测序运行编号 | 读段端/用途 | 清单中的文件名 | 下载链接 |
-| --- | --- | --- | --- |
-| ERR6348210 | 读段端 1 | ERR6348210_1.fastq.gz | [ERR6348210_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR634/000/ERR6348210/ERR6348210_1.fastq.gz) |
-| ERR6348210 | 读段端 2 | ERR6348210_2.fastq.gz | [ERR6348210_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR634/000/ERR6348210/ERR6348210_2.fastq.gz) |
-| ERR6348211 | 读段端 1 | ERR6348211_1.fastq.gz | [ERR6348211_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR634/001/ERR6348211/ERR6348211_1.fastq.gz) |
-| ERR6348211 | 读段端 2 | ERR6348211_2.fastq.gz | [ERR6348211_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR634/001/ERR6348211/ERR6348211_2.fastq.gz) |
-| ERR6348212 | 读段端 1 | ERR6348212_1.fastq.gz | [ERR6348212_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR634/002/ERR6348212/ERR6348212_1.fastq.gz) |
-| ERR6348212 | 读段端 2 | ERR6348212_2.fastq.gz | [ERR6348212_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR634/002/ERR6348212/ERR6348212_2.fastq.gz) |
-
-## 数据 31：CITE 抗体标签 — 8 个文件
-
-| 测序运行编号 | 读段端/用途 | 清单中的文件名 | 下载链接 |
-| --- | --- | --- | --- |
-| SRR19066657 | 读段端 1 | SRR19066657_1.fastq.gz | [SRR19066657_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/057/SRR19066657/SRR19066657_1.fastq.gz) |
-| SRR19066657 | 读段端 2 | SRR19066657_2.fastq.gz | [SRR19066657_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/057/SRR19066657/SRR19066657_2.fastq.gz) |
-| SRR19066658 | 读段端 1 | SRR19066658_1.fastq.gz | [SRR19066658_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/058/SRR19066658/SRR19066658_1.fastq.gz) |
-| SRR19066658 | 读段端 2 | SRR19066658_2.fastq.gz | [SRR19066658_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/058/SRR19066658/SRR19066658_2.fastq.gz) |
-| SRR19066659 | 读段端 1 | SRR19066659_1.fastq.gz | [SRR19066659_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/059/SRR19066659/SRR19066659_1.fastq.gz) |
-| SRR19066659 | 读段端 2 | SRR19066659_2.fastq.gz | [SRR19066659_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/059/SRR19066659/SRR19066659_2.fastq.gz) |
-| SRR19066661 | 读段端 1 | SRR19066661_1.fastq.gz | [SRR19066661_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/061/SRR19066661/SRR19066661_1.fastq.gz) |
-| SRR19066661 | 读段端 2 | SRR19066661_2.fastq.gz | [SRR19066661_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/061/SRR19066661/SRR19066661_2.fastq.gz) |
-
-## 数据 32：CITE mRNA 读段 — 8 个文件
-
-| 测序运行编号 | 读段端/用途 | 清单中的文件名 | 下载链接 |
-| --- | --- | --- | --- |
-| SRR19066662 | 读段端 1 | SRR19066662_1.fastq.gz | [SRR19066662_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/062/SRR19066662/SRR19066662_1.fastq.gz) |
-| SRR19066662 | 读段端 2 | SRR19066662_2.fastq.gz | [SRR19066662_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/062/SRR19066662/SRR19066662_2.fastq.gz) |
-| SRR19066664 | 读段端 1 | SRR19066664_1.fastq.gz | [SRR19066664_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/064/SRR19066664/SRR19066664_1.fastq.gz) |
-| SRR19066664 | 读段端 2 | SRR19066664_2.fastq.gz | [SRR19066664_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/064/SRR19066664/SRR19066664_2.fastq.gz) |
-| SRR19066665 | 读段端 1 | SRR19066665_1.fastq.gz | [SRR19066665_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/065/SRR19066665/SRR19066665_1.fastq.gz) |
-| SRR19066665 | 读段端 2 | SRR19066665_2.fastq.gz | [SRR19066665_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/065/SRR19066665/SRR19066665_2.fastq.gz) |
-| SRR19066666 | 读段端 1 | SRR19066666_1.fastq.gz | [SRR19066666_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/066/SRR19066666/SRR19066666_1.fastq.gz) |
-| SRR19066666 | 读段端 2 | SRR19066666_2.fastq.gz | [SRR19066666_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/066/SRR19066666/SRR19066666_2.fastq.gz) |
-
-## 数据 33：CITE 样本标签 — 8 个文件
-
-| 测序运行编号 | 读段端/用途 | 清单中的文件名 | 下载链接 |
-| --- | --- | --- | --- |
-| SRR19066668 | 读段端 1 | SRR19066668_1.fastq.gz | [SRR19066668_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/068/SRR19066668/SRR19066668_1.fastq.gz) |
-| SRR19066668 | 读段端 2 | SRR19066668_2.fastq.gz | [SRR19066668_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/068/SRR19066668/SRR19066668_2.fastq.gz) |
-| SRR19066669 | 读段端 1 | SRR19066669_1.fastq.gz | [SRR19066669_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/069/SRR19066669/SRR19066669_1.fastq.gz) |
-| SRR19066669 | 读段端 2 | SRR19066669_2.fastq.gz | [SRR19066669_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/069/SRR19066669/SRR19066669_2.fastq.gz) |
-| SRR19066671 | 读段端 1 | SRR19066671_1.fastq.gz | [SRR19066671_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/071/SRR19066671/SRR19066671_1.fastq.gz) |
-| SRR19066671 | 读段端 2 | SRR19066671_2.fastq.gz | [SRR19066671_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/071/SRR19066671/SRR19066671_2.fastq.gz) |
-| SRR19066672 | 读段端 1 | SRR19066672_1.fastq.gz | [SRR19066672_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/072/SRR19066672/SRR19066672_1.fastq.gz) |
-| SRR19066672 | 读段端 2 | SRR19066672_2.fastq.gz | [SRR19066672_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/072/SRR19066672/SRR19066672_2.fastq.gz) |
-
-## 数据 56：CHO 细胞系基因组组装 — 4 个文件
-
-| 测序运行编号 | 读段端/用途 | 清单中的文件名 | 下载链接 |
-| --- | --- | --- | --- |
-| ERR2192893 | 读段端 1 | ERR2192893_1.fastq.gz | [ERR2192893_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR219/003/ERR2192893/ERR2192893_1.fastq.gz) |
-| ERR2192893 | 读段端 2 | ERR2192893_2.fastq.gz | [ERR2192893_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR219/003/ERR2192893/ERR2192893_2.fastq.gz) |
-| ERR2192894 | 读段端 1 | ERR2192894_1.fastq.gz | [ERR2192894_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR219/004/ERR2192894/ERR2192894_1.fastq.gz) |
-| ERR2192894 | 读段端 2 | ERR2192894_2.fastq.gz | [ERR2192894_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR219/004/ERR2192894/ERR2192894_2.fastq.gz) |
+| 数据 ID | 运行/来源 | 读段端/用途 | 清单中的文件名 | 下载链接 |
+| --- | --- | --- | --- | --- |
+| 1 | ERR17003126 | 读段端 1；配对关系未核实 | ERR17003126_1.fastq.gz | [ERR17003126_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR170/026/ERR17003126/ERR17003126_1.fastq.gz) |
+| 1 | ERR17003126 | 读段端 2；配对关系未核实 | ERR17003126_2.fastq.gz | [ERR17003126_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR170/026/ERR17003126/ERR17003126_2.fastq.gz) |
+| 2 | ERR16794642 | 读段端 1；配对关系未核实 | ERR16794642_1.fastq.gz | [ERR16794642_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR167/042/ERR16794642/ERR16794642_1.fastq.gz) |
+| 2 | ERR16794642 | 读段端 2；配对关系未核实 | ERR16794642_2.fastq.gz | [ERR16794642_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR167/042/ERR16794642/ERR16794642_2.fastq.gz) |
+| 3 | SRR33329596 | 读段端 1；配对关系未核实 | SRR33329596_1.fastq.gz | [SRR33329596_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR333/096/SRR33329596/SRR33329596_1.fastq.gz) |
+| 3 | SRR33329596 | 读段端 2；配对关系未核实 | SRR33329596_2.fastq.gz | [SRR33329596_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR333/096/SRR33329596/SRR33329596_2.fastq.gz) |
+| 4 | ERR15383198 | 读段端 1；配对关系未核实 | ERR15383198_1.fastq.gz | [ERR15383198_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR153/098/ERR15383198/ERR15383198_1.fastq.gz) |
+| 4 | ERR15383198 | 读段端 2；配对关系未核实 | ERR15383198_2.fastq.gz | [ERR15383198_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR153/098/ERR15383198/ERR15383198_2.fastq.gz) |
+| 5 | ERR12954382 | 单个已提供的 FASTQ 文件 | ERR12954382.fastq.gz | [ERR12954382.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR129/082/ERR12954382/ERR12954382.fastq.gz) |
+| 6 | ONT_GIAB2025_HG002_PAW70337_SUP | BAM 源；后续导出 FASTQ | calls.sorted.bam | [calls.sorted.bam](https://ont-open-data.s3.amazonaws.com/giab_2025.01/basecalling/sup/HG002/PAW70337/calls.sorted.bam) |
+| 7 | ERR14732808 | 单个已提供的 FASTQ 文件 | ERR14732808.fastq.gz | [ERR14732808.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR147/008/ERR14732808/ERR14732808.fastq.gz) |
+| 8 | CNR1409093 | 单端 FASTQ 文件；不是配对端 | WY_reads.fq.gz | [WY_reads.fq.gz](https://ftp.cngb.org/pub/CNSA/data7/CNP0007646/CNS1382495/CNX1236558/CNR1409093/WY_reads.fq.gz) |
+| 9 | ERR12411150 | 读段端 1；配对关系未核实 | ERR12411150_1.fastq.gz | [ERR12411150_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR124/050/ERR12411150/ERR12411150_1.fastq.gz) |
+| 9 | ERR12411150 | 读段端 2；配对关系未核实 | ERR12411150_2.fastq.gz | [ERR12411150_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR124/050/ERR12411150/ERR12411150_2.fastq.gz) |
+| 10 | SRR8906645 | 读段端 1；配对关系未核实 | SRR8906645_1.fastq.gz | [SRR8906645_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR890/005/SRR8906645/SRR8906645_1.fastq.gz) |
+| 10 | SRR8906645 | 读段端 2；配对关系未核实 | SRR8906645_2.fastq.gz | [SRR8906645_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR890/005/SRR8906645/SRR8906645_2.fastq.gz) |
+| 11 | DRR341924 | 单个已提供的 FASTQ 文件 | DRR341924.fastq.gz | [DRR341924.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/DRR341/DRR341924/DRR341924.fastq.gz) |
+| 12 | SRR19440963 | 读段端 1；配对关系未核实 | SRR19440963_1.fastq.gz | [SRR19440963_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR194/063/SRR19440963/SRR19440963_1.fastq.gz) |
+| 12 | SRR19440963 | 读段端 2；配对关系未核实 | SRR19440963_2.fastq.gz | [SRR19440963_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR194/063/SRR19440963/SRR19440963_2.fastq.gz) |
+| 13 | DRR095727 | 读段端 1；配对关系未核实 | DRR095727_1.fastq.gz | [DRR095727_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/DRR095/DRR095727/DRR095727_1.fastq.gz) |
+| 13 | DRR095727 | 读段端 2；配对关系未核实 | DRR095727_2.fastq.gz | [DRR095727_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/DRR095/DRR095727/DRR095727_2.fastq.gz) |
+| 14 | SRR24804436 | 读段端 1；配对关系未核实 | SRR24804436_1.fastq.gz | [SRR24804436_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR248/036/SRR24804436/SRR24804436_1.fastq.gz) |
+| 14 | SRR24804436 | 读段端 2；配对关系未核实 | SRR24804436_2.fastq.gz | [SRR24804436_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR248/036/SRR24804436/SRR24804436_2.fastq.gz) |
+| 15 | ERR14032264 | 读段端 1 | ERR14032264_1.fastq.gz | [ERR14032264_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR140/064/ERR14032264/ERR14032264_1.fastq.gz) |
+| 15 | ERR14032264 | 读段端 2 | ERR14032264_2.fastq.gz | [ERR14032264_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR140/064/ERR14032264/ERR14032264_2.fastq.gz) |
+| 16 | ERR9904291 | 读段端 1 | ERR9904291_1.fastq.gz | [ERR9904291_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR990/001/ERR9904291/ERR9904291_1.fastq.gz) |
+| 16 | ERR9904291 | 读段端 2 | ERR9904291_2.fastq.gz | [ERR9904291_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR990/001/ERR9904291/ERR9904291_2.fastq.gz) |
+| 17 | SRR14993639 | 读段端 1；配对关系未核实 | SRR14993639_1.fastq.gz | [SRR14993639_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR149/039/SRR14993639/SRR14993639_1.fastq.gz) |
+| 17 | SRR14993639 | 读段端 2；配对关系未核实 | SRR14993639_2.fastq.gz | [SRR14993639_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR149/039/SRR14993639/SRR14993639_2.fastq.gz) |
+| 18 | DRR1000971 | 读段端 1；配对关系未核实 | DRR1000971_1.fastq.gz | [DRR1000971_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/DRR100/001/DRR1000971/DRR1000971_1.fastq.gz) |
+| 18 | DRR1000971 | 读段端 2；配对关系未核实 | DRR1000971_2.fastq.gz | [DRR1000971_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/DRR100/001/DRR1000971/DRR1000971_2.fastq.gz) |
+| 19 | ERR13943038 | 读段端 1；配对关系未核实 | ERR13943038_1.fastq.gz | [ERR13943038_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR139/038/ERR13943038/ERR13943038_1.fastq.gz) |
+| 19 | ERR13943038 | 读段端 2；配对关系未核实 | ERR13943038_2.fastq.gz | [ERR13943038_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR139/038/ERR13943038/ERR13943038_2.fastq.gz) |
+| 20 | SRR8801873 | 单个已提供的 FASTQ 文件 | SRR8801873_subreads.fastq.gz | [SRR8801873_subreads.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR880/003/SRR8801873/SRR8801873_subreads.fastq.gz) |
+| 21 | ERR13669551 | 单个已提供的 FASTQ 文件 | ERR13669551.fastq.gz | [ERR13669551.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR136/051/ERR13669551/ERR13669551.fastq.gz) |
+| 22 | SRR14728885 | 单个已提供的 FASTQ 文件 | SRR14728885_subreads.fastq.gz | [SRR14728885_subreads.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR147/085/SRR14728885/SRR14728885_subreads.fastq.gz) |
+| 23 | ERR10030615 | 读段端 1；配对关系未核实 | ERR10030615_1.fastq.gz | [ERR10030615_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR100/015/ERR10030615/ERR10030615_1.fastq.gz) |
+| 23 | ERR10030615 | 读段端 2；配对关系未核实 | ERR10030615_2.fastq.gz | [ERR10030615_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR100/015/ERR10030615/ERR10030615_2.fastq.gz) |
+| 24 | SRR14627767 | 读段端 1 | SRR14627767_1.fastq.gz | [SRR14627767_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR146/067/SRR14627767/SRR14627767_1.fastq.gz) |
+| 24 | SRR14627767 | 读段端 2 | SRR14627767_2.fastq.gz | [SRR14627767_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR146/067/SRR14627767/SRR14627767_2.fastq.gz) |
+| 25 | DRR1089360 | 单个已提供的 FASTQ 文件 | DRR1089360.fastq.gz | [DRR1089360.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/DRR108/000/DRR1089360/DRR1089360.fastq.gz) |
+| 26 | DRR1069746 | 读段端 1；配对关系未核实 | DRR1069746_1.fastq.gz | [DRR1069746_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/DRR106/006/DRR1069746/DRR1069746_1.fastq.gz) |
+| 26 | DRR1069746 | 读段端 2；配对关系未核实 | DRR1069746_2.fastq.gz | [DRR1069746_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/DRR106/006/DRR1069746/DRR1069746_2.fastq.gz) |
+| 27 | SRR30608496 | 单个已提供的 FASTQ 文件 | SRR30608496.fastq.gz | [SRR30608496.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR306/096/SRR30608496/SRR30608496.fastq.gz) |
+| 28 | SRR36288068 | 单个已提供的 FASTQ 文件 | SRR36288068_1.fastq.gz | [SRR36288068_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR362/068/SRR36288068/SRR36288068_1.fastq.gz) |
+| 29 | SRR6520293 | 读段端 1；配对关系未核实 | SRR6520293_1.fastq.gz | [SRR6520293_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR652/003/SRR6520293/SRR6520293_1.fastq.gz) |
+| 29 | SRR6520293 | 读段端 2；配对关系未核实 | SRR6520293_2.fastq.gz | [SRR6520293_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR652/003/SRR6520293/SRR6520293_2.fastq.gz) |
+| 30 | SRR19066659 | 读段端 1 | SRR19066659_1.fastq.gz | [SRR19066659_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/059/SRR19066659/SRR19066659_1.fastq.gz) |
+| 30 | SRR19066659 | 读段端 2 | SRR19066659_2.fastq.gz | [SRR19066659_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/059/SRR19066659/SRR19066659_2.fastq.gz) |
+| 31 | SRR19066665 | 读段端 1 | SRR19066665_1.fastq.gz | [SRR19066665_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/065/SRR19066665/SRR19066665_1.fastq.gz) |
+| 31 | SRR19066665 | 读段端 2 | SRR19066665_2.fastq.gz | [SRR19066665_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/065/SRR19066665/SRR19066665_2.fastq.gz) |
+| 32 | SRR19066668 | 读段端 1 | SRR19066668_1.fastq.gz | [SRR19066668_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/068/SRR19066668/SRR19066668_1.fastq.gz) |
+| 32 | SRR19066668 | 读段端 2 | SRR19066668_2.fastq.gz | [SRR19066668_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/068/SRR19066668/SRR19066668_2.fastq.gz) |
+| 33 | SRR29351083 | 读段端 1；配对关系未核实 | SRR29351083_1.fastq.gz | [SRR29351083_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR293/083/SRR29351083/SRR29351083_1.fastq.gz) |
+| 33 | SRR29351083 | 读段端 2；配对关系未核实 | SRR29351083_2.fastq.gz | [SRR29351083_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR293/083/SRR29351083/SRR29351083_2.fastq.gz) |
+| 34 | SRR30495077 | 读段端 1 | SRR30495077_1.fastq.gz | [SRR30495077_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR304/077/SRR30495077/SRR30495077_1.fastq.gz) |
+| 34 | SRR30495077 | 读段端 2 | SRR30495077_2.fastq.gz | [SRR30495077_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR304/077/SRR30495077/SRR30495077_2.fastq.gz) |
+| 35 | DRR1000045 | 读段端 1；配对关系未核实 | DRR1000045_1.fastq.gz | [DRR1000045_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/DRR100/005/DRR1000045/DRR1000045_1.fastq.gz) |
+| 35 | DRR1000045 | 读段端 2；配对关系未核实 | DRR1000045_2.fastq.gz | [DRR1000045_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/DRR100/005/DRR1000045/DRR1000045_2.fastq.gz) |
+| 36 | SRR26362943 | 读段端 1；配对关系未核实 | SRR26362943_1.fastq.gz | [SRR26362943_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR263/043/SRR26362943/SRR26362943_1.fastq.gz) |
+| 36 | SRR26362943 | 读段端 2；配对关系未核实 | SRR26362943_2.fastq.gz | [SRR26362943_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR263/043/SRR26362943/SRR26362943_2.fastq.gz) |
+| 37 | SRR30894055 | 读段端 1；配对关系未核实 | SRR30894055_1.fastq.gz | [SRR30894055_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR308/055/SRR30894055/SRR30894055_1.fastq.gz) |
+| 37 | SRR30894055 | 读段端 2；配对关系未核实 | SRR30894055_2.fastq.gz | [SRR30894055_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR308/055/SRR30894055/SRR30894055_2.fastq.gz) |
+| 38 | SRR34546226 | 单个已提供的 FASTQ 文件 | SRR34546226.fastq.gz | [SRR34546226.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR345/026/SRR34546226/SRR34546226.fastq.gz) |
+| 39 | DRR1009870 | 读段端 1；配对关系未核实 | DRR1009870_1.fastq.gz | [DRR1009870_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/DRR100/000/DRR1009870/DRR1009870_1.fastq.gz) |
+| 39 | DRR1009870 | 读段端 2；配对关系未核实 | DRR1009870_2.fastq.gz | [DRR1009870_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/DRR100/000/DRR1009870/DRR1009870_2.fastq.gz) |
+| 40 | SRR30515680 | 读段端 1 | SRR30515680_1.fastq.gz | [SRR30515680_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR305/080/SRR30515680/SRR30515680_1.fastq.gz) |
+| 40 | SRR30515680 | 读段端 2 | SRR30515680_2.fastq.gz | [SRR30515680_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR305/080/SRR30515680/SRR30515680_2.fastq.gz) |
+| 41 | SRR30515673 | 读段端 1 | SRR30515673_1.fastq.gz | [SRR30515673_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR305/073/SRR30515673/SRR30515673_1.fastq.gz) |
+| 41 | SRR30515673 | 读段端 2 | SRR30515673_2.fastq.gz | [SRR30515673_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR305/073/SRR30515673/SRR30515673_2.fastq.gz) |
+| 42 | DRR1051020 | 读段端 1；配对关系未核实 | DRR1051020_1.fastq.gz | [DRR1051020_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/DRR105/000/DRR1051020/DRR1051020_1.fastq.gz) |
+| 42 | DRR1051020 | 读段端 2；配对关系未核实 | DRR1051020_2.fastq.gz | [DRR1051020_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/DRR105/000/DRR1051020/DRR1051020_2.fastq.gz) |
+| 43 | ERR7749063 | 读段端 1；配对关系未核实 | ERR7749063_1.fastq.gz | [ERR7749063_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR774/003/ERR7749063/ERR7749063_1.fastq.gz) |
+| 43 | ERR7749063 | 读段端 2；配对关系未核实 | ERR7749063_2.fastq.gz | [ERR7749063_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR774/003/ERR7749063/ERR7749063_2.fastq.gz) |
+| 44 | ERR11252400 | 读段端 1；配对关系未核实 | ERR11252400_1.fastq.gz | [ERR11252400_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR112/000/ERR11252400/ERR11252400_1.fastq.gz) |
+| 44 | ERR11252400 | 读段端 2；配对关系未核实 | ERR11252400_2.fastq.gz | [ERR11252400_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR112/000/ERR11252400/ERR11252400_2.fastq.gz) |
+| 45 | DRR171213 | 读段端 1；配对关系未核实 | DRR171213_1.fastq.gz | [DRR171213_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/DRR171/DRR171213/DRR171213_1.fastq.gz) |
+| 45 | DRR171213 | 读段端 2；配对关系未核实 | DRR171213_2.fastq.gz | [DRR171213_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/DRR171/DRR171213/DRR171213_2.fastq.gz) |
+| 46 | SRR30502372 | 读段端 1；配对关系未核实 | SRR30502372_1.fastq.gz | [SRR30502372_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR305/072/SRR30502372/SRR30502372_1.fastq.gz) |
+| 46 | SRR30502372 | 读段端 2；配对关系未核实 | SRR30502372_2.fastq.gz | [SRR30502372_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR305/072/SRR30502372/SRR30502372_2.fastq.gz) |
+| 47 | ERR3152366 | 单个已提供的 FASTQ 文件 | ERR3152366.fastq.gz | [ERR3152366.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR315/006/ERR3152366/ERR3152366.fastq.gz) |
+| 48 | DRR1003246 | 读段端 1 | DRR1003246_1.fastq.gz | [DRR1003246_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/DRR100/006/DRR1003246/DRR1003246_1.fastq.gz) |
+| 48 | DRR1003246 | 读段端 2 | DRR1003246_2.fastq.gz | [DRR1003246_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/DRR100/006/DRR1003246/DRR1003246_2.fastq.gz) |
+| 49 | DRR1000746 | 读段端 1；配对关系未核实 | DRR1000746_1.fastq.gz | [DRR1000746_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/DRR100/006/DRR1000746/DRR1000746_1.fastq.gz) |
+| 49 | DRR1000746 | 读段端 2；配对关系未核实 | DRR1000746_2.fastq.gz | [DRR1000746_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/DRR100/006/DRR1000746/DRR1000746_2.fastq.gz) |
+| 50 | DRR1003638 | 读段端 1；配对关系未核实 | DRR1003638_1.fastq.gz | [DRR1003638_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/DRR100/008/DRR1003638/DRR1003638_1.fastq.gz) |
+| 50 | DRR1003638 | 读段端 2；配对关系未核实 | DRR1003638_2.fastq.gz | [DRR1003638_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/DRR100/008/DRR1003638/DRR1003638_2.fastq.gz) |
+| 51 | SRR27931704 | 读段端 1；配对关系未核实 | SRR27931704_1.fastq.gz | [SRR27931704_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR279/004/SRR27931704/SRR27931704_1.fastq.gz) |
+| 51 | SRR27931704 | 读段端 2；配对关系未核实 | SRR27931704_2.fastq.gz | [SRR27931704_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR279/004/SRR27931704/SRR27931704_2.fastq.gz) |
+| 52 | ERR2189808 | 读段端 1 | ERR2189808_1.fastq.gz | [ERR2189808_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR218/008/ERR2189808/ERR2189808_1.fastq.gz) |
+| 52 | ERR2189808 | 读段端 2 | ERR2189808_2.fastq.gz | [ERR2189808_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR218/008/ERR2189808/ERR2189808_2.fastq.gz) |
 
 # 更新与引用
 

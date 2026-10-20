@@ -1,14 +1,14 @@
 # FASTQ compression benchmark dataset
 
-Dataset version 1.0.0 • 20 October 2026
+Dataset version 1.1.0 • 20 October 2026
 
 This dataset is for testing lossless FASTQ compression and decompression. It contains 52 public datasets covering common sequencing technologies and uses. Each entry explains why it was chosen, lists the files to download, and describes the input to test. The repository contains the catalogue and instructions; sequencing files are downloaded separately.
 
 | Collection | Quantity |
 | --- | --- |
 | Datasets | 52 (51 FASTQ datasets and one BAM source) |
-| Files to download | 115 (114 gzip FASTQ files and one BAM) |
-| Listed download bytes | 1,419,456,345,104 |
+| Files to download | 91 (90 gzip FASTQ files and one BAM) |
+| Listed download bytes | 1,404,952,612,896 |
 | Suggested reference versions | 18 |
 
 A fair lossless test must recover the exact uncompressed FASTQ bytes, including read names, sequences, quality characters, order and formatting. Downloaded gzip files are containers to decompress first. The one BAM input needs the fixed export described in the preparation guide. Download sizes are not uncompressed FASTQ sizes or compression results.
@@ -75,15 +75,15 @@ These official sources show substantial China-hosted sequencing activity and tec
 
 Broad application portfolios, material/industry accounts and operating/deployed service routes were examined separately and cross-checked. This is a purposeful primary-source survey, not a representative sales sample. A provider menu establishes availability; a completed research project, commissioned service, instrument deployment and recurring production claim each establish something different. The [discovery register](../evidence/survey_discovery_register.csv) records routes, findings, exclusions and unknowns. Sources that mix arrays, proteins, images or generic genetic testing are not all counted as FASTQ demand.
 
-**Clinical and reproductive use.** CERTANIA lists arrays alongside sequencing, so its entire reproductive portfolio cannot be treated as read demand. Annoroad’s 15 April 2026 draft filing identifies non-invasive prenatal testing (NIPT) and copy-number sequencing (CNV-seq) solutions supplied to 109 hospitals and 15 independent clinical laboratories by 31 December 2025. These are supplied institutions, not annual tests or runs. NIPT/CNV describes an application; the cited evidence does not establish whether sampling is genome-wide or targeted. NHS WGS, an accredited Ion Torrent laboratory and commercial exome/NGS testing provide separate applied-use support. [CERTANIA portfolio](https://certania.com/services/molecular-diagnostics-and-genomics) [Annoroad 2026 filing](https://www.hkexnews.hk/app/sehk/2026/108447/a132011/sehk26041501668.pdf) [NHS genomic service](https://www.england.nhs.uk/nhs-genomic-medicine-service/) [Targeted laboratory service](https://pmc.ncbi.nlm.nih.gov/articles/PMC10958377/) [Natera 2025 report](https://www.sec.gov/Archives/edgar/data/1604821/000110465926047801/ntra-20251231xars.pdf) [Burning Rock 2025 report](https://ir.brbiotech.com/static-files/c8cee243-84ea-4ac3-b94f-3b76dbabdcc4)
+**Clinical and reproductive use**. CERTANIA lists arrays alongside sequencing, so its entire reproductive portfolio cannot be treated as read demand. Annoroad’s 15 April 2026 draft filing identifies non-invasive prenatal testing (NIPT) and copy-number sequencing (CNV-seq) solutions supplied to 109 hospitals and 15 independent clinical laboratories by 31 December 2025. These are supplied institutions, not annual tests or runs. NIPT/CNV describes an application; the cited evidence does not establish whether sampling is genome-wide or targeted. NHS WGS, an accredited Ion Torrent laboratory and commercial exome/NGS testing provide separate applied-use support. [CERTANIA portfolio](https://certania.com/services/molecular-diagnostics-and-genomics) [Annoroad 2026 filing](https://www.hkexnews.hk/app/sehk/2026/108447/a132011/sehk26041501668.pdf) [NHS genomic service](https://www.england.nhs.uk/nhs-genomic-medicine-service/) [Targeted laboratory service](https://pmc.ncbi.nlm.nih.gov/articles/PMC10958377/) [Natera 2025 report](https://www.sec.gov/Archives/edgar/data/1604821/000110465926047801/ntra-20251231xars.pdf) [Burning Rock 2025 report](https://ir.brbiotech.com/static-files/c8cee243-84ea-4ac3-b94f-3b76dbabdcc4)
 
-**Population, reference and ecological material.** DArT explicitly offers sequencing-based reduced-representation genotyping; not every genotype report or ecological project necessarily used it. Provider research accounts involve wheat, grape/Vitis, buckwheat and sugarcane genomic/reference work. PIC reports genome information for more than 8,000 elite pigs as an accumulated resource, while a poultry WGS paper and breeding-reference projects are completed research. None is converted into annual species sales. [DArTseq service](https://www.diversityarrays.com/services/dartseq/) [DArT ecological services](https://www.diversityarrays.com/industries/ecologists-and-biodiversity/) [Annoroad 2026 filing](https://www.hkexnews.hk/app/sehk/2026/108447/a132011/sehk26041501668.pdf) [Annoroad research accounts](https://www.annoroad.com/) [PIC genome resource](https://cms.genusplc.com/pic-nz/services/data-capture/) [Poultry WGS research](https://link.springer.com/article/10.1186/s12711-026-01085-2) [Breeding-reference project](https://www.plantbreeding.wur.nl/Solyntus/)
+**Population, reference and ecological material**. DArT explicitly offers sequencing-based reduced-representation genotyping; not every genotype report or ecological project necessarily used it. Provider research accounts involve wheat, grape/Vitis, buckwheat and sugarcane genomic/reference work. PIC reports genome information for more than 8,000 elite pigs as an accumulated resource, while a poultry WGS paper and breeding-reference projects are completed research. None is converted into annual species sales. [DArTseq service](https://www.diversityarrays.com/services/dartseq/) [DArT ecological services](https://www.diversityarrays.com/industries/ecologists-and-biodiversity/) [Annoroad 2026 filing](https://www.hkexnews.hk/app/sehk/2026/108447/a132011/sehk26041501668.pdf) [Annoroad research accounts](https://www.annoroad.com/) [PIC genome resource](https://cms.genusplc.com/pic-nz/services/data-capture/) [Poultry WGS research](https://link.springer.com/article/10.1186/s12711-026-01085-2) [Breeding-reference project](https://www.plantbreeding.wur.nl/Solyntus/)
 
-**Environmental and food uses.** China’s environment ministry describes actual aquatic DNA sequencing and a demonstrated 19-section Yangtze application. The exact library/instrument is not established. Food Forensics offers NGS ingredient identification; Hebei reports completed food-authenticity sequencing research separately from digital PCR. These give real sequencing links, while exact target sampling remains unresolved. Generic ecological DNA testing without a sequencing link remains an inquiry. [MEE monitoring account](https://www.mee.gov.cn/ywdt/hjywnews/202603/t20260312_1146462.shtml) [Food Forensics service](https://www.foodforensics.co.uk/technical-solutions/ngs-testing) [Hebei food research](https://scjg.hebei.gov.cn/info/84546) [Food NGS workflow](https://www.thermofisher.com/sg/en/home/industrial/food-beverage/food-authenticity-labeling/ngs-food-screening-species-identification.html)
+**Environmental and food uses**. China’s environment ministry describes actual aquatic DNA sequencing and a demonstrated 19-section Yangtze application. The exact library/instrument is not established. Food Forensics offers NGS ingredient identification; Hebei reports completed food-authenticity sequencing research separately from digital PCR. These give real sequencing links, while exact target sampling remains unresolved. Generic ecological DNA testing without a sequencing link remains an inquiry. [MEE monitoring account](https://www.mee.gov.cn/ywdt/hjywnews/202603/t20260312_1146462.shtml) [Food Forensics service](https://www.foodforensics.co.uk/technical-solutions/ngs-testing) [Hebei food research](https://scjg.hebei.gov.cn/info/84546) [Food NGS workflow](https://www.thermofisher.com/sg/en/home/industrial/food-beverage/food-authenticity-labeling/ngs-food-screening-species-identification.html)
 
-**Biopharma and modern research.** GenomeScan explicitly offers producer-cell WGS; Eurofins and a China-facing HyQure service advertise NGS characterization. These establish availability, not annual production volumes or all quality-control tests. SeqMatic’s operating services distinguish DNA/RNA, epigenomics, spatial and single-cell workflows, with 10x/Parse as workflow suppliers rather than sequencer manufacturers. Applied company research corroborates some tagged/functional library uses. [GenomeScan service](https://genomescan.nl/genetic-characterization/) [HyQure service](https://www.hyqure.com/gmp-ngs-services) [Eurofins BPT services](https://www.eurofins.com/en/biopharma-services/biopharma-product-testing/services/next-generation-sequencing-ngs/) [SeqMatic portfolio](https://www.seqmatic.com/services/) [Company single-cell research](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE292621) [Company CUT&RUN research](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM7883167)
+**Biopharma and modern research**. GenomeScan explicitly offers producer-cell WGS; Eurofins and a China-facing HyQure service advertise NGS characterization. These establish availability, not annual production volumes or all quality-control tests. SeqMatic’s operating services distinguish DNA/RNA, epigenomics, spatial and single-cell workflows, with 10x/Parse as workflow suppliers rather than sequencer manufacturers. Applied company research corroborates some tagged/functional library uses. [GenomeScan service](https://genomescan.nl/genetic-characterization/) [HyQure service](https://www.hyqure.com/gmp-ngs-services) [Eurofins BPT services](https://www.eurofins.com/en/biopharma-services/biopharma-product-testing/services/next-generation-sequencing-ngs/) [SeqMatic portfolio](https://www.seqmatic.com/services/) [Company single-cell research](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE292621) [Company CUT&RUN research](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM7883167)
 
-**Scale and technology direction.** Novogene reports 45,885.51 TB of produced sequence in FY2025, defining 1 TB as 10¹² bases: consolidated worldwide output, not storage bytes or China-only production. Named provider operation supports Ultima alongside established short/long-read families. MGI reports CycloneSEQ installations at two named China service sites. Roche’s dated 29 June 2026 SBX launch and July financial disclosure are more specific in time than an undated generic development footnote, but launch/research collaboration still does not establish broad production. These are scoped business/research reasons for technology attention, not novelty or corporate-size arguments. [Novogene 2025 report](https://static.cninfo.com.cn/finalpage/2026-04-15/1225103513.PDF) [SeqMatic portfolio](https://www.seqmatic.com/services/) [CycloneSEQ installations](https://www.mgi-tech.com/mgi-news/945.html) [Roche June launch](https://www.roche.com/investors/updates/inv-update-2026-06-29) [Roche July results](https://www.roche.com/media/releases/med-cor-2026-07-23) [Undated Roche page](https://diagnostics.roche.com/global/en/products/product-category/lab-type/sequencing.html) [SBX research presentations](https://diagnostics.roche.com/se/en/diagnostics-insights/introductory-sequencing-by-expansion-webinar.html)
+**Scale and technology direction**. Novogene reports 45,885.51 TB of produced sequence in FY2025, defining 1 TB as 10¹² bases: consolidated worldwide output, not storage bytes or China-only production. Named provider operation supports Ultima alongside established short/long-read families. MGI reports CycloneSEQ installations at two named China service sites. Roche’s dated 29 June 2026 SBX launch and July financial disclosure are more specific in time than an undated generic development footnote, but launch/research collaboration still does not establish broad production. These are scoped business/research reasons for technology attention, not novelty or corporate-size arguments. [Novogene 2025 report](https://static.cninfo.com.cn/finalpage/2026-04-15/1225103513.PDF) [SeqMatic portfolio](https://www.seqmatic.com/services/) [CycloneSEQ installations](https://www.mgi-tech.com/mgi-news/945.html) [Roche June launch](https://www.roche.com/investors/updates/inv-update-2026-06-29) [Roche July results](https://www.roche.com/media/releases/med-cor-2026-07-23) [Undated Roche page](https://diagnostics.roche.com/global/en/products/product-category/lab-type/sequencing.html) [SBX research presentations](https://diagnostics.roche.com/se/en/diagnostics-insights/introductory-sequencing-by-expansion-webinar.html)
 
 # How the datasets were chosen
 
@@ -93,8 +93,8 @@ The archive survey shows which kinds of sequencing are common and how much seque
 | --- | --- |
 | Choose important workloads | Use archive runs, reported bases and research breadth alongside documented applied use. Do not give every species, manufacturer or named application its own file automatically. |
 | Keep useful differences | Include important library, technology, read and reference differences. Similar quality alphabets do not establish similar frequency patterns. A difference is not a measured compression advantage. |
-| Use a complete, sensible input | A deposited paired run, one cell, one flow-cell output or a named multi-run library can be the appropriate unit. Compare sequence amount with the same task and unit; do not prefer smaller files simply to save space. |
-| Fix the bytes and references | List all mates, runs and chunks. Preserve exact prepared FASTQ bytes and state reference versions and remaining preparation. Select before testing compressors. |
+| Use a complete, sensible input | A complete deposited run or public vendor output can be the appropriate unit. Compare sequence amount with the same task and unit; do not prefer smaller files simply to save space. |
+| Fix the bytes and references | List every file belonging to the input. Preserve exact prepared FASTQ bytes and state reference versions and remaining preparation. Select before testing compressors. |
 
 Source-study comparisons support particular examples; they are not universal production norms. There is no minimum file size, target dataset count, score or claim that this is the smallest possible collection. Annual review may keep the same inputs when their reasons remain sound.
 
@@ -102,7 +102,7 @@ The workbook separates the sequencer manufacturer from the library method. Illum
 
 The collection includes human and other genome sequencing; bulk, small and single-cell RNA; CITE tags and spatial reads; chromatin libraries; targeted markers; isolates and mixed communities. The workbook’s Coverage, Materials and Technology sheets explain the links between those uses and the selected entries. Detailed archive tables and source notes remain available there.
 
-Reported sequence totals are separate from file sizes and read/spot counts. Known selected FASTQ totals sum to 2,029,937,896,053 bases across 50 inputs. Exact source totals for Data 6 and Data 8 are unknown and excluded; associated analysis or SRA totals are not substituted. Study counts are not added across overlapping categories.
+Reported sequence totals are separate from file sizes and read/spot counts. Known selected FASTQ totals sum to 2,012,275,239,298 bases across 50 inputs. Exact source totals for Data 6 and Data 8 are unknown and excluded; associated analysis or SRA totals are not substituted. Study counts are not added across overlapping categories.
 
 # Why some files are small
 
@@ -110,7 +110,7 @@ Reported sequence totals are separate from file sizes and read/spot counts. Know
 
 # The 52 datasets
 
-Read the reasons below alongside the [workbook](../catalogue/benchmark_dataset.xlsx), [all file links](../catalogue/files.tsv) and [current verification notes](../checksums/README.md). Data IDs are stable labels. Each entry’s amount is reported sequence, while its listed bytes describe the download. In the workbook, Reasons gives the short explanation and Details preserves the full amount evidence, processing notes and observation scope.
+Read the reasons below alongside the [workbook](../catalogue/benchmark_dataset.xlsx), [all file links](../catalogue/files.tsv) and [current verification notes](../checksums/README.md). Data IDs identify entries within this version. Each entry’s amount is reported sequence, while its listed bytes describe the download. In the workbook, Reasons gives the short explanation and Details preserves the full amount evidence, processing notes and observation scope.
 
 ## Data 1. Human genome — MGI G400
 
@@ -280,15 +280,17 @@ Why this amount: Five like-prepared germline-tail outputs contain 100.892–139.
 
 Public run(s): [ERR14032264](https://www.ebi.ac.uk/ena/browser/view/ERR14032264). Reference: fa ID 3 / GCF_000001635.24.
 
-## Data 16. Wheat genome assembly — Renan library
+## Data 16. Wheat whole-genome resequencing — Thatcher
 
-This wheat library represents work on a large, polyploid plant genome. All three paired runs of the named Renan assembly-polishing preparation are included: six files in total. The unit follows the documented library, rather than combining unrelated runs to reach a chosen depth.
+This ordinary wheat resequencing run adds a large, polyploid crop genome. Both FASTQ ends of one Thatcher sample are included. The primary study reports about 542.5 billion bases and 35× coverage for this sample; this is a real study input, not a subset made to reach a benchmark size. The proposed Renan assembly is from the same species but a different cultivar.
 
-Amount: 495,517,462,387 bases (495.517 billion). Download: 243,946,029,653 bytes (243.946 decimal GB) in 6 file(s).
+Amount: 542,472,250,800 bases (542.472 billion). Download: 273,813,897,418 bytes (273.814 decimal GB) in 2 file(s).
 
-Why this amount: The three outputs share the same sample and named preparation.
+Why this amount: One Thatcher resequencing run contains 542,472,250,800 reported bases; the primary study reports approximately 542.5 Gb and 35×.
 
-Public run(s): [ERR6348210](https://www.ebi.ac.uk/ena/browser/view/ERR6348210), [ERR6348211](https://www.ebi.ac.uk/ena/browser/view/ERR6348211), [ERR6348212](https://www.ebi.ac.uk/ena/browser/view/ERR6348212). Reference: fa ID 18 / GCA_937894285.1.
+Public run(s): [ERR9904291](https://www.ebi.ac.uk/ena/browser/view/ERR9904291). Reference: fa ID 18 / GCA_937894285.1.
+
+Method and amount sources: [Thatcher run, experiment and file metadata](https://www.ebi.ac.uk/ena/browser/view/ERR9904291) [Wheat study reporting Thatcher resequencing amount](https://www.nature.com/articles/s41588-023-01401-2) [ENA counts, release dates and file checksums for the selected wheat, CITE and CHO runs](https://www.ebi.ac.uk/ena/portal/api/search?result=read_run&query=run_accession%3D%22ERR9904291%22+OR+run_accession%3D%22ERR2189808%22+OR+run_accession%3D%22SRR19066659%22+OR+run_accession%3D%22SRR19066665%22+OR+run_accession%3D%22SRR19066668%22&fields=run_accession%2Cread_count%2Cbase_count%2Cfirst_public%2Cfastq_bytes%2Cfastq_md5&format=json&limit=5)
 
 ## Data 17. Potato genome assembly — Altus library
 
@@ -410,7 +412,7 @@ Why this amount: 3.10 billion bases is close to the 2.98-billion median of 18 so
 
 Public run(s): [SRR30608496](https://www.ebi.ac.uk/ena/browser/view/SRR30608496). Reference: fa ID 1 / GCF_000001405.39.
 
-## Data 29. Nanopore transcript sequencing
+## Data 28. Nanopore transcript sequencing
 
 This input adds nanopore reads from a transcript-derived library, alongside nanopore genomic reads. The source documents a full-length library; that describes the intended sampling, not a guarantee that every deposited read is long or complete. Its read count is comparable to the study's library amounts.
 
@@ -422,7 +424,7 @@ Public run(s): [SRR36288068](https://www.ebi.ac.uk/ena/browser/view/SRR36288068)
 
 Check before use: This is same-study scale support, not a general long-RNA production norm.
 
-## Data 30. One mouse Smart-seq2 cell
+## Data 29. One mouse Smart-seq2 cell
 
 This mouse bladder cell adds transcript-wide single-cell RNA sequencing alongside the 3-prime CITE libraries. Smart-seq2 samples across transcripts; it does not make every read span a whole transcript. Both ends of one SRA run are included, with an amount within the middle half of 660 annotated cells.
 
@@ -436,43 +438,49 @@ Check before use: The author and archive identify one cell in one run. The exact
 
 Method and amount sources: [Primary transcript-wide single-cell atlas](https://www.nature.com/articles/s41586-018-0590-4) [Exact bladder Smart-seq2 method and experiment](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2967045) [Official single-cell run and original-file mapping](https://ftp.ncbi.nlm.nih.gov/geo/series/GSE109nnn/GSE109774/suppl/GSE109774_list_of_SRR_accessions_and_raw_filenames.txt.gz) [Author bladder single-cell annotations](https://raw.githubusercontent.com/czbiohub-sf/tabula-muris/master/00_data_ingest/03_tissue_annotation_csv/Bladder_facs_annotation.csv) [Exact Smart-seq2 experiment run quantities](https://www.ebi.ac.uk/ena/browser/view/SRX3607041) [Exact selected Smart-seq2 run](https://www.ebi.ac.uk/ena/browser/view/SRR6520293)
 
-## Data 31. CITE antibody tags
+## Data 30. CITE antibody tags
 
-These files contain the antibody-derived tags from the same CITE experiment as Data 32 and 33. They complement the mRNA and sample-tag reads rather than duplicating them. All four paired runs are included: eight files from this named antibody-tag library.
+These antibody-derived tag reads complement the mRNA input in Data 31 and sample-tag input in Data 32 from the same CITE experiment. The selected input is one complete paired ADT run, with both ends. Tags carry a different kind of information from transcript reads; the three components are not replicate copies.
 
-Amount: 28,795,741,128 bases (28.796 billion). Download: 11,700,505,268 bytes (11.701 decimal GB) in 8 file(s).
+Amount: 13,478,870,416 bases (13.479 billion). Download: 5,458,838,862 bytes (5.459 decimal GB) in 2 file(s).
 
-Why this amount: The four paired runs contain 28,795,741,128 reported bases across eight files.
+Why this amount: Among the two largest outputs from each of 19 ADT experiments (38 runs), reported bases have median 13.065736 billion and range 10.638356–18.672885 billion. The selected run has 13,478,870,416 reported bases.
 
-Public run(s): [SRR19066657](https://www.ebi.ac.uk/ena/browser/view/SRR19066657), [SRR19066658](https://www.ebi.ac.uk/ena/browser/view/SRR19066658), [SRR19066659](https://www.ebi.ac.uk/ena/browser/view/SRR19066659), [SRR19066661](https://www.ebi.ac.uk/ena/browser/view/SRR19066661). Reference: Mixture/feature reference not fixed; no single genomic FASTA is nominated.
+Public run(s): [SRR19066659](https://www.ebi.ac.uk/ena/browser/view/SRR19066659). Reference: Mixture/feature reference not fixed; no single genomic FASTA is nominated.
 
-Check before use: Loading/recovery targets are not measured recovered-cell counts. See Files for exactly which files, if any, have inspected prefixes.
+Check before use: The two listed ends define this run. Cell-recovery targets do not establish its actual cell count; observations, where available, apply only to these exact files.
 
-## Data 32. CITE mRNA reads
+Method and amount sources: [CITE component-run metadata and matched amount comparisons](https://www.ebi.ac.uk/ena/browser/view/PRJNA834796) [ENA counts, release dates and file checksums for the selected wheat, CITE and CHO runs](https://www.ebi.ac.uk/ena/portal/api/search?result=read_run&query=run_accession%3D%22ERR9904291%22+OR+run_accession%3D%22ERR2189808%22+OR+run_accession%3D%22SRR19066659%22+OR+run_accession%3D%22SRR19066665%22+OR+run_accession%3D%22SRR19066668%22&fields=run_accession%2Cread_count%2Cbase_count%2Cfirst_public%2Cfastq_bytes%2Cfastq_md5&format=json&limit=5)
 
-These files contain the mRNA reads from the matched CITE experiment. Antibody tags and sample tags cannot substitute for this transcript library. All four paired runs are included, with eight files kept separate from the tag libraries.
+## Data 31. CITE mRNA reads
 
-Amount: 73,686,380,444 bases (73.686 billion). Download: 38,755,683,391 bytes (38.756 decimal GB) in 8 file(s).
+These mRNA reads provide the transcript component of the same CITE experiment as the antibody-tag input in Data 30 and sample-tag input in Data 32. Both FASTQ ends of one complete paired run are included. The tag libraries cannot substitute for this expression library.
 
-Why this amount: The four paired runs contain 73,686,380,444 reported bases across eight files.
+Amount: 35,465,206,140 bases (35.465 billion). Download: 18,634,282,939 bytes (18.634 decimal GB) in 2 file(s).
 
-Public run(s): [SRR19066662](https://www.ebi.ac.uk/ena/browser/view/SRR19066662), [SRR19066664](https://www.ebi.ac.uk/ena/browser/view/SRR19066664), [SRR19066665](https://www.ebi.ac.uk/ena/browser/view/SRR19066665), [SRR19066666](https://www.ebi.ac.uk/ena/browser/view/SRR19066666). Reference: fa ID 1 / GCF_000001405.39.
+Why this amount: Among the two largest outputs from each of 19 mRNA experiments (38 runs), reported bases have median 38.490196 billion and range 34.674149–52.108714 billion. The selected run has 35,465,206,140 reported bases.
 
-Check before use: Loading/recovery targets are not measured recovered-cell counts. See Files for exactly which files, if any, have inspected prefixes.
+Public run(s): [SRR19066665](https://www.ebi.ac.uk/ena/browser/view/SRR19066665). Reference: fa ID 1 / GCF_000001405.39.
 
-## Data 33. CITE sample tags
+Check before use: The two listed ends define this run. Cell-recovery targets do not establish its actual cell count; observations, where available, apply only to these exact files.
 
-These files contain the sample-tag reads from the same CITE experiment as the antibody-tag and mRNA inputs. They play a different role and are not replicate copies. All four paired runs are included: eight files. Tag definitions may help interpretation or a custom reference, but are not needed for exact FASTQ compression and recovery.
+Method and amount sources: [CITE component-run metadata and matched amount comparisons](https://www.ebi.ac.uk/ena/browser/view/PRJNA834796) [ENA counts, release dates and file checksums for the selected wheat, CITE and CHO runs](https://www.ebi.ac.uk/ena/portal/api/search?result=read_run&query=run_accession%3D%22ERR9904291%22+OR+run_accession%3D%22ERR2189808%22+OR+run_accession%3D%22SRR19066659%22+OR+run_accession%3D%22SRR19066665%22+OR+run_accession%3D%22SRR19066668%22&fields=run_accession%2Cread_count%2Cbase_count%2Cfirst_public%2Cfastq_bytes%2Cfastq_md5&format=json&limit=5)
 
-Amount: 1,566,671,480 bases (1.567 billion). Download: 687,740,927 bytes (687.741 decimal MB) in 8 file(s).
+## Data 32. CITE sample tags
 
-Why this amount: The four paired runs contain 1,566,671,480 reported bases across eight files.
+These sample-tag reads provide the sample-identification component of the same CITE experiment as Data 30 and Data 31. Both ends of one complete paired HTO run are included. It is a naturally small tag input; a tag definition may help interpretation or custom reference matching, but generic lossless compression does not require one.
 
-Public run(s): [SRR19066668](https://www.ebi.ac.uk/ena/browser/view/SRR19066668), [SRR19066669](https://www.ebi.ac.uk/ena/browser/view/SRR19066669), [SRR19066671](https://www.ebi.ac.uk/ena/browser/view/SRR19066671), [SRR19066672](https://www.ebi.ac.uk/ena/browser/view/SRR19066672). Reference: Mixture/feature reference not fixed; no single genomic FASTA is nominated.
+Amount: 393,276,078 bases (393.276 million). Download: 172,719,082 bytes (172.719 decimal MB) in 2 file(s).
 
-Check before use: Loading/recovery targets are not measured recovered-cell counts. See Files for exactly which files, if any, have inspected prefixes.
+Why this amount: Across all 62 HTO runs, reported bases have median 0.3823 billion and range 0.3335–1.5649 billion. The selected run has 393,276,078 reported bases.
 
-## Data 34. Spatial transcript sequencing — Stereo-seq
+Public run(s): [SRR19066668](https://www.ebi.ac.uk/ena/browser/view/SRR19066668). Reference: Mixture/feature reference not fixed; no single genomic FASTA is nominated.
+
+Check before use: The two listed ends define this run. Cell-recovery targets do not establish its actual cell count; observations, where available, apply only to these exact files.
+
+Method and amount sources: [CITE component-run metadata and matched amount comparisons](https://www.ebi.ac.uk/ena/browser/view/PRJNA834796) [ENA counts, release dates and file checksums for the selected wheat, CITE and CHO runs](https://www.ebi.ac.uk/ena/portal/api/search?result=read_run&query=run_accession%3D%22ERR9904291%22+OR+run_accession%3D%22ERR2189808%22+OR+run_accession%3D%22SRR19066659%22+OR+run_accession%3D%22SRR19066665%22+OR+run_accession%3D%22SRR19066668%22&fields=run_accession%2Cread_count%2Cbase_count%2Cfirst_public%2Cfastq_bytes%2Cfastq_md5&format=json&limit=5)
+
+## Data 33. Spatial transcript sequencing — Stereo-seq
 
 This run adds spatial transcript sequencing, where barcode and transcript reads serve different roles and can have different lengths. The complete named run is large because it is a real spatial input. Its capture area and cell/bin depths are unknown; neither should be inferred from file size.
 
@@ -484,7 +492,7 @@ Public run(s): [SRR29351083](https://www.ebi.ac.uk/ena/browser/view/SRR29351083)
 
 Check before use: Capture area and observed cell/bin depths remain unknown.
 
-## Data 35. Bulk ATAC sequencing
+## Data 34. Bulk ATAC sequencing
 
 This K562 library represents a conventional paired bulk-ATAC replicate. It samples accessible chromatin rather than genome-wide DNA or RNA. Its amount is close to the middle of 32 study runs, although total bases do not establish the number of useful, distinct fragments.
 
@@ -494,7 +502,7 @@ Why this amount: Thirty-two positive ATAC source runs span 6.612–19.462 billio
 
 Public run(s): [SRR30495077](https://www.ebi.ac.uk/ena/browser/view/SRR30495077). Reference: fa ID 1 / GCF_000001405.39.
 
-## Data 36. Rice ChIP sequencing
+## Data 35. Rice ChIP sequencing
 
 This rice library adds ChIP sequencing, which samples protein-associated chromatin. ATAC and CUT&RUN use different preparations and do not replace it. Its amount is close to the middle of eleven comparable runs in the study.
 
@@ -504,7 +512,7 @@ Why this amount: 7.85 billion bases is close to its 11-run study median of 7.98 
 
 Public run(s): [DRR1000045](https://www.ebi.ac.uk/ena/browser/view/DRR1000045). Reference: fa ID 8 / GCA_014636035.1.
 
-## Data 37. Human CUT&RUN sequencing
+## Data 36. Human CUT&RUN sequencing
 
 This run adds CUT&RUN, documented by its exact experiment even though the archive uses the broad OTHER label. It complements ATAC and ChIP inputs. Its amount falls within the middle 80% of thirty comparable study runs.
 
@@ -516,7 +524,7 @@ Public run(s): [SRR26362943](https://www.ebi.ac.uk/ena/browser/view/SRR26362943)
 
 Check before use: Normalization-reference composition and processed/usable depth remain unknown.
 
-## Data 38. Yeast Hi-C sequencing
+## Data 37. Yeast Hi-C sequencing
 
 This yeast library adds proximity-ligation reads used to study contacts between genome regions. Its compact eukaryotic reference also differs from the large animal and plant references. Its amount lies within both the source-study range and the wider yeast Hi-C comparison.
 
@@ -526,7 +534,7 @@ Why this amount: 15.04 billion bases is within both its 56-run study range and t
 
 Public run(s): [SRR30894055](https://www.ebi.ac.uk/ena/browser/view/SRR30894055). Reference: fa ID 7 / GCF_000146045.2.
 
-## Data 39. Human accessibility sequencing — Ultima
+## Data 38. Human accessibility sequencing — Ultima
 
 This Ultima input adds a deployed sequencing technology in an accessibility assay. The supplied single-read, variable-length format differs from the conventional paired ATAC input. Its amount is within the middle 80% of the 248-run source study.
 
@@ -536,7 +544,7 @@ Why this amount: 9.61 billion bases lies within the 248-run study’s middle-80%
 
 Public run(s): [SRR34546226](https://www.ebi.ac.uk/ena/browser/view/SRR34546226). Reference: fa ID 1 / GCF_000001405.39.
 
-## Data 40. Rice bisulfite sequencing
+## Data 39. Rice bisulfite sequencing
 
 This rice library adds bisulfite sequencing, whose preparation changes the sequence letters being stored. Ordinary genome sequencing or capture does not supply the same condition. Its amount is comparable to its source study and the wider rice bisulfite examples.
 
@@ -546,7 +554,7 @@ Why this amount: 19.65 billion bases is close to its six-run study and within th
 
 Public run(s): [DRR1009870](https://www.ebi.ac.uk/ena/browser/view/DRR1009870). Reference: fa ID 8 / GCA_014636035.1.
 
-## Data 41. Fungal ITS community markers
+## Data 40. Fungal ITS community markers
 
 This soil-root fungal library adds ITS marker sequencing on MiSeq. Both submitted read ends of FL_fungi_1 are included. Its amount is close to the middle of twelve ITS libraries from the same study. Those fungal libraries are compared separately from the study's bacterial 16S libraries.
 
@@ -558,7 +566,7 @@ Public run(s): [SRR30515680](https://www.ebi.ac.uk/ena/browser/view/SRR30515680)
 
 Method and amount sources: [Exact fungal ITS library and submitted pair](https://www.ncbi.nlm.nih.gov/sra/SRX25939332)
 
-## Data 42. Bacterial 16S community markers
+## Data 41. Bacterial 16S community markers
 
 This soil-root bacterial library adds classic 16S community-marker sequencing. Both read ends of SH_bacteria_1 are included. Its amount is close to the middle of twelve bacterial libraries from the study; fungal ITS is a different target and does not replace this input.
 
@@ -570,7 +578,7 @@ Public run(s): [SRR30515673](https://www.ebi.ac.uk/ena/browser/view/SRR30515673)
 
 Method and amount sources: [Exact bacterial 16S library and submitted pair](https://www.ncbi.nlm.nih.gov/sra/SRX25939339)
 
-## Data 43. Viral amplicon sequencing
+## Data 42. Viral amplicon sequencing
 
 This specimen-level viral amplicon run adds targeted sequencing of a small genome. Its amount is close to the middle of 58 comparable specimen outputs. A human whole-genome-sized delivery would not represent this task.
 
@@ -580,7 +588,7 @@ Why this amount: 67.83 million bases is near the 73.35-million median among 58 c
 
 Public run(s): [DRR1051020](https://www.ebi.ac.uk/ena/browser/view/DRR1051020). Reference: fa ID 14 / NC_045512.2.
 
-## Data 45. Freshwater environmental-DNA markers
+## Data 43. Freshwater environmental-DNA markers
 
 This input adds aquatic environmental-DNA marker sequencing. The library is associated with filter ITD20, extraction A and marker set VENE from Lugano. Both archive read ends are included. It is a sample/marker output, not an entire sequencing pool; the exact upstream filtering and barcode-splitting stage is unknown.
 
@@ -594,7 +602,7 @@ Check before use: The precise upstream demultiplexing and filtering boundary rem
 
 Method and amount sources: [Exact short-read aquatic marker archive unit](https://www.ebi.ac.uk/ena/browser/view/ERR7749063) [Official aquatic sample/site table and naming descriptions](https://www.ebi.ac.uk/biostudies/studies/S-BSST391) [Author workflow manifest and sample sheet](https://github.com/envmetagen/mussels_package)
 
-## Data 48. Tuberculosis bacterial isolate
+## Data 44. Tuberculosis bacterial isolate
 
 This input adds a compact bacterial genome beyond E. coli and an inspected trimmed-read format. Its compressed size is below one GB, yet its reported bases are substantial relative to the reference. It lies somewhat above the source study's upper decile, rather than being an ordinary median example.
 
@@ -604,7 +612,7 @@ Why this amount: 833 million bases is about 189 times the reference length in ra
 
 Public run(s): [ERR11252400](https://www.ebi.ac.uk/ena/browser/view/ERR11252400). Reference: fa ID 5 / GCF_000195955.2.
 
-## Data 49. E. coli bacterial isolate
+## Data 45. E. coli bacterial isolate
 
 This named MG1655 strain provides a classic bacterial-isolate input with a compact reference. The paired run's amount is close to both its source-study median and the broader E. coli comparison. Exact sample/reference agreement and usable mapped coverage still need checking.
 
@@ -614,7 +622,7 @@ Why this amount: 450 million bases is close to the broader E. coli Illumina medi
 
 Public run(s): [DRR171213](https://www.ebi.ac.uk/ena/browser/view/DRR171213). Reference: fa ID 4 / GCF_000005845.2.
 
-## Data 50. Yeast whole-genome sequencing
+## Data 46. Yeast whole-genome sequencing
 
 This input adds a compact eukaryotic microbial genome alongside bacterial isolates. Genome sequencing also differs from the yeast Hi-C preparation. Its amount is toward the upper end of its study, making it a high-yield research example rather than a claimed universal norm.
 
@@ -624,7 +632,7 @@ Why this amount: 2.12 billion bases is near the upper quartile of its 61-run stu
 
 Public run(s): [SRR30502372](https://www.ebi.ac.uk/ena/browser/view/SRR30502372). Reference: fa ID 7 / GCF_000146045.2.
 
-## Data 51. Long-read mock community
+## Data 47. Long-read mock community
 
 This run adds long reads from a known mixture of genomes. It differs from single-organism genome sequencing and short community-marker libraries. The source explicitly describes ultra-deep sequencing of a mock community, so its amount belongs to that research purpose.
 
@@ -634,7 +642,7 @@ Why this amount: 16.51 billion bases is close to the four-positive-run source-st
 
 Public run(s): [ERR3152366](https://www.ebi.ac.uk/ena/browser/view/ERR3152366). Reference: Mixture/feature reference not fixed; no single genomic FASTA is nominated.
 
-## Data 52. Fermentation community RNA
+## Data 48. Fermentation community RNA
 
 This paired library represents RNA sequencing of a cereal-fermentation community at one named timepoint. Its amount lies within five documented timepoints. It adds a mixed-community RNA task, rather than treating all metagenomic inputs as DNA sequencing.
 
@@ -644,7 +652,7 @@ Why this amount: Five named fermentation timepoints contain 10.324–11.764 bill
 
 Public run(s): [DRR1003246](https://www.ebi.ac.uk/ena/browser/view/DRR1003246). Reference: Mixture/feature reference not fixed; no single genomic FASTA is nominated.
 
-## Data 53. Soil shotgun community DNA
+## Data 49. Soil shotgun community DNA
 
 This input represents environmental shotgun DNA sequencing. It complements the gut and food mixtures and the targeted soil-marker inputs. Its amount is close to the middle of eight study runs and consistent with the wider soil comparison.
 
@@ -654,7 +662,7 @@ Why this amount: 10.12 billion bases is close to its eight-run study median of 1
 
 Public run(s): [DRR1000746](https://www.ebi.ac.uk/ena/browser/view/DRR1000746). Reference: Mixture/feature reference not fixed; no single genomic FASTA is nominated.
 
-## Data 54. Gut shotgun community DNA
+## Data 50. Gut shotgun community DNA
 
 This input represents ordinary human-gut shotgun DNA sequencing. It provides a host-associated community alongside soil and food mixtures. Its amount fits both its source study and the wider gut-study comparison.
 
@@ -664,7 +672,7 @@ Why this amount: 6.60 billion bases is close to its 30-run study and inside the 
 
 Public run(s): [DRR1003638](https://www.ebi.ac.uk/ena/browser/view/DRR1003638). Reference: Mixture/feature reference not fixed; no single genomic FASTA is nominated.
 
-## Data 55. Honey shotgun community DNA
+## Data 51. Honey shotgun community DNA
 
 This honey-derived run adds food-associated shotgun DNA sequencing. It is a complete paired run with an amount within the source study's 63-run range. The mixed reference setting differs from pure crop genomes and bacterial isolates; the actual ingredient/community proportions are not established.
 
@@ -676,19 +684,19 @@ Public run(s): [SRR27931704](https://www.ebi.ac.uk/ena/browser/view/SRR27931704)
 
 Method and amount sources: [Exact honey shotgun source sample](https://www.ebi.ac.uk/ena/browser/view/SRX23588786)
 
-## Data 56. CHO cell-line genome assembly
+## Data 52. CHO genome-assembly research
 
-This named CHO genomic library adds genome-assembly research on an industrial production cell line. Both paired runs are included: four files, not half of the named preparation. It is an assembly input, not a claim that these reads represent routine manufacturing quality control.
+This PCR-free CHO genomic run represents genome-assembly research on an industrial production-cell lineage. Both ends of one named CHO6262360 sample are included, with 67.10 billion reported bases. It is an assembly-related genomic workload, not a manufacturing quality-control assay or the entire project.
 
-Amount: 77,003,500,500 bases (77.004 billion). Download: 57,234,426,121 bytes (57.234 decimal GB) in 4 file(s).
+Amount: 67,097,495,750 bases (67.097 billion). Download: 39,740,914,851 bytes (39.741 decimal GB) in 2 file(s).
 
-Why this amount: Two public paired runs of the same named CHO genomic preparation sum to 77,003,500,500 reported bases.
+Why this amount: The named CHO6262360 paired genomic run contains 67,097,495,750 reported bases.
 
-Public run(s): [ERR2192893](https://www.ebi.ac.uk/ena/browser/view/ERR2192893), [ERR2192894](https://www.ebi.ac.uk/ena/browser/view/ERR2192894). Reference: fa ID 17 / GCF_003668045.3.
+Public run(s): [ERR2189808](https://www.ebi.ac.uk/ena/browser/view/ERR2189808). Reference: fa ID 17 / GCF_003668045.3.
 
-Check before use: The complete two-run named library is not the entire CHO assembly project.
+Check before use: ENA generated the listed FASTQs from submitted CRAM; they are not certified untouched instrument files. The exact CHO derivative and agreement with the proposed reference remain unknown. The files and their order, lengths, qualities and integrity have not been examined.
 
-Method and amount sources: [Named CHO genomic assembly library](https://www.ebi.ac.uk/ena/browser/view/PRJEB12319)
+Method and amount sources: [CHO6262360 paired genomic run metadata](https://www.ebi.ac.uk/ena/browser/view/ERR2189808) [ENA counts, release dates and file checksums for the selected wheat, CITE and CHO runs](https://www.ebi.ac.uk/ena/portal/api/search?result=read_run&query=run_accession%3D%22ERR9904291%22+OR+run_accession%3D%22ERR2189808%22+OR+run_accession%3D%22SRR19066659%22+OR+run_accession%3D%22SRR19066665%22+OR+run_accession%3D%22SRR19066668%22&fields=run_accession%2Cread_count%2Cbase_count%2Cfirst_public%2Cfastq_bytes%2Cfastq_md5&format=json&limit=5)
 
 # Download, check and prepare the files
 
@@ -740,72 +748,107 @@ fa 16: Chenopodium quinoa — ASM168347v1 / [GCF_001683475.1](https://ftp.ncbi.n
 
 fa 17: Cricetulus griseus — CriGri-PICRH-1.0 / [GCF_003668045.3](https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/003/668/045/GCF_003668045.3_CriGri-PICRH-1.0/GCF_003668045.3_CriGri-PICRH-1.0_genomic.fna.gz). Proposed same-species assembly; sample/strain/cultivar/target matching and FASTA content unverified.
 
-fa 18: Triticum aestivum cultivar Renan — Triticum_aestivum_Renan_v2.1 / [GCA_937894285.1](https://www.ncbi.nlm.nih.gov/datasets/genome/GCA_937894285.1/). Same Renan cultivar assemblyv2.1; no measured read match.
+fa 18: Triticum aestivum cultivar Renan — Triticum_aestivum_Renan_v2.1 / [GCA_937894285.1](https://www.ncbi.nlm.nih.gov/datasets/genome/GCA_937894285.1/). Same species, different cultivar: proposed Renan assembly for Thatcher wheat reads; exact matching is unverified.
 
-Renan GCA_937894285.1 is the proposed same-cultivar assembly. CITE tag definitions and spatial masks/coordinates may be needed for interpretation or a custom reference, but not for exact compression and recovery of the supplied FASTQ. Taxonomy tables are auxiliary files, not genomic references.
+Renan GCA_937894285.1 is a same-species, different-cultivar reference proposal for the Thatcher wheat reads. CITE tag definitions and spatial masks/coordinates may be needed for interpretation or a custom reference, but not for exact compression and recovery of the supplied FASTQ. Taxonomy tables are auxiliary files, not genomic references.
 
-# All files for multi-run inputs
+# Files for every input
 
-Keep these run boundaries. The Files sheet and TSV list all 115 files, including both ends of ordinary paired runs. Names and URLs below are exact listed values; no combined filename has been invented.
+The following list contains every selected file. Preserve the two ends of each paired run as separate FASTQs. The one BAM and one single-read CNGB file are listed separately. Names and URLs are exact catalogue values.
 
-## Data 16. Wheat genome assembly — Renan library — 6 files
-
-| Run | End / role | Exact filename | Download |
-| --- | --- | --- | --- |
-| ERR6348210 | Read end 1 | ERR6348210_1.fastq.gz | [ERR6348210_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR634/000/ERR6348210/ERR6348210_1.fastq.gz) |
-| ERR6348210 | Read end 2 | ERR6348210_2.fastq.gz | [ERR6348210_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR634/000/ERR6348210/ERR6348210_2.fastq.gz) |
-| ERR6348211 | Read end 1 | ERR6348211_1.fastq.gz | [ERR6348211_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR634/001/ERR6348211/ERR6348211_1.fastq.gz) |
-| ERR6348211 | Read end 2 | ERR6348211_2.fastq.gz | [ERR6348211_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR634/001/ERR6348211/ERR6348211_2.fastq.gz) |
-| ERR6348212 | Read end 1 | ERR6348212_1.fastq.gz | [ERR6348212_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR634/002/ERR6348212/ERR6348212_1.fastq.gz) |
-| ERR6348212 | Read end 2 | ERR6348212_2.fastq.gz | [ERR6348212_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR634/002/ERR6348212/ERR6348212_2.fastq.gz) |
-
-## Data 31. CITE antibody tags — 8 files
-
-| Run | End / role | Exact filename | Download |
-| --- | --- | --- | --- |
-| SRR19066657 | Read end 1 | SRR19066657_1.fastq.gz | [SRR19066657_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/057/SRR19066657/SRR19066657_1.fastq.gz) |
-| SRR19066657 | Read end 2 | SRR19066657_2.fastq.gz | [SRR19066657_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/057/SRR19066657/SRR19066657_2.fastq.gz) |
-| SRR19066658 | Read end 1 | SRR19066658_1.fastq.gz | [SRR19066658_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/058/SRR19066658/SRR19066658_1.fastq.gz) |
-| SRR19066658 | Read end 2 | SRR19066658_2.fastq.gz | [SRR19066658_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/058/SRR19066658/SRR19066658_2.fastq.gz) |
-| SRR19066659 | Read end 1 | SRR19066659_1.fastq.gz | [SRR19066659_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/059/SRR19066659/SRR19066659_1.fastq.gz) |
-| SRR19066659 | Read end 2 | SRR19066659_2.fastq.gz | [SRR19066659_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/059/SRR19066659/SRR19066659_2.fastq.gz) |
-| SRR19066661 | Read end 1 | SRR19066661_1.fastq.gz | [SRR19066661_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/061/SRR19066661/SRR19066661_1.fastq.gz) |
-| SRR19066661 | Read end 2 | SRR19066661_2.fastq.gz | [SRR19066661_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/061/SRR19066661/SRR19066661_2.fastq.gz) |
-
-## Data 32. CITE mRNA reads — 8 files
-
-| Run | End / role | Exact filename | Download |
-| --- | --- | --- | --- |
-| SRR19066662 | Read end 1 | SRR19066662_1.fastq.gz | [SRR19066662_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/062/SRR19066662/SRR19066662_1.fastq.gz) |
-| SRR19066662 | Read end 2 | SRR19066662_2.fastq.gz | [SRR19066662_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/062/SRR19066662/SRR19066662_2.fastq.gz) |
-| SRR19066664 | Read end 1 | SRR19066664_1.fastq.gz | [SRR19066664_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/064/SRR19066664/SRR19066664_1.fastq.gz) |
-| SRR19066664 | Read end 2 | SRR19066664_2.fastq.gz | [SRR19066664_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/064/SRR19066664/SRR19066664_2.fastq.gz) |
-| SRR19066665 | Read end 1 | SRR19066665_1.fastq.gz | [SRR19066665_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/065/SRR19066665/SRR19066665_1.fastq.gz) |
-| SRR19066665 | Read end 2 | SRR19066665_2.fastq.gz | [SRR19066665_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/065/SRR19066665/SRR19066665_2.fastq.gz) |
-| SRR19066666 | Read end 1 | SRR19066666_1.fastq.gz | [SRR19066666_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/066/SRR19066666/SRR19066666_1.fastq.gz) |
-| SRR19066666 | Read end 2 | SRR19066666_2.fastq.gz | [SRR19066666_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/066/SRR19066666/SRR19066666_2.fastq.gz) |
-
-## Data 33. CITE sample tags — 8 files
-
-| Run | End / role | Exact filename | Download |
-| --- | --- | --- | --- |
-| SRR19066668 | Read end 1 | SRR19066668_1.fastq.gz | [SRR19066668_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/068/SRR19066668/SRR19066668_1.fastq.gz) |
-| SRR19066668 | Read end 2 | SRR19066668_2.fastq.gz | [SRR19066668_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/068/SRR19066668/SRR19066668_2.fastq.gz) |
-| SRR19066669 | Read end 1 | SRR19066669_1.fastq.gz | [SRR19066669_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/069/SRR19066669/SRR19066669_1.fastq.gz) |
-| SRR19066669 | Read end 2 | SRR19066669_2.fastq.gz | [SRR19066669_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/069/SRR19066669/SRR19066669_2.fastq.gz) |
-| SRR19066671 | Read end 1 | SRR19066671_1.fastq.gz | [SRR19066671_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/071/SRR19066671/SRR19066671_1.fastq.gz) |
-| SRR19066671 | Read end 2 | SRR19066671_2.fastq.gz | [SRR19066671_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/071/SRR19066671/SRR19066671_2.fastq.gz) |
-| SRR19066672 | Read end 1 | SRR19066672_1.fastq.gz | [SRR19066672_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/072/SRR19066672/SRR19066672_1.fastq.gz) |
-| SRR19066672 | Read end 2 | SRR19066672_2.fastq.gz | [SRR19066672_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/072/SRR19066672/SRR19066672_2.fastq.gz) |
-
-## Data 56. CHO cell-line genome assembly — 4 files
-
-| Run | End / role | Exact filename | Download |
-| --- | --- | --- | --- |
-| ERR2192893 | Read end 1 | ERR2192893_1.fastq.gz | [ERR2192893_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR219/003/ERR2192893/ERR2192893_1.fastq.gz) |
-| ERR2192893 | Read end 2 | ERR2192893_2.fastq.gz | [ERR2192893_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR219/003/ERR2192893/ERR2192893_2.fastq.gz) |
-| ERR2192894 | Read end 1 | ERR2192894_1.fastq.gz | [ERR2192894_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR219/004/ERR2192894/ERR2192894_1.fastq.gz) |
-| ERR2192894 | Read end 2 | ERR2192894_2.fastq.gz | [ERR2192894_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR219/004/ERR2192894/ERR2192894_2.fastq.gz) |
+| Data ID | Run / source | End / role | Exact filename | Download |
+| --- | --- | --- | --- | --- |
+| 1 | ERR17003126 | Read end 1; pairing unverified | ERR17003126_1.fastq.gz | [ERR17003126_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR170/026/ERR17003126/ERR17003126_1.fastq.gz) |
+| 1 | ERR17003126 | Read end 2; pairing unverified | ERR17003126_2.fastq.gz | [ERR17003126_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR170/026/ERR17003126/ERR17003126_2.fastq.gz) |
+| 2 | ERR16794642 | Read end 1; pairing unverified | ERR16794642_1.fastq.gz | [ERR16794642_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR167/042/ERR16794642/ERR16794642_1.fastq.gz) |
+| 2 | ERR16794642 | Read end 2; pairing unverified | ERR16794642_2.fastq.gz | [ERR16794642_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR167/042/ERR16794642/ERR16794642_2.fastq.gz) |
+| 3 | SRR33329596 | Read end 1; pairing unverified | SRR33329596_1.fastq.gz | [SRR33329596_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR333/096/SRR33329596/SRR33329596_1.fastq.gz) |
+| 3 | SRR33329596 | Read end 2; pairing unverified | SRR33329596_2.fastq.gz | [SRR33329596_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR333/096/SRR33329596/SRR33329596_2.fastq.gz) |
+| 4 | ERR15383198 | Read end 1; pairing unverified | ERR15383198_1.fastq.gz | [ERR15383198_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR153/098/ERR15383198/ERR15383198_1.fastq.gz) |
+| 4 | ERR15383198 | Read end 2; pairing unverified | ERR15383198_2.fastq.gz | [ERR15383198_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR153/098/ERR15383198/ERR15383198_2.fastq.gz) |
+| 5 | ERR12954382 | Single supplied FASTQ object | ERR12954382.fastq.gz | [ERR12954382.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR129/082/ERR12954382/ERR12954382.fastq.gz) |
+| 6 | ONT_GIAB2025_HG002_PAW70337_SUP | BAM source; later FASTQ export | calls.sorted.bam | [calls.sorted.bam](https://ont-open-data.s3.amazonaws.com/giab_2025.01/basecalling/sup/HG002/PAW70337/calls.sorted.bam) |
+| 7 | ERR14732808 | Single supplied FASTQ object | ERR14732808.fastq.gz | [ERR14732808.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR147/008/ERR14732808/ERR14732808.fastq.gz) |
+| 8 | CNR1409093 | Single-read FASTQ source; not mates | WY_reads.fq.gz | [WY_reads.fq.gz](https://ftp.cngb.org/pub/CNSA/data7/CNP0007646/CNS1382495/CNX1236558/CNR1409093/WY_reads.fq.gz) |
+| 9 | ERR12411150 | Read end 1; pairing unverified | ERR12411150_1.fastq.gz | [ERR12411150_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR124/050/ERR12411150/ERR12411150_1.fastq.gz) |
+| 9 | ERR12411150 | Read end 2; pairing unverified | ERR12411150_2.fastq.gz | [ERR12411150_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR124/050/ERR12411150/ERR12411150_2.fastq.gz) |
+| 10 | SRR8906645 | Read end 1; pairing unverified | SRR8906645_1.fastq.gz | [SRR8906645_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR890/005/SRR8906645/SRR8906645_1.fastq.gz) |
+| 10 | SRR8906645 | Read end 2; pairing unverified | SRR8906645_2.fastq.gz | [SRR8906645_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR890/005/SRR8906645/SRR8906645_2.fastq.gz) |
+| 11 | DRR341924 | Single supplied FASTQ object | DRR341924.fastq.gz | [DRR341924.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/DRR341/DRR341924/DRR341924.fastq.gz) |
+| 12 | SRR19440963 | Read end 1; pairing unverified | SRR19440963_1.fastq.gz | [SRR19440963_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR194/063/SRR19440963/SRR19440963_1.fastq.gz) |
+| 12 | SRR19440963 | Read end 2; pairing unverified | SRR19440963_2.fastq.gz | [SRR19440963_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR194/063/SRR19440963/SRR19440963_2.fastq.gz) |
+| 13 | DRR095727 | Read end 1; pairing unverified | DRR095727_1.fastq.gz | [DRR095727_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/DRR095/DRR095727/DRR095727_1.fastq.gz) |
+| 13 | DRR095727 | Read end 2; pairing unverified | DRR095727_2.fastq.gz | [DRR095727_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/DRR095/DRR095727/DRR095727_2.fastq.gz) |
+| 14 | SRR24804436 | Read end 1; pairing unverified | SRR24804436_1.fastq.gz | [SRR24804436_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR248/036/SRR24804436/SRR24804436_1.fastq.gz) |
+| 14 | SRR24804436 | Read end 2; pairing unverified | SRR24804436_2.fastq.gz | [SRR24804436_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR248/036/SRR24804436/SRR24804436_2.fastq.gz) |
+| 15 | ERR14032264 | Read end 1 | ERR14032264_1.fastq.gz | [ERR14032264_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR140/064/ERR14032264/ERR14032264_1.fastq.gz) |
+| 15 | ERR14032264 | Read end 2 | ERR14032264_2.fastq.gz | [ERR14032264_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR140/064/ERR14032264/ERR14032264_2.fastq.gz) |
+| 16 | ERR9904291 | Read end 1 | ERR9904291_1.fastq.gz | [ERR9904291_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR990/001/ERR9904291/ERR9904291_1.fastq.gz) |
+| 16 | ERR9904291 | Read end 2 | ERR9904291_2.fastq.gz | [ERR9904291_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR990/001/ERR9904291/ERR9904291_2.fastq.gz) |
+| 17 | SRR14993639 | Read end 1; pairing unverified | SRR14993639_1.fastq.gz | [SRR14993639_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR149/039/SRR14993639/SRR14993639_1.fastq.gz) |
+| 17 | SRR14993639 | Read end 2; pairing unverified | SRR14993639_2.fastq.gz | [SRR14993639_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR149/039/SRR14993639/SRR14993639_2.fastq.gz) |
+| 18 | DRR1000971 | Read end 1; pairing unverified | DRR1000971_1.fastq.gz | [DRR1000971_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/DRR100/001/DRR1000971/DRR1000971_1.fastq.gz) |
+| 18 | DRR1000971 | Read end 2; pairing unverified | DRR1000971_2.fastq.gz | [DRR1000971_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/DRR100/001/DRR1000971/DRR1000971_2.fastq.gz) |
+| 19 | ERR13943038 | Read end 1; pairing unverified | ERR13943038_1.fastq.gz | [ERR13943038_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR139/038/ERR13943038/ERR13943038_1.fastq.gz) |
+| 19 | ERR13943038 | Read end 2; pairing unverified | ERR13943038_2.fastq.gz | [ERR13943038_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR139/038/ERR13943038/ERR13943038_2.fastq.gz) |
+| 20 | SRR8801873 | Single supplied FASTQ object | SRR8801873_subreads.fastq.gz | [SRR8801873_subreads.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR880/003/SRR8801873/SRR8801873_subreads.fastq.gz) |
+| 21 | ERR13669551 | Single supplied FASTQ object | ERR13669551.fastq.gz | [ERR13669551.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR136/051/ERR13669551/ERR13669551.fastq.gz) |
+| 22 | SRR14728885 | Single supplied FASTQ object | SRR14728885_subreads.fastq.gz | [SRR14728885_subreads.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR147/085/SRR14728885/SRR14728885_subreads.fastq.gz) |
+| 23 | ERR10030615 | Read end 1; pairing unverified | ERR10030615_1.fastq.gz | [ERR10030615_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR100/015/ERR10030615/ERR10030615_1.fastq.gz) |
+| 23 | ERR10030615 | Read end 2; pairing unverified | ERR10030615_2.fastq.gz | [ERR10030615_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR100/015/ERR10030615/ERR10030615_2.fastq.gz) |
+| 24 | SRR14627767 | Read end 1 | SRR14627767_1.fastq.gz | [SRR14627767_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR146/067/SRR14627767/SRR14627767_1.fastq.gz) |
+| 24 | SRR14627767 | Read end 2 | SRR14627767_2.fastq.gz | [SRR14627767_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR146/067/SRR14627767/SRR14627767_2.fastq.gz) |
+| 25 | DRR1089360 | Single supplied FASTQ object | DRR1089360.fastq.gz | [DRR1089360.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/DRR108/000/DRR1089360/DRR1089360.fastq.gz) |
+| 26 | DRR1069746 | Read end 1; pairing unverified | DRR1069746_1.fastq.gz | [DRR1069746_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/DRR106/006/DRR1069746/DRR1069746_1.fastq.gz) |
+| 26 | DRR1069746 | Read end 2; pairing unverified | DRR1069746_2.fastq.gz | [DRR1069746_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/DRR106/006/DRR1069746/DRR1069746_2.fastq.gz) |
+| 27 | SRR30608496 | Single supplied FASTQ object | SRR30608496.fastq.gz | [SRR30608496.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR306/096/SRR30608496/SRR30608496.fastq.gz) |
+| 28 | SRR36288068 | Single supplied FASTQ object | SRR36288068_1.fastq.gz | [SRR36288068_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR362/068/SRR36288068/SRR36288068_1.fastq.gz) |
+| 29 | SRR6520293 | Read end 1; pairing unverified | SRR6520293_1.fastq.gz | [SRR6520293_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR652/003/SRR6520293/SRR6520293_1.fastq.gz) |
+| 29 | SRR6520293 | Read end 2; pairing unverified | SRR6520293_2.fastq.gz | [SRR6520293_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR652/003/SRR6520293/SRR6520293_2.fastq.gz) |
+| 30 | SRR19066659 | Read end 1 | SRR19066659_1.fastq.gz | [SRR19066659_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/059/SRR19066659/SRR19066659_1.fastq.gz) |
+| 30 | SRR19066659 | Read end 2 | SRR19066659_2.fastq.gz | [SRR19066659_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/059/SRR19066659/SRR19066659_2.fastq.gz) |
+| 31 | SRR19066665 | Read end 1 | SRR19066665_1.fastq.gz | [SRR19066665_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/065/SRR19066665/SRR19066665_1.fastq.gz) |
+| 31 | SRR19066665 | Read end 2 | SRR19066665_2.fastq.gz | [SRR19066665_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/065/SRR19066665/SRR19066665_2.fastq.gz) |
+| 32 | SRR19066668 | Read end 1 | SRR19066668_1.fastq.gz | [SRR19066668_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/068/SRR19066668/SRR19066668_1.fastq.gz) |
+| 32 | SRR19066668 | Read end 2 | SRR19066668_2.fastq.gz | [SRR19066668_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR190/068/SRR19066668/SRR19066668_2.fastq.gz) |
+| 33 | SRR29351083 | Read end 1; pairing unverified | SRR29351083_1.fastq.gz | [SRR29351083_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR293/083/SRR29351083/SRR29351083_1.fastq.gz) |
+| 33 | SRR29351083 | Read end 2; pairing unverified | SRR29351083_2.fastq.gz | [SRR29351083_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR293/083/SRR29351083/SRR29351083_2.fastq.gz) |
+| 34 | SRR30495077 | Read end 1 | SRR30495077_1.fastq.gz | [SRR30495077_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR304/077/SRR30495077/SRR30495077_1.fastq.gz) |
+| 34 | SRR30495077 | Read end 2 | SRR30495077_2.fastq.gz | [SRR30495077_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR304/077/SRR30495077/SRR30495077_2.fastq.gz) |
+| 35 | DRR1000045 | Read end 1; pairing unverified | DRR1000045_1.fastq.gz | [DRR1000045_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/DRR100/005/DRR1000045/DRR1000045_1.fastq.gz) |
+| 35 | DRR1000045 | Read end 2; pairing unverified | DRR1000045_2.fastq.gz | [DRR1000045_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/DRR100/005/DRR1000045/DRR1000045_2.fastq.gz) |
+| 36 | SRR26362943 | Read end 1; pairing unverified | SRR26362943_1.fastq.gz | [SRR26362943_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR263/043/SRR26362943/SRR26362943_1.fastq.gz) |
+| 36 | SRR26362943 | Read end 2; pairing unverified | SRR26362943_2.fastq.gz | [SRR26362943_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR263/043/SRR26362943/SRR26362943_2.fastq.gz) |
+| 37 | SRR30894055 | Read end 1; pairing unverified | SRR30894055_1.fastq.gz | [SRR30894055_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR308/055/SRR30894055/SRR30894055_1.fastq.gz) |
+| 37 | SRR30894055 | Read end 2; pairing unverified | SRR30894055_2.fastq.gz | [SRR30894055_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR308/055/SRR30894055/SRR30894055_2.fastq.gz) |
+| 38 | SRR34546226 | Single supplied FASTQ object | SRR34546226.fastq.gz | [SRR34546226.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR345/026/SRR34546226/SRR34546226.fastq.gz) |
+| 39 | DRR1009870 | Read end 1; pairing unverified | DRR1009870_1.fastq.gz | [DRR1009870_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/DRR100/000/DRR1009870/DRR1009870_1.fastq.gz) |
+| 39 | DRR1009870 | Read end 2; pairing unverified | DRR1009870_2.fastq.gz | [DRR1009870_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/DRR100/000/DRR1009870/DRR1009870_2.fastq.gz) |
+| 40 | SRR30515680 | Read end 1 | SRR30515680_1.fastq.gz | [SRR30515680_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR305/080/SRR30515680/SRR30515680_1.fastq.gz) |
+| 40 | SRR30515680 | Read end 2 | SRR30515680_2.fastq.gz | [SRR30515680_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR305/080/SRR30515680/SRR30515680_2.fastq.gz) |
+| 41 | SRR30515673 | Read end 1 | SRR30515673_1.fastq.gz | [SRR30515673_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR305/073/SRR30515673/SRR30515673_1.fastq.gz) |
+| 41 | SRR30515673 | Read end 2 | SRR30515673_2.fastq.gz | [SRR30515673_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR305/073/SRR30515673/SRR30515673_2.fastq.gz) |
+| 42 | DRR1051020 | Read end 1; pairing unverified | DRR1051020_1.fastq.gz | [DRR1051020_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/DRR105/000/DRR1051020/DRR1051020_1.fastq.gz) |
+| 42 | DRR1051020 | Read end 2; pairing unverified | DRR1051020_2.fastq.gz | [DRR1051020_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/DRR105/000/DRR1051020/DRR1051020_2.fastq.gz) |
+| 43 | ERR7749063 | Read end 1; pairing unverified | ERR7749063_1.fastq.gz | [ERR7749063_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR774/003/ERR7749063/ERR7749063_1.fastq.gz) |
+| 43 | ERR7749063 | Read end 2; pairing unverified | ERR7749063_2.fastq.gz | [ERR7749063_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR774/003/ERR7749063/ERR7749063_2.fastq.gz) |
+| 44 | ERR11252400 | Read end 1; pairing unverified | ERR11252400_1.fastq.gz | [ERR11252400_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR112/000/ERR11252400/ERR11252400_1.fastq.gz) |
+| 44 | ERR11252400 | Read end 2; pairing unverified | ERR11252400_2.fastq.gz | [ERR11252400_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR112/000/ERR11252400/ERR11252400_2.fastq.gz) |
+| 45 | DRR171213 | Read end 1; pairing unverified | DRR171213_1.fastq.gz | [DRR171213_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/DRR171/DRR171213/DRR171213_1.fastq.gz) |
+| 45 | DRR171213 | Read end 2; pairing unverified | DRR171213_2.fastq.gz | [DRR171213_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/DRR171/DRR171213/DRR171213_2.fastq.gz) |
+| 46 | SRR30502372 | Read end 1; pairing unverified | SRR30502372_1.fastq.gz | [SRR30502372_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR305/072/SRR30502372/SRR30502372_1.fastq.gz) |
+| 46 | SRR30502372 | Read end 2; pairing unverified | SRR30502372_2.fastq.gz | [SRR30502372_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR305/072/SRR30502372/SRR30502372_2.fastq.gz) |
+| 47 | ERR3152366 | Single supplied FASTQ object | ERR3152366.fastq.gz | [ERR3152366.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR315/006/ERR3152366/ERR3152366.fastq.gz) |
+| 48 | DRR1003246 | Read end 1 | DRR1003246_1.fastq.gz | [DRR1003246_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/DRR100/006/DRR1003246/DRR1003246_1.fastq.gz) |
+| 48 | DRR1003246 | Read end 2 | DRR1003246_2.fastq.gz | [DRR1003246_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/DRR100/006/DRR1003246/DRR1003246_2.fastq.gz) |
+| 49 | DRR1000746 | Read end 1; pairing unverified | DRR1000746_1.fastq.gz | [DRR1000746_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/DRR100/006/DRR1000746/DRR1000746_1.fastq.gz) |
+| 49 | DRR1000746 | Read end 2; pairing unverified | DRR1000746_2.fastq.gz | [DRR1000746_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/DRR100/006/DRR1000746/DRR1000746_2.fastq.gz) |
+| 50 | DRR1003638 | Read end 1; pairing unverified | DRR1003638_1.fastq.gz | [DRR1003638_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/DRR100/008/DRR1003638/DRR1003638_1.fastq.gz) |
+| 50 | DRR1003638 | Read end 2; pairing unverified | DRR1003638_2.fastq.gz | [DRR1003638_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/DRR100/008/DRR1003638/DRR1003638_2.fastq.gz) |
+| 51 | SRR27931704 | Read end 1; pairing unverified | SRR27931704_1.fastq.gz | [SRR27931704_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR279/004/SRR27931704/SRR27931704_1.fastq.gz) |
+| 51 | SRR27931704 | Read end 2; pairing unverified | SRR27931704_2.fastq.gz | [SRR27931704_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR279/004/SRR27931704/SRR27931704_2.fastq.gz) |
+| 52 | ERR2189808 | Read end 1 | ERR2189808_1.fastq.gz | [ERR2189808_1.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR218/008/ERR2189808/ERR2189808_1.fastq.gz) |
+| 52 | ERR2189808 | Read end 2 | ERR2189808_2.fastq.gz | [ERR2189808_2.fastq.gz](https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR218/008/ERR2189808/ERR2189808_2.fastq.gz) |
 
 # Updates and citation
 

@@ -1,13 +1,14 @@
 {
   "snapshot_UTC": "2026-10-20T03:39:26.216321+00:00",
-  "dataset_version": "1.0.0",
-  "source_files": 115,
+  "dataset_version": "1.1.0",
+  "source_files": 91,
   "statuses": {
-    "Awaiting verification": 5,
-    "Incomplete": 12,
-    "Not downloaded": 83,
+    "Incomplete": 10,
     "Publisher MD5 matched": 13,
-    "Size matched only": 2
+    "Size matched only": 2,
+    "Not locally verified": 4,
+    "Not downloaded": 58,
+    "Awaiting verification": 4
   },
-  "scope": "Compressed/source files only. Publisher MD5 and size are checked where recorded; no decompressed-FASTQ or calculated SHA256 baseline is supplied."
+  "scope": "Retained-file checks are matched by exact source identity and keep their original dates. Current catalogue paths do not mean local download folders were moved. Four new files have no recorded local check and no snapshot timestamp. Compressed/source bytes only; no prepared FASTQ or SHA256 baseline."
 }

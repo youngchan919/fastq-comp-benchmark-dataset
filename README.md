@@ -2,7 +2,7 @@
 
 **English** · [简体中文](zh-CN/)
 
-**Dataset version: v1.0.0** · [Version policy](VERSIONING.md)
+**Dataset version: v1.1.0** · [Version policy](VERSIONING.md)
 
 This dataset is for testing lossless FASTQ compression and decompression. It contains **52 public datasets** covering common sequencing technologies and uses. Each entry explains why it was chosen, lists the files to download, and describes how to use it. This repository contains the catalogue and instructions; sequencing files are downloaded separately.
 
@@ -13,12 +13,12 @@ The benchmark input is **uncompressed FASTQ**. Downloaded gzip files must be dec
 | Item | Count |
 |---|---:|
 | Datasets in one collection | 52 |
-| Files to download | 115: 114 gzip FASTQ files and one BAM |
-| Total listed download size | 1,419,456,345,104 bytes (1.419 decimal TB) |
-| Files with a publisher MD5 | 73 |
+| Files to download | 91: 90 gzip FASTQ files and one BAM |
+| Total listed download size | 1,404,952,612,896 bytes (1.405 decimal TB) |
+| Files with a publisher MD5 | 75 |
 | Suggested reference versions | 18 |
 
-The data cover human and other genomes, bulk and single-cell RNA, tags and spatial reads, chromatin libraries, targeted markers, isolates and mixed communities. The list includes short and long reads from several technologies. A dataset may contain a paired run, one cell or a complete library with several runs. Keep every listed file.
+The data cover human and other genomes, bulk and single-cell RNA, tags and spatial reads, chromatin libraries, targeted markers, isolates and mixed communities. The list includes short and long reads from several technologies. Each selected archive input is one complete run, with all its listed ends. The BAM and single CNGB FASTQ retain their declared public-source units. Keep every listed file.
 
 ## Find a dataset
 
@@ -32,22 +32,22 @@ The workbook keeps the familiar `fq`, `Files` and `fa` sheets. `Reasons` gives a
 
 ## Download
 
-Python 3.8+ and GNU wget are required. Choose a separate download folder.
+Python 3.8+ and GNU wget are required. Choose a fresh, version-specific download folder, such as `downloads/v1.1.0`. Existing jobs and download folders have not been moved or changed.
 
 ```bash
 # List the files without downloading anything.
 python3 download_benchmark.py --dry-run
 
 # Download all selected files, keeping existing valid files and usable partials.
-python3 download_benchmark.py --output downloads --jobs 8
+python3 download_benchmark.py --output downloads/v1.1.0 --jobs 8
 
 # Or download only these dataset IDs, including all their listed files.
-python3 download_benchmark.py --ids 10,30 --output downloads
+python3 download_benchmark.py --ids 10,29 --output downloads/v1.1.0
 ```
 
 The downloader checks the listed size and publisher MD5 where available. It keeps incomplete files as `.part` and does not overwrite an existing completed file. A checksum failure is reported; it is not silently accepted. Size-only agreement is weaker than a checksum match. If a previous partial has wrong bytes, resuming it cannot repair those bytes.
 
-The [MD5SUMS file](checksums/MD5SUMS) exposes all 73 publisher values. The [verification table](checksums/verification.tsv) is explicitly dated; it is not a claim that every file has finished downloading. Missing hashes or ongoing local downloads do not create a different dataset version.
+The [MD5SUMS file](checksums/MD5SUMS) exposes all 75 publisher values. The [verification table](checksums/verification.tsv) is explicitly dated; it is not a claim that every file has finished downloading. Missing hashes or ongoing local downloads do not create a different dataset version.
 
 Data 8 is one CNGB `WY_reads.fq.gz` file, not mates or two chunks. Its listed size is 130,270,589,600 bytes and no publisher MD5 is available. Data 6 is a BAM file that needs the fixed FASTQ export described below. Neither has an established exact selected-source base total.
 
@@ -65,7 +65,7 @@ The archive survey covers releases through 30 September 2026 and the preceding t
 # Tiny synthetic tests; no real sequence data are read.
 python3 -m unittest discover -s tests -v
 
-# Rebuild English documents and tables; requires XlsxWriter.
+# Rebuild English documents and tables; requires XlsxWriter and markdown-it-py.
 python3 tools/build.py
 ```
 

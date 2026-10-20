@@ -28,19 +28,19 @@ class CatalogueAndDownloader(unittest.TestCase):
 
     def test_manifest_and_plan_parity(self):
         jobs = self.module.select_jobs(None, 'data')
-        self.assertEqual(len(jobs), 115)
-        self.assertEqual(sum(x['size'] for x in jobs), 1419456345104)
-        self.assertEqual(sum(bool(x['md5']) for x in jobs), 73)
-        self.assertEqual(len({x['path'] for x in jobs}), 115)
+        self.assertEqual(len(jobs), 91)
+        self.assertEqual(sum(x['size'] for x in jobs), 1404952612896)
+        self.assertEqual(sum(bool(x['md5']) for x in jobs), 75)
+        self.assertEqual(len({x['path'] for x in jobs}), 91)
         data8 = self.module.select_jobs('8', 'data')
         self.assertEqual(len(data8), 1)
         self.assertEqual(data8[0]['filename'], 'WY_reads.fq.gz')
         self.assertEqual(data8[0]['size'], 130270589600)
         self.assertEqual(data8[0]['md5'], '')
-        self.assertEqual(len(self.module.select_jobs('10,30', 'data')), 4)
+        self.assertEqual(len(self.module.select_jobs('10,29', 'data')), 4)
         self.assertEqual(len(self.module.select_jobs(None, 'references')), 18)
         with self.assertRaises(ValueError):
-            self.module.select_jobs('28', 'data')
+            self.module.select_jobs('53', 'data')
 
     def test_dry_run_does_not_create_output(self):
         with tempfile.TemporaryDirectory() as tmp:
@@ -124,6 +124,27 @@ class CatalogueAndDownloader(unittest.TestCase):
                 handle.write(b'>toy\nACGT\n')
             job = dict(kind='reference', filename=path.name, size=None, md5='')
             self.assertEqual(self.module.Downloader(Path(tmp), 0).verify(job, path), 'FASTA-header-only')
+
+
+class DocumentFormatting(unittest.TestCase):
+    def test_CommonMark_and_DOCX_preserve_bold_at_CJK_punctuation(self):
+        spec = importlib.util.spec_from_file_location('document_format', ROOT / 'tools/document_format.py')
+        formatter = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(formatter)
+        original = '**双端：**PAIRED'
+        self.assertNotIn('<strong>', formatter.MARKDOWN.renderInline(original))
+        self.assertEqual(formatter.MARKDOWN.renderInline(formatter.normalize_bold(original)), '<strong>双端</strong>：PAIRED')
+        with tempfile.TemporaryDirectory() as directory:
+            output = Path(directory)
+            formatter.write_documents([{'type': 'p', 'text': original}], output)
+            self.assertIn('<strong>双端</strong>：PAIRED', (output / 'report.html').read_text())
+            import zipfile
+            import xml.etree.ElementTree as E
+            with zipfile.ZipFile(output / 'report.docx') as package:
+                document = E.fromstring(package.read('word/document.xml'))
+            namespace = {'w': 'http://schemas.openxmlformats.org/wordprocessingml/2006/main'}
+            bold = [''.join(run.itertext()) for run in document.findall('.//w:r', namespace) if run.find('w:rPr/w:b', namespace) is not None]
+            self.assertEqual(bold, ['双端'])
 
 
 class SyntheticExport(unittest.TestCase):

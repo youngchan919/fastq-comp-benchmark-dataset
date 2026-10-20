@@ -4,11 +4,11 @@
 
 There are three separate checks:
 
-- **The catalogue:** file identities, expected sizes/checksums, reference versions, reported amounts and all required mates/runs are consistent across the manifest, tables, workbook and downloader.
-- **Downloaded files:** the dated verification table reports whole-file publisher-MD5 matches separately from size-only checks, unfinished downloads and files awaiting verification. A final filename or size alone does not certify contents.
-- **Preparation and compression:** gzip decompression and the real BAM export have not produced verified benchmark FASTQs here. No compression ratio or throughput result is claimed.
+- **The catalogue**: file identities, expected sizes/checksums, reference versions, reported amounts and all required mates/runs are consistent across the manifest, tables, workbook and downloader.
+- **Downloaded files**: the dated verification table reports whole-file publisher-MD5 matches separately from size-only checks, unfinished downloads and files awaiting verification. A final filename or size alone does not certify contents.
+- **Preparation and compression**: gzip decompression and the real BAM export have not produced verified benchmark FASTQs here. No compression ratio or throughput result is claimed.
 
-Ten tiny synthetic software tests pass. They cover catalogue planning, local verification, rejection of bad checksums, the bounded proxy retry and the fixed BAM export policy. A local HTTPS/proxy test also confirmed recovery from one transient CONNECT503 error with certificate checking enabled. These tests do not authenticate real sequencing data.
+Eleven tiny synthetic software tests pass. They cover catalogue planning, local verification, rejection of bad checksums, the bounded proxy retry the fixed BAM export policy and actual Markdown/HTML/DOCX bold rendering. A local HTTPS/proxy test also confirmed recovery from one transient CONNECT503 error with certificate checking enabled. These tests do not authenticate real sequencing data.
 
 Document checks inspect the actual XLSX/DOCX contents and links. Sample cell views use local fonts and configured widths; they are not native Excel or Word page rendering. The English and Chinese files must preserve the same scientific identities and quantities. Language review does not substitute for data checks or human approval of every sentence.
 
