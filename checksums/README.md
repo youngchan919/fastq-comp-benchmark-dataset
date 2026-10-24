@@ -1,31 +1,29 @@
-# Download checksums and verification
+# Check downloaded files
 
 [Home](../README.md) · [简体中文](../zh-CN/checksums/README.md) · [All file links](../catalogue/files.tsv)
 
-The catalogue lists 91 files. Publishers provide MD5 values for 75; 16 have no recorded publisher checksum. [MD5SUMS](MD5SUMS) contains the expected values and current catalogue paths. These are publisher expectations, not newly calculated SHA-256 values.
+[MD5SUMS](MD5SUMS) contains a whole-file MD5 for every source file in dataset **v1.1.0**: **91 files from 52 datasets**. All files have been downloaded and checked. The verification table was updated on **24 October 2026**.
 
-## Check downloaded files
+| MD5 source | Files | Checks completed |
+|---|---:|---|
+| Publisher | 75 | File size and whole-file MD5 match the publisher's values. |
+| Calculated locally | 16 | Expected file size and full gzip/BAM integrity checks passed; we then calculated each file's MD5. |
 
-Use a fresh, version-specific download directory, such as `downloads/v1.1.0`. Existing download jobs and folders have not been changed. From the directory that contains its `data/` folder:
+The 16 local values identify our checked copies; they are not publisher-confirmed checksums. [verification.tsv](verification.tsv) records each file's MD5, its source, file size and check dates.
+
+## Verify your downloads
+
+Run this from your download directory, which must contain the `data/` folder:
 
 ```bash
 cd YOUR_DOWNLOAD_FOLDER
 md5sum -c /path/to/fastq-comp-benchmark-dataset/checksums/MD5SUMS
 ```
 
-A match means the whole downloaded file matches the publisher value. Missing files are reported as missing, not proved corrupt. Neither a `.part` suffix, a final filename nor size agreement alone proves completeness. Files without publisher checksums need the further checks in the [preparation guide](../docs/preparation.md).
+A complete matching download reports `OK` for all 91 files. Each end of a paired run is checked separately. A missing file is reported as missing; a checksum mismatch is reported as `FAILED`.
 
-## Dated verification records
+## What the checks cover
 
-The retained-file checks in [verification.tsv](verification.tsv) are the **2026-10-20T03:39:26.216321+00:00** snapshot. They follow identical source files, not dataset numbers or folder names. Paths shown are this version's catalogue paths; they do not claim the existing local folders were moved or that those paths were checked on disk. No new live filesystem scan was made for this catalogue update.
+These MD5 values cover the downloaded files: **90 gzip FASTQ files and one BAM file**. They do not cover the uncompressed FASTQ files used in compression tests. Follow the [preparation guide](../docs/preparation.md) to prepare those inputs and record their byte counts and SHA-256 values.
 
-- **Incomplete: 10 files.**
-- **Publisher MD5 matched: 13 files.**
-- **Size matched only: 2 files.**
-- **Not locally verified: 4 files.**
-- **Not downloaded: 58 files.**
-- **Awaiting verification: 4 files.**
-
-Four newly selected wheat/CHO files were not in that snapshot. They have no recorded local verification or snapshot timestamp. Their publisher MD5 values are still available as expectations. The other rows retain the actual old check/snapshot dates and may no longer describe current download progress.
-
-A publisher-MD5 match supports publisher-identical source bytes; size-only matches are weaker. These checks concern downloaded gzip/BAM bytes. Benchmark targets are uncompressed FASTQ bytes, with their own byte counts and SHA-256 after preparation. No calculated source or prepared-FASTQ SHA-256 baseline is published. Download progress and verification do not determine the dataset version.
+Publisher MD5 checks were completed on the dates shown in the table. The 16 files without publisher MD5s passed full integrity checks on 22 October 2026; their local MD5 values were calculated on 24 October. No uncompressed FASTQ output is included in this checksum list.

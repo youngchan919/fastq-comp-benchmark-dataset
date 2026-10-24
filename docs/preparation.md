@@ -14,6 +14,8 @@ Data8 contains one SINGLE CNGB object, `WY_reads.fq.gz`. It is not a pair or two
 
 The shared downloader lists the files and reports their verification status. For 75 files it has a publisher MD5 and listed size; 16 have no recorded publisher checksum. Neither a catalogue entry nor a successful request implies completed verification. Where no publisher checksum exists, record a local SHA-256 for subsequent reproducibility, recognizing that a local hash alone does not independently authenticate the publisher's content.
 
+The [MD5SUMS file](../checksums/MD5SUMS) now covers all 91 downloaded sources. For the 16 without publisher MD5s, it records locally calculated values from copies that passed full gzip/BAM integrity checks. Follow the [checksum instructions](../checksums/README.md) to compare your downloads before preparing FASTQ inputs.
+
 The reference table distinguishes versioned source pages from proposed direct FASTA routes. Reference size/checksum information is incomplete; a first-character FASTA check is not a full-file or accession-identity check. Confirm full FASTA integrity, the pinned version and the relationship to the chosen sample before a reference-based comparison. Mixed communities and feature libraries do not receive invented single-genome references. Spatial masks/coordinates and CITE feature definitions are needed for particular interpretation or custom matching, not generic byte-identical compression.
 
 ## Gzip sources: uncompressed FASTQ is the benchmark target

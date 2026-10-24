@@ -1,14 +1,16 @@
 {
-  "snapshot_UTC": "2026-10-20T03:39:26.216321+00:00",
+  "snapshot_UTC": "2026-10-24T12:03:36.523338+00:00",
   "dataset_version": "1.1.0",
+  "datasets": 52,
   "source_files": 91,
+  "complete_files": 91,
+  "source_bytes": 1404952612896,
+  "md5_entries": 91,
+  "publisher_md5_matches": 75,
+  "locally_calculated_md5_files": 16,
   "statuses": {
-    "Incomplete": 10,
-    "Publisher MD5 matched": 13,
-    "Size matched only": 2,
-    "Not locally verified": 4,
-    "Not downloaded": 58,
-    "Awaiting verification": 4
+    "Publisher MD5 matched": 75,
+    "Integrity passed; local MD5 recorded": 16
   },
-  "scope": "Retained-file checks are matched by exact source identity and keep their original dates. Current catalogue paths do not mean local download folders were moved. Four new files have no recorded local check and no snapshot timestamp. Compressed/source bytes only; no prepared FASTQ or SHA256 baseline."
+  "scope": "Downloaded source bytes: 90 gzip FASTQ files and one BAM. Publisher MD5 checks retain their actual dates and were reused only for unchanged files. The other 16 have local MD5 values calculated from complete files after full gzip/BAM integrity checks. These hashes do not describe prepared, uncompressed FASTQ."
 }

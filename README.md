@@ -47,7 +47,7 @@ python3 download_benchmark.py --ids 10,29 --output downloads/v1.1.0
 
 The downloader checks the listed size and publisher MD5 where available. It keeps incomplete files as `.part` and does not overwrite an existing completed file. A checksum failure is reported; it is not silently accepted. Size-only agreement is weaker than a checksum match. If a previous partial has wrong bytes, resuming it cannot repair those bytes.
 
-The [MD5SUMS file](checksums/MD5SUMS) exposes all 75 publisher values. The [verification table](checksums/verification.tsv) is explicitly dated; it is not a claim that every file has finished downloading. Missing hashes or ongoing local downloads do not create a different dataset version.
+All 91 source files have been downloaded and checked. The [MD5SUMS file](checksums/MD5SUMS) covers every file: 75 values match the publisher's MD5, and 16 were calculated locally after integrity checks. The [verification table](checksums/verification.tsv) records the MD5 source and check dates. See the [checksum instructions](checksums/README.md) to verify your downloads.
 
 Data 8 is one CNGB `WY_reads.fq.gz` file, not mates or two chunks. Its listed size is 130,270,589,600 bytes and no publisher MD5 is available. Data 6 is a BAM file that needs the fixed FASTQ export described below. Neither has an established exact selected-source base total.
 

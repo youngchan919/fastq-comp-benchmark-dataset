@@ -45,15 +45,17 @@ with zipfile.ZipFile(ROOT / 'catalogue/benchmark_dataset.xlsx') as z:
     for name in z.namelist():
         if name.endswith(('.xml', '.rels')):
             E.fromstring(z.read(name))
-    ss = [''.join(x.itertext()) for x in E.fromstring(z.read('xl/sharedStrings.xml')).findall('s:si', ns)]
+    ss = [''.join(x.itertext()) for x in E.fromstring(z.read('xl/sharedStrings.xml')).findall('s:si', ns)] if 'xl/sharedStrings.xml' in z.namelist() else []
     wr = {x.attrib['Id']: x.attrib['Target'] for x in E.fromstring(z.read('xl/_rels/workbook.xml.rels'))}
     for sh in E.fromstring(z.read('xl/workbook.xml')).find('s:sheets', ns):
-        path = 'xl/' + wr[sh.attrib['{' + ns['r'] + '}id']]
+        target = wr[sh.attrib['{' + ns['r'] + '}id']]
+        path = target.lstrip('/') if target.startswith('/') else 'xl/' + target
         t = E.fromstring(z.read(path))
         cells = {}
         for c in t.findall('.//s:sheetData/s:row/s:c', ns):
             v = c.findtext('s:v', default='', namespaces=ns)
-            cells[c.attrib['r']] = ss[int(v)] if c.attrib.get('t') == 's' else v
+            cells[c.attrib['r']] = (ss[int(v)] if c.attrib.get('t') == 's' else
+                                    ''.join(node.text or '' for node in c.findall('s:is//s:t', ns)) if c.attrib.get('t') == 'inlineStr' else v)
         relpath = path.rsplit('/', 1)[0] + '/_rels/' + path.rsplit('/', 1)[1] + '.rels'
         rels = {x.attrib['Id']: x.attrib['Target'] for x in E.fromstring(z.read(relpath))} if relpath in z.namelist() else {}
         hl = {}
@@ -123,9 +125,15 @@ portfolio_phrases = [prep.split('## Preserve the declared input unit',1)[1].spli
 checks['current_preparation_CITE_coverage_technology_units'] = all(len(by[n]['run_accessions']) == 1 and len(by[n]['files']) == 2 for n in unit_numbers) and all('one complete paired run' in phrase and 'two FASTQ files' in phrase and not re.search(r'all four outputs|four outputs/eight files|three paired runs/six files|two paired runs/four files', phrase) for phrase in portfolio_phrases) and sheets['Coverage']['F8'] == m['coverage'][6]['limits'] and sheets['Technology']['F10'] == m['technologies'][8]['selection_reason']
 checks['preparation_publisher_counts_match_manifest'] = ('For '+str(m['counts']['publisher_md5_objects'])+' files it has a publisher MD5 and listed size; '+str(m['counts']['size_only_objects'])+' have no recorded publisher checksum.') in prep
 checks['uncompressed_FASTQ_target_and_checked_decompression'] = all(v in text for v in ['exact uncompressed FASTQ bytes', 'Do not concatenate mates, runs or chunks', 'FASTQ byte count and SHA-256']) and all(v in prep for v in ['Benchmark inputs are uncompressed FASTQ bytes', 'gzip -t -- "$source_gz"', 'gzip -dc -- "$source_gz"', 'sha256sum -- "$source_gz" "$output_fastq"', 'CRC/length', 'Do not concatenate']) and 'fix whether the benchmark input' not in prep and 'If decompressed FASTQ is chosen' not in prep
-checks['version_and_publisher_MD5_inventory'] = (ROOT/'VERSION').read_text().strip() == m['dataset_version'] == '1.1.0' and len((ROOT/'checksums/MD5SUMS').read_text().splitlines()) == 75 and {(line.split()[0],line.split()[1]) for line in (ROOT/'checksums/MD5SUMS').read_text().splitlines()} == {(f['publisher_md5'],'data/Data_'+str(x['no'])+'/'+f['physical_name']) for x,f in files if f['publisher_md5']}
 verification_rows = list(csv.DictReader((ROOT/'checksums/verification.tsv').open(),delimiter='\t'))
-checks['dated_91_file_verification_no_fake_SHA256'] = len(verification_rows) == 91 and len({z['Path'] for z in verification_rows}) == 91 and sum(z['Status']=='Not locally verified' and not z['Snapshot UTC'] for z in verification_rows)==4 and all(z['Snapshot UTC'] for z in verification_rows if z['Status']!='Not locally verified') and not (ROOT/'checksums/SHA256SUMS').exists()
+md5_lines = (ROOT/'checksums/MD5SUMS').read_text().splitlines()
+md5_entries = {line.split()[1]: line.split()[0] for line in md5_lines}
+expected_files = {'data/Data_'+str(x['no'])+'/'+f['physical_name']: f for x,f in files}
+checks['version_and_91_file_MD5_inventory'] = (ROOT/'VERSION').read_text().strip() == m['dataset_version'] == '1.1.0' and len(md5_lines) == len(md5_entries) == 91 and set(md5_entries) == set(expected_files) and all(re.fullmatch(r'[0-9a-f]{32}  data/Data_[1-9][0-9]*/[^/\s]+', line) for line in md5_lines) and all(md5_entries[path] == f['publisher_md5'] for path,f in expected_files.items() if f['publisher_md5'])
+verification_summary = json.loads((ROOT/'checksums/verification_summary.json').read_text())
+checks['dated_91_file_verification_no_fake_SHA256'] = len(verification_rows) == 91 and {z['Path'] for z in verification_rows} == set(expected_files) and all(z['Snapshot UTC'] == verification_summary['snapshot_UTC'] and z['Checked UTC'] and z['Content check date'] and z['File MD5'] == md5_entries[z['Path']] and int(z['Local bytes']) == int(z['Expected bytes']) == expected_files[z['Path']]['listed_bytes'] for z in verification_rows) and verification_summary['complete_files'] == verification_summary['md5_entries'] == 91 and not (ROOT/'checksums/SHA256SUMS').exists()
+checks['publisher_and_local_MD5_provenance'] = sum(z['MD5 source'] == 'Publisher' and z['Status'] == 'Publisher MD5 matched' for z in verification_rows) == 75 and sum(z['MD5 source'] == 'Local (no publisher MD5)' and z['Status'] == 'Integrity passed; local MD5 recorded' for z in verification_rows) == 16 and all(z['Publisher MD5'] == expected_files[z['Path']]['publisher_md5'] and (z['MD5 source'] == 'Publisher') == bool(z['Publisher MD5']) for z in verification_rows)
+checks['workbook_MD5_values_match_verification_table'] = all(sheets['Verification']['D'+str(i+2)] == z['File MD5'] and sheets['Verification']['E'+str(i+2)] == z['MD5 source'] and sheets['Verification']['C'+str(i+2)] == z['Status'] for i,z in enumerate(verification_rows))
 checks['full_details_preserved_in_actual_workbook'] = all(x['size_evidence'] in sheets['Details'].values() and x['limits'] in sheets['Details'].values() for x in by.values())
 checks['plain_reason_amount_and_checks_actual_workbook'] = all(rr['D'+str(rrr[n])] == x['amount_summary'] and rr['E'+str(rrr[n])] == x['checks_summary'] for n,x in by.items())
 local_links = []

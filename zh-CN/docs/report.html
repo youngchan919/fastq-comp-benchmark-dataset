@@ -330,7 +330,7 @@
 <p>使用前请注意：ENA 根据提交的 CRAM 生成了清单中的 FASTQ；这些文件并未被认证为未经改动的仪器原始文件。确切的 CHO 衍生文件及其与建议参考序列是否一致仍未知。文件内容、顺序、读长、质量值和完整性均未检查。</p>
 <p>方法与数据量来源：<a href="https://www.ebi.ac.uk/ena/browser/view/ERR2189808">CHO6262360 双端基因组测序运行元数据</a> <a href="https://www.ebi.ac.uk/ena/portal/api/search?result=read_run&amp;query=run_accession%3D%22ERR9904291%22+OR+run_accession%3D%22ERR2189808%22+OR+run_accession%3D%22SRR19066659%22+OR+run_accession%3D%22SRR19066665%22+OR+run_accession%3D%22SRR19066668%22&amp;fields=run_accession%2Cread_count%2Cbase_count%2Cfirst_public%2Cfastq_bytes%2Cfastq_md5&amp;format=json&amp;limit=5">所选小麦、CITE 和 CHO 测序运行的 ENA 计数、公开日期和文件校验和</a></p>
 <h1>下载、检查和准备文件</h1>
-<p><a href="../checksums/README.md">下载与校验和说明</a>区分了发布者提供的 MD5 预期值和本地已完成的检查。状态表是带日期的快照，并不表示所有文件都已下载完成。文件大小一致不足以证明文件完整；压缩源文件的校验和也不能标识解压后的 FASTQ 字节。</p>
+<p><a href="../checksums/README.md">下载与校验和说明</a>列出了全部 91 个源文件的 MD5 和检查日期。75 个文件与发布者 MD5 一致；另外 16 个通过了完整性检查，并记录了本地计算的 MD5。这些 MD5 对应下载的 gzip/BAM 文件，未压缩 FASTQ 需另行计算校验和。</p>
 <p>请按<a href="preparation.md">准备说明</a>检查源文件，将每个 gzip 文件分别解压，并记录未压缩 FASTQ 的字节数和 SHA-256。保留名称、序列、质量、顺序和格式；不要合并双端文件、不同测序运行或分块，不要规范化记录，也不要重新压缩准备后的输入。必须通过完整的 gzip CRC/文件结束检查。</p>
 <p>Data 6 须按指定的 SAMtools 1.22/htslib 1.22 规则导出。规则按 QNAME 自然排序，只保留未配对的主记录，使用已存质量值，并在主记录缺少质量值时停止。该规则已通过合成测试，但尚未用于真实 BAM。准备后的顺序不等于仪器原始顺序；FASTQ 也不会保留 BAM 标签或比对信息。</p>
 <p>保存的前缀观察只适用于“文件”表中明确标识的对应文件。这些是非随机抽样，不能代表整个文件的分布，也不是完整性检查。FASTQ 质量行中的每个质量字符都表示编码后的质量值；“众数占比”指抽查质量位置中最常见字符所占比例。新文件或未抽查文件不能沿用其他文件的测量结果。</p>

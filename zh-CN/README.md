@@ -44,7 +44,9 @@ python3 download_benchmark.py --output downloads/v1.1.0 --jobs 8
 python3 download_benchmark.py --ids 10,29 --output downloads/v1.1.0
 ```
 
-下载程序会在可用时核对清单中的文件大小和发布者 MD5 值。未完成的文件保留为 `.part`，程序不会覆盖已有的完整文件。校验和不匹配时会报告错误，不会将其当作通过。仅大小相同，验证力度低于校验和匹配。共享的 [MD5SUMS 文件](../checksums/MD5SUMS)列出全部 75 个发布者提供的值；[核验表](../checksums/verification.tsv)标明记录日期，并不表示所有文件都已下载完成。缺失校验和或仍在进行的本地下载不会形成新的数据集版本。
+下载程序会核对清单中的文件大小，并在有发布者 MD5 时检查该值。未完成的文件保留为 `.part`，MD5 不一致时会报告错误。
+
+全部 91 个源文件均已下载并完成检查。[MD5SUMS 文件](../checksums/MD5SUMS)覆盖每个文件：75 个值与发布者提供的 MD5 一致，另外 16 个值由我们在完整性检查后计算。[核验表](../checksums/verification.tsv)记录了 MD5 来源和检查日期。请按[校验说明](checksums/README.md)检查自己的下载文件。
 
 Data 8 是单个 CNGB 文件 `WY_reads.fq.gz`，不是一对读段或两个分块。清单所列文件大小为 130,270,589,600 字节，没有发布者 MD5 值。Data 6 是待按固定规则导出为 FASTQ 的 BAM 文件。两者所选来源的确切碱基总量均未确定。
 

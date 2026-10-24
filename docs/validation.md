@@ -5,7 +5,7 @@
 There are three separate checks:
 
 - **The catalogue**: file identities, expected sizes/checksums, reference versions, reported amounts and all required mates/runs are consistent across the manifest, tables, workbook and downloader.
-- **Downloaded files**: the dated verification table reports whole-file publisher-MD5 matches separately from size-only checks, unfinished downloads and files awaiting verification. A final filename or size alone does not certify contents.
+- **Downloaded files**: all 91 source files are complete. Whole-file MD5 and size checks passed for the 75 files with publisher checksums. The other 16 passed full gzip/BAM integrity checks and have locally calculated MD5 values. The dated verification table identifies the source of every MD5.
 - **Preparation and compression**: gzip decompression and the real BAM export have not produced verified benchmark FASTQs here. No compression ratio or throughput result is claimed.
 
 Eleven tiny synthetic software tests pass. They cover catalogue planning, local verification, rejection of bad checksums, the bounded proxy retry the fixed BAM export policy and actual Markdown/HTML/DOCX bold rendering. A local HTTPS/proxy test also confirmed recovery from one transient CONNECT503 error with certificate checking enabled. These tests do not authenticate real sequencing data.
