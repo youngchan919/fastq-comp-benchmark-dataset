@@ -2,7 +2,7 @@
 
 **English** · [简体中文](zh-CN/)
 
-**Dataset version: v1.1.0** · [Version policy](VERSIONING.md)
+**Dataset version: v1.2.0** · [Version policy](VERSIONING.md)
 
 This dataset is for testing lossless FASTQ compression and decompression. It contains **52 public datasets** covering common sequencing technologies and uses. Each entry explains why it was chosen, lists the files to download, and describes how to use it. This repository contains the catalogue and instructions; sequencing files are downloaded separately.
 
@@ -32,17 +32,17 @@ The workbook keeps the familiar `fq`, `Files` and `fa` sheets. `Reasons` gives a
 
 ## Download
 
-Python 3.8+ and GNU wget are required. Choose a fresh, version-specific download folder, such as `downloads/v1.1.0`. Existing jobs and download folders have not been moved or changed.
+Python 3.8+ and GNU wget are required. Choose a fresh, version-specific download folder, such as `downloads/v1.2.0`. Existing jobs and download folders have not been moved or changed.
 
 ```bash
 # List the files without downloading anything.
 python3 download_benchmark.py --dry-run
 
 # Download all selected files, keeping existing valid files and usable partials.
-python3 download_benchmark.py --output downloads/v1.1.0 --jobs 8
+python3 download_benchmark.py --output downloads/v1.2.0 --jobs 8
 
 # Or download only these dataset IDs, including all their listed files.
-python3 download_benchmark.py --ids 10,29 --output downloads/v1.1.0
+python3 download_benchmark.py --ids 10,29 --output downloads/v1.2.0
 ```
 
 The downloader checks the listed size and publisher MD5 where available. It keeps incomplete files as `.part` and does not overwrite an existing completed file. A checksum failure is reported; it is not silently accepted. Size-only agreement is weaker than a checksum match. If a previous partial has wrong bytes, resuming it cannot repair those bytes.
@@ -55,7 +55,7 @@ Data 8 is one CNGB `WY_reads.fq.gz` file, not mates or two chunks. Its listed si
 
 Follow the [complete preparation guide](docs/preparation.md). For each gzip source, check the full stream, decompress it separately and record the FASTQ byte count and SHA-256. Keep mate/run boundaries and preserve the bytes. For Data 6, use the documented SAMtools 1.22/htslib 1.22 export policy; it has synthetic tests but has not been run on the real BAM.
 
-References are suggested versions, not verified downloads or guaranteed sample matches. Spatial masks and tag definitions may help interpretation or a custom reference; they are not required for generic lossless FASTQ compression.
+The [18 FASTA reference choices](catalogue/references.tsv) were checked against NCBI on **27 October 2026**. We use current NCBI-designated reference genomes, keeping MG1655 for the matching E. coli strain and NC_045512.2 as the fixed viral reference. The table gives exact versions, download links and available publisher MD5 values. A current reference may have an older release date. Sample matching and downloaded FASTA integrity still need checking. [Reference metadata and sources](evidence/reference_snapshot_20261027.json) are saved separately from sequencing-file checksums. Spatial masks and tag definitions may help interpretation or a custom reference.
 
 The archive survey covers releases through 30 September 2026 and the preceding twelve months, using the original source/retrieval dates. Global figures include China. Archive hosting is not the location or volume of commercial production. See the report for the actual findings and limits.
 

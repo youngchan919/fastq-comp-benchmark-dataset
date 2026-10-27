@@ -1,6 +1,6 @@
 {
   "title": "FASTQ compression benchmark dataset",
-  "edition_date": "2026-10-20",
+  "edition_date": "2026-10-27",
   "eligibility_cutoff": "30 September 2026",
   "data_id_policy": "Consecutive Data IDs 1–52 identify inputs within this dataset version. Use public run/source identities and file hashes when comparing versions.",
   "counts": {
@@ -110,8 +110,8 @@
       "reference_proposals": [
         {
           "fa_no": 1,
-          "accession_version": "GCF_000001405.39",
-          "relationship": "Same-species proposal only; sample/strain/target/contig match and FASTA contents unverified."
+          "accession_version": "GCF_000001405.40",
+          "relationship": "Human reference genome; matching to individual donors has not been checked."
         }
       ],
       "size_evidence": "122.63 billion bases is roughly a 40x human-genome budget. Eleven of 16 matched study records have positive totals; their median is 115.23 billion bases. This fits ordinary human WGS planning, although raw bases are not usable coverage.",
@@ -199,8 +199,8 @@
       "reference_proposals": [
         {
           "fa_no": 1,
-          "accession_version": "GCF_000001405.39",
-          "relationship": "Same-species proposal only; sample/strain/target/contig match and FASTA contents unverified."
+          "accession_version": "GCF_000001405.40",
+          "relationship": "Human reference genome; matching to individual donors has not been checked."
         }
       ],
       "size_evidence": "131.25 billion bases is roughly a 42x human-genome budget, within common WGS planning. The source study contains only this run, so it cannot independently establish a population distribution.",
@@ -288,8 +288,8 @@
       "reference_proposals": [
         {
           "fa_no": 1,
-          "accession_version": "GCF_000001405.39",
-          "relationship": "Same-species proposal only; sample/strain/target/contig match and FASTA contents unverified."
+          "accession_version": "GCF_000001405.40",
+          "relationship": "Human reference genome; matching to individual donors has not been checked."
         }
       ],
       "size_evidence": "127.54 billion bases lies within the eight-positive-run study range (nine records; one zero total). Its RPE1 ploidy-benchmark source is explicit; this is not described as a normal diploid patient genome.",
@@ -377,8 +377,8 @@
       "reference_proposals": [
         {
           "fa_no": 1,
-          "accession_version": "GCF_000001405.39",
-          "relationship": "Same-species proposal only; sample/strain/target/contig match and FASTA contents unverified."
+          "accession_version": "GCF_000001405.40",
+          "relationship": "Human reference genome; matching to individual donors has not been checked."
         }
       ],
       "size_evidence": "39.31 billion bases is close to the 35.48-billion median of 24 comparable runs in its source study and within the positive-volume NovaSeq X archive interquartile range.",
@@ -450,8 +450,8 @@
       "reference_proposals": [
         {
           "fa_no": 1,
-          "accession_version": "GCF_000001405.39",
-          "relationship": "Same-species proposal only; sample/strain/target/contig match and FASTA contents unverified."
+          "accession_version": "GCF_000001405.40",
+          "relationship": "Human reference genome; matching to individual donors has not been checked."
         }
       ],
       "size_evidence": "49.18 billion bases is close to the median 51.65 billion among 74 positive-yield source-study runs (79 records; five zero totals). This is a credible long-read run/library amount.",
@@ -525,8 +525,8 @@
       "reference_proposals": [
         {
           "fa_no": 1,
-          "accession_version": "GCF_000001405.39",
-          "relationship": "Same-species proposal only; sample/strain/target/contig match and FASTA contents unverified."
+          "accession_version": "GCF_000001405.40",
+          "relationship": "Human reference genome; matching to individual donors has not been checked."
         }
       ],
       "size_evidence": "The release describes about 140 Gb per flow cell. The exact PAW70337 SUP analysis summary reports 153,264,463,825 bases and 8,155,127 reads, all mapped within that analysis. Its scope is distinct from the exact selected BAM/export yield.",
@@ -599,8 +599,8 @@
       "reference_proposals": [
         {
           "fa_no": 1,
-          "accession_version": "GCF_000001405.39",
-          "relationship": "Same-species proposal only; sample/strain/target/contig match and FASTA contents unverified."
+          "accession_version": "GCF_000001405.40",
+          "relationship": "Human reference genome; matching to individual donors has not been checked."
         }
       ],
       "size_evidence": "The submitted source identifies a barcode-specific HiFi cell output with 48,501,907,479 reported bases. Three same-sample, same-library outputs total 135,306,939,495 bases; those other outputs are a full-library alternative, not missing parts of the selected barcode output. The documentary submitted filename is m84046_230703_215053_s2.hifi_reads.bc2031.bam. The chosen object remains the separately listed archive FASTQ, not that BAM.",
@@ -674,8 +674,8 @@
       "reference_proposals": [
         {
           "fa_no": 1,
-          "accession_version": "GCF_000001405.39",
-          "relationship": "Human genomic reference proposed for documented HG002 study identity; exact strain/contig matching and FASTA contents unverified. Source byte equivalence to the associated SRA representation is a separate unresolved question."
+          "accession_version": "GCF_000001405.40",
+          "relationship": "Human reference genome; matching to individual donors has not been checked."
         }
       ],
       "size_evidence": "The selected WY_reads.fq.gz object is listed at 130,270,589,600 compressed bytes. CNGB metadata documents release on 4 December 2025; exact whole-file read count and sequence-base yield have not been established. Associated-study quantities are not substituted for this file’s yield; compressed source size is not a production norm or uncompressed FASTQ size.",
@@ -767,8 +767,8 @@
       "reference_proposals": [
         {
           "fa_no": 1,
-          "accession_version": "GCF_000001405.39",
-          "relationship": "Same-species proposal only; sample/strain/target/contig match and FASTA contents unverified."
+          "accession_version": "GCF_000001405.40",
+          "relationship": "Human reference genome; matching to individual donors has not been checked."
         }
       ],
       "size_evidence": "The source has 38 FFPE exome runs with median 5.650 billion bases. The selected run has 5.447 billion bases and nominal 72 Mb enrichment. This supports the scoped source workflow, not verified usable tumor depth.",
@@ -859,8 +859,8 @@
       "reference_proposals": [
         {
           "fa_no": 10,
-          "accession_version": "GCA_902167145.1",
-          "relationship": "Same-species, different-inbred B73 reference for SW1611. Exact sample/cultivar/contig matching and FASTA contents remain unverified."
+          "accession_version": "GCF_902167145.1",
+          "relationship": "B73 maize reference for SW1611 reads; these are different inbred lines."
         }
       ],
       "reported_sequence_scope": "Reported archive bases/spots for the complete named paired run; not mapped coverage.",
@@ -938,8 +938,8 @@
       "reference_proposals": [
         {
           "fa_no": 1,
-          "accession_version": "GCF_000001405.39",
-          "relationship": "Same-species proposal only; sample/strain/target/contig match and FASTA contents unverified."
+          "accession_version": "GCF_000001405.40",
+          "relationship": "Human reference genome; matching to individual donors has not been checked."
         }
       ],
       "size_evidence": "The selected named amplicon run has 1,497,990,828 reported bases. The 133 comparable source-study runs have median 1,644,565,071 bases. Panel-wide usable depth is not established.",
@@ -1030,7 +1030,7 @@
         {
           "fa_no": 15,
           "accession_version": "GCA_900067695.1",
-          "relationship": "Proposed same-species assembly; sample/strain/cultivar/target matching and FASTA content unverified."
+          "relationship": "Norway spruce reference for the targeted input; exact sample and target matching has not been checked."
         }
       ],
       "size_evidence": "The 335,384,842-base archive run lies in the lower range of 7,729 project runs with median 584 million bases. The exact record groups L001–L003 lane pairs under UME_081104_P72_WE10. The primary paper reports 40,018 probes and average 15× for an earlier cohort, not this later library.",
@@ -1124,7 +1124,7 @@
         {
           "fa_no": 16,
           "accession_version": "GCF_001683475.1",
-          "relationship": "Proposed same-species assembly; sample/strain/cultivar/target matching and FASTA content unverified."
+          "relationship": "QQ74 quinoa reference; exact cultivar matching has not been checked."
         }
       ],
       "size_evidence": "895 million bases is close to the median 872 million among 136 matching population-study runs.",
@@ -1212,8 +1212,8 @@
       "reference_proposals": [
         {
           "fa_no": 2,
-          "accession_version": "GCA_000003025.6",
-          "relationship": "Same-species proposal only; sample/strain/target/contig match and FASTA contents unverified."
+          "accession_version": "GCF_054392235.1",
+          "relationship": "Yorkshire/Landrace pig reference; the selected FASTQ sample's breed has not been established."
         }
       ],
       "size_evidence": "26.34 billion bases is close to the very tight approximately 26.19-billion median of 147 source-study runs.",
@@ -1303,8 +1303,8 @@
       "reference_proposals": [
         {
           "fa_no": 3,
-          "accession_version": "GCF_000001635.24",
-          "relationship": "Same species; mouse strain unspecified in exact public sample; no strain match claim."
+          "accession_version": "GCF_000001635.27",
+          "relationship": "C57BL/6J mouse reference; donor substrain and transcript targets need checking. ERCC spike-ins require a separate reference."
         }
       ],
       "reported_sequence_scope": "Archive-reported complete named input unit; no paired-count multiplier.",
@@ -1386,8 +1386,8 @@
           "verification_expected": "publisher-md5+size"
         }
       ],
-      "reason": "This ordinary wheat resequencing run adds a large, polyploid crop genome. Both FASTQ ends of one Thatcher sample are included. The primary study reports about 542.5 billion bases and 35× coverage for this sample; this is a real study input, not a subset made to reach a benchmark size. The proposed Renan assembly is from the same species but a different cultivar.",
-      "limits": "The proposed reference is Renan, not Thatcher; exact read/reference matching remains unverified. Nominal paired 150-base sequencing is documented, but actual FASTQ lengths, qualities, headers and integrity have not been examined.",
+      "reason": "This ordinary wheat resequencing run adds a large, polyploid crop genome. Both FASTQ ends of one Thatcher sample are included. The primary study reports about 542.5 billion bases and 35× coverage for this sample; this is a real study input, not a subset made to reach a benchmark size. The proposed Chinese Spring assembly is from the same species but a different cultivar.",
+      "limits": "The proposed reference is Chinese Spring, not Thatcher; exact read/reference matching remains unverified. Nominal paired 150-base sequencing is documented, but actual FASTQ lengths, qualities, headers and integrity have not been examined.",
       "preparation": "Use every exact listed object and preserve run boundaries; verify full-file integrity and pairing where applicable before testing. No preparation or acquisition was performed for this edition.",
       "coverage_needs": [
         "Reference genomes, pangenomes and non-model assembly"
@@ -1395,8 +1395,8 @@
       "reference_proposals": [
         {
           "fa_no": 18,
-          "accession_version": "GCA_937894285.1",
-          "relationship": "Same species, different cultivar: Thatcher reads with the proposed Renan GCA_937894285.1 assembly; no measured read match."
+          "accession_version": "GCF_018294505.1",
+          "relationship": "Chinese Spring wheat reference for Thatcher reads; these are different cultivars."
         }
       ],
       "reported_sequence_scope": "Archive-reported bases for one complete paired run; no read-count multiplier.",
@@ -1406,7 +1406,7 @@
       ],
       "display_name": "Wheat whole-genome resequencing — Thatcher",
       "amount_summary": "One Thatcher resequencing run contains 542,472,250,800 reported bases; the primary study reports approximately 542.5 Gb and 35×.",
-      "checks_summary": "The proposed reference is Renan, not Thatcher; exact read/reference matching remains unverified. Nominal paired 150-base sequencing is documented, but actual FASTQ lengths, qualities, headers and integrity have not been examined.",
+      "checks_summary": "The proposed reference is Chinese Spring, not Thatcher; exact read/reference matching remains unverified. Nominal paired 150-base sequencing is documented, but actual FASTQ lengths, qualities, headers and integrity have not been examined.",
       "unit_evidence_ids": [
         "INPUT_WHEAT_THATCHER",
         "INPUT_WHEAT_PAPER",
@@ -1489,8 +1489,8 @@
       "reference_proposals": [
         {
           "fa_no": 6,
-          "accession_version": "GCA_000226075.1",
-          "relationship": "Same-species proposal only; sample/strain/target/contig match and FASTA contents unverified."
+          "accession_version": "GCF_000226075.1",
+          "relationship": "DM 1-3 516 R44 reference for the Altus potato input; these are different cultivars."
         }
       ],
       "size_evidence": "Three same-sample libraries with 470 bp inserts contain 68.017,70.557 and 70.976 billion bases. Different 800 bp, mate-pair and linked-read preparations are separate libraries, not missing components of this input.",
@@ -1582,7 +1582,7 @@
         {
           "fa_no": 11,
           "accession_version": "GCF_042767895.1",
-          "relationship": "Same-species proposal only; sample/strain/target/contig match and FASTA contents unverified."
+          "relationship": "JL-2024 whiteleg shrimp reference; exact sample matching has not been checked."
         }
       ],
       "size_evidence": "26.76 billion bases is close to the 26.96-billion median among ten matched inbreeding-study runs. It is about 15 times the reference length in raw bases against the cited shrimp assembly.",
@@ -1670,8 +1670,8 @@
       "reference_proposals": [
         {
           "fa_no": 12,
-          "accession_version": "GCA_016699485.1",
-          "relationship": "Same-species proposal only; sample/strain/target/contig match and FASTA contents unverified."
+          "accession_version": "GCF_016699485.2",
+          "relationship": "Broiler maternal chicken reference; matching to the selected laying-hen sample has not been checked."
         }
       ],
       "size_evidence": "19.60 billion bases lies within the 13.90–20.80-billion P10–P90 range of the 1,004-layer study.",
@@ -1742,8 +1742,8 @@
       "reference_proposals": [
         {
           "fa_no": 1,
-          "accession_version": "GCF_000001405.39",
-          "relationship": "Same-species proposal only; sample/strain/target/contig match and FASTA contents unverified."
+          "accession_version": "GCF_000001405.40",
+          "relationship": "Human reference genome; matching to individual donors has not been checked."
         }
       ],
       "size_evidence": "113.90 billion reported raw bases is a substantial genomic input. Its study contains only this matching record, so there is no independent within-study size distribution.",
@@ -1817,7 +1817,7 @@
         {
           "fa_no": 9,
           "accession_version": "GCF_000001735.4",
-          "relationship": "Same species/ecotypeCol-0; TAIR10.1-family reference, no sequence match verification."
+          "relationship": "Columbia Arabidopsis reference; sample and target matching has not been checked."
         }
       ],
       "reported_sequence_scope": "Archive-reported complete named input unit; no paired-count multiplier.",
@@ -1891,7 +1891,7 @@
         {
           "fa_no": 9,
           "accession_version": "GCF_000001735.4",
-          "relationship": "Same species/ecotypeCol-0; published source explicitly comparesTAIR10.1, no claim identicalCol-XJTU assembly."
+          "relationship": "Columbia Arabidopsis reference; sample and target matching has not been checked."
         }
       ],
       "reported_sequence_scope": "Archive-reported complete named input unit; no paired-count multiplier.",
@@ -1979,8 +1979,8 @@
       "reference_proposals": [
         {
           "fa_no": 1,
-          "accession_version": "GCF_000001405.39",
-          "relationship": "Same-species proposal only; sample/strain/target/contig match and FASTA contents unverified."
+          "accession_version": "GCF_000001405.40",
+          "relationship": "Human reference genome; matching to individual donors has not been checked."
         }
       ],
       "size_evidence": "4.83 billion bases is near the 4.81-billion median of eight source-study runs and is a plausible ordinary expression-library amount.",
@@ -2071,7 +2071,7 @@
         {
           "fa_no": 9,
           "accession_version": "GCF_000001735.4",
-          "relationship": "Same species/ecotypeCol-0; genomic reference with transcript annotation needed only for particular reference-based mode."
+          "relationship": "Columbia Arabidopsis reference; sample and target matching has not been checked."
         }
       ],
       "reported_sequence_scope": "Archive-reported complete named input unit; no paired-count multiplier.",
@@ -2142,8 +2142,8 @@
       "reference_proposals": [
         {
           "fa_no": 1,
-          "accession_version": "GCF_000001405.39",
-          "relationship": "Same-species proposal only; sample/strain/target/contig match and FASTA contents unverified."
+          "accession_version": "GCF_000001405.40",
+          "relationship": "Human reference genome; matching to individual donors has not been checked."
         }
       ],
       "size_evidence": "12.64 million reported single reads and 284 million bases match the eight-run study, whose base median is 286 million. Official small-RNA guidance varies by workflow; this is a credible research-library amount.",
@@ -2235,8 +2235,8 @@
       "reference_proposals": [
         {
           "fa_no": 1,
-          "accession_version": "GCF_000001405.39",
-          "relationship": "Same-species proposal only; sample/strain/target/contig match and FASTA contents unverified."
+          "accession_version": "GCF_000001405.40",
+          "relationship": "Human reference genome; matching to individual donors has not been checked."
         }
       ],
       "size_evidence": "4.00 billion bases is close to the 4.11-billion median of 12 matching study runs and within the wider positive-volume NovaSeq RNA range.",
@@ -2308,8 +2308,8 @@
       "reference_proposals": [
         {
           "fa_no": 1,
-          "accession_version": "GCF_000001405.39",
-          "relationship": "Same-species proposal only; sample/strain/target/contig match and FASTA contents unverified."
+          "accession_version": "GCF_000001405.40",
+          "relationship": "Human reference genome; matching to individual donors has not been checked."
         }
       ],
       "size_evidence": "3.10 billion bases is close to the 2.98-billion median of 18 source-study runs and within the wider AVITI single-end RNA range across 20 known studies.",
@@ -2381,8 +2381,8 @@
       "reference_proposals": [
         {
           "fa_no": 1,
-          "accession_version": "GCF_000001405.39",
-          "relationship": "Same-species proposal only; sample/strain/target/contig match and FASTA contents unverified."
+          "accession_version": "GCF_000001405.40",
+          "relationship": "Human reference genome; matching to individual donors has not been checked."
         }
       ],
       "size_evidence": "The source paper reports 310.8 million raw reads across 72 libraries, an arithmetic average of 4.32 million. This input has 3.98 million reads and 2.48 billion bases.",
@@ -2466,15 +2466,15 @@
       "reason": "This mouse bladder cell adds transcript-wide single-cell RNA sequencing alongside the 3-prime CITE libraries. Smart-seq2 samples across transcripts; it does not make every read span a whole transcript. Both ends of one SRA run are included, with an amount within the middle half of 660 annotated cells.",
       "size_evidence": "Among 660 author-annotated bladder cells with one listed run each, reported amounts have median 182,126,200 bases and interquartile range 139,362,300–226,050,350. This cell has 220,101,000 bases, in the upper portion of that central range. Eight additional deposited one-run groups do not join the authors’ annotation and are outside this denominator. The comparison supports this natural individual-cell amount, not a general service or worldwide production norm.",
       "limits": "The full official filename manifest lists one run and two original FASTQ names for this exact well/plate/donor identity. Source label C1 is undefined; no additional part is listed. Completeness is at the deposited-FASTQ boundary, not all instrument/index, aligned-BAM or count-matrix assets. The author annotation does not certify the exact pre-upload processing stage. Archive descriptors specify nominal 100/100-base application reads; actual file properties remain unpreviewed.",
-      "preparation": "Acquire both listed archive ends and verify integrity and pairing. Keep the exact chosen FASTQ representation and order. Same-species GRCm38.p4 is proposed; exact donor substrain, transcript/patch equivalence and the study’s auxiliary ERCC version remain unverified. Such interpretation assets are not required for generic lossless FASTQ compression.",
+      "preparation": "Acquire both listed archive ends and verify integrity and pairing. Keep the exact chosen FASTQ representation and order. Same-species GRCm39 is proposed; exact donor substrain, transcript/patch equivalence and the study’s auxiliary ERCC version remain unverified. Such interpretation assets are not required for generic lossless FASTQ compression.",
       "coverage_needs": [
         "Single-cell expression, immune and feature libraries"
       ],
       "reference_proposals": [
         {
           "fa_no": 3,
-          "accession_version": "GCF_000001635.24",
-          "relationship": "Same-species GRCm38.p4 genomic reference proposal. Exact donor substrain, transcript/patch/contig equivalence and auxiliary ERCC reference match remain unverified."
+          "accession_version": "GCF_000001635.27",
+          "relationship": "C57BL/6J mouse reference; donor substrain and transcript targets need checking. ERCC spike-ins require a separate reference."
         }
       ],
       "reported_sequence_scope": "Archive-reported spots/bases for one exact individual-cell run; two application reads per spot.",
@@ -2660,8 +2660,8 @@
       "reference_proposals": [
         {
           "fa_no": 1,
-          "accession_version": "GCF_000001405.39",
-          "relationship": "Same-species proposal only; sample/strain/target/contig match and FASTA contents unverified."
+          "accession_version": "GCF_000001405.40",
+          "relationship": "Human reference genome; matching to individual donors has not been checked."
         }
       ],
       "reported_sequence_scope": "Archive-reported bases for one complete paired component run, not the sum of all component outputs.",
@@ -2843,8 +2843,8 @@
       "reference_proposals": [
         {
           "fa_no": 1,
-          "accession_version": "GCF_000001405.39",
-          "relationship": "Same-species proposal only; sample/strain/target/contig match and FASTA contents unverified."
+          "accession_version": "GCF_000001405.40",
+          "relationship": "Human reference genome; matching to individual donors has not been checked."
         }
       ],
       "size_evidence": "The named L01 spatial run contains 248,408,655,120 reported bases. The source-study metadata has three positive totals among twelve records, with the selected amount near their middle. That limited comparison is not a general spatial-production norm.",
@@ -2934,8 +2934,8 @@
       "reference_proposals": [
         {
           "fa_no": 1,
-          "accession_version": "GCF_000001405.39",
-          "relationship": "Same species; K562 cell-line/sample differences and sourcehg38 patch/contig scope remain qualified."
+          "accession_version": "GCF_000001405.40",
+          "relationship": "Human reference genome; matching to individual donors has not been checked."
         }
       ],
       "reported_sequence_scope": "Archive-reported complete named input unit; no paired-count multiplier.",
@@ -3023,8 +3023,8 @@
       "reference_proposals": [
         {
           "fa_no": 8,
-          "accession_version": "GCA_014636035.1",
-          "relationship": "Same-species proposal only; sample/strain/target/contig match and FASTA contents unverified."
+          "accession_version": "GCF_034140825.1",
+          "relationship": "Nipponbare japonica rice reference; cultivars of the two selected rice inputs have not been confirmed."
         }
       ],
       "size_evidence": "7.85 billion bases is close to its 11-run study median of 7.98 billion and within the wider rice ChIP P10–P90 range of 3.36–10.57 billion.",
@@ -3112,13 +3112,13 @@
       "reference_proposals": [
         {
           "fa_no": 1,
-          "accession_version": "GCF_000001405.39",
-          "relationship": "Same-species proposal only; sample/strain/target/contig match and FASTA contents unverified."
+          "accession_version": "GCF_000001405.40",
+          "relationship": "Human reference genome; matching to individual donors has not been checked."
         },
         {
           "fa_no": 13,
           "accession_version": "GCF_000001215.4",
-          "relationship": "Same-species proposal only; sample/strain/target/contig match and FASTA contents unverified."
+          "relationship": "Drosophila reference; exact sample matching has not been checked."
         }
       ],
       "size_evidence": "2.14 billion bases lies inside the matched 30-run study’s P10–P90 range of 1.79–5.13 billion.",
@@ -3208,7 +3208,7 @@
         {
           "fa_no": 7,
           "accession_version": "GCF_000146045.2",
-          "relationship": "Same-species proposal only; sample/strain/target/contig match and FASTA contents unverified."
+          "relationship": "S288C yeast reference; exact strain matching has not been checked."
         }
       ],
       "size_evidence": "15.04 billion bases is within both its 56-run study range and the wider yeast Hi-C P10–P90 range of 1.78–26.40 billion.",
@@ -3280,8 +3280,8 @@
       "reference_proposals": [
         {
           "fa_no": 1,
-          "accession_version": "GCF_000001405.39",
-          "relationship": "Same-species proposal only; sample/strain/target/contig match and FASTA contents unverified."
+          "accession_version": "GCF_000001405.40",
+          "relationship": "Human reference genome; matching to individual donors has not been checked."
         }
       ],
       "size_evidence": "9.61 billion bases lies within the 248-run study’s P10–P90 range of 3.93–11.02 billion.",
@@ -3370,8 +3370,8 @@
       "reference_proposals": [
         {
           "fa_no": 8,
-          "accession_version": "GCA_014636035.1",
-          "relationship": "Same-species proposal only; sample/strain/target/contig match and FASTA contents unverified."
+          "accession_version": "GCF_034140825.1",
+          "relationship": "Nipponbare japonica rice reference; cultivars of the two selected rice inputs have not been confirmed."
         }
       ],
       "size_evidence": "19.65 billion bases is close to its six-run study and within the wider rice bisulfite P10–P90 range of 7.77–22.60 billion.",
@@ -3636,7 +3636,7 @@
         {
           "fa_no": 14,
           "accession_version": "NC_045512.2",
-          "relationship": "Same-organism label proposal; isolate/variant/target compatibility untested."
+          "relationship": "Fixed Wuhan-Hu-1 reference; matching to the selected sample and targets has not been checked."
         }
       ],
       "size_evidence": "67.83 million bases is near the 73.35-million median among 58 comparable specimen runs, inside their P10–P90 range.",
@@ -3815,7 +3815,7 @@
         {
           "fa_no": 5,
           "accession_version": "GCF_000195955.2",
-          "relationship": "Same-species proposal only; sample/strain/target/contig match and FASTA contents unverified."
+          "relationship": "H37Rv reference; the selected sample's exact strain match has not been checked."
         }
       ],
       "size_evidence": "833 million bases is about 189 times the reference length in raw bases. It is somewhat above the matched 350-run study’s upper decile of 790 million, rather than orders of magnitude away.",
@@ -3905,7 +3905,7 @@
         {
           "fa_no": 4,
           "accession_version": "GCF_000005845.2",
-          "relationship": "Same-species proposal only; sample/strain/target/contig match and FASTA contents unverified."
+          "relationship": "MG1655 reference for the MG1655 input; exact read-to-reference matching has not been measured."
         }
       ],
       "size_evidence": "450 million bases is close to the broader E. coli Illumina median of 435 million and its eight-run study median of 428 million; it is about 97 times the reference length in raw bases.",
@@ -3995,7 +3995,7 @@
         {
           "fa_no": 7,
           "accession_version": "GCF_000146045.2",
-          "relationship": "Same-species proposal only; sample/strain/target/contig match and FASTA contents unverified."
+          "relationship": "S288C yeast reference; exact strain matching has not been checked."
         }
       ],
       "size_evidence": "2.12 billion bases is near the upper quartile of its 61-run study and about 176 times the reference length in raw bases. It is a high-end, credible yeast research input.",
@@ -4493,7 +4493,7 @@
         {
           "fa_no": 17,
           "accession_version": "GCF_003668045.3",
-          "relationship": "Proposed same-species assembly; sample/strain/cultivar/target matching and FASTA content unverified."
+          "relationship": "17A/GY Chinese hamster reference for the CHO input; cell-line differences have not been measured."
         }
       ],
       "reported_sequence_scope": "Archive-reported bases for one complete paired run; ENA FASTQs regenerated from submitted CRAM.",
@@ -4513,185 +4513,250 @@
   "references": [
     {
       "no": 1,
-      "name": "GRCh38",
+      "name": "GRCh38.p14",
       "organism": "Homo sapiens",
-      "accession_version": "GCF_000001405.39",
-      "route": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/405/GCF_000001405.39_GRCh38.p13/GCF_000001405.39_GRCh38.p13_genomic.fna.gz",
-      "route_type": "Direct gzip FASTA route",
-      "relationship": "Same-species proposal only; sample/strain/target/contig match and FASTA contents unverified.",
-      "download_filename": "GCF_000001405.39_GRCh38.p13_genomic.fna.gz",
-      "download_url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/405/GCF_000001405.39_GRCh38.p13/GCF_000001405.39_GRCh38.p13_genomic.fna.gz",
-      "listed_bytes": null,
-      "publisher_md5": "",
-      "download_status": "Proposed versioned retrieval route; live route and FASTA contents not verified during packaging"
+      "accession_version": "GCF_000001405.40",
+      "route": "https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_000001405.40/",
+      "route_type": "NCBI assembly record; direct gzip FASTA link supplied separately",
+      "relationship": "Human reference genome; matching to individual donors has not been checked.",
+      "download_filename": "GCF_000001405.40_GRCh38.p14_genomic.fna.gz",
+      "download_url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/405/GCF_000001405.40_GRCh38.p14/GCF_000001405.40_GRCh38.p14_genomic.fna.gz",
+      "listed_bytes": 972898531,
+      "publisher_md5": "c30471567037b2b2389d43c908c653e1",
+      "download_status": "NCBI version confirmed on 2026-10-27; download size and publisher MD5 recorded on 2026-10-25; FASTA not downloaded.",
+      "metadata_checked_date": "2026-10-27",
+      "checksum_url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/405/GCF_000001405.40_GRCh38.p14/md5checksums.txt",
+      "assembly_release_date": "2022-02-03",
+      "reference_category": "reference genome",
+      "metadata_url": "https://api.ncbi.nlm.nih.gov/datasets/v2/genome/taxon/9606/dataset_report?filters.reference_only=true&page_size=20"
     },
     {
       "no": 2,
-      "name": "Sscrofa11.1",
+      "name": "Sscrofa_HxYL_maternal_Yorkshire_Landrace_v2.0",
       "organism": "Sus scrofa",
-      "accession_version": "GCA_000003025.6",
-      "route": "https://www.ncbi.nlm.nih.gov/datasets/genome/GCA_000003025.6/",
-      "route_type": "Accession landing page; exact FASTA retrieval remains to be fixed",
-      "relationship": "Same-species proposal only; sample/strain/target/contig match and FASTA contents unverified.",
-      "download_filename": "GCA_000003025.6_Sscrofa11.1_genomic.fna.gz",
-      "download_url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/003/025/GCA_000003025.6_Sscrofa11.1/GCA_000003025.6_Sscrofa11.1_genomic.fna.gz",
-      "listed_bytes": null,
-      "publisher_md5": "",
-      "download_status": "Proposed versioned retrieval route; live route and FASTA contents not verified during packaging"
+      "accession_version": "GCF_054392235.1",
+      "route": "https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_054392235.1/",
+      "route_type": "NCBI assembly record; direct gzip FASTA link supplied separately",
+      "relationship": "Yorkshire/Landrace pig reference; the selected FASTQ sample's breed has not been established.",
+      "download_filename": "GCF_054392235.1_Sscrofa_HxYL_maternal_Yorkshire_Landrace_v2.0_genomic.fna.gz",
+      "download_url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/054/392/235/GCF_054392235.1_Sscrofa_HxYL_maternal_Yorkshire_Landrace_v2.0/GCF_054392235.1_Sscrofa_HxYL_maternal_Yorkshire_Landrace_v2.0_genomic.fna.gz",
+      "listed_bytes": 796779932,
+      "publisher_md5": "56b9f3d9c185e35e2410611e424ec6eb",
+      "download_status": "NCBI version confirmed on 2026-10-27; download size and publisher MD5 recorded on 2026-10-25; FASTA not downloaded.",
+      "metadata_checked_date": "2026-10-27",
+      "checksum_url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/054/392/235/GCF_054392235.1_Sscrofa_HxYL_maternal_Yorkshire_Landrace_v2.0/md5checksums.txt",
+      "assembly_release_date": "2026-01-28",
+      "reference_category": "reference genome",
+      "metadata_url": "https://api.ncbi.nlm.nih.gov/datasets/v2/genome/taxon/9823/dataset_report?filters.reference_only=true&page_size=20"
     },
     {
       "no": 3,
-      "name": "GRCm38",
+      "name": "GRCm39",
       "organism": "Mus musculus",
-      "accession_version": "GCF_000001635.24",
-      "route": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/635/GCF_000001635.24_GRCm38.p4/GCF_000001635.24_GRCm38.p4_genomic.fna.gz",
-      "route_type": "Direct gzip FASTA route",
-      "relationship": "Same-species genomic reference proposal for mouse inputs; sample/strain/target match and FASTA contents unverified. For Smart-seq2, transcript/patch equivalence and auxiliary ERCC version are separately unverified.",
-      "download_filename": "GCF_000001635.24_GRCm38.p4_genomic.fna.gz",
-      "download_url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/635/GCF_000001635.24_GRCm38.p4/GCF_000001635.24_GRCm38.p4_genomic.fna.gz",
-      "listed_bytes": null,
-      "publisher_md5": "",
-      "download_status": "Proposed versioned retrieval route; live route and FASTA contents not verified during packaging"
+      "accession_version": "GCF_000001635.27",
+      "route": "https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_000001635.27/",
+      "route_type": "NCBI assembly record; direct gzip FASTA link supplied separately",
+      "relationship": "C57BL/6J mouse reference; donor substrain and transcript targets need checking. ERCC spike-ins require a separate reference.",
+      "download_filename": "GCF_000001635.27_GRCm39_genomic.fna.gz",
+      "download_url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/635/GCF_000001635.27_GRCm39/GCF_000001635.27_GRCm39_genomic.fna.gz",
+      "listed_bytes": 834262758,
+      "publisher_md5": "c0b0c4c3f54d2b480efe68a18bf7e42b",
+      "download_status": "NCBI version confirmed on 2026-10-27; download size and publisher MD5 recorded on 2026-10-25; FASTA not downloaded.",
+      "metadata_checked_date": "2026-10-27",
+      "checksum_url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/635/GCF_000001635.27_GRCm39/md5checksums.txt",
+      "assembly_release_date": "2020-06-24",
+      "reference_category": "reference genome",
+      "metadata_url": "https://api.ncbi.nlm.nih.gov/datasets/v2/genome/taxon/10090/dataset_report?filters.reference_only=true&page_size=20"
     },
     {
       "no": 4,
-      "name": "ASM584",
-      "organism": "Escherichia coli",
+      "name": "ASM584v2",
+      "organism": "Escherichia coli str. K-12 substr. MG1655",
       "accession_version": "GCF_000005845.2",
-      "route": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/005/845/GCF_000005845.2_ASM584v2/GCF_000005845.2_ASM584v2_genomic.fna.gz",
-      "route_type": "Direct gzip FASTA route",
-      "relationship": "Same-species proposal only; sample/strain/target/contig match and FASTA contents unverified.",
+      "route": "https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_000005845.2/",
+      "route_type": "NCBI assembly record; direct gzip FASTA link supplied separately",
+      "relationship": "MG1655 reference for the MG1655 input; exact read-to-reference matching has not been measured.",
       "download_filename": "GCF_000005845.2_ASM584v2_genomic.fna.gz",
       "download_url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/005/845/GCF_000005845.2_ASM584v2/GCF_000005845.2_ASM584v2_genomic.fna.gz",
-      "listed_bytes": null,
-      "publisher_md5": "",
-      "download_status": "Proposed versioned retrieval route; live route and FASTA contents not verified during packaging"
+      "listed_bytes": 1379902,
+      "publisher_md5": "c13d459b5caa702ff7e1f26fe44b8ad7",
+      "download_status": "NCBI version confirmed on 2026-10-27; download size and publisher MD5 recorded on 2026-10-25; FASTA not downloaded.",
+      "metadata_checked_date": "2026-10-27",
+      "checksum_url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/005/845/GCF_000005845.2_ASM584v2/md5checksums.txt",
+      "assembly_release_date": "2013-09-26",
+      "reference_category": "reference genome",
+      "metadata_url": "https://api.ncbi.nlm.nih.gov/datasets/v2/genome/taxon/562/dataset_report?filters.reference_only=true&page_size=20"
     },
     {
       "no": 5,
-      "name": "ASM19595v2 (H37Rv)",
-      "organism": "Mycobacterium tuberculosis",
+      "name": "ASM19595v2",
+      "organism": "Mycobacterium tuberculosis H37Rv",
       "accession_version": "GCF_000195955.2",
-      "route": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/195/955/GCF_000195955.2_ASM19595v2/GCF_000195955.2_ASM19595v2_genomic.fna.gz",
-      "route_type": "Direct gzip FASTA route",
-      "relationship": "Same-species proposal only; sample/strain/target/contig match and FASTA contents unverified.",
+      "route": "https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_000195955.2/",
+      "route_type": "NCBI assembly record; direct gzip FASTA link supplied separately",
+      "relationship": "H37Rv reference; the selected sample's exact strain match has not been checked.",
       "download_filename": "GCF_000195955.2_ASM19595v2_genomic.fna.gz",
       "download_url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/195/955/GCF_000195955.2_ASM19595v2/GCF_000195955.2_ASM19595v2_genomic.fna.gz",
-      "listed_bytes": null,
-      "publisher_md5": "",
-      "download_status": "Proposed versioned retrieval route; live route and FASTA contents not verified during packaging"
+      "listed_bytes": 1277508,
+      "publisher_md5": "f93726a0a6e57af2bf1173998fbeb546",
+      "download_status": "NCBI version confirmed on 2026-10-27; download size and publisher MD5 recorded on 2026-10-25; FASTA not downloaded.",
+      "metadata_checked_date": "2026-10-27",
+      "checksum_url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/195/955/GCF_000195955.2_ASM19595v2/md5checksums.txt",
+      "assembly_release_date": "2013-02-01",
+      "reference_category": "reference genome",
+      "metadata_url": "https://api.ncbi.nlm.nih.gov/datasets/v2/genome/taxon/1773/dataset_report?filters.reference_only=true&page_size=20"
     },
     {
       "no": 6,
       "name": "SolTub_3.0",
       "organism": "Solanum tuberosum",
-      "accession_version": "GCA_000226075.1",
-      "route": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/226/075/GCA_000226075.1_SolTub_3.0/GCA_000226075.1_SolTub_3.0_genomic.fna.gz",
-      "route_type": "Direct gzip FASTA route",
-      "relationship": "Same-species proposal only; sample/strain/target/contig match and FASTA contents unverified.",
-      "download_filename": "GCA_000226075.1_SolTub_3.0_genomic.fna.gz",
-      "download_url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/226/075/GCA_000226075.1_SolTub_3.0/GCA_000226075.1_SolTub_3.0_genomic.fna.gz",
-      "listed_bytes": null,
-      "publisher_md5": "",
-      "download_status": "Proposed versioned retrieval route; live route and FASTA contents not verified during packaging"
+      "accession_version": "GCF_000226075.1",
+      "route": "https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_000226075.1/",
+      "route_type": "NCBI assembly record; direct gzip FASTA link supplied separately",
+      "relationship": "DM 1-3 516 R44 reference for the Altus potato input; these are different cultivars.",
+      "download_filename": "GCF_000226075.1_SolTub_3.0_genomic.fna.gz",
+      "download_url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/226/075/GCF_000226075.1_SolTub_3.0/GCF_000226075.1_SolTub_3.0_genomic.fna.gz",
+      "listed_bytes": 210303167,
+      "publisher_md5": "6ba91aa204b3a87501ff3ed5564183fd",
+      "download_status": "NCBI version confirmed on 2026-10-27; download size and publisher MD5 recorded on 2026-10-25; FASTA not downloaded.",
+      "metadata_checked_date": "2026-10-27",
+      "checksum_url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/226/075/GCF_000226075.1_SolTub_3.0/md5checksums.txt",
+      "assembly_release_date": "2011-09-19",
+      "reference_category": "reference genome",
+      "metadata_url": "https://api.ncbi.nlm.nih.gov/datasets/v2/genome/taxon/4113/dataset_report?filters.reference_only=true&page_size=20"
     },
     {
       "no": 7,
       "name": "R64",
-      "organism": "Saccharomyces cerevisiae",
+      "organism": "Saccharomyces cerevisiae S288C",
       "accession_version": "GCF_000146045.2",
-      "route": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/146/045/GCF_000146045.2_R64/GCF_000146045.2_R64_genomic.fna.gz",
-      "route_type": "Direct gzip FASTA route",
-      "relationship": "Same-species proposal only; sample/strain/target/contig match and FASTA contents unverified.",
+      "route": "https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_000146045.2/",
+      "route_type": "NCBI assembly record; direct gzip FASTA link supplied separately",
+      "relationship": "S288C yeast reference; exact strain matching has not been checked.",
       "download_filename": "GCF_000146045.2_R64_genomic.fna.gz",
       "download_url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/146/045/GCF_000146045.2_R64/GCF_000146045.2_R64_genomic.fna.gz",
-      "listed_bytes": null,
-      "publisher_md5": "",
-      "download_status": "Proposed versioned retrieval route; live route and FASTA contents not verified during packaging"
+      "listed_bytes": 3843460,
+      "publisher_md5": "88c38b957b721dfc50e6c4df03b6242e",
+      "download_status": "NCBI version confirmed on 2026-10-27; download size and publisher MD5 recorded on 2026-10-25; FASTA not downloaded.",
+      "metadata_checked_date": "2026-10-27",
+      "checksum_url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/146/045/GCF_000146045.2_R64/md5checksums.txt",
+      "assembly_release_date": "2014-12-17",
+      "reference_category": "reference genome",
+      "metadata_url": "https://api.ncbi.nlm.nih.gov/datasets/v2/genome/taxon/4932/dataset_report?filters.reference_only=true&page_size=20"
     },
     {
       "no": 8,
-      "name": "ASM1463603v1",
-      "organism": "Oryza sativa",
-      "accession_version": "GCA_014636035.1",
-      "route": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/014/636/035/GCA_014636035.1_ASM1463603v1/GCA_014636035.1_ASM1463603v1_genomic.fna.gz",
-      "route_type": "Direct gzip FASTA route",
-      "relationship": "Same-species proposal only; sample/strain/target/contig match and FASTA contents unverified.",
-      "download_filename": "GCA_014636035.1_ASM1463603v1_genomic.fna.gz",
-      "download_url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/014/636/035/GCA_014636035.1_ASM1463603v1/GCA_014636035.1_ASM1463603v1_genomic.fna.gz",
-      "listed_bytes": null,
-      "publisher_md5": "",
-      "download_status": "Proposed versioned retrieval route; live route and FASTA contents not verified during packaging"
+      "name": "AGIS1.0",
+      "organism": "Oryza sativa Japonica Group",
+      "accession_version": "GCF_034140825.1",
+      "route": "https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_034140825.1/",
+      "route_type": "NCBI assembly record; direct gzip FASTA link supplied separately",
+      "relationship": "Nipponbare japonica rice reference; cultivars of the two selected rice inputs have not been confirmed.",
+      "download_filename": "GCF_034140825.1_ASM3414082v1_genomic.fna.gz",
+      "download_url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/034/140/825/GCF_034140825.1_ASM3414082v1/GCF_034140825.1_ASM3414082v1_genomic.fna.gz",
+      "listed_bytes": 120268131,
+      "publisher_md5": "193a5b81b26b57547b1e4c7be4065b89",
+      "download_status": "NCBI version confirmed on 2026-10-27; download size and publisher MD5 recorded on 2026-10-25; FASTA not downloaded.",
+      "metadata_checked_date": "2026-10-27",
+      "checksum_url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/034/140/825/GCF_034140825.1_ASM3414082v1/md5checksums.txt",
+      "assembly_release_date": "2023-12-06",
+      "reference_category": "reference genome",
+      "metadata_url": "https://api.ncbi.nlm.nih.gov/datasets/v2/genome/taxon/4530/dataset_report?filters.reference_only=true&page_size=20"
     },
     {
       "no": 9,
       "name": "TAIR10.1",
       "organism": "Arabidopsis thaliana",
       "accession_version": "GCF_000001735.4",
-      "route": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/735/GCF_000001735.4_TAIR10.1/GCF_000001735.4_TAIR10.1_genomic.fna.gz",
-      "route_type": "Direct gzip FASTA route",
-      "relationship": "Same-species proposal only; sample/strain/target/contig match and FASTA contents unverified.",
+      "route": "https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_000001735.4/",
+      "route_type": "NCBI assembly record; direct gzip FASTA link supplied separately",
+      "relationship": "Columbia Arabidopsis reference; sample and target matching has not been checked.",
       "download_filename": "GCF_000001735.4_TAIR10.1_genomic.fna.gz",
       "download_url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/735/GCF_000001735.4_TAIR10.1/GCF_000001735.4_TAIR10.1_genomic.fna.gz",
-      "listed_bytes": null,
-      "publisher_md5": "",
-      "download_status": "Proposed versioned retrieval route; live route and FASTA contents not verified during packaging"
+      "listed_bytes": 37482399,
+      "publisher_md5": "0fed2d7901bf1488f20e7ef6842cd84c",
+      "download_status": "NCBI version confirmed on 2026-10-27; download size and publisher MD5 recorded on 2026-10-25; FASTA not downloaded.",
+      "metadata_checked_date": "2026-10-27",
+      "checksum_url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/735/GCF_000001735.4_TAIR10.1/md5checksums.txt",
+      "assembly_release_date": "2018-03-15",
+      "reference_category": "reference genome",
+      "metadata_url": "https://api.ncbi.nlm.nih.gov/datasets/v2/genome/taxon/3702/dataset_report?filters.reference_only=true&page_size=20"
     },
     {
       "no": 10,
       "name": "Zm-B73-REFERENCE-NAM-5.0",
       "organism": "Zea mays",
-      "accession_version": "GCA_902167145.1",
-      "route": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/902/167/145/GCA_902167145.1_Zm-B73-REFERENCE-NAM-5.0/GCA_902167145.1_Zm-B73-REFERENCE-NAM-5.0_genomic.fna.gz",
-      "route_type": "Direct gzip FASTA route",
-      "relationship": "Same-species, different-inbred B73 reference for SW1611. Exact sample/cultivar/contig matching and FASTA contents remain unverified.",
-      "download_filename": "GCA_902167145.1_Zm-B73-REFERENCE-NAM-5.0_genomic.fna.gz",
-      "download_url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/902/167/145/GCA_902167145.1_Zm-B73-REFERENCE-NAM-5.0/GCA_902167145.1_Zm-B73-REFERENCE-NAM-5.0_genomic.fna.gz",
-      "listed_bytes": null,
-      "publisher_md5": "",
-      "download_status": "Proposed versioned retrieval route; live route and FASTA contents not verified during packaging"
+      "accession_version": "GCF_902167145.1",
+      "route": "https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_902167145.1/",
+      "route_type": "NCBI assembly record; direct gzip FASTA link supplied separately",
+      "relationship": "B73 maize reference for SW1611 reads; these are different inbred lines.",
+      "download_filename": "GCF_902167145.1_Zm-B73-REFERENCE-NAM-5.0_genomic.fna.gz",
+      "download_url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/902/167/145/GCF_902167145.1_Zm-B73-REFERENCE-NAM-5.0/GCF_902167145.1_Zm-B73-REFERENCE-NAM-5.0_genomic.fna.gz",
+      "listed_bytes": 650091408,
+      "publisher_md5": "3fe51a7a675eb0ac410814a41d50c775",
+      "download_status": "NCBI version confirmed on 2026-10-27; download size and publisher MD5 recorded on 2026-10-25; FASTA not downloaded.",
+      "metadata_checked_date": "2026-10-27",
+      "checksum_url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/902/167/145/GCF_902167145.1_Zm-B73-REFERENCE-NAM-5.0/md5checksums.txt",
+      "assembly_release_date": "2020-03-21",
+      "reference_category": "reference genome",
+      "metadata_url": "https://api.ncbi.nlm.nih.gov/datasets/v2/genome/taxon/4577/dataset_report?filters.reference_only=true&page_size=20"
     },
     {
       "no": 11,
       "name": "ASM4276789v1",
       "organism": "Penaeus vannamei",
       "accession_version": "GCF_042767895.1",
-      "route": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_genomic.fna.gz",
-      "route_type": "Direct gzip FASTA route",
-      "relationship": "Same-species proposal only; sample/strain/target/contig match and FASTA contents unverified.",
+      "route": "https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_042767895.1/",
+      "route_type": "NCBI assembly record; direct gzip FASTA link supplied separately",
+      "relationship": "JL-2024 whiteleg shrimp reference; exact sample matching has not been checked.",
       "download_filename": "GCF_042767895.1_ASM4276789v1_genomic.fna.gz",
       "download_url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_genomic.fna.gz",
-      "listed_bytes": null,
-      "publisher_md5": "",
-      "download_status": "Proposed versioned retrieval route; live route and FASTA contents not verified during packaging"
+      "listed_bytes": 437570644,
+      "publisher_md5": "2a71288f90309178c725a8ba0657451d",
+      "download_status": "NCBI version confirmed on 2026-10-27; download size and publisher MD5 recorded on 2026-10-25; FASTA not downloaded.",
+      "metadata_checked_date": "2026-10-27",
+      "checksum_url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/md5checksums.txt",
+      "assembly_release_date": "2024-10-10",
+      "reference_category": "reference genome",
+      "metadata_url": "https://api.ncbi.nlm.nih.gov/datasets/v2/genome/taxon/6689/dataset_report?filters.reference_only=true&page_size=20"
     },
     {
       "no": 12,
       "name": "bGalGal1.mat.broiler.GRCg7b",
       "organism": "Gallus gallus",
-      "accession_version": "GCA_016699485.1",
-      "route": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/016/699/485/GCA_016699485.1_bGalGal1.mat.broiler.GRCg7b/GCA_016699485.1_bGalGal1.mat.broiler.GRCg7b_genomic.fna.gz",
-      "route_type": "Direct gzip FASTA route",
-      "relationship": "Same-species proposal only; sample/strain/target/contig match and FASTA contents unverified.",
-      "download_filename": "GCA_016699485.1_bGalGal1.mat.broiler.GRCg7b_genomic.fna.gz",
-      "download_url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/016/699/485/GCA_016699485.1_bGalGal1.mat.broiler.GRCg7b/GCA_016699485.1_bGalGal1.mat.broiler.GRCg7b_genomic.fna.gz",
-      "listed_bytes": null,
-      "publisher_md5": "",
-      "download_status": "Proposed versioned retrieval route; live route and FASTA contents not verified during packaging"
+      "accession_version": "GCF_016699485.2",
+      "route": "https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_016699485.2/",
+      "route_type": "NCBI assembly record; direct gzip FASTA link supplied separately",
+      "relationship": "Broiler maternal chicken reference; matching to the selected laying-hen sample has not been checked.",
+      "download_filename": "GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b_genomic.fna.gz",
+      "download_url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/016/699/485/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b_genomic.fna.gz",
+      "listed_bytes": 327035795,
+      "publisher_md5": "51291297e6b693d8d73207509cbba6aa",
+      "download_status": "NCBI version confirmed on 2026-10-27; download size and publisher MD5 recorded on 2026-10-25; FASTA not downloaded.",
+      "metadata_checked_date": "2026-10-27",
+      "checksum_url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/016/699/485/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b/md5checksums.txt",
+      "assembly_release_date": "2021-01-19",
+      "reference_category": "reference genome",
+      "metadata_url": "https://api.ncbi.nlm.nih.gov/datasets/v2/genome/taxon/9031/dataset_report?filters.reference_only=true&page_size=20"
     },
     {
       "no": 13,
       "name": "Release 6 plus ISO1 MT",
       "organism": "Drosophila melanogaster",
       "accession_version": "GCF_000001215.4",
-      "route": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/215/GCF_000001215.4_Release_6_plus_ISO1_MT/GCF_000001215.4_Release_6_plus_ISO1_MT_genomic.fna.gz",
-      "route_type": "Direct gzip FASTA route",
-      "relationship": "Same-species proposal only; sample/strain/target/contig match and FASTA contents unverified.",
+      "route": "https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_000001215.4/",
+      "route_type": "NCBI assembly record; direct gzip FASTA link supplied separately",
+      "relationship": "Drosophila reference; exact sample matching has not been checked.",
       "download_filename": "GCF_000001215.4_Release_6_plus_ISO1_MT_genomic.fna.gz",
       "download_url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/215/GCF_000001215.4_Release_6_plus_ISO1_MT/GCF_000001215.4_Release_6_plus_ISO1_MT_genomic.fna.gz",
-      "listed_bytes": null,
-      "publisher_md5": "",
-      "download_status": "Proposed versioned retrieval route; live route and FASTA contents not verified during packaging"
+      "listed_bytes": 44235956,
+      "publisher_md5": "869cf40e4f5c7ca27d04ca9ae7baee4f",
+      "download_status": "NCBI version confirmed on 2026-10-27; download size and publisher MD5 recorded on 2026-10-25; FASTA not downloaded.",
+      "metadata_checked_date": "2026-10-27",
+      "checksum_url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/215/GCF_000001215.4_Release_6_plus_ISO1_MT/md5checksums.txt",
+      "assembly_release_date": "2014-08-01",
+      "reference_category": "reference genome",
+      "metadata_url": "https://api.ncbi.nlm.nih.gov/datasets/v2/genome/taxon/7227/dataset_report?filters.reference_only=true&page_size=20"
     },
     {
       "no": 14,
@@ -4699,69 +4764,92 @@
       "organism": "Severe acute respiratory syndrome coronavirus 2",
       "accession_version": "NC_045512.2",
       "route": "https://www.ncbi.nlm.nih.gov/nuccore/NC_045512.2",
-      "route_type": "Accession landing page; exact FASTA retrieval remains to be fixed",
-      "relationship": "Same-organism label proposal; isolate/variant/target compatibility untested.",
+      "route_type": "NCBI nucleotide record; versioned FASTA retrieval link supplied separately",
+      "relationship": "Fixed Wuhan-Hu-1 reference; matching to the selected sample and targets has not been checked.",
       "download_filename": "NC_045512.2.fna",
       "download_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=NC_045512.2&rettype=fasta&retmode=text",
       "listed_bytes": null,
       "publisher_md5": "",
-      "download_status": "Proposed versioned retrieval route; live route and FASTA contents not verified during packaging"
+      "download_status": "Current NC_045512.2 version confirmed from NCBI metadata on 2026-10-27; FASTA not downloaded; no publisher MD5 recorded.",
+      "metadata_checked_date": "2026-10-27",
+      "metadata_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi?db=nuccore&id=NC_045512&retmode=json",
+      "reference_category": "Fixed RefSeq nucleotide reference"
     },
     {
       "no": 15,
       "name": "Pabies01",
       "organism": "Picea abies",
       "accession_version": "GCA_900067695.1",
-      "route": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/900/067/695/GCA_900067695.1_Pabies01/GCA_900067695.1_Pabies01_genomic.fna.gz",
-      "route_type": "Direct gzip FASTA route",
-      "relationship": "Proposed same-species assembly; sample/strain/cultivar/target matching and FASTA content unverified.",
+      "route": "https://www.ncbi.nlm.nih.gov/datasets/genome/GCA_900067695.1/",
+      "route_type": "NCBI assembly record; direct gzip FASTA link supplied separately",
+      "relationship": "Norway spruce reference for the targeted input; exact sample and target matching has not been checked.",
       "download_filename": "GCA_900067695.1_Pabies01_genomic.fna.gz",
       "download_url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/900/067/695/GCA_900067695.1_Pabies01/GCA_900067695.1_Pabies01_genomic.fna.gz",
-      "listed_bytes": null,
-      "publisher_md5": "",
-      "download_status": "Proposed versioned retrieval route; live route and FASTA contents not verified during packaging"
+      "listed_bytes": 4038780371,
+      "publisher_md5": "f23f2f85b0302fbbaed95d159e0b6a6f",
+      "download_status": "NCBI version confirmed on 2026-10-27; download size and publisher MD5 recorded on 2026-10-25; FASTA not downloaded.",
+      "metadata_checked_date": "2026-10-27",
+      "checksum_url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/900/067/695/GCA_900067695.1_Pabies01/md5checksums.txt",
+      "assembly_release_date": "2016-11-09",
+      "reference_category": "reference genome",
+      "metadata_url": "https://api.ncbi.nlm.nih.gov/datasets/v2/genome/taxon/3329/dataset_report?filters.reference_only=true&page_size=20"
     },
     {
       "no": 16,
       "name": "ASM168347v1",
       "organism": "Chenopodium quinoa",
       "accession_version": "GCF_001683475.1",
-      "route": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/001/683/475/GCF_001683475.1_ASM168347v1/GCF_001683475.1_ASM168347v1_genomic.fna.gz",
-      "route_type": "Direct gzip FASTA route",
-      "relationship": "Proposed same-species assembly; sample/strain/cultivar/target matching and FASTA content unverified.",
+      "route": "https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_001683475.1/",
+      "route_type": "NCBI assembly record; direct gzip FASTA link supplied separately",
+      "relationship": "QQ74 quinoa reference; exact cultivar matching has not been checked.",
       "download_filename": "GCF_001683475.1_ASM168347v1_genomic.fna.gz",
       "download_url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/001/683/475/GCF_001683475.1_ASM168347v1/GCF_001683475.1_ASM168347v1_genomic.fna.gz",
-      "listed_bytes": null,
-      "publisher_md5": "",
-      "download_status": "Proposed versioned retrieval route; live route and FASTA contents not verified during packaging"
+      "listed_bytes": 395946550,
+      "publisher_md5": "7ba8333bed6ee71c631410104d735017",
+      "download_status": "NCBI version confirmed on 2026-10-27; download size and publisher MD5 recorded on 2026-10-25; FASTA not downloaded.",
+      "metadata_checked_date": "2026-10-27",
+      "checksum_url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/001/683/475/GCF_001683475.1_ASM168347v1/md5checksums.txt",
+      "assembly_release_date": "2017-05-19",
+      "reference_category": "reference genome",
+      "metadata_url": "https://api.ncbi.nlm.nih.gov/datasets/v2/genome/taxon/63459/dataset_report?filters.reference_only=true&page_size=20"
     },
     {
       "no": 17,
       "name": "CriGri-PICRH-1.0",
       "organism": "Cricetulus griseus",
       "accession_version": "GCF_003668045.3",
-      "route": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/003/668/045/GCF_003668045.3_CriGri-PICRH-1.0/GCF_003668045.3_CriGri-PICRH-1.0_genomic.fna.gz",
-      "route_type": "Direct gzip FASTA route",
-      "relationship": "Proposed same-species assembly; sample/strain/cultivar/target matching and FASTA content unverified.",
+      "route": "https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_003668045.3/",
+      "route_type": "NCBI assembly record; direct gzip FASTA link supplied separately",
+      "relationship": "17A/GY Chinese hamster reference for the CHO input; cell-line differences have not been measured.",
       "download_filename": "GCF_003668045.3_CriGri-PICRH-1.0_genomic.fna.gz",
       "download_url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/003/668/045/GCF_003668045.3_CriGri-PICRH-1.0/GCF_003668045.3_CriGri-PICRH-1.0_genomic.fna.gz",
-      "listed_bytes": null,
-      "publisher_md5": "",
-      "download_status": "Proposed versioned retrieval route; live route and FASTA contents not verified during packaging"
+      "listed_bytes": 749193397,
+      "publisher_md5": "9c7ed3f95a6fe684157ff4480a3ece2d",
+      "download_status": "NCBI version confirmed on 2026-10-27; download size and publisher MD5 recorded on 2026-10-25; FASTA not downloaded.",
+      "metadata_checked_date": "2026-10-27",
+      "checksum_url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/003/668/045/GCF_003668045.3_CriGri-PICRH-1.0/md5checksums.txt",
+      "assembly_release_date": "2020-06-11",
+      "reference_category": "reference genome",
+      "metadata_url": "https://api.ncbi.nlm.nih.gov/datasets/v2/genome/taxon/10029/dataset_report?filters.reference_only=true&page_size=20"
     },
     {
       "no": 18,
-      "name": "Triticum_aestivum_Renan_v2.1",
-      "organism": "Triticum aestivum cultivar Renan",
-      "accession_version": "GCA_937894285.1",
-      "route": "https://www.ncbi.nlm.nih.gov/datasets/genome/GCA_937894285.1/",
-      "route_type": "Accession landing page; exactFASTA object must be chosen later",
-      "relationship": "Same species, different cultivar: proposed Renan assembly for Thatcher wheat reads; exact matching is unverified.",
-      "download_filename": "GCA_937894285.1_Triticum_aestivum_Renan_v2.1_genomic.fna.gz",
-      "download_url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/937/894/285/GCA_937894285.1_Triticum_aestivum_Renan_v2.1/GCA_937894285.1_Triticum_aestivum_Renan_v2.1_genomic.fna.gz",
-      "listed_bytes": null,
-      "publisher_md5": "",
-      "download_status": "Proposed versioned retrieval route; live route and FASTA contents not verified during packaging"
+      "name": "IWGSC CS RefSeq v2.1",
+      "organism": "Triticum aestivum",
+      "accession_version": "GCF_018294505.1",
+      "route": "https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_018294505.1/",
+      "route_type": "NCBI assembly record; direct gzip FASTA link supplied separately",
+      "relationship": "Chinese Spring wheat reference for Thatcher reads; these are different cultivars.",
+      "download_filename": "GCF_018294505.1_IWGSC_CS_RefSeq_v2.1_genomic.fna.gz",
+      "download_url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/018/294/505/GCF_018294505.1_IWGSC_CS_RefSeq_v2.1/GCF_018294505.1_IWGSC_CS_RefSeq_v2.1_genomic.fna.gz",
+      "listed_bytes": 4338081367,
+      "publisher_md5": "13acbd8dfa42164e3143543918e8e6a3",
+      "download_status": "NCBI version confirmed on 2026-10-27; download size and publisher MD5 recorded on 2026-10-25; FASTA not downloaded.",
+      "metadata_checked_date": "2026-10-27",
+      "checksum_url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/018/294/505/GCF_018294505.1_IWGSC_CS_RefSeq_v2.1/md5checksums.txt",
+      "assembly_release_date": "2021-05-06",
+      "reference_category": "reference genome",
+      "metadata_url": "https://api.ncbi.nlm.nih.gov/datasets/v2/genome/taxon/4565/dataset_report?filters.reference_only=true&page_size=20"
     }
   ],
   "coverage": [
@@ -5555,5 +5643,11 @@
     "project_license": null,
     "status": "Author attribution and project license have not been specified; no license grant is implied. Third-party sources retain their own terms."
   },
-  "dataset_version": "1.1.0"
+  "dataset_version": "1.2.0",
+  "reference_policy": {
+    "checked_date": "2026-10-27",
+    "description": "The 18 reference choices were checked against NCBI on 27 October 2026. Use the current NCBI-designated reference genome for each species, retaining the MG1655 strain for the matching E. coli input. The fixed SARS-CoV-2 reference remains NC_045512.2. A current reference can have an old release date; it is not necessarily the most recently submitted assembly. Exact versions, download links and available publisher MD5 values are listed in the fa sheet and reference table. FASTA files were not downloaded in this update. A species reference does not guarantee a match to the sample, cultivar or transcript targets. Mixed communities and tag libraries have no single genome assigned.",
+    "source_url": "https://www.ncbi.nlm.nih.gov/datasets/docs/v2/data-processing/policies-annotation/genome-processing/reference-selection/",
+    "evidence": "evidence/reference_snapshot_20261027.json"
+  }
 }

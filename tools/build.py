@@ -34,7 +34,7 @@ def runlinks(x):
  if x['no']==8:return '[CNR1409093 / CNX1236558](https://db.cngb.org/search/run/CNR1409093/)'
  return ', '.join('['+v+'](https://www.ebi.ac.uk/ena/browser/view/'+v+')' for v in x['run_accessions']) if x['source_format']!='BAM' else '[PAW70337 SUP flow-cell source]('+x['source_url']+')'
 h('FASTQ compression benchmark dataset')
-p('Dataset version '+pub['dataset_version']+' • 20 October 2026')
+p('Dataset version '+pub['dataset_version']+' • 27 October 2026')
 p('This dataset is for testing lossless FASTQ compression and decompression. It contains 52 public datasets covering common sequencing technologies and uses. Each entry explains why it was chosen, lists the files to download, and describes the input to test. The repository contains the catalogue and instructions; sequencing files are downloaded separately.')
 table(['Collection','Quantity'],[['Datasets',str(counts['selected_datasets'])+' (51 FASTQ datasets and one BAM source)'],['Files to download',str(counts['source_objects'])+' ('+str(counts['source_object_formats']['FASTQ.gz'])+' gzip FASTQ files and one BAM)'],['Listed download bytes',format(counts['listed_source_bytes'],',')],['Suggested reference versions',str(len(pub['references']))]])
 p('A fair lossless test must recover the exact uncompressed FASTQ bytes, including read names, sequences, quality characters, order and formatting. Downloaded gzip files are containers to decompress first. The one BAM input needs the fixed export described in the preparation guide. Download sizes are not uncompressed FASTQ sizes or compression results.')
@@ -67,9 +67,9 @@ p('Data 6 requires the specified SAMtools 1.22/htslib 1.22 export. It uses natur
 p('Saved prefix observations apply only to the exact files identified in Files. They are nonrandom samples, not whole-file distributions or integrity checks. A quality character is an encoded value in the FASTQ quality line; modal share means the percentage of inspected quality positions occupied by its most common character. New or uninspected files do not inherit another file’s measurements.')
 p('Data 8 is one SINGLE CNGB file, not two mates or chunks. Its whole-file yield and byte equivalence to the associated SRA files are unknown. The saved prefix contains 258 complete reads with lengths 355–28,912 bases; it does not establish the distribution of the whole file. No publisher MD5 is available.')
 h('Reference versions')
-p('These 18 suggested references have fixed accession versions. They have not been downloaded or verified here. The fa sheet distinguishes source pages from proposed direct FASTA downloads. Same species does not establish the same strain, cultivar or transcript targets. A mixed community or tag library does not receive an invented single-genome reference.')
+p(pub['reference_policy']['description'])
 for z in pub['references']:p('fa '+str(z['no'])+': '+z['organism']+' — '+z['name']+' / ['+z['accession_version']+']('+z['route']+'). '+z['relationship'])
-p('Renan GCA_937894285.1 is a same-species, different-cultivar reference proposal for the Thatcher wheat reads. CITE tag definitions and spatial masks/coordinates may be needed for interpretation or a custom reference, but not for exact compression and recovery of the supplied FASTQ. Taxonomy tables are auxiliary files, not genomic references.')
+p('Chinese Spring and the Thatcher wheat input are different cultivars. CITE tag definitions, spatial masks and taxonomy tables remain separate auxiliary files.')
 h('Files for every input')
 p('The following list contains every selected file. Preserve the two ends of each paired run as separate FASTQs. The one BAM and one single-read CNGB file are listed separately. Names and URLs are exact catalogue values.')
 table(['Data ID','Run / source','End / role','Exact filename','Download'],[[x['no'],f['run_accession'],f['role'],f['physical_name'],'['+f['physical_name']+']('+f['url']+')'] for x in selected for f in x['files']])
@@ -96,7 +96,7 @@ for block in blocks:
 link_count=write_documents(blocks,OUT)
 evidence=json.load(open(ROOT/'evidence/evidence_register.json'))
 # Human workbook layout follows the accepted fa/fq/Files arrangement.
-wb=xlsxwriter.Workbook(CAT/'benchmark_dataset.xlsx');wb.set_properties({'title':'Public FASTQ compression benchmark','subject':'Dataset '+pub['dataset_version']+'; '+str(counts['selected_datasets'])+' datasets; 20 October 2026','author':''})
+wb=xlsxwriter.Workbook(CAT/'benchmark_dataset.xlsx');wb.set_properties({'title':'Public FASTQ compression benchmark','subject':'Dataset '+pub['dataset_version']+'; '+str(counts['selected_datasets'])+' datasets; 27 October 2026','author':''})
 normal=wb.add_format({'font_name':'Arial','font_size':11,'text_wrap':True,'valign':'top','border':1,'border_color':'#D7DFE4'});head=wb.add_format({'font_name':'Arial','font_size':11,'bold':True,'bg_color':'#254B63','font_color':'white','text_wrap':True,'valign':'top','border':1});link=wb.add_format({'font_name':'Arial','font_size':11,'font_color':'#0563C1','underline':1,'text_wrap':True,'valign':'top','border':1});number=wb.add_format({'font_name':'Arial','font_size':11,'text_wrap':True,'valign':'top','border':1,'border_color':'#D7DFE4','num_format':'#,##0'});band=wb.add_format({'bold':True,'bg_color':'#D3E2ED','align':'center','valign':'vcenter','border':1,'font_size':12})
 sheet_counts={};fit=[];sheet_data={}
 def sheet(name,headers,rows,widths,start=0,full_url_columns=()):
@@ -116,7 +116,7 @@ def sheet(name,headers,rows,widths,start=0,full_url_columns=()):
   if height>400:fit.append({'sheet':name,'excel_row':ri+1,'estimated_height':height})
   ws.set_row(ri,min(400,height))
  ws.autofilter(start,0,start+len(rows),len(headers)-1);ws.set_landscape();ws.fit_to_pages(1,0);ws.repeat_rows(0,start);ws.set_paper(9);sheet_counts[name]=len(rows);sheet_data[name]={'headers':headers,'rows':rows,'widths':widths,'start':start};return ws
-sheet('fa',['fa ID','Reference / assembly','Species / material','Accession / version','Reference source link','Link type','Use / relationship','Proposed FASTA download'],[[q['no'],q['name'],q['organism'],q['accession_version'],q['route'],q['route_type'],q['relationship'],q['download_url']] for q in pub['references']],[8,29,30,25,20,35,72,65])
+sheet('fa',['fa ID','Reference / assembly','Species / material','Accession / version','NCBI record','Link type','Use / relationship','FASTA download','Expected bytes','Publisher MD5','Assembly release date','Metadata checked date','Publisher checksum URL'],[[q['no'],q['name'],q['organism'],q['accession_version'],q['route'],q['route_type'],q['relationship'],q['download_url'],q.get('listed_bytes'),q['publisher_md5'] or 'Not recorded',q.get('assembly_release_date',''),q['metadata_checked_date'],q.get('checksum_url','')] for q in pub['references']],[8,29,30,25,20,35,72,65,22,36,20,20,65])
 file_rows=[];first={}
 for x in selected:
  for f in x['files']:
@@ -162,8 +162,8 @@ with (CAT/'files.tsv').open('w',newline='',encoding='utf-8') as handle:
  for x in selected:
   for f in x['files']:writer.writerow([x['no'],f['run_accession'],tr(f['role']),f['physical_name'],f['url'],f['listed_bytes'],f.get('publisher_md5',''),tr(f['verification_expected'])])
 with (CAT/'references.tsv').open('w',newline='',encoding='utf-8') as handle:
- writer=csv.writer(handle,delimiter='\t');writer.writerow([tr(v) for v in ['fa ID','Versioned accession','Name','Proposed FASTA filename','Proposed FASTA URL','Status']])
- for q in pub['references']:writer.writerow([q['no'],q['accession_version'],q['name'],q['download_filename'],q['download_url'],tr(q['download_status'])])
+ writer=csv.writer(handle,delimiter='\t');writer.writerow([tr(v) for v in ['fa ID','Versioned accession','Name','FASTA filename','FASTA URL','Status','Expected bytes','Publisher MD5','Assembly release date','Metadata checked date','NCBI record','Publisher checksum URL']])
+ for q in pub['references']:writer.writerow([q['no'],q['accession_version'],q['name'],q['download_filename'],q['download_url'],tr(q['download_status']),q.get('listed_bytes') or '',q['publisher_md5'],q.get('assembly_release_date',''),q['metadata_checked_date'],q['route'],q.get('checksum_url','')])
 rows=['# '+tr('Dataset catalogue'),'',('[English](../README.md) | [简体中文](../zh-CN/)' if args.language=='en' else '[English](../../README.md) | [简体中文](../README.md)'),'',tr('One collection, dataset version ')+pub['dataset_version']+'. '+tr('Use the report or Reasons sheet for why each dataset was chosen; Files lists every download.'),'','| '+tr('Data ID')+' | '+tr('Dataset')+' | '+tr('Public ID')+' | '+tr('Files')+' | '+tr('Reported bases')+' | '+tr('Download bytes')+' |','|---|---|---|---:|---:|---:|']
 for x in selected:rows.append('| '+str(x['no'])+' | '+tr(x['display_name'])+' | '+x['identity']+' | '+str(len(x['files']))+' | '+(format(x['metadata']['reported_base_count'],',') if x['metadata']['reported_base_count'] is not None else tr('Not established'))+' | '+format(sum(f['listed_bytes'] for f in x['files']),',')+' |')
 (CAT/'README.md').write_text('\n'.join(rows)+'\n',encoding='utf-8')

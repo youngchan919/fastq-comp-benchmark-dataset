@@ -8,7 +8,7 @@
 **仓库**： [youngchan919/fastq-comp-benchmark-dataset](https://github.com/youngchan919/fastq-comp-benchmark-dataset)  
 **作者、项目 DOI 和项目许可证**： 尚未提供
 
-引用本集合时，请注明数据集版本 **v1.1.0**、仓库网址和访问日期。报告实测结果时，还应记录实际使用的准备后 FASTQ 哈希。
+引用本集合时，请注明数据集版本 **v1.2.0**、仓库网址和访问日期。报告实测结果时，还应记录实际使用的准备后 FASTQ 哈希。
 
 请为实际使用的输入引用原始档案登录号、参考组装版本和主要论文。相关公开链接见[报告](docs/report.md)、[共享清单](../catalogue/manifest.json)和[来源登记表](../evidence/evidence_register.json)。
 

@@ -1,6 +1,6 @@
 # FASTQ compression benchmark dataset
 
-Dataset version 1.1.0 • 20 October 2026
+Dataset version 1.2.0 • 27 October 2026
 
 This dataset is for testing lossless FASTQ compression and decompression. It contains 52 public datasets covering common sequencing technologies and uses. Each entry explains why it was chosen, lists the files to download, and describes the input to test. The repository contains the catalogue and instructions; sequencing files are downloaded separately.
 
@@ -120,7 +120,7 @@ Amount: 122,627,292,300 bases (122.627 billion). Download: 73,841,588,662 bytes 
 
 Why this amount: 122.63 billion bases is roughly a 40x human-genome budget.
 
-Public run(s): [ERR17003126](https://www.ebi.ac.uk/ena/browser/view/ERR17003126). Reference: fa ID 1 / GCF_000001405.39.
+Public run(s): [ERR17003126](https://www.ebi.ac.uk/ena/browser/view/ERR17003126). Reference: fa ID 1 / GCF_000001405.40.
 
 ## Data 2. Human genome — MGI T7, concentrated qualities
 
@@ -130,7 +130,7 @@ Amount: 131,251,843,800 bases (131.252 billion). Download: 66,737,537,425 bytes 
 
 Why this amount: 131.25 billion bases is roughly a 42x human-genome budget, within common WGS planning.
 
-Public run(s): [ERR16794642](https://www.ebi.ac.uk/ena/browser/view/ERR16794642). Reference: fa ID 1 / GCF_000001405.39.
+Public run(s): [ERR16794642](https://www.ebi.ac.uk/ena/browser/view/ERR16794642). Reference: fa ID 1 / GCF_000001405.40.
 
 ## Data 3. Human genome — MGI T7, four-symbol qualities
 
@@ -140,7 +140,7 @@ Amount: 127,540,227,000 bases (127.540 billion). Download: 48,041,300,140 bytes 
 
 Why this amount: 127.54 billion bases lies within the eight-positive-run study range (nine records; one zero total).
 
-Public run(s): [SRR33329596](https://www.ebi.ac.uk/ena/browser/view/SRR33329596). Reference: fa ID 1 / GCF_000001405.39.
+Public run(s): [SRR33329596](https://www.ebi.ac.uk/ena/browser/view/SRR33329596). Reference: fa ID 1 / GCF_000001405.40.
 
 ## Data 4. Human genome — NovaSeq X Plus
 
@@ -150,7 +150,7 @@ Amount: 39,313,093,714 bases (39.313 billion). Download: 15,853,763,048 bytes (1
 
 Why this amount: 39.31 billion bases is close to the 35.48-billion median of 24 comparable runs in its source study and within the positive-volume NovaSeq X archive middle-half range.
 
-Public run(s): [ERR15383198](https://www.ebi.ac.uk/ena/browser/view/ERR15383198). Reference: fa ID 1 / GCF_000001405.39.
+Public run(s): [ERR15383198](https://www.ebi.ac.uk/ena/browser/view/ERR15383198). Reference: fa ID 1 / GCF_000001405.40.
 
 ## Data 5. Human ultra-long nanopore reads
 
@@ -160,7 +160,7 @@ Amount: 49,183,304,334 bases (49.183 billion). Download: 40,884,662,813 bytes (4
 
 Why this amount: 49.18 billion bases is close to the median 51.65 billion among 74 positive-yield source-study runs (79 records; five zero totals).
 
-Public run(s): [ERR12954382](https://www.ebi.ac.uk/ena/browser/view/ERR12954382). Reference: fa ID 1 / GCF_000001405.39.
+Public run(s): [ERR12954382](https://www.ebi.ac.uk/ena/browser/view/ERR12954382). Reference: fa ID 1 / GCF_000001405.40.
 
 ## Data 6. Human nanopore reads — one ONT flow cell
 
@@ -170,7 +170,7 @@ Amount: Exact selected-source sequence yield not established. Download: 171,763,
 
 Why this amount: The release describes about 140 Gb per flow cell.
 
-Public run(s): [PAW70337 SUP flow-cell source](https://ont-open-data.s3.amazonaws.com/giab_2025.01/basecalling/sup/HG002/PAW70337/calls.sorted.bam). Reference: fa ID 1 / GCF_000001405.39.
+Public run(s): [PAW70337 SUP flow-cell source](https://ont-open-data.s3.amazonaws.com/giab_2025.01/basecalling/sup/HG002/PAW70337/calls.sorted.bam). Reference: fa ID 1 / GCF_000001405.40.
 
 Check before use: The separate mapped-analysis totals are not verified as the exact BAM/export yield. The specified FASTQ export has not been run.
 
@@ -182,7 +182,7 @@ Amount: 48,501,907,479 bases (48.502 billion). Download: 23,718,059,148 bytes (2
 
 Why this amount: The submitted source identifies a barcode-specific HiFi cell output with 48,501,907,479 reported bases.
 
-Public run(s): [ERR14732808](https://www.ebi.ac.uk/ena/browser/view/ERR14732808). Reference: fa ID 1 / GCF_000001405.39.
+Public run(s): [ERR14732808](https://www.ebi.ac.uk/ena/browser/view/ERR14732808). Reference: fa ID 1 / GCF_000001405.40.
 
 Check before use: The selected amount is a barcode-specific cell output, not an entire Revio cell or every library for the individual.
 
@@ -194,7 +194,7 @@ Amount: Exact selected-source sequence yield not established. Download: 130,270,
 
 Why this amount: One CNGB FASTQ file, WY_reads.fq.gz, is listed at 130,270,589,600 compressed bytes. Its exact total reads and bases are unknown.
 
-Public run(s): [CNR1409093 / CNX1236558](https://db.cngb.org/search/run/CNR1409093/). Reference: fa ID 1 / GCF_000001405.39.
+Public run(s): [CNR1409093 / CNX1236558](https://db.cngb.org/search/run/CNR1409093/). Reference: fa ID 1 / GCF_000001405.40.
 
 Check before use: No publisher MD5 is available. Matching the listed size is not a full integrity check. Exact total reads and bases, and byte equivalence to SRA files, are unknown.
 
@@ -208,7 +208,7 @@ Amount: 5,446,687,469 bases (5.447 billion). Download: 2,415,095,443 bytes (2.41
 
 Why this amount: The source has 38 FFPE exome runs with median 5.650 billion bases.
 
-Public run(s): [ERR12411150](https://www.ebi.ac.uk/ena/browser/view/ERR12411150). Reference: fa ID 1 / GCF_000001405.39.
+Public run(s): [ERR12411150](https://www.ebi.ac.uk/ena/browser/view/ERR12411150). Reference: fa ID 1 / GCF_000001405.40.
 
 ## Data 10. Maize resequencing
 
@@ -218,7 +218,7 @@ Amount: 47,789,487,240 bases (47.789 billion). Download: 24,082,143,756 bytes (2
 
 Why this amount: The primary panel study describes approximately 20× DNA resequencing.
 
-Public run(s): [SRR8906645](https://www.ebi.ac.uk/ena/browser/view/SRR8906645). Reference: fa ID 10 / GCA_902167145.1.
+Public run(s): [SRR8906645](https://www.ebi.ac.uk/ena/browser/view/SRR8906645). Reference: fa ID 10 / GCF_902167145.1.
 
 Check before use: Trimming is indicated by the submitted filename, but the exact steps are unknown. The actual FASTQ lengths and qualities have not been inspected.
 
@@ -232,7 +232,7 @@ Amount: 1,497,990,828 bases (1.498 billion). Download: 1,154,396,293 bytes (1.15
 
 Why this amount: The selected named amplicon run has 1,497,990,828 reported bases.
 
-Public run(s): [DRR341924](https://www.ebi.ac.uk/ena/browser/view/DRR341924). Reference: fa ID 1 / GCF_000001405.39.
+Public run(s): [DRR341924](https://www.ebi.ac.uk/ena/browser/view/DRR341924). Reference: fa ID 1 / GCF_000001405.40.
 
 ## Data 12. Spruce target capture
 
@@ -266,7 +266,7 @@ Amount: 26,338,729,500 bases (26.339 billion). Download: 10,018,740,265 bytes (1
 
 Why this amount: 26.34 billion bases is close to the very tight approximately 26.19-billion median of 147 source-study runs.
 
-Public run(s): [SRR24804436](https://www.ebi.ac.uk/ena/browser/view/SRR24804436). Reference: fa ID 2 / GCA_000003025.6.
+Public run(s): [SRR24804436](https://www.ebi.ac.uk/ena/browser/view/SRR24804436). Reference: fa ID 2 / GCF_054392235.1.
 
 Check before use: The original role is an assembly/resequencing study component.
 
@@ -278,17 +278,17 @@ Amount: 100,892,053,998 bases (100.892 billion). Download: 48,335,307,261 bytes 
 
 Why this amount: Five like-prepared germline-tail outputs contain 100.892–139.281 billion bases, with median 118.131 billion.
 
-Public run(s): [ERR14032264](https://www.ebi.ac.uk/ena/browser/view/ERR14032264). Reference: fa ID 3 / GCF_000001635.24.
+Public run(s): [ERR14032264](https://www.ebi.ac.uk/ena/browser/view/ERR14032264). Reference: fa ID 3 / GCF_000001635.27.
 
 ## Data 16. Wheat whole-genome resequencing — Thatcher
 
-This ordinary wheat resequencing run adds a large, polyploid crop genome. Both FASTQ ends of one Thatcher sample are included. The primary study reports about 542.5 billion bases and 35× coverage for this sample; this is a real study input, not a subset made to reach a benchmark size. The proposed Renan assembly is from the same species but a different cultivar.
+This ordinary wheat resequencing run adds a large, polyploid crop genome. Both FASTQ ends of one Thatcher sample are included. The primary study reports about 542.5 billion bases and 35× coverage for this sample; this is a real study input, not a subset made to reach a benchmark size. The proposed Chinese Spring assembly is from the same species but a different cultivar.
 
 Amount: 542,472,250,800 bases (542.472 billion). Download: 273,813,897,418 bytes (273.814 decimal GB) in 2 file(s).
 
 Why this amount: One Thatcher resequencing run contains 542,472,250,800 reported bases; the primary study reports approximately 542.5 Gb and 35×.
 
-Public run(s): [ERR9904291](https://www.ebi.ac.uk/ena/browser/view/ERR9904291). Reference: fa ID 18 / GCA_937894285.1.
+Public run(s): [ERR9904291](https://www.ebi.ac.uk/ena/browser/view/ERR9904291). Reference: fa ID 18 / GCF_018294505.1.
 
 Method and amount sources: [Thatcher run, experiment and file metadata](https://www.ebi.ac.uk/ena/browser/view/ERR9904291) [Wheat study reporting Thatcher resequencing amount](https://www.nature.com/articles/s41588-023-01401-2) [ENA counts, release dates and file checksums for the selected wheat, CITE and CHO runs](https://www.ebi.ac.uk/ena/portal/api/search?result=read_run&query=run_accession%3D%22ERR9904291%22+OR+run_accession%3D%22ERR2189808%22+OR+run_accession%3D%22SRR19066659%22+OR+run_accession%3D%22SRR19066665%22+OR+run_accession%3D%22SRR19066668%22&fields=run_accession%2Cread_count%2Cbase_count%2Cfirst_public%2Cfastq_bytes%2Cfastq_md5&format=json&limit=5)
 
@@ -300,7 +300,7 @@ Amount: 70,556,516,868 bases (70.557 billion). Download: 52,291,517,076 bytes (5
 
 Why this amount: Three same-sample libraries with 470 bp inserts contain 68.017,70.557 and 70.976 billion bases.
 
-Public run(s): [SRR14993639](https://www.ebi.ac.uk/ena/browser/view/SRR14993639). Reference: fa ID 6 / GCA_000226075.1.
+Public run(s): [SRR14993639](https://www.ebi.ac.uk/ena/browser/view/SRR14993639). Reference: fa ID 6 / GCF_000226075.1.
 
 Check before use: This is one named PCR-free library, not the entire cultivar assembly dataset.
 
@@ -324,7 +324,7 @@ Amount: 19,596,096,600 bases (19.596 billion). Download: 14,336,554,441 bytes (1
 
 Why this amount: 19.60 billion bases lies within the 13.90–20.80-billion middle-80% range of the 1,004-layer study.
 
-Public run(s): [ERR13943038](https://www.ebi.ac.uk/ena/browser/view/ERR13943038). Reference: fa ID 12 / GCA_016699485.1.
+Public run(s): [ERR13943038](https://www.ebi.ac.uk/ena/browser/view/ERR13943038). Reference: fa ID 12 / GCF_016699485.2.
 
 ## Data 20. Human raw PacBio CLR reads
 
@@ -334,7 +334,7 @@ Amount: 113,896,753,645 bases (113.897 billion). Download: 34,654,458,158 bytes 
 
 Why this amount: 113.90 billion reported raw bases is a substantial genomic input.
 
-Public run(s): [SRR8801873](https://www.ebi.ac.uk/ena/browser/view/SRR8801873). Reference: fa ID 1 / GCF_000001405.39.
+Public run(s): [SRR8801873](https://www.ebi.ac.uk/ena/browser/view/SRR8801873). Reference: fa ID 1 / GCF_000001405.40.
 
 ## Data 21. Plant nanopore genome assembly
 
@@ -368,7 +368,7 @@ Amount: 4,828,141,800 bases (4.828 billion). Download: 3,817,894,154 bytes (3.81
 
 Why this amount: 4.83 billion bases is near the 4.81-billion median of eight source-study runs and is a plausible ordinary expression-library amount.
 
-Public run(s): [ERR10030615](https://www.ebi.ac.uk/ena/browser/view/ERR10030615). Reference: fa ID 1 / GCF_000001405.39.
+Public run(s): [ERR10030615](https://www.ebi.ac.uk/ena/browser/view/ERR10030615). Reference: fa ID 1 / GCF_000001405.40.
 
 ## Data 24. Plant RNA sequencing
 
@@ -388,7 +388,7 @@ Amount: 284,297,641 bases (284.298 million). Download: 291,749,840 bytes (291.75
 
 Why this amount: 12.64 million reported single reads and 284 million bases match the eight-run study, whose base median is 286 million.
 
-Public run(s): [DRR1089360](https://www.ebi.ac.uk/ena/browser/view/DRR1089360). Reference: fa ID 1 / GCF_000001405.39.
+Public run(s): [DRR1089360](https://www.ebi.ac.uk/ena/browser/view/DRR1089360). Reference: fa ID 1 / GCF_000001405.40.
 
 Method and amount sources: [Exact named small-RNA replicate](https://www.ncbi.nlm.nih.gov/sra/DRX1064881)
 
@@ -400,7 +400,7 @@ Amount: 4,002,783,900 bases (4.003 billion). Download: 1,795,309,208 bytes (1.79
 
 Why this amount: 4.00 billion bases is close to the 4.11-billion median of 12 matching study runs and within the wider positive-volume NovaSeq RNA range.
 
-Public run(s): [DRR1069746](https://www.ebi.ac.uk/ena/browser/view/DRR1069746). Reference: fa ID 1 / GCF_000001405.39.
+Public run(s): [DRR1069746](https://www.ebi.ac.uk/ena/browser/view/DRR1069746). Reference: fa ID 1 / GCF_000001405.40.
 
 ## Data 27. Single-end RNA sequencing — Element AVITI
 
@@ -410,7 +410,7 @@ Amount: 3,095,516,700 bases (3.096 billion). Download: 2,301,820,230 bytes (2.30
 
 Why this amount: 3.10 billion bases is close to the 2.98-billion median of 18 source-study runs and within the wider AVITI single-end RNA range across 20 known studies.
 
-Public run(s): [SRR30608496](https://www.ebi.ac.uk/ena/browser/view/SRR30608496). Reference: fa ID 1 / GCF_000001405.39.
+Public run(s): [SRR30608496](https://www.ebi.ac.uk/ena/browser/view/SRR30608496). Reference: fa ID 1 / GCF_000001405.40.
 
 ## Data 28. Nanopore transcript sequencing
 
@@ -420,7 +420,7 @@ Amount: 2,480,166,369 bases (2.480 billion). Download: 2,307,675,498 bytes (2.30
 
 Why this amount: The source paper reports 310.8 million raw reads across 72 libraries, an arithmetic average of 4.32 million.
 
-Public run(s): [SRR36288068](https://www.ebi.ac.uk/ena/browser/view/SRR36288068). Reference: fa ID 1 / GCF_000001405.39.
+Public run(s): [SRR36288068](https://www.ebi.ac.uk/ena/browser/view/SRR36288068). Reference: fa ID 1 / GCF_000001405.40.
 
 Check before use: This is same-study scale support, not a general long-RNA production norm.
 
@@ -432,7 +432,7 @@ Amount: 220,101,000 bases (220.101 million). Download: 97,956,122 bytes (97.956 
 
 Why this amount: Among 660 author-annotated bladder cells with one listed run each, reported amounts have median 182,126,200 bases and middle-half range 139,362,300–226,050,350.
 
-Public run(s): [SRR6520293](https://www.ebi.ac.uk/ena/browser/view/SRR6520293). Reference: fa ID 3 / GCF_000001635.24.
+Public run(s): [SRR6520293](https://www.ebi.ac.uk/ena/browser/view/SRR6520293). Reference: fa ID 3 / GCF_000001635.27.
 
 Check before use: The author and archive identify one cell in one run. The exact pre-upload processing stage and actual FASTQ properties remain unexamined.
 
@@ -460,7 +460,7 @@ Amount: 35,465,206,140 bases (35.465 billion). Download: 18,634,282,939 bytes (1
 
 Why this amount: Among the two largest outputs from each of 19 mRNA experiments (38 runs), reported bases have median 38.490196 billion and range 34.674149–52.108714 billion. The selected run has 35,465,206,140 reported bases.
 
-Public run(s): [SRR19066665](https://www.ebi.ac.uk/ena/browser/view/SRR19066665). Reference: fa ID 1 / GCF_000001405.39.
+Public run(s): [SRR19066665](https://www.ebi.ac.uk/ena/browser/view/SRR19066665). Reference: fa ID 1 / GCF_000001405.40.
 
 Check before use: The two listed ends define this run. Cell-recovery targets do not establish its actual cell count; observations, where available, apply only to these exact files.
 
@@ -488,7 +488,7 @@ Amount: 248,408,655,120 bases (248.409 billion). Download: 181,786,356,695 bytes
 
 Why this amount: The named L01 spatial run contains 248,408,655,120 reported bases.
 
-Public run(s): [SRR29351083](https://www.ebi.ac.uk/ena/browser/view/SRR29351083). Reference: fa ID 1 / GCF_000001405.39.
+Public run(s): [SRR29351083](https://www.ebi.ac.uk/ena/browser/view/SRR29351083). Reference: fa ID 1 / GCF_000001405.40.
 
 Check before use: Capture area and observed cell/bin depths remain unknown.
 
@@ -500,7 +500,7 @@ Amount: 9,954,897,900 bases (9.955 billion). Download: 4,218,603,299 bytes (4.21
 
 Why this amount: Thirty-two positive ATAC source runs span 6.612–19.462 billion bases, with median 10.146 billion.
 
-Public run(s): [SRR30495077](https://www.ebi.ac.uk/ena/browser/view/SRR30495077). Reference: fa ID 1 / GCF_000001405.39.
+Public run(s): [SRR30495077](https://www.ebi.ac.uk/ena/browser/view/SRR30495077). Reference: fa ID 1 / GCF_000001405.40.
 
 ## Data 35. Rice ChIP sequencing
 
@@ -510,7 +510,7 @@ Amount: 7,848,285,900 bases (7.848 billion). Download: 3,388,187,408 bytes (3.38
 
 Why this amount: 7.85 billion bases is close to its 11-run study median of 7.98 billion and within the wider rice ChIP middle-80% range of 3.36–10.57 billion.
 
-Public run(s): [DRR1000045](https://www.ebi.ac.uk/ena/browser/view/DRR1000045). Reference: fa ID 8 / GCA_014636035.1.
+Public run(s): [DRR1000045](https://www.ebi.ac.uk/ena/browser/view/DRR1000045). Reference: fa ID 8 / GCF_034140825.1.
 
 ## Data 36. Human CUT&RUN sequencing
 
@@ -520,7 +520,7 @@ Amount: 2,142,233,300 bases (2.142 billion). Download: 1,123,492,148 bytes (1.12
 
 Why this amount: 2.14 billion bases lies inside the matched 30-run study’s middle-80% range of 1.79–5.13 billion.
 
-Public run(s): [SRR26362943](https://www.ebi.ac.uk/ena/browser/view/SRR26362943). Reference: fa ID 1 / GCF_000001405.39; fa ID 13 / GCF_000001215.4.
+Public run(s): [SRR26362943](https://www.ebi.ac.uk/ena/browser/view/SRR26362943). Reference: fa ID 1 / GCF_000001405.40; fa ID 13 / GCF_000001215.4.
 
 Check before use: Normalization-reference composition and processed/usable depth remain unknown.
 
@@ -542,7 +542,7 @@ Amount: 9,613,662,904 bases (9.614 billion). Download: 3,749,797,716 bytes (3.75
 
 Why this amount: 9.61 billion bases lies within the 248-run study’s middle-80% range of 3.93–11.02 billion.
 
-Public run(s): [SRR34546226](https://www.ebi.ac.uk/ena/browser/view/SRR34546226). Reference: fa ID 1 / GCF_000001405.39.
+Public run(s): [SRR34546226](https://www.ebi.ac.uk/ena/browser/view/SRR34546226). Reference: fa ID 1 / GCF_000001405.40.
 
 ## Data 39. Rice bisulfite sequencing
 
@@ -552,7 +552,7 @@ Amount: 19,651,497,831 bases (19.651 billion). Download: 9,477,168,274 bytes (9.
 
 Why this amount: 19.65 billion bases is close to its six-run study and within the wider rice bisulfite middle-80% range of 7.77–22.60 billion.
 
-Public run(s): [DRR1009870](https://www.ebi.ac.uk/ena/browser/view/DRR1009870). Reference: fa ID 8 / GCA_014636035.1.
+Public run(s): [DRR1009870](https://www.ebi.ac.uk/ena/browser/view/DRR1009870). Reference: fa ID 8 / GCF_034140825.1.
 
 ## Data 40. Fungal ITS community markers
 
@@ -712,45 +712,45 @@ Data 8 is one SINGLE CNGB file, not two mates or chunks. Its whole-file yield an
 
 # Reference versions
 
-These 18 suggested references have fixed accession versions. They have not been downloaded or verified here. The fa sheet distinguishes source pages from proposed direct FASTA downloads. Same species does not establish the same strain, cultivar or transcript targets. A mixed community or tag library does not receive an invented single-genome reference.
+The 18 reference choices were checked against NCBI on 27 October 2026. Use the current NCBI-designated reference genome for each species, retaining the MG1655 strain for the matching E. coli input. The fixed SARS-CoV-2 reference remains NC_045512.2. A current reference can have an old release date; it is not necessarily the most recently submitted assembly. Exact versions, download links and available publisher MD5 values are listed in the fa sheet and reference table. FASTA files were not downloaded in this update. A species reference does not guarantee a match to the sample, cultivar or transcript targets. Mixed communities and tag libraries have no single genome assigned.
 
-fa 1: Homo sapiens — GRCh38 / [GCF_000001405.39](https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/405/GCF_000001405.39_GRCh38.p13/GCF_000001405.39_GRCh38.p13_genomic.fna.gz). Same-species proposal only; sample/strain/target/contig match and FASTA contents unverified.
+fa 1: Homo sapiens — GRCh38.p14 / [GCF_000001405.40](https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_000001405.40/). Human reference genome; matching to individual donors has not been checked.
 
-fa 2: Sus scrofa — Sscrofa11.1 / [GCA_000003025.6](https://www.ncbi.nlm.nih.gov/datasets/genome/GCA_000003025.6/). Same-species proposal only; sample/strain/target/contig match and FASTA contents unverified.
+fa 2: Sus scrofa — Sscrofa_HxYL_maternal_Yorkshire_Landrace_v2.0 / [GCF_054392235.1](https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_054392235.1/). Yorkshire/Landrace pig reference; the selected FASTQ sample's breed has not been established.
 
-fa 3: Mus musculus — GRCm38 / [GCF_000001635.24](https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/635/GCF_000001635.24_GRCm38.p4/GCF_000001635.24_GRCm38.p4_genomic.fna.gz). Same-species genomic reference proposal for mouse inputs; sample/strain/target match and FASTA contents unverified. For Smart-seq2, transcript/patch equivalence and auxiliary ERCC version are separately unverified.
+fa 3: Mus musculus — GRCm39 / [GCF_000001635.27](https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_000001635.27/). C57BL/6J mouse reference; donor substrain and transcript targets need checking. ERCC spike-ins require a separate reference.
 
-fa 4: Escherichia coli — ASM584 / [GCF_000005845.2](https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/005/845/GCF_000005845.2_ASM584v2/GCF_000005845.2_ASM584v2_genomic.fna.gz). Same-species proposal only; sample/strain/target/contig match and FASTA contents unverified.
+fa 4: Escherichia coli str. K-12 substr. MG1655 — ASM584v2 / [GCF_000005845.2](https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_000005845.2/). MG1655 reference for the MG1655 input; exact read-to-reference matching has not been measured.
 
-fa 5: Mycobacterium tuberculosis — ASM19595v2 (H37Rv) / [GCF_000195955.2](https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/195/955/GCF_000195955.2_ASM19595v2/GCF_000195955.2_ASM19595v2_genomic.fna.gz). Same-species proposal only; sample/strain/target/contig match and FASTA contents unverified.
+fa 5: Mycobacterium tuberculosis H37Rv — ASM19595v2 / [GCF_000195955.2](https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_000195955.2/). H37Rv reference; the selected sample's exact strain match has not been checked.
 
-fa 6: Solanum tuberosum — SolTub_3.0 / [GCA_000226075.1](https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/226/075/GCA_000226075.1_SolTub_3.0/GCA_000226075.1_SolTub_3.0_genomic.fna.gz). Same-species proposal only; sample/strain/target/contig match and FASTA contents unverified.
+fa 6: Solanum tuberosum — SolTub_3.0 / [GCF_000226075.1](https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_000226075.1/). DM 1-3 516 R44 reference for the Altus potato input; these are different cultivars.
 
-fa 7: Saccharomyces cerevisiae — R64 / [GCF_000146045.2](https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/146/045/GCF_000146045.2_R64/GCF_000146045.2_R64_genomic.fna.gz). Same-species proposal only; sample/strain/target/contig match and FASTA contents unverified.
+fa 7: Saccharomyces cerevisiae S288C — R64 / [GCF_000146045.2](https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_000146045.2/). S288C yeast reference; exact strain matching has not been checked.
 
-fa 8: Oryza sativa — ASM1463603v1 / [GCA_014636035.1](https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/014/636/035/GCA_014636035.1_ASM1463603v1/GCA_014636035.1_ASM1463603v1_genomic.fna.gz). Same-species proposal only; sample/strain/target/contig match and FASTA contents unverified.
+fa 8: Oryza sativa Japonica Group — AGIS1.0 / [GCF_034140825.1](https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_034140825.1/). Nipponbare japonica rice reference; cultivars of the two selected rice inputs have not been confirmed.
 
-fa 9: Arabidopsis thaliana — TAIR10.1 / [GCF_000001735.4](https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/735/GCF_000001735.4_TAIR10.1/GCF_000001735.4_TAIR10.1_genomic.fna.gz). Same-species proposal only; sample/strain/target/contig match and FASTA contents unverified.
+fa 9: Arabidopsis thaliana — TAIR10.1 / [GCF_000001735.4](https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_000001735.4/). Columbia Arabidopsis reference; sample and target matching has not been checked.
 
-fa 10: Zea mays — Zm-B73-REFERENCE-NAM-5.0 / [GCA_902167145.1](https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/902/167/145/GCA_902167145.1_Zm-B73-REFERENCE-NAM-5.0/GCA_902167145.1_Zm-B73-REFERENCE-NAM-5.0_genomic.fna.gz). Same-species, different-inbred B73 reference for SW1611. Exact sample/cultivar/contig matching and FASTA contents remain unverified.
+fa 10: Zea mays — Zm-B73-REFERENCE-NAM-5.0 / [GCF_902167145.1](https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_902167145.1/). B73 maize reference for SW1611 reads; these are different inbred lines.
 
-fa 11: Penaeus vannamei — ASM4276789v1 / [GCF_042767895.1](https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_genomic.fna.gz). Same-species proposal only; sample/strain/target/contig match and FASTA contents unverified.
+fa 11: Penaeus vannamei — ASM4276789v1 / [GCF_042767895.1](https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_042767895.1/). JL-2024 whiteleg shrimp reference; exact sample matching has not been checked.
 
-fa 12: Gallus gallus — bGalGal1.mat.broiler.GRCg7b / [GCA_016699485.1](https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/016/699/485/GCA_016699485.1_bGalGal1.mat.broiler.GRCg7b/GCA_016699485.1_bGalGal1.mat.broiler.GRCg7b_genomic.fna.gz). Same-species proposal only; sample/strain/target/contig match and FASTA contents unverified.
+fa 12: Gallus gallus — bGalGal1.mat.broiler.GRCg7b / [GCF_016699485.2](https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_016699485.2/). Broiler maternal chicken reference; matching to the selected laying-hen sample has not been checked.
 
-fa 13: Drosophila melanogaster — Release 6 plus ISO1 MT / [GCF_000001215.4](https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/215/GCF_000001215.4_Release_6_plus_ISO1_MT/GCF_000001215.4_Release_6_plus_ISO1_MT_genomic.fna.gz). Same-species proposal only; sample/strain/target/contig match and FASTA contents unverified.
+fa 13: Drosophila melanogaster — Release 6 plus ISO1 MT / [GCF_000001215.4](https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_000001215.4/). Drosophila reference; exact sample matching has not been checked.
 
-fa 14: Severe acute respiratory syndrome coronavirus 2 — NC_045512.2 / [NC_045512.2](https://www.ncbi.nlm.nih.gov/nuccore/NC_045512.2). Same-organism label proposal; isolate/variant/target compatibility untested.
+fa 14: Severe acute respiratory syndrome coronavirus 2 — NC_045512.2 / [NC_045512.2](https://www.ncbi.nlm.nih.gov/nuccore/NC_045512.2). Fixed Wuhan-Hu-1 reference; matching to the selected sample and targets has not been checked.
 
-fa 15: Picea abies — Pabies01 / [GCA_900067695.1](https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/900/067/695/GCA_900067695.1_Pabies01/GCA_900067695.1_Pabies01_genomic.fna.gz). Proposed same-species assembly; sample/strain/cultivar/target matching and FASTA content unverified.
+fa 15: Picea abies — Pabies01 / [GCA_900067695.1](https://www.ncbi.nlm.nih.gov/datasets/genome/GCA_900067695.1/). Norway spruce reference for the targeted input; exact sample and target matching has not been checked.
 
-fa 16: Chenopodium quinoa — ASM168347v1 / [GCF_001683475.1](https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/001/683/475/GCF_001683475.1_ASM168347v1/GCF_001683475.1_ASM168347v1_genomic.fna.gz). Proposed same-species assembly; sample/strain/cultivar/target matching and FASTA content unverified.
+fa 16: Chenopodium quinoa — ASM168347v1 / [GCF_001683475.1](https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_001683475.1/). QQ74 quinoa reference; exact cultivar matching has not been checked.
 
-fa 17: Cricetulus griseus — CriGri-PICRH-1.0 / [GCF_003668045.3](https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/003/668/045/GCF_003668045.3_CriGri-PICRH-1.0/GCF_003668045.3_CriGri-PICRH-1.0_genomic.fna.gz). Proposed same-species assembly; sample/strain/cultivar/target matching and FASTA content unverified.
+fa 17: Cricetulus griseus — CriGri-PICRH-1.0 / [GCF_003668045.3](https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_003668045.3/). 17A/GY Chinese hamster reference for the CHO input; cell-line differences have not been measured.
 
-fa 18: Triticum aestivum cultivar Renan — Triticum_aestivum_Renan_v2.1 / [GCA_937894285.1](https://www.ncbi.nlm.nih.gov/datasets/genome/GCA_937894285.1/). Same species, different cultivar: proposed Renan assembly for Thatcher wheat reads; exact matching is unverified.
+fa 18: Triticum aestivum — IWGSC CS RefSeq v2.1 / [GCF_018294505.1](https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_018294505.1/). Chinese Spring wheat reference for Thatcher reads; these are different cultivars.
 
-Renan GCA_937894285.1 is a same-species, different-cultivar reference proposal for the Thatcher wheat reads. CITE tag definitions and spatial masks/coordinates may be needed for interpretation or a custom reference, but not for exact compression and recovery of the supplied FASTQ. Taxonomy tables are auxiliary files, not genomic references.
+Chinese Spring and the Thatcher wheat input are different cultivars. CITE tag definitions, spatial masks and taxonomy tables remain separate auxiliary files.
 
 # Files for every input
 

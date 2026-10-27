@@ -2,7 +2,7 @@
 
 [English](../README.md) | [简体中文](../zh-CN/)
 
-One collection, dataset version 1.1.0. Use the report or Reasons sheet for why each dataset was chosen; Files lists every download.
+One collection, dataset version 1.2.0. Use the report or Reasons sheet for why each dataset was chosen; Files lists every download.
 
 | Data ID | Dataset | Public ID | Files | Reported bases | Download bytes |
 |---|---|---|---:|---:|---:|

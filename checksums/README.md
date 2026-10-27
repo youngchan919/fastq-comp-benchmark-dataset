@@ -2,7 +2,7 @@
 
 [Home](../README.md) · [简体中文](../zh-CN/checksums/README.md) · [All file links](../catalogue/files.tsv)
 
-[MD5SUMS](MD5SUMS) contains a whole-file MD5 for every source file in dataset **v1.1.0**: **91 files from 52 datasets**. All files have been downloaded and checked. The verification table was updated on **24 October 2026**.
+[MD5SUMS](MD5SUMS) contains a whole-file MD5 for every source file in dataset **v1.2.0**: **91 files from 52 datasets**. All files have been downloaded and checked. The verification table was updated on **24 October 2026**.
 
 | MD5 source | Files | Checks completed |
 |---|---:|---|

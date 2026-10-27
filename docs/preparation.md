@@ -16,7 +16,7 @@ The shared downloader lists the files and reports their verification status. For
 
 The [MD5SUMS file](../checksums/MD5SUMS) now covers all 91 downloaded sources. For the 16 without publisher MD5s, it records locally calculated values from copies that passed full gzip/BAM integrity checks. Follow the [checksum instructions](../checksums/README.md) to compare your downloads before preparing FASTQ inputs.
 
-The reference table distinguishes versioned source pages from proposed direct FASTA routes. Reference size/checksum information is incomplete; a first-character FASTA check is not a full-file or accession-identity check. Confirm full FASTA integrity, the pinned version and the relationship to the chosen sample before a reference-based comparison. Mixed communities and feature libraries do not receive invented single-genome references. Spatial masks/coordinates and CITE feature definitions are needed for particular interpretation or custom matching, not generic byte-identical compression.
+The reference table lists exact NCBI versions checked on 27 October 2026, with direct download links and publisher MD5 values for the 17 assembly FASTA files. The fixed NC_045512.2 nucleotide reference has no recorded publisher MD5. No FASTA was downloaded in this update. After downloading, check the publisher MD5 where available, run a full gzip integrity check for compressed files, and record the FASTA hash used in the benchmark. Confirm the relationship to the chosen sample: some references use different cultivars or strains. Mixed communities and feature libraries have no single genome assigned. Spatial masks/coordinates and CITE feature definitions support interpretation or custom matching.
 
 ## Gzip sources: uncompressed FASTQ is the benchmark target
 

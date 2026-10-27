@@ -1,6 +1,6 @@
 # FASTQ 无损压缩基准数据集
 
-数据集版本 1.1.0 · 2026 年 10 月 20 日
+数据集版本 1.2.0 · 2026 年 10 月 27 日
 
 这份数据集用于测试 FASTQ 文件的无损压缩和解压。我们选择了 52 组公开数据，覆盖常见的测序技术和用途。每组数据都给出选择理由、下载地址和使用方法。这个仓库只保存清单和说明，测序文件需要另外下载。
 
@@ -120,7 +120,7 @@ WGS 和 RNA-Seq 合计占报告碱基数的大部分；扩增子占存量测序R
 
 数量依据：报告序列量为 1,226.3 亿个碱基，约相当于人类基因组 40× 测序量。
 
-公开记录：[ERR17003126](https://www.ebi.ac.uk/ena/browser/view/ERR17003126)。建议参考序列：fa 编号 1 / GCF_000001405.39。
+公开记录：[ERR17003126](https://www.ebi.ac.uk/ena/browser/view/ERR17003126)。建议参考序列：fa 编号 1 / GCF_000001405.40。
 
 ## 数据 2：人类全基因组 — MGI T7（质量字符集中）
 
@@ -130,7 +130,7 @@ WGS 和 RNA-Seq 合计占报告碱基数的大部分；扩增子占存量测序R
 
 数量依据：报告序列量为 1,312.5 亿个碱基，约相当于人类基因组 42× 测序量，处于常见全基因组测序规划范围内。
 
-公开记录：[ERR16794642](https://www.ebi.ac.uk/ena/browser/view/ERR16794642)。建议参考序列：fa 编号 1 / GCF_000001405.39。
+公开记录：[ERR16794642](https://www.ebi.ac.uk/ena/browser/view/ERR16794642)。建议参考序列：fa 编号 1 / GCF_000001405.40。
 
 ## 数据 3：人类全基因组 — MGI T7（四种质量字符）
 
@@ -140,7 +140,7 @@ WGS 和 RNA-Seq 合计占报告碱基数的大部分；扩增子占存量测序R
 
 数量依据：报告序列量为 1,275.4 亿个碱基，落在该研究 8次有正产出的测序RUN的范围内（共 9 条记录，其中 1 条总量为零）。
 
-公开记录：[SRR33329596](https://www.ebi.ac.uk/ena/browser/view/SRR33329596)。建议参考序列：fa 编号 1 / GCF_000001405.39。
+公开记录：[SRR33329596](https://www.ebi.ac.uk/ena/browser/view/SRR33329596)。建议参考序列：fa 编号 1 / GCF_000001405.40。
 
 ## 数据 4：人类全基因组 — NovaSeq X Plus
 
@@ -150,7 +150,7 @@ WGS 和 RNA-Seq 合计占报告碱基数的大部分；扩增子占存量测序R
 
 数量依据：该数据报告 393.1 亿个碱基；来源研究中 24次可比测序RUN的中位数为 354.8 亿个碱基，且这一数量处于 NovaSeq X 档案中正产出次测序RUN的中间一半范围内。
 
-公开记录：[ERR15383198](https://www.ebi.ac.uk/ena/browser/view/ERR15383198)。建议参考序列：fa 编号 1 / GCF_000001405.39。
+公开记录：[ERR15383198](https://www.ebi.ac.uk/ena/browser/view/ERR15383198)。建议参考序列：fa 编号 1 / GCF_000001405.40。
 
 ## 数据 5：人类超长纳米孔读段
 
@@ -160,7 +160,7 @@ WGS 和 RNA-Seq 合计占报告碱基数的大部分；扩增子占存量测序R
 
 数量依据：该数据报告 491.8 亿个碱基；来源研究中 74次有正产出的测序RUN的中位数为 516.5 亿个碱基（共 79 条记录，其中 5 条总量为零）。
 
-公开记录：[ERR12954382](https://www.ebi.ac.uk/ena/browser/view/ERR12954382)。建议参考序列：fa 编号 1 / GCF_000001405.39。
+公开记录：[ERR12954382](https://www.ebi.ac.uk/ena/browser/view/ERR12954382)。建议参考序列：fa 编号 1 / GCF_000001405.40。
 
 ## 数据 6：人类纳米孔读段 — 一个 ONT 测序流动槽
 
@@ -170,7 +170,7 @@ WGS 和 RNA-Seq 合计占报告碱基数的大部分；扩增子占存量测序R
 
 数量依据：发布说明称每个测序流动槽约产生 140 Gb。
 
-公开记录：[PAW70337 SUP 测序流动槽源文件](https://ont-open-data.s3.amazonaws.com/giab_2025.01/basecalling/sup/HG002/PAW70337/calls.sorted.bam)。建议参考序列：fa 编号 1 / GCF_000001405.39。
+公开记录：[PAW70337 SUP 测序流动槽源文件](https://ont-open-data.s3.amazonaws.com/giab_2025.01/basecalling/sup/HG002/PAW70337/calls.sorted.bam)。建议参考序列：fa 编号 1 / GCF_000001405.40。
 
 使用前请注意：另行报告的比对分析总量尚未证实等于该 BAM/导出 FASTQ 的准确产量。规定的 FASTQ 导出尚未执行。
 
@@ -182,7 +182,7 @@ WGS 和 RNA-Seq 合计占报告碱基数的大部分；扩增子占存量测序R
 
 数量依据：提交来源将其标记为按条码区分的 HiFi 细胞输出，报告了 48,501,907,479 个碱基。
 
-公开记录：[ERR14732808](https://www.ebi.ac.uk/ena/browser/view/ERR14732808)。建议参考序列：fa 编号 1 / GCF_000001405.39。
+公开记录：[ERR14732808](https://www.ebi.ac.uk/ena/browser/view/ERR14732808)。建议参考序列：fa 编号 1 / GCF_000001405.40。
 
 使用前请注意：所选数据量对应一个按条码区分的细胞输出，并非整个 Revio 测序细胞的产出，也不是该个体的全部文库。
 
@@ -194,7 +194,7 @@ WGS 和 RNA-Seq 合计占报告碱基数的大部分；扩增子占存量测序R
 
 数量依据：清单中只有一个 CNGB FASTQ 文件 `WY_reads.fq.gz`，压缩后为 130,270,589,600 字节。确切读段数和碱基总量未知。
 
-公开记录：[CNR1409093 / CNX1236558](https://db.cngb.org/search/run/CNR1409093/)。建议参考序列：fa 编号 1 / GCF_000001405.39。
+公开记录：[CNR1409093 / CNX1236558](https://db.cngb.org/search/run/CNR1409093/)。建议参考序列：fa 编号 1 / GCF_000001405.40。
 
 使用前请注意：没有发布者提供的 MD5 值。文件大小与清单一致，并不能证明文件完整。确切读段数和碱基总量，以及它与 SRA 文件是否逐字节相同，均未知。
 
@@ -208,7 +208,7 @@ WGS 和 RNA-Seq 合计占报告碱基数的大部分；扩增子占存量测序R
 
 数量依据：来源研究中有 38次 FFPE 外显子组测序RUN，碱基数中位数为 56.5 亿。
 
-公开记录：[ERR12411150](https://www.ebi.ac.uk/ena/browser/view/ERR12411150)。建议参考序列：fa 编号 1 / GCF_000001405.39。
+公开记录：[ERR12411150](https://www.ebi.ac.uk/ena/browser/view/ERR12411150)。建议参考序列：fa 编号 1 / GCF_000001405.40。
 
 ## 数据 10：玉米重测序
 
@@ -218,7 +218,7 @@ WGS 和 RNA-Seq 合计占报告碱基数的大部分；扩增子占存量测序R
 
 数量依据：主要面板研究将该工作描述为约 20× DNA 重测序。
 
-公开记录：[SRR8906645](https://www.ebi.ac.uk/ena/browser/view/SRR8906645)。建议参考序列：fa 编号 10 / GCA_902167145.1。
+公开记录：[SRR8906645](https://www.ebi.ac.uk/ena/browser/view/SRR8906645)。建议参考序列：fa 编号 10 / GCF_902167145.1。
 
 使用前请注意：提交文件名显示数据经过修剪，但具体步骤未知。尚未检查实际 FASTQ 的读长和质量值。
 
@@ -232,7 +232,7 @@ WGS 和 RNA-Seq 合计占报告碱基数的大部分；扩增子占存量测序R
 
 数量依据：所选具名扩增子次测序RUN报告了 1,497,990,828 个碱基。
 
-公开记录：[DRR341924](https://www.ebi.ac.uk/ena/browser/view/DRR341924)。建议参考序列：fa 编号 1 / GCF_000001405.39。
+公开记录：[DRR341924](https://www.ebi.ac.uk/ena/browser/view/DRR341924)。建议参考序列：fa 编号 1 / GCF_000001405.40。
 
 ## 数据 12：云杉靶向捕获测序
 
@@ -266,7 +266,7 @@ WGS 和 RNA-Seq 合计占报告碱基数的大部分；扩增子占存量测序R
 
 数量依据：该数据报告 263.4 亿个碱基，接近来源研究 147次测序RUN的中位数（约 261.9 亿），该研究的次测序RUN产量分布很集中。
 
-公开记录：[SRR24804436](https://www.ebi.ac.uk/ena/browser/view/SRR24804436)。建议参考序列：fa 编号 2 / GCA_000003025.6。
+公开记录：[SRR24804436](https://www.ebi.ac.uk/ena/browser/view/SRR24804436)。建议参考序列：fa 编号 2 / GCF_054392235.1。
 
 使用前请注意：该数据在原研究中用于组装/重测序研究的一项组成部分。
 
@@ -278,17 +278,17 @@ WGS 和 RNA-Seq 合计占报告碱基数的大部分；扩增子占存量测序R
 
 数量依据：五份制备方式相近的生殖系尾部样本报告 1,008.92–1,392.81 亿个碱基，中位数为 1,181.31 亿个碱基。
 
-公开记录：[ERR14032264](https://www.ebi.ac.uk/ena/browser/view/ERR14032264)。建议参考序列：fa 编号 3 / GCF_000001635.24。
+公开记录：[ERR14032264](https://www.ebi.ac.uk/ena/browser/view/ERR14032264)。建议参考序列：fa 编号 3 / GCF_000001635.27。
 
 ## 数据 16：小麦全基因组重测序 — Thatcher
 
-这次常规小麦重测序RUN补充了大型多倍体作物基因组。纳入一个 Thatcher 样本的两个 FASTQ 端。主要研究报告该样本约有 5,425 亿个碱基，覆盖深度为 35×；这是实际研究输入，并非为凑基准规模而截取的子集。建议使用的 Renan 组装来自同一物种的另一栽培品种。
+这次常规小麦重测序RUN补充了大型多倍体作物基因组。纳入一个 Thatcher 样本的两个 FASTQ 端。主要研究报告该样本约有 5,425 亿个碱基，覆盖深度为 35×；这是实际研究输入，并非为凑基准规模而截取的子集。建议使用的 中国春 组装来自同一物种的另一栽培品种。
 
 序列量：542,472,250,800 个碱基（5,424.722508 亿）。下载：273,813,897,418 字节（273.814 十进制 GB），共 2 个文件。
 
 数据量依据：一次 Thatcher 重测序RUN报告 542,472,250,800 个碱基；主要研究报告约 542.5 Gb 和 35×。
 
-公开记录：[ERR9904291](https://www.ebi.ac.uk/ena/browser/view/ERR9904291)。参考序列：fa 编号 18 / GCA_937894285.1。
+公开记录：[ERR9904291](https://www.ebi.ac.uk/ena/browser/view/ERR9904291)。参考序列：fa 编号 18 / GCF_018294505.1。
 
 方法与数据量来源：[Thatcher 测序RUN、实验和文件元数据](https://www.ebi.ac.uk/ena/browser/view/ERR9904291) [报告 Thatcher 重测序数据量的小麦研究](https://www.nature.com/articles/s41588-023-01401-2) [所选小麦、CITE 和 CHO 测序RUN的 ENA 计数、公开日期和文件校验和](https://www.ebi.ac.uk/ena/portal/api/search?result=read_run&query=run_accession%3D%22ERR9904291%22+OR+run_accession%3D%22ERR2189808%22+OR+run_accession%3D%22SRR19066659%22+OR+run_accession%3D%22SRR19066665%22+OR+run_accession%3D%22SRR19066668%22&fields=run_accession%2Cread_count%2Cbase_count%2Cfirst_public%2Cfastq_bytes%2Cfastq_md5&format=json&limit=5)
 
@@ -300,7 +300,7 @@ WGS 和 RNA-Seq 合计占报告碱基数的大部分；扩增子占存量测序R
 
 数量依据：同一样本的三份文库插入片段均为 470 bp，分别报告 680.17 亿、705.57 亿和 709.76 亿个碱基。
 
-公开记录：[SRR14993639](https://www.ebi.ac.uk/ena/browser/view/SRR14993639)。建议参考序列：fa 编号 6 / GCA_000226075.1。
+公开记录：[SRR14993639](https://www.ebi.ac.uk/ena/browser/view/SRR14993639)。建议参考序列：fa 编号 6 / GCF_000226075.1。
 
 使用前请注意：这里选取的是一份具名无 PCR 文库，不是该栽培品种组装项目的全部数据。
 
@@ -324,7 +324,7 @@ WGS 和 RNA-Seq 合计占报告碱基数的大部分；扩增子占存量测序R
 
 数量依据：该数据报告 196 亿个碱基，处于这项 1,004 层研究中间 80% 的 139–208 亿个碱基范围内。
 
-公开记录：[ERR13943038](https://www.ebi.ac.uk/ena/browser/view/ERR13943038)。建议参考序列：fa 编号 12 / GCA_016699485.1。
+公开记录：[ERR13943038](https://www.ebi.ac.uk/ena/browser/view/ERR13943038)。建议参考序列：fa 编号 12 / GCF_016699485.2。
 
 ## 数据 20：人类 PacBio 原始 CLR 读段
 
@@ -334,7 +334,7 @@ WGS 和 RNA-Seq 合计占报告碱基数的大部分；扩增子占存量测序R
 
 数量依据：报告的原始序列量为 1,139 亿个碱基，是较大的基因组输入。
 
-公开记录：[SRR8801873](https://www.ebi.ac.uk/ena/browser/view/SRR8801873)。建议参考序列：fa 编号 1 / GCF_000001405.39。
+公开记录：[SRR8801873](https://www.ebi.ac.uk/ena/browser/view/SRR8801873)。建议参考序列：fa 编号 1 / GCF_000001405.40。
 
 ## 数据 21：植物纳米孔基因组组装
 
@@ -368,7 +368,7 @@ WGS 和 RNA-Seq 合计占报告碱基数的大部分；扩增子占存量测序R
 
 数量依据：该数据报告 48.3 亿个碱基，接近来源研究八次测序RUN的中位数 48.1 亿个碱基，符合常见表达文库的序列量。
 
-公开记录：[ERR10030615](https://www.ebi.ac.uk/ena/browser/view/ERR10030615)。建议参考序列：fa 编号 1 / GCF_000001405.39。
+公开记录：[ERR10030615](https://www.ebi.ac.uk/ena/browser/view/ERR10030615)。建议参考序列：fa 编号 1 / GCF_000001405.40。
 
 ## 数据 24：植物 RNA 测序
 
@@ -388,7 +388,7 @@ WGS 和 RNA-Seq 合计占报告碱基数的大部分；扩增子占存量测序R
 
 数量依据：该数据报告 1,264 万 条单端读段和 28,400 万个碱基；来源研究八次测序RUN的碱基数中位数为 28,600 万，与之相符。
 
-公开记录：[DRR1089360](https://www.ebi.ac.uk/ena/browser/view/DRR1089360)。建议参考序列：fa 编号 1 / GCF_000001405.39。
+公开记录：[DRR1089360](https://www.ebi.ac.uk/ena/browser/view/DRR1089360)。建议参考序列：fa 编号 1 / GCF_000001405.40。
 
 方法和数量依据：[具名小 RNA 重复样本记录](https://www.ncbi.nlm.nih.gov/sra/DRX1064881)
 
@@ -400,7 +400,7 @@ WGS 和 RNA-Seq 合计占报告碱基数的大部分；扩增子占存量测序R
 
 数量依据：该数据报告 40 亿个碱基，接近同类研究 12次测序RUN的中位数 41.1 亿个碱基，并处于 NovaSeq RNA 正产出次测序RUN的较宽范围内。
 
-公开记录：[DRR1069746](https://www.ebi.ac.uk/ena/browser/view/DRR1069746)。建议参考序列：fa 编号 1 / GCF_000001405.39。
+公开记录：[DRR1069746](https://www.ebi.ac.uk/ena/browser/view/DRR1069746)。建议参考序列：fa 编号 1 / GCF_000001405.40。
 
 ## 数据 27：单端 RNA 测序 — Element AVITI
 
@@ -410,7 +410,7 @@ WGS 和 RNA-Seq 合计占报告碱基数的大部分；扩增子占存量测序R
 
 数量依据：该数据报告 31 亿个碱基，接近来源研究 18次测序RUN的中位数 29.8 亿个碱基，并处于 20 项已知研究中 AVITI 单端 RNA 数据的较宽范围内。
 
-公开记录：[SRR30608496](https://www.ebi.ac.uk/ena/browser/view/SRR30608496)。建议参考序列：fa 编号 1 / GCF_000001405.39。
+公开记录：[SRR30608496](https://www.ebi.ac.uk/ena/browser/view/SRR30608496)。建议参考序列：fa 编号 1 / GCF_000001405.40。
 
 ## 数据 28：纳米孔转录本测序
 
@@ -420,7 +420,7 @@ WGS 和 RNA-Seq 合计占报告碱基数的大部分；扩增子占存量测序R
 
 数量依据：来源论文报告 72 个文库合计有 31,080 万 条原始读段，算术平均为 432 万 条。
 
-公开记录：[SRR36288068](https://www.ebi.ac.uk/ena/browser/view/SRR36288068)。建议参考序列：fa 编号 1 / GCF_000001405.39。
+公开记录：[SRR36288068](https://www.ebi.ac.uk/ena/browser/view/SRR36288068)。建议参考序列：fa 编号 1 / GCF_000001405.40。
 
 使用前请注意：这是同一研究内的规模参照，不是长 RNA 产量的一般标准。
 
@@ -432,7 +432,7 @@ WGS 和 RNA-Seq 合计占报告碱基数的大部分；扩增子占存量测序R
 
 数量依据：作者标注的 660 个膀胱细胞各有一个清单次测序RUN；其报告序列量中位数为 182,126,200 个碱基，中间一半范围为 139,362,300–226,050,350 个碱基。
 
-公开记录：[SRR6520293](https://www.ebi.ac.uk/ena/browser/view/SRR6520293)。建议参考序列：fa 编号 3 / GCF_000001635.24。
+公开记录：[SRR6520293](https://www.ebi.ac.uk/ena/browser/view/SRR6520293)。建议参考序列：fa 编号 3 / GCF_000001635.27。
 
 使用前请注意：作者和档案均将其标为一次测序RUN中的一个细胞。上传前的确切处理阶段和 FASTQ 实际属性尚未检查。
 
@@ -460,7 +460,7 @@ WGS 和 RNA-Seq 合计占报告碱基数的大部分；扩增子占存量测序R
 
 数据量依据：在 19 个 mRNA 实验中，每个实验取数据量最大的两个输出，共 38 个RUN；报告碱基数中位数为 38.490196 十亿，范围为 34.674149–52.108714 十亿。所选RUN报告 35,465,206,140 个碱基。
 
-公开记录：[SRR19066665](https://www.ebi.ac.uk/ena/browser/view/SRR19066665)。参考序列：fa 编号 1 / GCF_000001405.39。
+公开记录：[SRR19066665](https://www.ebi.ac.uk/ena/browser/view/SRR19066665)。参考序列：fa 编号 1 / GCF_000001405.40。
 
 使用前请注意：清单中的两个读段端构成这次测序RUN。细胞回收目标不能证明实际细胞数；已有观察仅适用于这些确切文件。
 
@@ -488,7 +488,7 @@ WGS 和 RNA-Seq 合计占报告碱基数的大部分；扩增子占存量测序R
 
 数量依据：具名的 L01 空间测序次测序RUN报告了 248,408,655,120 个碱基。
 
-公开记录：[SRR29351083](https://www.ebi.ac.uk/ena/browser/view/SRR29351083)。建议参考序列：fa 编号 1 / GCF_000001405.39。
+公开记录：[SRR29351083](https://www.ebi.ac.uk/ena/browser/view/SRR29351083)。建议参考序列：fa 编号 1 / GCF_000001405.40。
 
 使用前请注意：捕获区域以及实测细胞/网格深度仍未知。
 
@@ -500,7 +500,7 @@ WGS 和 RNA-Seq 合计占报告碱基数的大部分；扩增子占存量测序R
 
 数量依据：来源研究中 32 次有正产出的 ATAC测序RUN报告 66.12–194.62 亿个碱基，中位数为 101.46 亿个碱基。
 
-公开记录：[SRR30495077](https://www.ebi.ac.uk/ena/browser/view/SRR30495077)。建议参考序列：fa 编号 1 / GCF_000001405.39。
+公开记录：[SRR30495077](https://www.ebi.ac.uk/ena/browser/view/SRR30495077)。建议参考序列：fa 编号 1 / GCF_000001405.40。
 
 ## 数据 35：水稻 ChIP 测序
 
@@ -510,7 +510,7 @@ WGS 和 RNA-Seq 合计占报告碱基数的大部分；扩增子占存量测序R
 
 数量依据：该数据报告 78.5 亿个碱基，接近研究中 11次测序RUN的中位数 79.8 亿，并处于水稻 ChIP 数据较宽的中间 80% 范围（33.6–105.7 亿）内。
 
-公开记录：[DRR1000045](https://www.ebi.ac.uk/ena/browser/view/DRR1000045)。建议参考序列：fa 编号 8 / GCA_014636035.1。
+公开记录：[DRR1000045](https://www.ebi.ac.uk/ena/browser/view/DRR1000045)。建议参考序列：fa 编号 8 / GCF_034140825.1。
 
 ## 数据 36：人类 CUT&RUN 测序
 
@@ -520,7 +520,7 @@ WGS 和 RNA-Seq 合计占报告碱基数的大部分；扩增子占存量测序R
 
 数量依据：该数据报告 21.4 亿个碱基，处于匹配的 30次测序RUN研究中间 80% 的 17.9–51.3 亿个碱基范围内。
 
-公开记录：[SRR26362943](https://www.ebi.ac.uk/ena/browser/view/SRR26362943)。建议参考序列：fa 编号 1 / GCF_000001405.39; fa 编号 13 / GCF_000001215.4。
+公开记录：[SRR26362943](https://www.ebi.ac.uk/ena/browser/view/SRR26362943)。建议参考序列：fa 编号 1 / GCF_000001405.40; fa 编号 13 / GCF_000001215.4。
 
 使用前请注意：归一化所用参考组成以及处理后/可用测序深度仍未知。
 
@@ -542,7 +542,7 @@ WGS 和 RNA-Seq 合计占报告碱基数的大部分；扩增子占存量测序R
 
 数量依据：该数据报告 96.1 亿个碱基，处于这项 248次测序RUN研究中间 80% 的 39.3–110.2 亿个碱基范围内。
 
-公开记录：[SRR34546226](https://www.ebi.ac.uk/ena/browser/view/SRR34546226)。建议参考序列：fa 编号 1 / GCF_000001405.39。
+公开记录：[SRR34546226](https://www.ebi.ac.uk/ena/browser/view/SRR34546226)。建议参考序列：fa 编号 1 / GCF_000001405.40。
 
 ## 数据 39：水稻亚硫酸氢盐测序
 
@@ -552,7 +552,7 @@ WGS 和 RNA-Seq 合计占报告碱基数的大部分；扩增子占存量测序R
 
 数量依据：该数据报告 196.5 亿个碱基，接近其 6次测序RUN研究的范围，也处于更广泛水稻亚硫酸氢盐数据中间 80% 的 77.7–226 亿个碱基范围内。
 
-公开记录：[DRR1009870](https://www.ebi.ac.uk/ena/browser/view/DRR1009870)。建议参考序列：fa 编号 8 / GCA_014636035.1。
+公开记录：[DRR1009870](https://www.ebi.ac.uk/ena/browser/view/DRR1009870)。建议参考序列：fa 编号 8 / GCF_034140825.1。
 
 ## 数据 40：真菌 ITS 群落标记
 
@@ -712,45 +712,45 @@ Data 8 是 CNGB 的一个 SINGLE 文件，不是两个配对文件或多个分�
 
 # 参考序列版本
 
-这里列出 18 个带固定登录号版本的建议参考序列；本项目尚未下载或验证它们。“参考序列”工作表区分了来源页面和拟议的 FASTA 直接下载地址。物种相同并不代表品系、栽培品种或转录本靶标相同；混合群落或标签文库也不会被擅自指定一个单一基因组参考。
+这 18 项参考序列于 2026 年 10 月 27 日对照 NCBI 核对。各物种采用 NCBI 当前指定的参考基因组；大肠杆菌输入保留与样本品系相符的 MG1655 参考。SARS-CoV-2 仍使用固定参考 NC_045512.2。当前参考基因组的发布日期可能较早，它不一定是最近提交的组装。“参考序列”工作表和参考序列表列出确切版本、下载地址及可查到的发布者 MD5。本次没有下载 FASTA 文件。同一物种的参考基因组不一定与样本、品种或转录本靶标完全匹配；混合群落和标签文库没有指定单一基因组参考。
 
-参考序列 1：Homo sapiens — GRCh38 / [GCF_000001405.39](https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/405/GCF_000001405.39_GRCh38.p13/GCF_000001405.39_GRCh38.p13_genomic.fna.gz)。仅提出同物种参考序列；样本、品系、靶标、contig 是否匹配以及 FASTA 内容均未核实。
+参考序列 1: Homo sapiens — GRCh38.p14 / [GCF_000001405.40](https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_000001405.40/). 人类参考基因组；尚未检查与各供体的匹配程度。
 
-参考序列 2：Sus scrofa — Sscrofa11.1 / [GCA_000003025.6](https://www.ncbi.nlm.nih.gov/datasets/genome/GCA_000003025.6/)。仅提出同物种参考序列；样本、品系、靶标、contig 是否匹配以及 FASTA 内容均未核实。
+参考序列 2: Sus scrofa — Sscrofa_HxYL_maternal_Yorkshire_Landrace_v2.0 / [GCF_054392235.1](https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_054392235.1/). Yorkshire/Landrace 猪参考基因组；所选 FASTQ 样本的品种尚未确定。
 
-参考序列 3：Mus musculus — GRCm38 / [GCF_000001635.24](https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/635/GCF_000001635.24_GRCm38.p4/GCF_000001635.24_GRCm38.p4_genomic.fna.gz)。为小鼠输入提出同物种基因组参考序列；样本、品系和靶标匹配情况及 FASTA 内容均未核实。对于 Smart-seq2，转录本/补丁等价性及辅助 ERCC 版本也尚未分别核实。
+参考序列 3: Mus musculus — GRCm39 / [GCF_000001635.27](https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_000001635.27/). C57BL/6J 小鼠参考基因组；仍需确认供体亚品系和转录本靶标。ERCC 外源对照需要单独的参考序列。
 
-参考序列 4：Escherichia coli — ASM584 / [GCF_000005845.2](https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/005/845/GCF_000005845.2_ASM584v2/GCF_000005845.2_ASM584v2_genomic.fna.gz)。仅提出同物种参考序列；样本、品系、靶标、contig 是否匹配以及 FASTA 内容均未核实。
+参考序列 4: Escherichia coli str. K-12 substr. MG1655 — ASM584v2 / [GCF_000005845.2](https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_000005845.2/). MG1655 样本使用 MG1655 参考基因组；尚未测量读段与参考的匹配程度。
 
-参考序列 5：Mycobacterium tuberculosis — ASM19595v2 (H37Rv) / [GCF_000195955.2](https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/195/955/GCF_000195955.2_ASM19595v2/GCF_000195955.2_ASM19595v2_genomic.fna.gz)。仅提出同物种参考序列；样本、品系、靶标、contig 是否匹配以及 FASTA 内容均未核实。
+参考序列 5: Mycobacterium tuberculosis H37Rv — ASM19595v2 / [GCF_000195955.2](https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_000195955.2/). H37Rv 参考基因组；尚未检查所选样本与该菌株的匹配程度。
 
-参考序列 6：Solanum tuberosum — SolTub_3.0 / [GCA_000226075.1](https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/226/075/GCA_000226075.1_SolTub_3.0/GCA_000226075.1_SolTub_3.0_genomic.fna.gz)。仅提出同物种参考序列；样本、品系、靶标、contig 是否匹配以及 FASTA 内容均未核实。
+参考序列 6: Solanum tuberosum — SolTub_3.0 / [GCF_000226075.1](https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_000226075.1/). Altus 马铃薯输入使用 DM 1-3 516 R44 参考基因组，两者品种不同。
 
-参考序列 7：Saccharomyces cerevisiae — R64 / [GCF_000146045.2](https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/146/045/GCF_000146045.2_R64/GCF_000146045.2_R64_genomic.fna.gz)。仅提出同物种参考序列；样本、品系、靶标、contig 是否匹配以及 FASTA 内容均未核实。
+参考序列 7: Saccharomyces cerevisiae S288C — R64 / [GCF_000146045.2](https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_000146045.2/). S288C 酵母参考基因组；尚未检查样本品系是否一致。
 
-参考序列 8：Oryza sativa — ASM1463603v1 / [GCA_014636035.1](https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/014/636/035/GCA_014636035.1_ASM1463603v1/GCA_014636035.1_ASM1463603v1_genomic.fna.gz)。仅提出同物种参考序列；样本、品系、靶标、contig 是否匹配以及 FASTA 内容均未核实。
+参考序列 8: Oryza sativa Japonica Group — AGIS1.0 / [GCF_034140825.1](https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_034140825.1/). 日本晴粳稻参考基因组；尚未确认两组水稻输入的品种。
 
-参考序列 9：Arabidopsis thaliana — TAIR10.1 / [GCF_000001735.4](https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/735/GCF_000001735.4_TAIR10.1/GCF_000001735.4_TAIR10.1_genomic.fna.gz)。仅提出同物种参考序列；样本、品系、靶标、contig 是否匹配以及 FASTA 内容均未核实。
+参考序列 9: Arabidopsis thaliana — TAIR10.1 / [GCF_000001735.4](https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_000001735.4/). Columbia 拟南芥参考基因组；尚未检查样本和靶标的匹配程度。
 
-参考序列 10：Zea mays — Zm-B73-REFERENCE-NAM-5.0 / [GCA_902167145.1](https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/902/167/145/GCA_902167145.1_Zm-B73-REFERENCE-NAM-5.0/GCA_902167145.1_Zm-B73-REFERENCE-NAM-5.0_genomic.fna.gz)。为 SW1611 提出同物种但不同自交系的 B73 参考序列。样本、栽培品种和 contig 是否匹配，以及 FASTA 内容均未核实。
+参考序列 10: Zea mays — Zm-B73-REFERENCE-NAM-5.0 / [GCF_902167145.1](https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_902167145.1/). SW1611 玉米读段使用 B73 参考基因组，两者自交系不同。
 
-参考序列 11：Penaeus vannamei — ASM4276789v1 / [GCF_042767895.1](https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_genomic.fna.gz)。仅提出同物种参考序列；样本、品系、靶标、contig 是否匹配以及 FASTA 内容均未核实。
+参考序列 11: Penaeus vannamei — ASM4276789v1 / [GCF_042767895.1](https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_042767895.1/). JL-2024 南美白对虾参考基因组；尚未检查与所选样本的匹配程度。
 
-参考序列 12：Gallus gallus — bGalGal1.mat.broiler.GRCg7b / [GCA_016699485.1](https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/016/699/485/GCA_016699485.1_bGalGal1.mat.broiler.GRCg7b/GCA_016699485.1_bGalGal1.mat.broiler.GRCg7b_genomic.fna.gz)。仅提出同物种参考序列；样本、品系、靶标、contig 是否匹配以及 FASTA 内容均未核实。
+参考序列 12: Gallus gallus — bGalGal1.mat.broiler.GRCg7b / [GCF_016699485.2](https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_016699485.2/). 肉鸡母系参考基因组；尚未检查与所选蛋鸡样本的匹配程度。
 
-参考序列 13：Drosophila melanogaster — Release 6 plus ISO1 MT / [GCF_000001215.4](https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/215/GCF_000001215.4_Release_6_plus_ISO1_MT/GCF_000001215.4_Release_6_plus_ISO1_MT_genomic.fna.gz)。仅提出同物种参考序列；样本、品系、靶标、contig 是否匹配以及 FASTA 内容均未核实。
+参考序列 13: Drosophila melanogaster — Release 6 plus ISO1 MT / [GCF_000001215.4](https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_000001215.4/). 果蝇参考基因组；尚未检查与所选样本的匹配程度。
 
-参考序列 14：Severe acute respiratory syndrome coronavirus 2 — NC_045512.2 / [NC_045512.2](https://www.ncbi.nlm.nih.gov/nuccore/NC_045512.2)。按相同生物名称提出的参考序列；尚未测试分离株、变体和靶标是否兼容。
+参考序列 14: Severe acute respiratory syndrome coronavirus 2 — NC_045512.2 / [NC_045512.2](https://www.ncbi.nlm.nih.gov/nuccore/NC_045512.2). 固定使用 Wuhan-Hu-1 参考；尚未检查与所选样本及靶标的匹配程度。
 
-参考序列 15：Picea abies — Pabies01 / [GCA_900067695.1](https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/900/067/695/GCA_900067695.1_Pabies01/GCA_900067695.1_Pabies01_genomic.fna.gz)。提出的同物种组装版本；样本、品系、栽培品种和靶标匹配情况及 FASTA 内容均未核实。
+参考序列 15: Picea abies — Pabies01 / [GCA_900067695.1](https://www.ncbi.nlm.nih.gov/datasets/genome/GCA_900067695.1/). 挪威云杉靶向输入使用同物种参考基因组；尚未检查样本和靶标的匹配程度。
 
-参考序列 16：Chenopodium quinoa — ASM168347v1 / [GCF_001683475.1](https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/001/683/475/GCF_001683475.1_ASM168347v1/GCF_001683475.1_ASM168347v1_genomic.fna.gz)。提出的同物种组装版本；样本、品系、栽培品种和靶标匹配情况及 FASTA 内容均未核实。
+参考序列 16: Chenopodium quinoa — ASM168347v1 / [GCF_001683475.1](https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_001683475.1/). QQ74 藜麦参考基因组；尚未检查样本品种是否一致。
 
-参考序列 17：Cricetulus griseus — CriGri-PICRH-1.0 / [GCF_003668045.3](https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/003/668/045/GCF_003668045.3_CriGri-PICRH-1.0/GCF_003668045.3_CriGri-PICRH-1.0_genomic.fna.gz)。提出的同物种组装版本；样本、品系、栽培品种和靶标匹配情况及 FASTA 内容均未核实。
+参考序列 17: Cricetulus griseus — CriGri-PICRH-1.0 / [GCF_003668045.3](https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_003668045.3/). CHO 输入使用 17A/GY 中国仓鼠参考基因组；尚未测量细胞系差异。
 
-fa 18：Triticum aestivum，Renan 栽培品种 — Triticum_aestivum_Renan_v2.1 / [GCA_937894285.1](https://www.ncbi.nlm.nih.gov/datasets/genome/GCA_937894285.1/)。同物种、不同栽培品种：为 Thatcher 小麦读段建议使用 Renan 组装；是否精确匹配尚未核实。
+参考序列 18: Triticum aestivum — IWGSC CS RefSeq v2.1 / [GCF_018294505.1](https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_018294505.1/). Thatcher 小麦读段使用中国春参考基因组，两者品种不同。
 
-Renan GCA_937894285.1 是为 Thatcher 小麦读段提出的同物种、不同栽培品种参考序列。解释 CITE 标签或建立自定义参考时，可能需要标签定义以及空间掩膜/坐标；但对所提供 FASTQ 进行精确压缩和还原并不需要这些信息。分类表是辅助文件，不是基因组参考序列。
+中国春参考基因组与 Thatcher 小麦来自不同品种。CITE 标签定义、空间掩膜和分类表属于另行记录的辅助文件。
 
 # 每个输入的文件
 

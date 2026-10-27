@@ -1,7 +1,7 @@
 # FASTQ 无损压缩基准数据集
 
 [English](../README.md) · **简体中文**  
-数据集版本：v1.1.0 · [版本说明](VERSIONING.md)
+数据集版本：v1.2.0 · [版本说明](VERSIONING.md)
 
 这份数据集用于测试 FASTQ 文件的无损压缩和解压。我们选择了 52 组公开数据，覆盖常见的测序技术和用途。每组数据都给出选择理由、下载地址和使用方法。这个仓库只保存清单和说明，测序文件需要另外下载。
 
@@ -31,17 +31,17 @@
 
 ## 下载
 
-需要 Python 3.8 或更高版本以及 GNU wget。请将下载文件放在新的版本专属目录中，例如 `downloads/v1.1.0`。现有下载任务和目录没有移动或更改。
+需要 Python 3.8 或更高版本以及 GNU wget。请将下载文件放在新的版本专属目录中，例如 `downloads/v1.2.0`。现有下载任务和目录没有移动或更改。
 
 ```bash
 # 列出文件，不执行下载。
 python3 download_benchmark.py --dry-run
 
 # 下载所有入选文件；保留现有有效文件和可续传的部分文件。
-python3 download_benchmark.py --output downloads/v1.1.0 --jobs 8
+python3 download_benchmark.py --output downloads/v1.2.0 --jobs 8
 
 # 也可只下载指定数据集的全部清单文件。
-python3 download_benchmark.py --ids 10,29 --output downloads/v1.1.0
+python3 download_benchmark.py --ids 10,29 --output downloads/v1.2.0
 ```
 
 下载程序会核对清单中的文件大小，并在有发布者 MD5 时检查该值。未完成的文件保留为 `.part`，MD5 不一致时会报告错误。
@@ -54,7 +54,7 @@ Data 8 是单个 CNGB 文件 `WY_reads.fq.gz`，不是一对读段或两个分�
 
 请按[完整准备说明](docs/preparation.md)处理数据。每个 gzip 源文件都要检查完整数据流，单独解压，并记录 FASTQ 字节数和 SHA-256。不要合并配对文件、不同测序运行或分块，也不要改动文件字节。Data 6 使用文档规定的 SAMtools 1.22/htslib 1.22 导出规则；该规则已通过合成测试，但尚未用于真实 BAM。
 
-建议的参考序列版本尚未在此处下载或验证，也不保证与样本匹配。空间掩码和标签定义可用于特定解释或自定义参考方案，但不是通用 FASTQ 无损压缩的必要输入。
+[18 项 FASTA 参考序列](catalogue/references.tsv)已于 **2026 年 10 月 27 日**对照 NCBI 核对。各物种采用 NCBI 当前指定的参考基因组；大肠杆菌输入保留与样本品系相符的 MG1655 参考，病毒输入固定使用 NC_045512.2。表中列出确切版本、下载地址和可查到的发布者 MD5。当前参考基因组的发布日期可能较早。下载后仍需检查文件完整性及其与样本的匹配程度。[参考序列信息及来源](../evidence/reference_snapshot_20261027.json)与测序文件的校验记录分开保存。空间掩码和标签定义可用于特定解释或自定义参考方案。
 
 归档调查覆盖截至 2026 年 9 月 30 日的存量及此前 12 个月的公开增量，并沿用原始来源和检索日期。全球统计包含中国。归档托管地不能说明商业生产地点或产量。报告详述调查结果及其限制。
 
